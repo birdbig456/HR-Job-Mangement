@@ -1,0 +1,89 @@
+import { CREATEJOB_ACTION_CREATE } from "../constants/Constants";
+import { CREATESUBJOB_ACTION_CREATE } from "../constants/Constants";
+import { CREATEPOSITION_ACTION_CREATE } from "../constants/Constants";
+import { CREATEATTRIBUTE_ACTION_CREATE } from "../constants/Constants";
+import { CREATEJOBPEOPLE_ACTION_CREATE } from "../constants/Constants";
+import { CREATECOMPETENCY_ACTION_CREATE } from "../constants/Constants";
+import { CREATEJOBFIT_ACTION_CREATE } from "../constants/Constants";
+
+export const setStateToCreateJob = (payload) => ({
+    type: CREATEJOB_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateSubJob = (payload) => ({
+    type: CREATESUBJOB_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreatePosition = (payload) => ({
+    type: CREATEPOSITION_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateAttribute = (payload) => ({
+    type: CREATEATTRIBUTE_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateJobPeople = (payload) => ({
+    type: CREATEJOBPEOPLE_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateCompetency = (payload) => ({
+    type: CREATECOMPETENCY_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateJobFit = (payload) => ({
+    type: CREATEJOBFIT_ACTION_CREATE,
+    payload
+})
+
+export const CreateJob = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateJob(payload))
+    }
+}
+
+export const CreateSubJob = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateSubJob(payload))
+    }
+}
+
+export const CreatePosition = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreatePosition(payload))
+    }
+}
+
+export const CreateAttribute = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateAttribute(payload))
+    }
+}
+export const CreateJobPeople = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateJobPeople(payload))
+    }
+}
+
+export const CreateCompetency = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateCompetency(payload))
+    }
+}
+export const CreateJobFit = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateJobFit(payload))
+    }
+}

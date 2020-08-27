@@ -1,0 +1,35 @@
+{
+    "products": [
+      {
+        "id": 0,
+        "Name": "Pongsakorn",
+        "NickName": "Bird",
+        "NoEmp":123456,
+        "BirthDay": "01/04/1999",
+        "Age": "21",
+        "LastName": "Panprasert",
+        "Email": "birdbig456@gmail.com",
+        "PhoneMobile": "061-385-7269",
+        "PhoneHouse": "032-333-333",
+        "JobGroup": "Engineers",
+        "JobLevel": 18,
+        "JobDate": "31/06/2020",
+        "YearInJob": 5,
+        "SubJobGroup": "Developer",
+        "JobPosition": "Front End developer",
+        "YearInPo": "5",
+        "PersonalLevel": "6",
+        "PersonalDate": "01/01/2020",
+        "YearInPer": "8",
+        "ATB": 80,
+        "Division": "Computer IT",
+        "Department": "Computer Engineering",
+        "Section": "1",
+        "HiringDate": "31/06/2020",
+        "ReportManager": "Hi My name is Bird",
+        "ServiceYear": "6",
+        "Salary": "30,000",
+        "OutEx": "Botio Company Limited - Developer Intern June 2019 - Aug 2019"
+      } 
+    ]
+  }
