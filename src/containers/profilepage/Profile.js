@@ -17,7 +17,6 @@ import AcJob from "./Accorditons/AcJob";
 import AcAttribute from "./Accorditons/AcAttribute";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import LinearProgress from "@material-ui/core/LinearProgress";
-import bird from "./bird.jpg";
 import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
@@ -72,9 +71,7 @@ export default function Profile() {
                 <Typography className={classes.heading}>Accordion 1</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  <AcAttribute />
-                </Typography>
+                <AcAttribute/>
               </AccordionDetails>
             </Accordion>
             <Accordion style={{ marginTop: 10 }}>
