@@ -17,7 +17,6 @@ import { CREATEATTRIBUTE_ACTION_CREATE } from "../constants/Constants";
                                 "Attribute 11",
                                 "Attribute 12",
                             ]
-
 }
 
 export default (state = [initialState], { type, payload }) => {
