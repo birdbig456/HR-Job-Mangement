@@ -107,7 +107,7 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#3F51B5"}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff"}}>Job</Typography>
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Job</Typography>
               </AccordionSummary>
               <AccordionDetails>
                
@@ -122,7 +122,7 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#3F51B5"}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff"}}>Education</Typography>
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Education</Typography>
               </AccordionSummary>
               <AccordionDetails>
                
