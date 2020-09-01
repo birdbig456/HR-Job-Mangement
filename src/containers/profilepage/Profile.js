@@ -97,7 +97,7 @@ export default function Profile() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  <AcAttribute />
+                  <AcAttribute/>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -111,9 +111,7 @@ export default function Profile() {
                 <Typography className={classes.heading} style={{color:"#ffffff"}}>Job</Typography>
               </AccordionSummary>
               <AccordionDetails>
-               
                   <AcJob />
-                
               </AccordionDetails>
             </Accordion>
           </div>
