@@ -18,6 +18,7 @@ import AcAttribute from "./Accorditons/AcAttribute";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import axios from "axios";
+import AcEducation from "./Accorditons/AcEducation";
 
 const useStyles = makeStyles((theme) => ({
   marginPaper: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paperInFor: {
     margin: "auto",
-    // width:"95%",
+   
 
     marginTop: 20,
   },
@@ -88,32 +89,50 @@ export default function Profile() {
           <div style={{ marginTop: 20 }}>
             <Accordion style={{ marginTop: 10 }}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
                 style={{background:"#3F51B5"}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center"}}>Attibute</Typography>
+                <Typography className={classes.heading}  style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Attibute</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
                   <AcAttribute/>
                 </Typography>
+
+                <AcAttribute/>
               </AccordionDetails>
             </Accordion>
             <Accordion style={{ marginTop: 10 }}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#3F51B5"}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff"}}>Job</Typography>
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Job</Typography>
               </AccordionSummary>
               <AccordionDetails>
                   <AcJob />
               </AccordionDetails>
             </Accordion>
+            <Accordion style={{ marginTop: 10 }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{background:"#3F51B5"}}
+              >
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Education</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+               
+                  <AcEducation />
+                
+              </AccordionDetails>
+            </Accordion>
+            
           </div>
         </Grid>
       </Grid>
