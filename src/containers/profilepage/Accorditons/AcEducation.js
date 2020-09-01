@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Paper } from '@material-ui/core'
 
-export default function AcJob() {
+export default function AcEducation(){
     return (
         
         <Grid container>
