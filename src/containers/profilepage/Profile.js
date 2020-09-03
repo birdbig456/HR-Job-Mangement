@@ -20,7 +20,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import axios from "axios";
 import AcEducation from "./Accorditons/AcEducation";
 import AcExp from "./Accorditons/AcExp";
-
+import AcProjExp from "./Accorditons/AcProjExp";
 const useStyles = makeStyles((theme) => ({
   marginPaper: {
     margin: "auto",
@@ -145,6 +145,21 @@ export default function Profile() {
               <AccordionDetails>
                
                   <AcExp />
+                
+              </AccordionDetails>
+            </Accordion>
+            <Accordion style={{ marginTop: 10 }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{background:"#3F51B5"}}
+              >
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Project Profile Experience</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+               
+                 <AcProjExp/>
                 
               </AccordionDetails>
             </Accordion>
