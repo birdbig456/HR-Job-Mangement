@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import JobFit from "./layout/JobFit";
 import JobProFile from "./layout/JobProFile";
 import CompetencyJob from "./layout/CompetencyJob";
+import JobView from "./layout/JobView";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -79,10 +80,7 @@ export default function PositionPage() {
       <div>
         {activeStep === steps.length ? (
           <div>
-            <Typography className={classes.instructions}>
-              All steps completed
-            </Typography>
-            <Button onClick={handleReset}>Reset</Button>
+            <JobView/>
           </div>
         ) : (
           <div>
