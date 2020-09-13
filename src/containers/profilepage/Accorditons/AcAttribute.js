@@ -22,7 +22,6 @@ import { purple } from "@material-ui/core/colors";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import MyRadarComp from "./RadarChart/MyRadarComp";
 
-
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
     height: 20,
@@ -55,24 +54,26 @@ export default function AcAttribute() {
     };
   }, []);
   return (
-    <Grid container>
-      <Grid item xs={12} sm={8}>
-        <Grid
-          container
-          style={{ textAlign: "left", paddingBottom: 20, lineHeight: 4 }}
-        >
-          {CreateAttributeReducer[0].Attribute.map((itemAttribute, index) => (
-            <Grid item key={index} xs={6} sm={6} style={{ paddingLeft: 40 }}>
-              {itemAttribute}
-              <BorderLinearProgress variant="determinate" value={80} />
-            </Grid>
-          ))}
+    <div>
+      <Grid container>
+        <Grid item xs={12} sm={8}>
+          <Grid
+            container
+            style={{ textAlign: "left", paddingBottom: 20, lineHeight: 4 }}
+          >
+            {CreateAttributeReducer[0].Attribute.map((itemAttribute, index) => (
+              <Grid item key={index} xs={6} sm={6} style={{ paddingLeft: 40 }}>
+                {itemAttribute}
+                {console.log(CreateAttributeReducer[0].Attribute)}
+                <BorderLinearProgress variant="determinate" value={80} />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          aaa
         </Grid>
       </Grid>
-      <Grid item xs={12} sm={4}>
-      
-        <MyRadarComp/>
-      </Grid>
-    </Grid>
+    </div>
   );
 }

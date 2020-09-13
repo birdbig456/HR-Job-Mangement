@@ -98,11 +98,11 @@ export default function Profile() {
                 <Typography className={classes.heading}  style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Attibute</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
+               
                   <AcAttribute/>
-                </Typography>
+               
 
-                <AcAttribute/>
+                
               </AccordionDetails>
             </Accordion>
             <Accordion style={{ marginTop: 10 }}>
