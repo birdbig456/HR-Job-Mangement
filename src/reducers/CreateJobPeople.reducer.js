@@ -1,8 +1,13 @@
 import { CREATEJOBPEOPLE_ACTION_CREATE } from "../constants/Constants";
 
+const initialState = {
+    JobLevel: "18",
+    JobClassifield: "12",
+    Exp: "28",
+    ProjectNeed: " ",
+}
 
-
-export default (state = [], { type, payload }) => {
+export default (state = [initialState], { type, payload }) => {
     switch (type) {
 
     case CREATEJOBPEOPLE_ACTION_CREATE:

@@ -80,8 +80,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     border: "solid",
     margin: "auto",
-    fontSize: 14,
+    fontSize: 16,
     marginBottom: 20,
+  },
+  paperBox: {
+    paddingBottom: 40,
+    height: 150,
+    width: 600,
+    marginTop: theme.spacing(3),
+    border: "solid 1px",
+    margin: "auto",
+    fontSize: 14,
+    marginTop: 20,
+    marginBottom: 50,
   },
 }));
 
@@ -89,6 +100,13 @@ export default function JobView() {
   const classes = useStyles();
   const CreateAttributeReducer = useSelector(
     ({ CreateAttributeReducer }) => CreateAttributeReducer
+  );
+  
+  const CreateJobFitReducer = useSelector(
+    ({ CreateJobFitReducer }) => CreateJobFitReducer
+  );
+  const CreateJobPeopleReducer = useSelector(
+    ({ CreateJobPeopleReducer }) => CreateJobPeopleReducer
   );
   const [progress, setProgress] = React.useState(0);
   useEffect(() => {
@@ -107,6 +125,9 @@ export default function JobView() {
       <div className={classes.paperJobfit}>
         <div style={{ textAlign: "center" }}>
           <h3>Job Fit</h3>
+          <div className={classes.paperBox}>
+            {CreateJobFitReducer.map((itemJobFit, index) => ({ itemJobFit }))}
+          </div>
         </div>
       </div>
       <div className={classes.paperJobfit}>
@@ -126,7 +147,7 @@ export default function JobView() {
                     {itemAttribute}
                   </Grid>
                   <Grid item xs={6} sm={6} style={{ marginLeft: -80 }}>
-                    <BorderLinearProgress variant="determinate" value={10} />
+                    <BorderLinearProgress variant="determinate" value={30} />
                   </Grid>
                 </Grid>
               </Grid>
@@ -134,33 +155,39 @@ export default function JobView() {
           </Grid>
         </div>
       </div>
-      <div className={classes.paperJobProfile}>
-        <div style={{ textAlign: "center" }}>
-          <h3>Job Profile</h3>
-          <div style={{ marginTop: 30 }}>
-            <Grid container>
-              <Grid item xs={12} sm={4}>
-                <span style={{ border: "1px solid #000000", padding: 20 }}>
-                  Job Level :{18}
-                </span>
+      
+        <div className={classes.paperJobProfile}>
+          <div style={{ textAlign: "center" }}>
+            <h3>Job Profile</h3>
+            <div style={{ marginTop: 30 }}>
+            {CreateJobPeopleReducer.map((itemJobPeople, index) => (
+              <Grid container key={index}>
+                <Grid item xs={12} sm={4}>
+                  <span style={{ border: "1px solid #000000", padding: 20 }}>
+                    Job Level :{itemJobPeople.JobLevel}
+                  </span>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <span style={{ border: "1px solid #000000", padding: 20 }}>
+                    Job Classified : {itemJobPeople.JobClassifield}
+                  </span>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <span style={{ border: "1px solid #000000", padding: 20 }}>
+                    Experience Need : {itemJobPeople.Exp} Years
+                  </span>
+                </Grid>
               </Grid>
-              <Grid item xs={12} sm={4}>
-                <span style={{ border: "1px solid #000000", padding: 20 }}>
-                  Job Classified : {32}
-                </span>
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <span style={{ border: "1px solid #000000", padding: 20 }}>
-                  Experience Need : {20} Years
-                </span>
-              </Grid>
-            </Grid>
+               ))}
+            </div>
           </div>
         </div>
-      </div>
+     
       <div className={classes.paperJobfit}>
         <div style={{ textAlign: "center" }}>
           <h3>Project Pass Need</h3>
+
+          <div className={classes.paperBox}></div>
         </div>
       </div>
     </div>

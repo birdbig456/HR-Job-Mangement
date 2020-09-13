@@ -31,7 +31,7 @@ function getStepContent(stepIndex) {
     case 0:
       return (
         <div>
-          <JobFit />
+          <JobFit  />
         </div>
       );
     case 1:
