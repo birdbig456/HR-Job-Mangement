@@ -8,7 +8,9 @@ export default class MyRadarComp extends React.Component {
     const tooltipstyle = {
         position: 'relative',
         display: 'inline-block',
-        borderBottom: '1px dotted black'
+        borderBottom: '1px dotted black',
+       
+        
     }
 
     const tooltiptextstyle = {
@@ -34,28 +36,9 @@ export default class MyRadarComp extends React.Component {
           speed: 0.57,
           weight: 0.7
         },
-        meta: { color: 'blue' }
+        meta: { color: '#26A69A' }
       },
-      {
-        data: {
-          battery: 0.6,
-          design: .85,
-          useful: 0.5,
-          speed: 0.6,
-          weight: 0.7
-        },
-        meta: { color: 'red' }
-      },
-      {
-            data: {
-              battery: 0.7,
-              design: .8,
-              useful: 0.9,
-              speed: 0.67,
-              weight: 0.8
-            },
-            meta: { color: '#58FCEC' }
-        }
+     
     ];
  
     const captions = {
@@ -108,8 +91,9 @@ export default class MyRadarComp extends React.Component {
       };
  
     return (
-      <div>
-        <RadarChart
+      <div >
+        <RadarChart 
+        
             captions={{
               // columns
               battery: 'Battery Capacity',
@@ -120,6 +104,7 @@ export default class MyRadarComp extends React.Component {
             }}
             data={data}
             size={400}
+            
             options={defaultOptions}
           />
           <div id="divtool" style={tooltipstyle}><label id="tooltip" style={tooltiptextstyle}></label></div>

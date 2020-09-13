@@ -56,7 +56,7 @@ export default function AcAttribute() {
   return (
     <div>
       <Grid container>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={8} style={{paddingRight:20}}>
           <Grid
             container
             style={{ textAlign: "left", paddingBottom: 20, lineHeight: 4 }}
@@ -70,9 +70,11 @@ export default function AcAttribute() {
             ))}
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={4}>
-          aaa
+        
+        <Grid item xs={12} sm={4} style={{margin:"auto"}}>
+          <MyRadarComp />
         </Grid>
+        
       </Grid>
     </div>
   );
