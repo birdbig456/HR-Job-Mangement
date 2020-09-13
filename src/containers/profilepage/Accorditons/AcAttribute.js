@@ -20,6 +20,8 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { green, orange } from "@material-ui/core/colors";
 import { purple } from "@material-ui/core/colors";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import MyRadarComp from "./RadarChart/MyRadarComp";
+
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -68,7 +70,8 @@ export default function AcAttribute() {
         </Grid>
       </Grid>
       <Grid item xs={12} sm={4}>
-        bbbb
+      
+        <MyRadarComp/>
       </Grid>
     </Grid>
   );
