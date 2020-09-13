@@ -21,6 +21,7 @@ import axios from "axios";
 import AcEducation from "./Accorditons/AcEducation";
 import AcExp from "./Accorditons/AcExp";
 import AcProjExp from "./Accorditons/AcProjExp";
+import AcCareer from "./Accorditons/AcCareer"
 const useStyles = makeStyles((theme) => ({
   marginPaper: {
     margin: "auto",
@@ -163,6 +164,55 @@ export default function Profile() {
                 
               </AccordionDetails>
             </Accordion>
+
+            <Accordion style={{ marginTop: 10 }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{background:"#3F51B5"}}
+              >
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Learning Profile</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+               
+                 {/* <AcLearnPro/> */}
+                
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion style={{ marginTop: 10 }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{background:"#3F51B5"}}
+              >
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Career & Successor</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+               
+                 <AcCareer/>
+                
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion style={{ marginTop: 10 }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{background:"#3F51B5"}}
+              >
+                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Performance Potential</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+               
+                 {/* <AcPerform/> */}
+                
+              </AccordionDetails>
+            </Accordion>
+            
             
           </div>
         </Grid>

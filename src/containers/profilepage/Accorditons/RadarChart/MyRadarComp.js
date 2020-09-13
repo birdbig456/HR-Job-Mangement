@@ -30,11 +30,16 @@ export default class MyRadarComp extends React.Component {
  	 const data = [
       {
         data: {
-          battery: 0.5,
-          design: .7,
-          useful: 0.985,
-          speed: 0.57,
-          weight: 0.7
+        //   battery: 0.5,
+        //   design: .7,
+        //   useful: 0.985,
+        //   speed: 0.57,
+        //   weight: 0.7
+            culture: 0.75,
+            agility:0.7,
+            obsession:0.8,
+            professional:0.8,
+            brave:0.7
         },
         meta: { color: '#26A69A' }
       },
@@ -43,11 +48,16 @@ export default class MyRadarComp extends React.Component {
  
     const captions = {
       // columns
-      battery: 'Battery Capacity',
-      design: 'Design',
-      useful: 'Usefulness',
-      speed: 'Speed',
-      weight: 'Weight'
+    //   battery: 'Battery Capacity',
+    //   design: 'Design',
+    //   useful: 'Usefulness',
+    //   speed: 'Speed',
+    //   weight: 'Weight'
+        culture:'Culture Fit',
+        agility:'Agility',
+        obsession:'Obsession',
+        professional:'Professional',
+        brave:'Brave'
     };
 
     const noSmoothing = points => {
@@ -96,11 +106,16 @@ export default class MyRadarComp extends React.Component {
         
             captions={{
               // columns
-              battery: 'Battery Capacity',
-              design: 'Design',
-              useful: 'Usefulness',
-              speed: 'Speed',
-              weight: 'Weight'
+            //   battery: 'Battery Capacity',
+            //   design: 'Design',
+            //   useful: 'Usefulness',
+            //   speed: 'Speed',
+            //   weight: 'Weight'
+                culture:'Culture Fit',
+                agility:'Agility',
+                obsession:'Obsession',
+                professional:'Professional',
+                brave:'Brave'
             }}
             data={data}
             size={400}

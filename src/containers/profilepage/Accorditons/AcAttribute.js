@@ -74,7 +74,6 @@ export default function AcAttribute() {
         <Grid item xs={12} sm={4} style={{margin:"auto"}}>
           <MyRadarComp />
         </Grid>
-        
       </Grid>
     </div>
   );
