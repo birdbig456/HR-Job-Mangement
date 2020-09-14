@@ -18,17 +18,28 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AcCareer() {
   const classes = useStyles();
-  // const [checked, setChecked] = React.useState(true);
-
-  // const handleChange = (event) => {
-  //   setChecked(event.target.checked);
-  // };
+  
+  const successor = [
+    {
+      name: "Bird Pongsakorn",
+      position: "Developer 1"
+    },
+    {
+      name: "Thanuch M",
+      position: "Developer 2"
+    },
+    {
+      name: "Nay chaitong",
+      position: "Developer 3"
+    },
+  ]
 
   return (
     <Grid container>
       <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
         <p>Under Successor</p>
-        <List className={classes.Block}>
+        {successor.map((item,index) => (
+          <List key={index} className={classes.Block}>
           <ListItem>
             <ListItemAvatar>
               <Checkbox
@@ -37,49 +48,13 @@ export default function AcCareer() {
               />
             </ListItemAvatar>
             <ListItemText>
-              <p>Pongsakorn Bird</p>
-              <p>Developer</p>
+              <p>{item.name}</p>
+              <p>{item.position}</p>
             </ListItemText>
-          </ListItem><hr/>
-
-          <ListItem>
-            <ListItemAvatar>
-              <Checkbox
-                color="primary"
-                inputProps={{ "aria-label": "checkbox" }}
-              />
-            </ListItemAvatar>
-            <ListItemText>
-              <p>Pongsakorn Bird</p>
-              <p>Developer</p>
-            </ListItemText>
-          </ListItem><hr/>
-
-          <ListItem>
-            <ListItemAvatar>
-              <Checkbox
-                color="primary"
-                inputProps={{ "aria-label": "checkbox" }}
-              />
-            </ListItemAvatar>
-            <ListItemText>
-              <p>Pongsakorn Bird</p>
-              <p>Developer</p>
-            </ListItemText>
-          </ListItem><hr/>
+          </ListItem>
         </List>
-        {/* <Grid className={classes.levelBlock} style={{alignItems:"center"}}>
-            <Grid item xs={4} sm={4} style={{alignItems:"center"}}>
-            <Checkbox
-                color="primary"
-                inputProps={{ 'aria-label': 'checkbox' }}
-            />
-            </Grid>
-            <Grid item xs={8} sm={8}>
-                <p>Name</p>
-                <p>Position</p>
-            </Grid>
-        </Grid> */}
+        ))}
+        
       </Grid>
       <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
         <p>xxxxxxxx</p>
