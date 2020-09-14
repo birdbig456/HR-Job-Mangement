@@ -23,12 +23,28 @@ export default function AcCareer() {
   // const handleChange = (event) => {
   //   setChecked(event.target.checked);
   // };
+  const Successor = [
+    {
+      Name:"bird Pongsakorn",
+      Position:"Developer"
+    },
+    {
+      Name:"Nay Chaithong",
+      Position:"Developer"
+    },
+    {
+      Name:"M Thanuch",
+      Position:"Developer"
+    }
+  ];
 
   return (
     <Grid container>
       <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
         <p>Under Successor</p>
         <List className={classes.Block}>
+          {Successor.map((item,index)=>(
+            <div key={index}>
           <ListItem>
             <ListItemAvatar>
               <Checkbox
@@ -37,36 +53,15 @@ export default function AcCareer() {
               />
             </ListItemAvatar>
             <ListItemText>
-              <p>Pongsakorn Bird</p>
-              <p>Developer</p>
+              <p>{item.Name}</p>
+          <p>{item.Position}</p>
             </ListItemText>
           </ListItem><hr/>
+          </div>))}
 
-          <ListItem>
-            <ListItemAvatar>
-              <Checkbox
-                color="primary"
-                inputProps={{ "aria-label": "checkbox" }}
-              />
-            </ListItemAvatar>
-            <ListItemText>
-              <p>Pongsakorn Bird</p>
-              <p>Developer</p>
-            </ListItemText>
-          </ListItem><hr/>
+        
 
-          <ListItem>
-            <ListItemAvatar>
-              <Checkbox
-                color="primary"
-                inputProps={{ "aria-label": "checkbox" }}
-              />
-            </ListItemAvatar>
-            <ListItemText>
-              <p>Pongsakorn Bird</p>
-              <p>Developer</p>
-            </ListItemText>
-          </ListItem><hr/>
+          
         </List>
         {/* <Grid className={classes.levelBlock} style={{alignItems:"center"}}>
             <Grid item xs={4} sm={4} style={{alignItems:"center"}}>
