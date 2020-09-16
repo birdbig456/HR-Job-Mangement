@@ -315,7 +315,7 @@ export default function CreateSubJobPage({ match }) {
     <div>
       {CreateJobReducer != null ? (
         <div>
-          {CreateJobReducer.map((item, index) => {
+          {CreateJobReducer.JobFamily.map((item, index) => {
             return match.params.JobName == item.NameJob ? (
               <div key={index}>
                 <Grid container className={classes.root}>
@@ -425,7 +425,9 @@ export default function CreateSubJobPage({ match }) {
                             spacing={3}
                             style={{ marginTop: 15 }}
                           >
-                            {CreateSubJobReducer.filter((itemSubJob) => {
+                            {CreateSubJobReducer.SubJob.filter((itemSubJob,index) => {
+                              console.log(itemSubJob.ParentJobName)
+                              console.log(item.NameJob)
                               return item.NameJob === itemSubJob.ParentJobName;
                             }).map((itemSubJob, index) => (
                               <Grid key={index} item xs={12} sm={4}>
