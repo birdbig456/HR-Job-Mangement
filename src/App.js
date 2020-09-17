@@ -26,14 +26,19 @@ import Profile from "./containers/profilepage/Profile";
 import ShowJob from "./containers/showJobPage/ShowJob";
 import PositionPage from "./containers/createsubjobpage/positionpage/PositionPage";
 import PositionCrate from "./containers/createsubjobpage/positionpage/PositionCrate";
-
+import WorkforceCapacity from "./containers/workforcecapacitypage/WorkforceCapacity"
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
   palette: {
+
     primary: {
       main: '#FF5745',
+
+    secondary: {
+      main: green[500],
     },
   },
+}
 });
 
 const useStyles = makeStyles((theme) => ({
@@ -124,7 +129,7 @@ export default function App() {
           <AppBar
             position="fixed"
             className={classes.palette}
-            color="primary"
+            color="secondary"
             className={clsx(classes.appBar, {
               [classes.appBarShift]: open,
             })}
@@ -209,6 +214,18 @@ export default function App() {
                 </ListItem>
               </Link>
 
+              <Link
+                to="/WorkforceCapacity"
+                className={classes.link}
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={"WorkforceCapacity"} />
+                </ListItem>
+              </Link>
+
             </List>
             <Divider />
           </Drawer>
@@ -223,10 +240,12 @@ export default function App() {
               <Route exact path="/CreateJob" component={CreateJobPage} />
               <Route exact path="/Profile" component={Profile} />
               <Route exact path="/ShowJob" component={ShowJob} />
+              <Route exact path="/WorkforceCapacity" component={WorkforceCapacity} />
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
               <Route exact path="/:JobName/:SubJobName/Position" component={PositionPage} />
-
+              
+              
             </Switch>
           </main>
         

@@ -30,16 +30,11 @@ export default class MyRadarComp extends React.Component {
  	 const data = [
       {
         data: {
-        //   battery: 0.5,
-        //   design: .7,
-        //   useful: 0.985,
-        //   speed: 0.57,
-        //   weight: 0.7
-            culture: 0.75,
-            agility:0.7,
-            obsession:0.8,
-            professional:0.8,
-            brave:0.7
+          battery: 0.5,
+          design: .7,
+          useful: 0.985,
+          speed: 0.57,
+          weight: 0.7
         },
         meta: { color: '#26A69A' }
       },
@@ -48,16 +43,11 @@ export default class MyRadarComp extends React.Component {
  
     const captions = {
       // columns
-    //   battery: 'Battery Capacity',
-    //   design: 'Design',
-    //   useful: 'Usefulness',
-    //   speed: 'Speed',
-    //   weight: 'Weight'
-        culture:'Culture Fit',
-        agility:'Agility',
-        obsession:'Obsession',
-        professional:'Professional',
-        brave:'Brave'
+      battery: 'Battery Capacity',
+      design: 'Design',
+      useful: 'Usefulness',
+      speed: 'Speed',
+      weight: 'Weight'
     };
 
     const noSmoothing = points => {
@@ -70,14 +60,14 @@ export default class MyRadarComp extends React.Component {
        
       const defaultOptions = {
         size: 200,
-        axes: true, // show axes?
-        scales: 3, // show scale circles?
-        captions: true, // show captions?
+        axes: true, 
+        scales: 3, 
+        captions: true, 
         captionMargin: 10,
-        dots: true, // show dots?
-        zoomDistance: 1.2, // where on the axes are the captions?
-        setViewBox: (options) => `-${options.captionMargin} 0 ${options.size + options.captionMargin * 2} ${options.size}`, // custom viewBox ?
-        smoothing: noSmoothing, // shape smoothing function
+        dots: true, 
+        zoomDistance: 1.2, 
+        setViewBox: (options) => `-${options.captionMargin} 0 ${options.size + options.captionMargin * 2} ${options.size}`, 
+        smoothing: noSmoothing, 
         axisProps: () => ({ className: 'axis' }),
         scaleProps: () => ({ className: 'scale', fill: 'none' }),
         shapeProps: () => ({ className: 'shape' }),
@@ -106,16 +96,11 @@ export default class MyRadarComp extends React.Component {
         
             captions={{
               // columns
-            //   battery: 'Battery Capacity',
-            //   design: 'Design',
-            //   useful: 'Usefulness',
-            //   speed: 'Speed',
-            //   weight: 'Weight'
-                culture:'Culture Fit',
-                agility:'Agility',
-                obsession:'Obsession',
-                professional:'Professional',
-                brave:'Brave'
+              battery: 'Battery Capacity',
+              design: 'Design',
+              useful: 'Usefulness',
+              speed: 'Speed',
+              weight: 'Weight'
             }}
             data={data}
             size={400}
