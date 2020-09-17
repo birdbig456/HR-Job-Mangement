@@ -303,7 +303,7 @@ export default function CreateJobPage() {
             style={{ marginTop: 15 }}
           >
             <Grid container>
-              {CreateJobReducer.map((item, index) => (
+              {CreateJobReducer.JobFamily.map((item, index) => (
                 <Grid key={index} item xs={12} sm={4}>
                   <Paper
                     className={classes.paper}
