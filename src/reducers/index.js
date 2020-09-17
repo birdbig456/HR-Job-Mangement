@@ -6,6 +6,7 @@ import CreateAttributeReducer from "./CreateAttribute.reducer";
 import CreateJobFitReducer from "./CreateJobFit.reducer";
 import CreateJobPeopleReducer from "./CreateJobPeople.reducer";
 import CreateCompetencyReducer from "./CreateCompetency.reducer";
+import CreateTeamReducer from "./CreateTeam.reducer";
 export default combineReducers({
     CreateJobReducer,
     CreateSubJobReducer,
@@ -13,5 +14,6 @@ export default combineReducers({
     CreateAttributeReducer,
     CreateJobFitReducer,
     CreateJobPeopleReducer,
-    CreateCompetencyReducer
+    CreateCompetencyReducer,
+    CreateTeamReducer
 });
