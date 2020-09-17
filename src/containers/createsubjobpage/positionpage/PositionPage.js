@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
@@ -26,12 +26,13 @@ function getSteps() {
   return ["Job Fit", "Job Profile", "Competency"];
 }
 
-function getStepContent(stepIndex) {
+function getStepContent(stepIndex, childRef) {
+  console.log(childRef)
   switch (stepIndex) {
     case 0:
       return (
         <div>
-          <JobFit  />
+          <JobFit ref={childRef}/>
         </div>
       );
     case 1:
@@ -52,6 +53,8 @@ function getStepContent(stepIndex) {
 }
 
 export default function PositionPage() {
+  const childRef = useRef();
+  console.log(childRef)
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const steps = getSteps();
@@ -85,7 +88,7 @@ export default function PositionPage() {
         ) : (
           <div>
             <Typography className={classes.instructions}>
-              {getStepContent(activeStep)}
+              {getStepContent(activeStep, childRef)}
             </Typography>
             <div style={{ margin: 20 }}>
               <Button

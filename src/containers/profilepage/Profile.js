@@ -22,6 +22,11 @@ import AcEducation from "./Accorditons/AcEducation";
 import AcExp from "./Accorditons/AcExp";
 import AcProjExp from "./Accorditons/AcProjExp";
 import AcCareer from "./Accorditons/AcCareer"
+import AcPerform from "./Accorditons/AcPerform"
+import Avatar from '@material-ui/core/Avatar';
+import AcLearnPro from "./Accorditons/AcLearnPro"
+
+
 const useStyles = makeStyles((theme) => ({
   marginPaper: {
     margin: "auto",
@@ -29,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
   paperTop: {
     margin: "auto",
     marginTop: 20,
+    paddingTop: 36,
+    paddingBottom: 36,
   },
   paperAccord: {
     margin: "auto",
@@ -37,8 +44,6 @@ const useStyles = makeStyles((theme) => ({
   },
   paperInFor: {
     margin: "auto",
-   
-
     marginTop: 20,
   },
   heading: {
@@ -46,6 +51,11 @@ const useStyles = makeStyles((theme) => ({
     // color:"#ffffff",
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
+  },
+  large: {
+    margin:"auto",
+    width: theme.spacing(25),
+    height: theme.spacing(25),
   },
 }));
 
@@ -57,7 +67,11 @@ export default function Profile() {
         <Grid item xs={12} sm={3}>
           {/*ส่วนของ profile picture */}
           <div style={{margin:10}}>
-            <Paper className={classes.paperTop}>Profile Picture</Paper>
+            <Paper className={classes.paperTop} style={{textAlign:"center"}}>
+            <Avatar src="https://www.img.in.th/images/a73c20e5e02fdcf845d81d8f2ee16463.jpg" className={classes.large}></Avatar>
+            <h2 style={{ color:"#3F51B5"}}>Wayne Rooney</h2>
+            <h2 style={{ color:"#3F51B5"}}>United Kingdom</h2>
+            </Paper>
           </div>
         </Grid>
         <Grid item xs={12} sm={9}>
@@ -176,7 +190,7 @@ export default function Profile() {
               </AccordionSummary>
               <AccordionDetails>
                
-                 {/* <AcLearnPro/> */}
+                 <AcLearnPro/>
                 
               </AccordionDetails>
             </Accordion>
@@ -208,7 +222,7 @@ export default function Profile() {
               </AccordionSummary>
               <AccordionDetails>
                
-                 {/* <AcPerform/> */}
+                 <AcPerform/>
                 
               </AccordionDetails>
             </Accordion>

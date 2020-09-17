@@ -18,33 +18,28 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AcCareer() {
   const classes = useStyles();
-  // const [checked, setChecked] = React.useState(true);
-
-  // const handleChange = (event) => {
-  //   setChecked(event.target.checked);
-  // };
-  const Successor = [
+  
+  const successor = [
     {
-      Name:"bird Pongsakorn",
-      Position:"Developer"
+      name: "Bird Pongsakorn",
+      position: "Developer 1"
     },
     {
-      Name:"Nay Chaithong",
-      Position:"Developer"
+      name: "Thanuch M",
+      position: "Developer 2"
     },
     {
-      Name:"M Thanuch",
-      Position:"Developer"
-    }
-  ];
+      name: "Nay chaitong",
+      position: "Developer 3"
+    },
+  ]
 
   return (
     <Grid container>
       <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
         <p>Under Successor</p>
-        <List className={classes.Block}>
-          {Successor.map((item,index)=>(
-            <div key={index}>
+        {successor.map((item,index) => (
+          <List key={index} className={classes.Block}>
           <ListItem>
             <ListItemAvatar>
               <Checkbox
@@ -53,28 +48,13 @@ export default function AcCareer() {
               />
             </ListItemAvatar>
             <ListItemText>
-              <p>{item.Name}</p>
-          <p>{item.Position}</p>
+              <p>{item.name}</p>
+              <p>{item.position}</p>
             </ListItemText>
-          </ListItem><hr/>
-          </div>))}
-
-        
-
-          
+          </ListItem>
         </List>
-        {/* <Grid className={classes.levelBlock} style={{alignItems:"center"}}>
-            <Grid item xs={4} sm={4} style={{alignItems:"center"}}>
-            <Checkbox
-                color="primary"
-                inputProps={{ 'aria-label': 'checkbox' }}
-            />
-            </Grid>
-            <Grid item xs={8} sm={8}>
-                <p>Name</p>
-                <p>Position</p>
-            </Grid>
-        </Grid> */}
+        ))}
+        
       </Grid>
       <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
         <p>xxxxxxxx</p>

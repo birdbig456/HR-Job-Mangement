@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{forwardRef, useState, useImperativeHandle} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -84,7 +84,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function JobFit() {
+const JobFit = forwardRef((props, ref) => {
+  console.log(ref)
   const classes = useStyles();
 
   const CreateAttributeReducer = useSelector(
@@ -109,6 +110,13 @@ const handleClose = () => {
   setOpen(false);
 };
 
+useImperativeHandle(
+  ref,
+  () => {
+    console.log("K")
+  }
+)
+
   const showForm = ({
     values,
     handleChange,
@@ -120,7 +128,6 @@ const handleClose = () => {
     handleBlur,
     handleReset,
   }) => {
-    
     return (
       <form onSubmit={handleSubmit}>
         <ThemeProvider theme={outerTheme}>
@@ -251,4 +258,6 @@ const handleClose = () => {
       </Grid>
     </div>
   );
-}
+})
+
+export default JobFit
