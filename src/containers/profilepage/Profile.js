@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
   paperTop: {
     margin: "auto",
     marginTop: 20,
-    paddingTop: 36,
-    paddingBottom: 36,
+    paddingTop: 40,
+    paddingBottom: 40,
   },
   paperAccord: {
     margin: "auto",

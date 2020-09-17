@@ -31,7 +31,7 @@ const drawerWidth = 240;
 const outerTheme = createMuiTheme({
   palette: {
     primary: {
-      main: orange[500],
+      main: '#FF5745',
     },
   },
 });
@@ -69,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
+    color:'#FF5745'
   },
   drawerHeader: {
     display: "flex",
@@ -119,6 +120,7 @@ export default function App() {
       <div className={classes.root}>
         
           <CssBaseline />
+          <ThemeProvider theme={outerTheme}>
           <AppBar
             position="fixed"
             className={classes.palette}
@@ -141,6 +143,8 @@ export default function App() {
               </Typography>
             </Toolbar>
           </AppBar>
+          </ThemeProvider>
+
           <Drawer
             className={classes.drawer}
             variant="persistent"
@@ -163,11 +167,13 @@ export default function App() {
                 )}
               </IconButton>
             </div>
+
             <Divider />
+
             <List>
+
               <Link
                 to="/CreateJob"
-                
                 className={classes.link}
               >
                 <ListItem button>
