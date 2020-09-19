@@ -129,7 +129,6 @@ export default function App() {
           <AppBar
             position="fixed"
             className={classes.palette}
-            color="secondary"
             className={clsx(classes.appBar, {
               [classes.appBarShift]: open,
             })}
@@ -222,7 +221,7 @@ export default function App() {
                   <ListItemIcon>
                     <MailIcon />
                   </ListItemIcon>
-                  <ListItemText primary={"WorkforceCapacity"} />
+                  <ListItemText primary={"Workforce Capacity"} />
                 </ListItem>
               </Link>
 
