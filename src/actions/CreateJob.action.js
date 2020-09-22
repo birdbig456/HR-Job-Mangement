@@ -6,7 +6,7 @@ import { CREATEJOBPEOPLE_ACTION_CREATE } from "../constants/Constants";
 import { CREATECOMPETENCY_ACTION_CREATE } from "../constants/Constants";
 import { CREATEJOBFIT_ACTION_CREATE } from "../constants/Constants";
 import { CREATETEAM_ACTION_CREATE } from "../constants/Constants";
-
+import { CREATEDIVISION_ACTION_CREATE } from "../constants/Constants";
 export const setStateToCreateJob = (payload) => ({
     type: CREATEJOB_ACTION_CREATE,
     payload
@@ -44,6 +44,11 @@ export const setStateToCreateJobFit = (payload) => ({
 
 export const setStateToCreateTeam = (payload) => ({
     type: CREATETEAM_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateDivision = (payload) => ({
+    type: CREATEDIVISION_ACTION_CREATE,
     payload
 })
 
@@ -97,5 +102,11 @@ export const CreateTeam = (payload) => {
     return dispatch => {
         console.log(payload)
         dispatch(setStateToCreateTeam(payload))
+    }
+}
+export const CreateDivision= (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateDivision(payload))
     }
 }

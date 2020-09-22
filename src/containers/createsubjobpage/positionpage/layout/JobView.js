@@ -137,12 +137,12 @@ export default function JobView() {
             {CreateAttributeReducer[0].Attribute.map((itemAttribute, index) => (
               <Grid
                 item
-                key={index}
+                
                 xs={6}
                 sm={4}
                 style={{ paddingLeft: 80, marginTop: 20 }}
               >
-                <Grid container>
+                <Grid container key={index}>
                   <Grid item xs={6} sm={6} style={{ textAlign: "left" }}>
                     {itemAttribute}
                   </Grid>

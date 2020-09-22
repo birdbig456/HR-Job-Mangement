@@ -9,13 +9,14 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import AcTeam1 from "./Accordions/AcTeam1"
+import TeamView from "./Accordions/TeamView";
+import StatusView from "./Accordions/StatusView";
 
 const useStyles = makeStyles((theme) => ({
-  button:{
-    background:'#07B1C8',
-    color:'#ffff'
-  }
+  button: {
+    background: "#07B1C8",
+    color: "#ffff",
+  },
 }));
 
 export default function JobView() {
@@ -36,7 +37,7 @@ export default function JobView() {
           <Button
             className={classes.button}
             variant="contained"
-            onMouseEnter={()=>{}}
+            onMouseEnter={() => {}}
             onClick={() => {
               dispatch(CreateAction.CreateTeam(count));
               setCount(count + 1);
@@ -57,13 +58,21 @@ export default function JobView() {
           >
             <Typography
               className={classes.heading}
-              style={{ color: "#ffffff", textAlign: "center", width: "100%" }}
+              style={{ color: "#ffffff", textAlign: "left", width: "100%",fontSize:22 }}
             >
               Team : {num}
             </Typography>
           </AccordionSummary>
-          <AccordionDetails >
-            <AcTeam1/>
+          <AccordionDetails>
+            <Grid container>
+              <Grid item xs={7} sm={7}>
+                <TeamView />
+              </Grid>
+              <Grid item xs={5} sm={5}>
+                <div style={{textAlign:"center",fontSize:22 ,marginTop:55 ,backgroundColor:"#c3c3c3",padding:10,border:0,borderRadius:5}}>Team :{num}</div>
+                <StatusView />
+              </Grid>
+            </Grid>
           </AccordionDetails>
         </Accordion>
       ))}
