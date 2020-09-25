@@ -80,8 +80,9 @@ const StyledTreeItem = withStyles((theme) => ({
     borderRadius: 3,
     border: 0,
     padding:10,
-    width:"auto",
-    textAlign:"left"
+    width:"65%",
+    textAlign:"center",
+    
   },
   expanded:{
     marginTop:0
@@ -109,12 +110,13 @@ const StyledTreeItem2 = withStyles((theme) => ({
   label: {
     textTransform: 'capitalize',
     fontSize:24,
-    background: 'linear-gradient(45deg, #07B1C8 30%, #07B1B8 90%)',
+    borderColor: 'linear-gradient(45deg, #07B1C8 30%, #07B1B8 90%)',
     borderRadius: 3,
-    border: 0,
+    border: "solid 3px #07B1C8",
+    
     padding:10,
-    width:"auto",
-    textAlign:"left"
+    width:"65%",
+    textAlign:"center",
   },
   expanded:{
     marginTop:0
@@ -168,7 +170,7 @@ export default function TeamView() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <div >
+    <div style={{width:"100%"}}>
      <StyledTreeView
       className={classes.root}
       defaultCollapseIcon={<MinusSquare />}
