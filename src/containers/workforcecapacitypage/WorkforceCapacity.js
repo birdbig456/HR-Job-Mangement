@@ -14,7 +14,7 @@ import StatusView from "./Accordions/StatusView";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    background: "#07B1C8",
+    background: "#FF5745",
     color: "#ffff",
   },
 }));
@@ -49,22 +49,24 @@ export default function JobView() {
       </Grid>
 
       {CreateTeamReducer.Team.map((num, index) => (
-        <Accordion style={{ marginTop: 20 }}>
+        <Accordion style={{ marginTop: 20}}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
+            expandIcon={<ExpandMoreIcon style={{ color: "#FF5745"}} />}
             aria-controls="panel2a-content"
             id="panel2a-header"
-            style={{ background: "#FF5745" }}
+            style={{border:"1px solid #FF5745"}}
           >
             <Typography
+
               className={classes.heading}
-              style={{ color: "#ffffff", textAlign: "left", width: "100%",fontSize:22 }}
+              style={{ color: "#FF5745", textAlign: "left", width: "100%",fontSize:22 }}
             >
               Team : {num}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Grid container>
+            <TeamView/>
+            {/* <Grid container>
               <Grid item xs={7} sm={7}>
                 <TeamView />
               </Grid>
@@ -72,7 +74,7 @@ export default function JobView() {
                 <div style={{textAlign:"center",fontSize:22 ,marginTop:55 ,backgroundColor:"#c3c3c3",padding:10,border:0,borderRadius:5}}>Team :{num}</div>
                 <StatusView />
               </Grid>
-            </Grid>
+            </Grid> */}
           </AccordionDetails>
         </Accordion>
       ))}

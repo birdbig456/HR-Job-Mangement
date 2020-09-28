@@ -1,75 +1,53 @@
-import React ,{useState,useEffect} from 'react'
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import { useSelector, useDispatch } from "react-redux";
-import * as CreateAction from "../../../../actions/CreateJob.action";
-const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-      marginTop: theme.spacing(5),
-      marginLeft: theme.spacing(3),
-    },
-}));
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
 export default function CreateDivision() {
-    const [nameDivision, setNameDivision] = useState()
-    const classes = useStyles();
-    const dispatch = useDispatch();
-    
-    return (
-        <div style={{margin:50}}>
-            <form>
-        
-          <Grid container>
-            
-            <Grid container style={{ marginTop: 30 }}>
-              <Grid item xs={12} sm={5}>
-                <TextField disabled label="Division Name :" />
-              </Grid>
-              <Grid item xs={12} sm={7}>
-                <TextField
-                  required
-                  color="primary"
-                  label="Enter Division Name"
-                  fullWidth
-                  id="CreateDivision"
-                  name="CreateDivision"
-                  onChange={ e => {(setNameDivision(e.target.value))}} 
-                />
-              </Grid>
-            </Grid>
-          </Grid>
-          <div
-            style={{ display: "flex", justifyContent: "center", margin: 25 }}
-          >
-            <Button
-              type="submit"
-              className={classes.palette}
-              color="primary"
-              variant="contained"
-              size="small"
-              style={{ margin: 7 }}
-              onSubmit={() => {
-                
-                dispatch(CreateAction.CreateDivision(nameDivision));
-                
-              }}
-            >
-              Save
-            </Button>
-            <Button
-              
-              variant="contained"
-              size="small"
-              style={{ margin: 7 }}
-            >
-              Cancel
-            </Button>
-          </div>
-        
-      </form>
-        </div>
-    )
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        Open form dialog
+      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            To subscribe to this website, please enter your email address here. We will send updates
+            occasionally.
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email Address"
+            type="email"
+            fullWidth
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Subscribe
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
 }
