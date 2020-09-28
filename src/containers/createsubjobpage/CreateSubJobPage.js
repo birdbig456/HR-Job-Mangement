@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
     height:300,
     backgroundColor: "#fff",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
-    border: "4px solid #303f9f",
+    border: "4px solid #FF5745",
     fontSize: 14,
     margin:"auto",
     marginBottom:40

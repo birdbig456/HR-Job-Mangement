@@ -28,7 +28,7 @@ export default function JobView() {
     ({ CreateTeamReducer }) => CreateTeamReducer
   );
   return (
-    <div style={{ backgroundColor: "#fff", padding: 20 }}>
+    <div style={{ backgroundColor: "#f8f8f8", padding: 20 }}>
       <Grid container>
         <Grid item xs={6} sm={6} style={{ margin: "auto" }}>
           <span style={{ fontSize: 24 }}>Workforce Capacity</span>
@@ -54,10 +54,9 @@ export default function JobView() {
             expandIcon={<ExpandMoreIcon style={{ color: "#FF5745"}} />}
             aria-controls="panel2a-content"
             id="panel2a-header"
-            style={{border:"1px solid #FF5745"}}
+            style={{border:"2px solid #E5E5E5"}}
           >
             <Typography
-
               className={classes.heading}
               style={{ color: "#FF5745", textAlign: "left", width: "100%",fontSize:22 }}
             >
