@@ -6,7 +6,7 @@ import TreeView from "@material-ui/lab/TreeView";
 import TreeItem from "@material-ui/lab/TreeItem";
 import Collapse from "@material-ui/core/Collapse";
 import { useSpring, animated } from "react-spring/web.cjs";
-
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { useSelector, useDispatch } from "react-redux";
 import * as CreateAction from "../../../actions/CreateJob.action";
 import Button from "@material-ui/core/Button";
@@ -21,7 +21,7 @@ function MinusSquare(props) {
   return (
     <SvgIcon
       fontSize="inherit"
-      style={{ width: 20, height: 20, background: "#FF5745", color: "white" }}
+      style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
       {...props}
     >
       {/* tslint:disable-next-line: max-line-length */}
@@ -34,7 +34,7 @@ function PlusSquare(props) {
   return (
     <SvgIcon
       fontSize="inherit"
-      style={{ width: 20, height: 20, background: "#FF5745", color: "white" }}
+      style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
       {...props}
     >
       {/* tslint:disable-next-line: max-line-length */}
@@ -48,7 +48,7 @@ function CloseSquare(props) {
     <SvgIcon
       className="close"
       fontSize="inherit"
-      style={{ width: 20, height: 20, background: "#FF5745", color: "white" }}
+      style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
       {...props}
     >
       {/* tslint:disable-next-line: max-line-length */}
@@ -94,10 +94,17 @@ const StyledTreeItem = withStyles((theme) => ({
   },
   label: {
     textTransform: "capitalize",
-    fontSize: 20,
+    fontSize: 16,
+    background:"#ffffff",
+    color:"#2962ff",
+    fontWeight:"bold",
+    marginLeft:15,
     border: "1px solid #e5e5e5",
     borderRadius: 3,
-    padding: 10,
+    paddingLeft: 40,
+    paddingRight: 40,
+    paddingTop:20,
+    paddingBottom:20,
     width: "auto",
     textAlign: "left",
   },

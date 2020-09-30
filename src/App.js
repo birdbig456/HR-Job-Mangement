@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, responsiveFontSizes, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
@@ -32,7 +32,7 @@ const outerTheme = createMuiTheme({
   palette: {
 
     primary: {
-      main: '#FF5745',
+      main: '#FF3019',
 
     secondary: {
       main: green[500],
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color:'#FF5745'
+    color:'#FF3019'
   },
   drawerHeader: {
     display: "flex",
@@ -122,7 +122,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className={classes.root}>
+      <div className={classes.root} >
         
           <CssBaseline />
           <ThemeProvider theme={outerTheme}>

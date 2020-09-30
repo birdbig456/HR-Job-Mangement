@@ -8,6 +8,7 @@ import logger from "redux-logger"
 import thunk  from "redux-thunk"
 import reducers from "./reducers"
 import { Provider } from 'react-redux';
+import ActorRegular from "./fonts/Actor-Regular.ttf"
 
 const store = createStore(reducers, applyMiddleware(thunk,logger))
 

@@ -108,7 +108,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading}  style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Attibute</Typography>
               </AccordionSummary>
@@ -125,7 +125,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Job</Typography>
               </AccordionSummary>
@@ -138,7 +138,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Education</Typography>
               </AccordionSummary>
@@ -153,7 +153,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Experience Profile</Typography>
               </AccordionSummary>
@@ -168,7 +168,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Project Profile Experience</Typography>
               </AccordionSummary>
@@ -184,7 +184,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Learning Profile</Typography>
               </AccordionSummary>
@@ -200,7 +200,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Career & Successor</Typography>
               </AccordionSummary>
@@ -216,7 +216,7 @@ export default function Profile() {
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF5745"}}
+                style={{background:"#FF3019"}}
               >
                 <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%"}}>Performance Potential</Typography>
               </AccordionSummary>
