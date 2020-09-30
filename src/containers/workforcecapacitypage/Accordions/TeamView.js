@@ -17,6 +17,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
+
 function MinusSquare(props) {
   return (
     <SvgIcon
@@ -105,8 +106,8 @@ const StyledTreeItem = withStyles((theme) => ({
     paddingRight: 40,
     paddingTop:20,
     paddingBottom:20,
-    width: "auto",
-    textAlign: "left",
+    width: "100%",
+    textAlign: "center",
   },
   expanded: {
     marginTop: 0,
@@ -133,12 +134,19 @@ const StyledTreeItem2 = withStyles((theme) => ({
   },
   label: {
     textTransform: "capitalize",
-    fontSize: 20,
+    fontSize: 16,
+    background:"#ffffff",
+    color:"black",
+    fontWeight:"medium",
+    marginLeft:15,
     border: "1px solid #e5e5e5",
     borderRadius: 3,
-    padding: 10,
-    width: "auto",
-    textAlign: "left",
+    paddingLeft: 40,
+    paddingRight: 40,
+    paddingTop:20,
+    paddingBottom:20,
+    width: "100%",
+    textAlign: "center",
   },
   expanded: {
     marginTop: 0,
@@ -217,6 +225,8 @@ export default function TeamView() {
         </StyledTreeItem>
         ))}
       </StyledTreeView>
+
+      
 
       <Dialog
         open={open}

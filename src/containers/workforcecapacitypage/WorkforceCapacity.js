@@ -49,31 +49,52 @@ export default function JobView() {
       </Grid>
 
       {CreateTeamReducer.Team.map((num, index) => (
-        <Accordion style={{ marginTop: 20 , boxShadow:"0px 0px 0px rgba(0,0,0,0)"}}>
+        <Accordion
+          style={{ marginTop: 20, boxShadow: "0px 0px 0px rgba(0,0,0,0)" }}
+        >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#FF3019"}} />}
+            expandIcon={<ExpandMoreIcon style={{ color: "#FF3019" }} />}
             aria-controls="panel2a-content"
             id="panel2a-header"
-            style={{border:"2px solid #E5E5E5"}}
+            style={{ border: "2px solid #E5E5E5" }}
           >
             <Typography
               className={classes.heading}
-              style={{ color: "#FF3019", textAlign: "left", width: "100%",fontSize:22 }}
+              style={{
+                color: "#FF3019",
+                textAlign: "left",
+                width: "100%",
+                fontSize: 22,
+              }}
             >
               Team : {num}
             </Typography>
           </AccordionSummary>
-          <AccordionDetails style={{background:"#fafafa"}}>
-            <TeamView />
-            {/* <Grid container>
-              <Grid item xs={7} sm={7}>
+          <AccordionDetails style={{ background: "#fff" }}>
+            <Grid container >
+              <Grid item xs={7} sm={7} style={{borderRight:"1px solid #e5e5e5"}}>
                 <TeamView />
               </Grid>
               <Grid item xs={5} sm={5}>
-                <div style={{textAlign:"center",fontSize:22 ,marginTop:55 ,backgroundColor:"#c3c3c3",padding:10,border:0,borderRadius:5}}>Team :{num}</div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    fontSize: 22,
+                    marginTop: 55,
+                    marginLeft:15,
+                    marginRight:15,
+                    backgroundColor: "#FF3019",
+                    padding: 10,
+                    border: 0,
+                    borderRadius: 5,
+                    color:'white'
+                  }}
+                >
+                  Team : {num}
+                </div>
                 <StatusView />
               </Grid>
-            </Grid> */}
+            </Grid>
           </AccordionDetails>
         </Accordion>
       ))}
