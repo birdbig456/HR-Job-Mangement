@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 export default function JobView() {
   const classes = useStyles();
 
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(4);
   const dispatch = useDispatch();
   const CreateTeamReducer = useSelector(
     ({ CreateTeamReducer }) => CreateTeamReducer
@@ -72,10 +72,10 @@ export default function JobView() {
           </AccordionSummary>
           <AccordionDetails style={{ background: "#fff" }}>
             <Grid container >
-              <Grid item xs={7} sm={7} style={{borderRight:"1px solid #e5e5e5"}}>
+              <Grid item xs={9} sm={9} style={{borderRight:"1px solid #e5e5e5"}}>
                 <TeamView />
               </Grid>
-              <Grid item xs={5} sm={5}>
+              <Grid item xs={3} sm={3}>
                 <div
                   style={{
                     textAlign: "center",

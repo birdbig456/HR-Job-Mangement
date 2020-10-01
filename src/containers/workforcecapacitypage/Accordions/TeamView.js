@@ -6,7 +6,7 @@ import TreeView from "@material-ui/lab/TreeView";
 import TreeItem from "@material-ui/lab/TreeItem";
 import Collapse from "@material-ui/core/Collapse";
 import { useSpring, animated } from "react-spring/web.cjs";
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { useSelector, useDispatch } from "react-redux";
 import * as CreateAction from "../../../actions/CreateJob.action";
 import Button from "@material-ui/core/Button";
@@ -16,8 +16,9 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-
-
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 function MinusSquare(props) {
   return (
     <SvgIcon
@@ -96,16 +97,16 @@ const StyledTreeItem = withStyles((theme) => ({
   label: {
     textTransform: "capitalize",
     fontSize: 16,
-    background:"#ffffff",
-    color:"#2962ff",
-    fontWeight:"bold",
-    marginLeft:15,
+    background: "#ffffff",
+    color: "#2962ff",
+    fontWeight: "bold",
+    marginLeft: 15,
     border: "1px solid #e5e5e5",
     borderRadius: 3,
     paddingLeft: 40,
     paddingRight: 40,
-    paddingTop:20,
-    paddingBottom:20,
+    paddingTop: 20,
+    paddingBottom: 20,
     width: "100%",
     textAlign: "center",
   },
@@ -135,16 +136,16 @@ const StyledTreeItem2 = withStyles((theme) => ({
   label: {
     textTransform: "capitalize",
     fontSize: 16,
-    background:"#ffffff",
-    color:"black",
-    fontWeight:"medium",
-    marginLeft:15,
+    background: "#ffffff",
+    color: "black",
+    fontWeight: "medium",
+    marginLeft: 15,
     border: "1px solid #e5e5e5",
     borderRadius: 3,
     paddingLeft: 40,
     paddingRight: 40,
-    paddingTop:20,
-    paddingBottom:20,
+    paddingTop: 20,
+    paddingBottom: 20,
     width: "100%",
     textAlign: "center",
   },
@@ -204,6 +205,30 @@ export default function TeamView() {
 
   const [open, setOpen] = React.useState(false);
 
+  const handleClickOpen2 = () => {
+    setOpen2(true);
+  };
+
+  const handleClose2 = () => {
+    setOpen2(false);
+  };
+
+  const [open2, setOpen2] = React.useState(false);
+
+  const [state, setState] = React.useState({
+    JobGroup: '',
+    SubJobGroup: '',
+    JobPosition:'',
+  });
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
+
   return (
     <div style={{ width: "100%" }}>
       <StyledTreeView
@@ -214,19 +239,20 @@ export default function TeamView() {
       >
         {CreateDivisionReducer.NameDivision.map((item, index) => (
           <StyledTreeItem onClick={handleClickOpen} nodeId="1" label={item}>
-          <StyledTreeItem2 nodeId="2" label="Workforce Create" />
-          <StyledTreeItem nodeId="3" label="Create Department">
-            <StyledTreeItem2 nodeId="4" label="Workforce Create" />
+            <StyledTreeItem2
+              nodeId="2"
+              label="Workforce Create"
+              onClick={handleClickOpen2}
+            />
+            <StyledTreeItem nodeId="3" label="Create Department">
+              <StyledTreeItem2 nodeId="4" label="Workforce Create" />
+            </StyledTreeItem>
+            <StyledTreeItem nodeId="5" label="Create Section">
+              <StyledTreeItem2 nodeId="6" label="Workforce Create" />
+            </StyledTreeItem>
           </StyledTreeItem>
-          <StyledTreeItem nodeId="5" label="Create Section">
-            <StyledTreeItem2 nodeId="6" label="Workforce Create" />
-          </StyledTreeItem>
-          
-        </StyledTreeItem>
         ))}
       </StyledTreeView>
-
-      
 
       <Dialog
         open={open}
@@ -241,7 +267,7 @@ export default function TeamView() {
             required
             color="primary"
             label="Enter Division Name"
-            fullWidth
+            style={{width:500}}
             id="CreateDivision"
             name="CreateDivision"
             onChange={(e) => {
@@ -257,6 +283,103 @@ export default function TeamView() {
             onClick={() => {
               dispatch(CreateAction.CreateDivision(nameDivision));
               handleClose();
+            }}
+            color="primary"
+          >
+            Save
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      <Dialog
+        open={open2}
+        onClose={handleClose2}
+        aria-labelledby="form-dialog-title"
+      >
+        <DialogTitle id="form-dialog-title">Create Workforce</DialogTitle>
+        <DialogContent>
+          <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="JobGroup">Job Group</InputLabel>
+            <Select
+              native
+              value={state.age}
+              style={{width:250}}
+              onChange={handleChange}
+              inputProps={{
+                name: "JobGroup",
+                id: "JobGroup",
+              }}
+            >
+              <option aria-label="None" value="" />
+              <option value={"Job1"}>Job 1</option>
+              <option value={"Job2"}>Job 2</option>
+              <option value={"Job3"}>Job 3</option>
+            </Select>
+          </FormControl>
+          <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="JobGroup" style={{marginLeft:20}}>Sub Job Group</InputLabel>
+            <Select
+              native
+              value={state.age}
+              style={{width:250,marginLeft:20}}
+              onChange={handleChange}
+              inputProps={{
+                name: "JobGroup",
+                id: "JobGroup",
+              }}
+            >
+              <option aria-label="None" value="" />
+              <option value={"Job1"}>Job 1</option>
+              <option value={"Job2"}>Job 2</option>
+              <option value={"Job3"}>Job 3</option>
+            </Select>
+          </FormControl>
+          <FormControl className={classes.formControl} style={{marginTop:20}}>
+            <InputLabel htmlFor="JobGroup">Job Position</InputLabel>
+            <Select
+              native
+              value={state.age}
+              style={{width:250}}
+              onChange={handleChange}
+              inputProps={{
+                name: "JobGroup",
+                id: "JobGroup",
+              }}
+            >
+              <option aria-label="None" value="" />
+              <option value={"Job1"}>Job 1</option>
+              <option value={"Job2"}>Job 2</option>
+              <option value={"Job3"}>Job 3</option>
+            </Select>
+          </FormControl>
+
+          <FormControl className={classes.formControl} style={{marginTop:20}}>
+            <InputLabel htmlFor="JobGroup" style={{marginLeft:20}}>Job Area</InputLabel>
+            <Select
+              native
+              value={state.age}
+              style={{width:250,marginLeft:20}}
+              onChange={handleChange}
+              inputProps={{
+                name: "JobGroup",
+                id: "JobGroup",
+              }}
+            >
+              <option aria-label="None" value="" />
+              <option value={"Job1"}>Job 1</option>
+              <option value={"Job2"}>Job 2</option>
+              <option value={"Job3"}>Job 3</option>
+            </Select>
+          </FormControl>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose2} color="primary">
+            Cancel
+          </Button>
+          <Button
+            onClick={() => {
+              dispatch(CreateAction.CreateDivision(nameDivision));
+              handleClose2();
             }}
             color="primary"
           >
