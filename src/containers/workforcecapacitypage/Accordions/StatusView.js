@@ -3,7 +3,7 @@ import React from "react";
 
 export default function StatusView() {
   return (
-    <Grid style={{ marginTop:20,marginBottom:20, marginLeft:60,marginRight:60 }}>
+    <Grid style={{ marginTop:20,marginBottom:20, marginLeft:30,marginRight:30 }}>
       <div style={{ textAlign: "center"}}>
         <label
           style={{
@@ -71,7 +71,7 @@ export default function StatusView() {
         </label>
       </div>
       <div style={{ marginBottom:20, marginTop:20}}>
-      <div style={{display:"flex", justifyContent:"space-between",}}>
+      <div style={{display:"flex", justifyContent:"space-between"}}>
           <p>LLDPE 1</p>
           <p>5</p>
       </div>

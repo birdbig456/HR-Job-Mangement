@@ -45,15 +45,6 @@ export default function AcEducation() {
           style={{ textAlign: "center" }}
         ></div>
       </Grid>
-      {/* <Grid item xs={4} sm={4} style={{marginTop:10}}>
-        <div className={classes.levelBlock}>Level 1</div>
-      </Grid>
-      <Grid item xs={4} sm={4} style={{marginTop:10}}>
-        <div className={classes.levelBlock}>Level 2</div>
-      </Grid>
-      <Grid item xs={4} sm={4} style={{marginTop:10}}>
-        <div className={classes.levelBlock}>Level 3</div>
-      </Grid> */}
     </Grid>
   );
 }
