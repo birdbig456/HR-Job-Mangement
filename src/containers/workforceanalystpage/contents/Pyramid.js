@@ -20,7 +20,7 @@ export default function Pyramid() {
     return (
         <Grid container >
           <p style={{marginLeft:40,fontSize:16,color:"#FF3019"}}>Pyramid</p>
-         <Grid xs={12} sm={12} className={classes.Block} style={{textAlign:"center"}}>Pyramid Graph</Grid>
+         <Grid item xs={12} sm={12} className={classes.Block} style={{textAlign:"center"}}>Pyramid Graph</Grid>
         </Grid>
 
     )

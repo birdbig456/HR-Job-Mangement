@@ -3,7 +3,7 @@ import React from "react";
 
 export default function StatusView() {
   return (
-    <Grid style={{ marginTop:20,marginBottom:20, marginLeft:30,marginRight:30 }}>
+    <Grid item style={{ marginTop:20,marginBottom:20, marginLeft:30,marginRight:30 }}>
       <div style={{ textAlign: "center"}}>
         <label
           style={{

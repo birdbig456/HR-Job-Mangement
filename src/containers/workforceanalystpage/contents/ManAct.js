@@ -25,7 +25,7 @@ export default function ManAct() {
   const classes = useStyles();
   return (
     <Grid container>
-      <Grid xs={5} sm={5}>
+      <Grid item xs={5} sm={5}>
         <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" }}>
           Man Power
         </p>
@@ -46,6 +46,7 @@ export default function ManAct() {
         </div>
       </Grid>
       <Grid
+      item
         xs={2}
         sm={2}
         style={{
@@ -58,7 +59,7 @@ export default function ManAct() {
       >
         <h4>VS</h4>
       </Grid>
-      <Grid xs={5} sm={5}>
+      <Grid item xs={5} sm={5}>
         <p style={{ fontSize: 16, color: "#FF3019" }}>Actual</p>
         <div className={classes.RightBlock}>
           <Box style={{ display: "flex", justifyContent: "center" }}>
