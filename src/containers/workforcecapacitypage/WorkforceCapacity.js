@@ -72,10 +72,10 @@ export default function JobView() {
           </AccordionSummary>
           <AccordionDetails style={{ background: "#fff" }}>
             <Grid container >
-              <Grid item xs={9} sm={9} style={{borderRight:"1px solid #e5e5e5"}}>
+              <Grid item xs={12} sm={9} style={{borderRight:"1px solid #e5e5e5"}}>
                 <TeamView />
               </Grid>
-              <Grid item xs={3} sm={3}>
+              <Grid item xs={12} sm={3}>
                 <div
                   style={{
                     textAlign: "center",
