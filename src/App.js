@@ -1,3 +1,5 @@
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
 import React from "react";
 import clsx from "clsx";
 import { makeStyles, responsiveFontSizes, useTheme } from "@material-ui/core/styles";

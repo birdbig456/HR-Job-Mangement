@@ -11,14 +11,18 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
+    "devextreme": "20.1.7",
+    "devextreme-react": "20.1.7",
     "faker": "^4.1.0",
     "formik": "^2.1.4",
+    "fusioncharts": "^3.15.3",
     "material-table": "^1.67.1",
     "mongodb": "^3.6.0",
     "mongoose": "^5.9.27",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.1",
+    "react-fusioncharts": "^3.1.2",
     "react-perfect-scrollbar": "^1.5.8",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
@@ -50,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "devextreme-themebuilder": "20.1-stable"
   }
 }
