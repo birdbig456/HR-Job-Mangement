@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 40,
     marginLeft: 40,
     marginBottom: 40,
-    height: "auto",
+    height: 405,
   },
 }));
 
@@ -36,13 +36,7 @@ export default function ManpowerVsActual() {
         Man Power VS Actual
       </p>
       <Grid container className={classes.Block}>
-      <Bar
-          data={data}
-          
-          options={{
-            maintainAspectRatio: []
-          }}
-        />
+      
       </Grid>
     </Grid>
   );

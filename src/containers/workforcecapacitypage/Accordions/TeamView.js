@@ -47,7 +47,7 @@ function PlusSquare(props) {
 
 function CloseSquare(props) {
   return (
-    <SvgIcon
+    <SvgIcon 
       className="close"
       fontSize="inherit"
       style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
@@ -190,6 +190,7 @@ export default function TeamView() {
   const handleToggle = (event, nodeIds) => {
     setExpanded(nodeIds);
   };
+  
 
   const handleSelect = (event, nodeIds) => {
     setSelected(nodeIds);
@@ -238,7 +239,7 @@ export default function TeamView() {
         defaultEndIcon={<CloseSquare />}
       >
         {CreateDivisionReducer.NameDivision.map((item, index) => (
-          <StyledTreeItem onClick={handleClickOpen} nodeId="1" label={item}>
+          <StyledTreeItem key={index} onClick={handleClickOpen} nodeId="1" label={item}>
             <StyledTreeItem2
               nodeId="2"
               label="Workforce Create"
