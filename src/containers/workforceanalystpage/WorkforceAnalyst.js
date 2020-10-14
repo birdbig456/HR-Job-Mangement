@@ -9,6 +9,7 @@ import ManpowerVsActual from "./contents/ManpowerVsActual"
 import ScatterChart from "./contents/ScatterChart"
 import TrendLabour from "./contents/TrendLabour"
 
+
 export default function WorkforceAnalyst() {
     return (
         <Grid container>

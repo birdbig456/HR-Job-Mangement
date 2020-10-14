@@ -6,6 +6,7 @@ import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   LeftBlock: {
+    background:"#ffff",
     border: "solid 3px #FEC566",
     borderRadius: 5,
     marginLeft: 40,
@@ -13,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     height: 160,
   },
   RightBlock:{
+    background:"#ffff",
     border: "solid 3px #FEC566",  
     borderRadius: 5,
     marginRight: 40,
@@ -41,7 +43,7 @@ export default function BudgetVsLabour() {
               color:"#FEC566"
             }}
           >
-            <h3>Bath</h3>
+            <h3>Baht</h3>
           </Box>
         </div>
       </Grid>
@@ -73,7 +75,7 @@ export default function BudgetVsLabour() {
               color:"#FEC566"
             }}
           >
-            <h3>Bath</h3>
+            <h3>Baht</h3>
           </Box>
         </div>
       </Grid>

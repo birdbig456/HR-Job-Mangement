@@ -13,8 +13,12 @@ import Funnel, {
   Label,
   Font,
 } from "devextreme-react/funnel";
+// import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+// import JobDepartment from "../JobDepartment"
+
 const useStyles = makeStyles((theme) => ({
   Block: {
+    background:"#ffff",
     border: "solid 3px #e5e5e5",
     borderRadius: 5,
     marginRight: 40,
@@ -28,6 +32,15 @@ export default function Pyramid() {
   const classes = useStyles();
   return (
     <Grid container>
+      {/* <BrowserRouter>
+      <Link 
+      to="/JobDepartment">
+          <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" }}>Pyramid</p>
+      </Link>
+      <Switch>
+        <Route exact path="/JobDepartment" component={JobDepartment} />
+      </Switch>
+      </BrowserRouter> */}
       <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" }}>Pyramid</p>
       <Grid
         item

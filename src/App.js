@@ -30,6 +30,7 @@ import PositionPage from "./containers/createsubjobpage/positionpage/PositionPag
 import PositionCrate from "./containers/createsubjobpage/positionpage/PositionCrate";
 import WorkforceCapacity from "./containers/workforcecapacitypage/WorkforceCapacity"
 import WorkforceAnalyst from "./containers/workforceanalystpage/WorkforceAnalyst"
+import JobDepartment from "./containers/workforceanalystpage/JobDepartment"
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
   palette: {
@@ -240,6 +241,18 @@ export default function App() {
                 </ListItem>
               </Link>
 
+              <Link
+                to="/JobDepartment"
+                className={classes.link}
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={"Job & Department"} />
+                </ListItem>
+              </Link>
+
             </List>
             <Divider />
           </Drawer>
@@ -256,11 +269,10 @@ export default function App() {
               <Route exact path="/ShowJob" component={ShowJob} />
               <Route exact path="/WorkforceCapacity" component={WorkforceCapacity} />
               <Route exact path="/WorkforceAnalyst" component={WorkforceAnalyst}/>
+              <Route exact path="/JobDepartment" component={JobDepartment} />
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
               <Route exact path="/:JobName/:SubJobName/Position" component={PositionPage} />
-              
-              
             </Switch>
           </main>
         

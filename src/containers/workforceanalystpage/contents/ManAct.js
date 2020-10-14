@@ -6,6 +6,7 @@ import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   LeftBlock: {
+    background:"#ffff",
     border: "solid 3px #26A69A",
     borderRadius: 5,
     marginLeft: 40,
@@ -13,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     height: 160,
   },
   RightBlock:{
+    background:"#ffff",
     border: "solid 3px #26A69A",  
     borderRadius: 5,
     marginRight: 40,
@@ -41,7 +43,7 @@ export default function ManAct() {
               color:"#26A69A"
             }}
           >
-            <h3>คน</h3>
+            <h3>People</h3>
           </Box>
         </div>
       </Grid>
@@ -73,7 +75,7 @@ export default function ManAct() {
               color:"#26A69A"
             }}
           >
-            <h3>คน</h3>
+            <h3>People</h3>
           </Box>
         </div>
       </Grid>

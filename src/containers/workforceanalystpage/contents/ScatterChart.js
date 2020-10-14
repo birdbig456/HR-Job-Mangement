@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   Block: {
+    background:"#ffff",
     border: "solid 3px #e5e5e5",
     borderRadius: 5,
     marginRight: 40,
