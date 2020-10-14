@@ -49,7 +49,7 @@ export default function JobView() {
       </Grid>
 
       {CreateTeamReducer.Team.map((num, index) => (
-        <Accordion
+        <Accordion key={index}
           style={{ marginTop: 20, boxShadow: "0px 0px 0px rgba(0,0,0,0)" }}
         >
           <AccordionSummary

@@ -66,6 +66,7 @@ export default function Pyramid() {
           </Title>
           <Tooltip enabled={true} />
           <Item>
+            
             <Border visible={true} />
           </Item>
           <Legend visible={true} />
