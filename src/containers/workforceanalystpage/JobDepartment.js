@@ -29,10 +29,11 @@ export default function JobDepartment() {
             </Grid>
             <Grid item xs={3} sm={3}>
             <div className={classes.Block} style={{textAlign:"left",lineHeight:3}}>
-                    <div style={{marginLeft:5}}>Name : </div>
-                    <div style={{marginLeft:5}}>Job : </div>
-                    <div style={{marginLeft:5}}>Job Position : </div>
-                    <div style={{marginLeft:5}}>
+            <Grid style={{margin:25}}>
+                    <div style={{marginLeft:20}}>Name : </div>
+                    <div style={{marginLeft:20}}>Job : </div>
+                    <div style={{marginLeft:20}}>Job Position : </div>
+                    <div style={{marginLeft:20}}>
                 <Grid container >
                       <Grid item xs={6} sm={6}>
                         <div style={{}}>ESY : </div>
@@ -44,8 +45,9 @@ export default function JobDepartment() {
                   </Grid>
                  </Grid>
                     </div>
-                    <div style={{marginLeft:5}}>Performance : </div>
-                    <div style={{marginLeft:5}}>Potential : </div>
+                    <div style={{marginLeft:20}}>Performance : </div>
+                    <div style={{marginLeft:20}}>Potential : </div>
+                    </Grid>
             </div>
             </Grid>
 
