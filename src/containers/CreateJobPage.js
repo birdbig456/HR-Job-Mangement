@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     height:190,
     margin: theme.spacing(0),
     backgroundColor: "#fafafa",
-    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.3);",
+    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.1);",
   },
   marginAt: {
     margin: theme.spacing(3),
@@ -109,9 +109,9 @@ const useStyles = makeStyles((theme) => ({
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
-    background: "#FEC566",
+    background: "#FF3019",
     "&:hover": {
-      background:"#FF3019",
+      background:"#FF4F3C",
     },
   },
 }))(Button);
@@ -186,9 +186,10 @@ export default function CreateJobPage() {
     return (
       <form onSubmit={handleSubmit}>
         <Grid container>
-          <Grid item xs={12} sm={4} >
+          <Grid item xs={12} sm={6} style={{display:"flex",justifyContent:"center"}}>
             <Paper
               className={classes.avatarInPut}
+              style={{display:"flex",justifyContent:"center",alignItems:"center",marginLeft:55}}
             >
               <input
                 id="file"
@@ -206,18 +207,18 @@ export default function CreateJobPage() {
                     <IconButton
                       className={classes.white}
                       className={classes.palette}
-                      color="primary"
                       aria-label="upload picture"
                       component="span"
+                      style={{color:"#FF3019"}}
                     >
-                      <PhotoCamera />
+                      <PhotoCamera/>
                     </IconButton>
                   </>
                 )}
               </label>
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={12} sm={6}>
             <Grid container>
               <div style={{ marginLeft: 20 }}>
                 <Grid item xs={12} sm={3}>
@@ -262,10 +263,9 @@ export default function CreateJobPage() {
           <Button
             type="submit"
             className={classes.palette}
-            color="primary"
             variant="contained"
             size="small"
-            style={{ margin: 7 }}
+            style={{ margin: 7, background:"#FF3019",color:"#ffffff" }}
           >
             Save
           </Button>
@@ -398,8 +398,8 @@ export default function CreateJobPage() {
       >
         <Grid container>
           <Grid xs={12} sm={12} item>
-            <DialogTitle style={{ textAlign: "center", color: "#5B5656" }}>
-              Create New Job
+            <DialogTitle style={{ textAlign: "center",}}>
+            <h3 style={{fontSize:20,color: "#FF3019"}}>Create New Job</h3>
             </DialogTitle>
           </Grid>
           <DialogContent>

@@ -69,7 +69,7 @@ export default function Profile() {
           <div style={{margin:10}}>
             <Paper className={classes.paperTop} style={{textAlign:"center"}}>
             <Avatar src="https://sv1.picz.in.th/images/2020/09/16/ORllZe.jpg" className={classes.large}></Avatar>
-            <h2 style={{ color:"#FEC566"}}>Birdy Pongsakorn</h2>
+            <h2 style={{ color:"#385A7C"}}>Birdy Pongsakorn</h2>
             <h3 style={{ color:"#FEC566"}}>React Developer</h3>
             </Paper>
           </div>
@@ -77,7 +77,7 @@ export default function Profile() {
         <Grid item xs={12} sm={9}>
           {/*ส่วนของ main infomation */}
           <Paper className={classes.paperInFor} style={{paddingTop:10,paddingBottom:20}}>
-            <h2 style={{textAlign:"center",color:"#FEC566",fontWeight:"bold"}}>Main Information</h2>
+            <h2 style={{textAlign:"center",color:"#385A7C",fontWeight:"bold"}}>Main Information</h2>
             <Grid container >
               <Grid item xs={6} sm={6} style={{fontSize:16},{lineHeight:3}}>
                   <div style={{marginLeft:60}}>Employee ID : </div>
