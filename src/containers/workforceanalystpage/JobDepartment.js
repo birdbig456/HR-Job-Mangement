@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
       height: "auto",
       marginLeft:5,
       marginRight:5,
+      boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)"
     },
   }));
   
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 export default function JobDepartment() {
     const classes = useStyles();
     return (
-        <Grid container>
+        <Grid container >
             <Grid item xs={12} sm={12} style={{textAlign:"center"}}>
                 <h3 style={{fontSize:20,color: "#385A7C"}}>Workforce Analytic Job & Department Level</h3>
             </Grid>

@@ -56,7 +56,7 @@ export default function JobView() {
             expandIcon={<ExpandMoreIcon style={{ color: "#FF3019" }} />}
             aria-controls="panel2a-content"
             id="panel2a-header"
-            style={{ border: "2px solid #E5E5E5" }}
+            style={{ border: "2px solid #E5E5E5", boxShadow:"0px 1px 1px rgba(0, 0, 0, 0.25)" }}
           >
             <Typography
               className={classes.heading}

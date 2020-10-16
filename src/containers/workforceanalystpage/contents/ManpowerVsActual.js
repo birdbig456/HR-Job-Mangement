@@ -6,12 +6,13 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   Block: {
     background:"#ffff",
-    border: "solid 3px #e5e5e5",
+    border: "solid 1px #e5e5e5",
     borderRadius: 5,
     marginRight: 40,
     marginLeft: 40,
     marginBottom: 40,
     height: 405,
+    boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)",
   },
 }));
 

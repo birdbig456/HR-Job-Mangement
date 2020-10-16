@@ -17,6 +17,14 @@ const JobFamily = [
     NameJob: "Job 4 ",
     Description: "",
   },
+  {
+    NameJob: "Job 5 ",
+    Description: "",
+  },
+  {
+    NameJob: "Job 6 ",
+    Description: "",
+  },
 ];
 
 export default (state = { JobFamily }, { type, payload }) => {

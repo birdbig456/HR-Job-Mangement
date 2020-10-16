@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 40,
     marginBottom: 40,
     height: 160,
+    boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)",
   },
   RightBlock:{
     background:"#ffff",
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 40,
     marginBottom: 40,
     height: 160,
+    boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)",
   }
 }));
 

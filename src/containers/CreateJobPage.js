@@ -31,7 +31,7 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
   bar: {
     borderRadius: 15,
-    backgroundColor: green[500],
+    background:"#26A69A"
   },
 }))(LinearProgress);
 
@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
     width: 360,
     height:300,
     backgroundColor: "#fff",
-    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
-    border: "4px solid #FF5745",
+    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.1);",
+    border: "0px",
     fontSize: 14,
   },
   paperCreate: {
@@ -78,9 +78,10 @@ const useStyles = makeStyles((theme) => ({
   },
   avatarInPut: {
     width: 150,
-    margin: theme.spacing(3),
-    backgroundColor: "#F0F3EF",
-    boxShadow: "0px 8px 4px rgba(0, 0, 0, 0.25);",
+    height:190,
+    margin: theme.spacing(0),
+    backgroundColor: "#fafafa",
+    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.3);",
   },
   marginAt: {
     margin: theme.spacing(3),
@@ -108,9 +109,9 @@ const useStyles = makeStyles((theme) => ({
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: green[500],
+    background: "#FEC566",
     "&:hover": {
-      backgroundColor: green[700],
+      background:"#FF3019",
     },
   },
 }))(Button);
@@ -185,10 +186,9 @@ export default function CreateJobPage() {
     return (
       <form onSubmit={handleSubmit}>
         <Grid container>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4} >
             <Paper
               className={classes.avatarInPut}
-              style={{ textAlign: "center", backgroundColor: "#DDDCDC" }}
             >
               <input
                 id="file"
@@ -284,7 +284,7 @@ export default function CreateJobPage() {
 
   return (
     <div className={classes.root} style={{ fontSize: 18 }}>
-      <span>All Job Structure</span>
+      <h3 style={{fontSize:20,color: "#385A7C"}}>All Job Structure</h3>
       <ColorButton
         variant="contained"
         color="primary"
@@ -312,23 +312,32 @@ export default function CreateJobPage() {
                   >
                     <div
                       style={{
+                        color:"#FF3019",
                         textAlign: "center",
                         fontSize: 20,
                         marginTop: 15,
+                        fontWeight: "bold",
+                        paddingTop:20,
                       }}
                     >
                       {item.NameJob}
                     </div>
                     <Grid container>
-                      <Grid item xs={6} sm={6}>
-                        <Paper className={classes.avatarInPut}>
-                          <img src={item.preview} width="150" height="200" />
+                      <Grid item xs={6} sm={6} style={{ display:"flex",alignItems:"center",justifyContent:"flex-end"}}>
+                        <Paper className={classes.avatarInPut} 
+                              style={{marginTop:10,
+                                      borderTopLeftRadius:0,
+                                      borderTopRightRadius:0,
+                                      borderBottomLeftRadius:0,
+                                      borderBottomRightRadius:0,
+                                      }}>
+                          <img src={item.preview} />
                         </Paper>
                       </Grid>
                       <Grid item xs={6} sm={6}>
-                        <div className={classes.marginAt}>
+                        <div className={classes.marginAt} style={{lineHeight:"2"}}>
                           <div>
-                            <div style={{ fontSize: 14 }}>
+                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
                               <label>Attribute 1</label>
                             </div>
                             <BorderLinearProgress
@@ -336,8 +345,8 @@ export default function CreateJobPage() {
                               value={progress}
                             />
                           </div>
-                          <div style={{ marginTop: 5 }}>
-                            <div style={{ fontSize: 14 }}>
+                          <div >
+                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
                               <label>Attribute 2</label>
                             </div>
                             <BorderLinearProgress
@@ -345,8 +354,8 @@ export default function CreateJobPage() {
                               value={progress}
                             />
                           </div>
-                          <div style={{ marginTop: 5 }}>
-                            <div style={{ fontSize: 14 }}>
+                          <div >
+                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
                               <label>Attribute 3</label>
                             </div>
                             <BorderLinearProgress
@@ -354,8 +363,8 @@ export default function CreateJobPage() {
                               value={progress}
                             />
                           </div>
-                          <div style={{ marginTop: 5 }}>
-                            <div style={{ fontSize: 14 }}>
+                          <div >
+                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
                               <label>Attribute 4</label>
                             </div>
                             <BorderLinearProgress
@@ -363,8 +372,8 @@ export default function CreateJobPage() {
                               value={progress}
                             />
                           </div>
-                          <div style={{ marginTop: 5 }}>
-                            <div style={{ fontSize: 14 }}>
+                          <div >
+                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
                               <label>Attribute 5</label>
                             </div>
                             <BorderLinearProgress
