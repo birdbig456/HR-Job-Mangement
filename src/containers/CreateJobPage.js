@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     width: 360,
     height:300,
     backgroundColor: "#fff",
-    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.1);",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
     border: "0px",
     fontSize: 14,
   },
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     height:190,
     margin: theme.spacing(0),
     backgroundColor: "#fafafa",
-    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.1);",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
   },
   marginAt: {
     margin: theme.spacing(3),
@@ -284,6 +284,7 @@ export default function CreateJobPage() {
 
   return (
     <div className={classes.root} style={{ fontSize: 18 }}>
+      <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"space-between",alignItems:'center'}}>
       <h3 style={{fontSize:20,color: "#385A7C"}}>All Job Structure</h3>
       <ColorButton
         variant="contained"
@@ -294,6 +295,7 @@ export default function CreateJobPage() {
       >
         Create Job
       </ColorButton>
+      </Grid>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Grid

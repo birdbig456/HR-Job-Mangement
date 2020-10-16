@@ -7,21 +7,21 @@ import { Box } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   LeftBlock: {
     background:"#ffff",
-    border: "solid 3px #FEC566",
+    border: "0px",
     borderRadius: 5,
     marginLeft: 40,
     marginBottom: 40,
     height: 160,
-    boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)",
+    boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
   },
   RightBlock:{
     background:"#ffff",
-    border: "solid 3px #FEC566",  
+    border: "0px",  
     borderRadius: 5,
     marginRight: 40,
     marginBottom: 40,
     height: 160,
-    boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)",
+    boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
   }
 }));
 
@@ -30,7 +30,7 @@ export default function BudgetVsLabour() {
   return (
     <Grid container>
       <Grid item xs={5} sm={5}>
-        <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" }}>
+        <p style={{ marginLeft: 40, fontSize: 16, color: "#ff3019" ,fontWeight:"bolder"}}>
           Budget
         </p>
         <div className={classes.LeftBlock}>
@@ -58,13 +58,13 @@ export default function BudgetVsLabour() {
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
-          color:"#385A7C"
+          color:"#ff3019"
         }}
       >
         <h4>VS</h4>
       </Grid>
       <Grid item xs={5} sm={5}>
-        <p style={{ fontSize: 16, color: "#FF3019" }}>Labour Cost</p>
+        <p style={{ fontSize: 16, color: "#ff3019" ,fontWeight:"bolder"}}>Labour Cost</p>
         <div className={classes.RightBlock}>
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <h2 style={{ marginTop: 60 ,color:"#FEC566"}}>249,000,000</h2>

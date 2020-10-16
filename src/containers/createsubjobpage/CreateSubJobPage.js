@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
     width: 360,
     height:300,
     backgroundColor: "#fff",
-    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.1);",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
     border: "0px",
     fontSize: 14,
     margin:"auto",
@@ -154,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
     height:190,
     margin: theme.spacing(0),
     backgroundColor: "#fafafa",
-    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.1);",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
   },
 }));
 

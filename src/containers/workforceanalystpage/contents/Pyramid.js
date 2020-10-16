@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 40,
     marginBottom: 40,
     height: "auto",
-    boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)",
+    boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
   },
 }));
 
@@ -42,7 +42,7 @@ export default function Pyramid() {
         <Route exact path="/JobDepartment" component={JobDepartment} />
       </Switch>
       </BrowserRouter> */}
-      <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" }}>Pyramid</p>
+      <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" ,fontWeight:"bolder"}}>Pyramid</p>
       <Grid
         item
         xs={12}

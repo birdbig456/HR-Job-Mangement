@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 40,
     marginBottom: 40,
     height: 405,
-    boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)",
+    boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
   },
 }));
 
@@ -34,7 +34,7 @@ export default function ManpowerVsActual() {
   const classes = useStyles();
   return (
     <Grid container>
-      <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" }}>
+      <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" ,fontWeight:"bolder"}}>
         Man Power VS Actual
       </p>
       <Grid container className={classes.Block}>
