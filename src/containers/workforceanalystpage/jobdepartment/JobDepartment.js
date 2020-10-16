@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import PyramidJob from "./contents/PyramidJob";
 
 const useStyles = makeStyles((theme) => ({
     Block: {
@@ -25,7 +26,7 @@ export default function JobDepartment() {
             </Grid>
             <Grid item xs={9} sm={9}>
                 <div className={classes.Block} style={{textAlign:"center"}}>
-                    <p>LeftSide</p>
+                    <PyramidJob/>
                 </div>
             </Grid>
             <Grid item xs={3} sm={3}>

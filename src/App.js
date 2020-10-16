@@ -30,7 +30,7 @@ import PositionPage from "./containers/createsubjobpage/positionpage/PositionPag
 import PositionCrate from "./containers/createsubjobpage/positionpage/PositionCrate";
 import WorkforceCapacity from "./containers/workforcecapacitypage/WorkforceCapacity"
 import WorkforceAnalyst from "./containers/workforceanalystpage/WorkforceAnalyst"
-import JobDepartment from "./containers/workforceanalystpage/JobDepartment"
+import JobDepartment from "./containers/workforceanalystpage/jobdepartment/JobDepartment"
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
   palette: {
