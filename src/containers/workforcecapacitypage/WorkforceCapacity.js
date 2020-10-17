@@ -30,10 +30,8 @@ export default function JobView() {
   return (
     <div style={{ backgroundColor: "#fafafa", padding: 20 }}>
       <Grid container>
-        <Grid item xs={6} sm={6} style={{ margin: "auto" }}>
-          <span style={{ fontSize: 24 }}>Workforce Capacity</span>
-        </Grid>
-        <Grid item xs={6} sm={6} style={{ textAlign: "right" }}>
+        <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"space-between",alignItems:'center'}}>
+          <h3 style={{fontSize:20,color: "#385A7C"}}>Workforce Capacity</h3>
           <Button
             className={classes.button}
             variant="contained"
@@ -45,7 +43,7 @@ export default function JobView() {
           >
             Create Team
           </Button>
-        </Grid>
+          </Grid>
       </Grid>
 
       {CreateTeamReducer.Team.map((num, index) => (
@@ -56,7 +54,7 @@ export default function JobView() {
             expandIcon={<ExpandMoreIcon style={{ color: "#FF3019" }} />}
             aria-controls="panel2a-content"
             id="panel2a-header"
-            style={{ border: "2px solid #E5E5E5", boxShadow:"0px 1px 1px rgba(0, 0, 0, 0.25)" }}
+            style={{ border: "1px solid #E5E5E5", boxShadow:"0px 1px 1px rgba(0, 0, 0, 0.1)" }}
           >
             <Typography
               className={classes.heading}
@@ -64,7 +62,7 @@ export default function JobView() {
                 color: "#FF3019",
                 textAlign: "left",
                 width: "100%",
-                fontSize: 22,
+                fontSize: 18,
               }}
             >
               Team : {num}

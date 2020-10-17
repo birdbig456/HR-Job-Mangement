@@ -19,6 +19,11 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import LibraryAddOutlinedIcon from '@material-ui/icons/LibraryAddOutlined';
+import AccountBoxOutlinedIcon from '@material-ui/icons/AccountBoxOutlined';
+import StorageOutlinedIcon from '@material-ui/icons/StorageOutlined';
+import GroupOutlinedIcon from '@material-ui/icons/GroupOutlined';
+import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import CreateJobPage from "./containers/CreateJobPage";
 import CreateSubJobPage from "./containers/createsubjobpage/CreateSubJobPage";
@@ -139,6 +144,7 @@ export default function App() {
           >
             <Toolbar>
               <IconButton
+              style={{color:"#ffffff"}}
                 aria-label="open drawer"
                 onClick={handleDrawerOpen}
                 edge="start"
@@ -147,7 +153,7 @@ export default function App() {
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" noWrap>
-                JOB-JAB
+                JOB - JAB
               </Typography>
             </Toolbar>
           </AppBar>
@@ -164,8 +170,8 @@ export default function App() {
           >
             <div className={classes.drawerHeader}>
               <IconButton
+              style={{color:"#FF3019"}}
                 className={classes.palette}
-                color="primary"
                 onClick={handleDrawerClose}
               >
                 {theme.direction === "ltr" ? (
@@ -176,9 +182,8 @@ export default function App() {
               </IconButton>
             </div>
 
-            <Divider />
-
-            <List>
+            <List style={{ boxShadow: "0px 2px 0px rgba(0, 0, 0, 0.25);",
+                border: "1px solid #e5e5e5", borderRight:""}}>
 
               <Link
                 to="/CreateJob"
@@ -186,7 +191,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <MailIcon />
+                    <LibraryAddOutlinedIcon style={{color:"#ff3019"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Create Job"}  />
                 </ListItem>
@@ -199,7 +204,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <MailIcon />
+                    <AccountBoxOutlinedIcon style={{color:"#ff3019"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"My Profile"} />
                 </ListItem>
@@ -211,7 +216,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <MailIcon />
+                    <StorageOutlinedIcon style={{color:"#ff3019"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Show Job"} />
                 </ListItem>
@@ -223,7 +228,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <MailIcon />
+                    <GroupOutlinedIcon style={{color:"#ff3019"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Workforce Capacity"} />
                 </ListItem>
@@ -235,7 +240,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <MailIcon />
+                    <EqualizerOutlinedIcon style={{color:"#ff3019"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Workforce Analyst"} />
                 </ListItem>
@@ -247,14 +252,14 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <MailIcon />
+                    <MailIcon style={{color:"#ff3019"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Job & Department"} />
                 </ListItem>
               </Link>
 
             </List>
-            <Divider />
+            
           </Drawer>
           <main
             className={clsx(classes.content, {
