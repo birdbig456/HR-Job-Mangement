@@ -33,8 +33,12 @@ export default function PyramidJob() {
         <div
           style={{
             width: `${10 * (index + 2)}%`,
-            border: "solid",
+            border: "solid 1px #e5e5e5",
+            background:"#ffff",
+            boxShadow:"0px 1px 2px rgba(0, 0, 0, 0.25)",
             margin: "auto",
+            marginBottom:3,
+            borderRadius:20,    
             padding: 10,
             textAlign: "center",
           }}
@@ -46,6 +50,7 @@ export default function PyramidJob() {
                 alt={itemEmp}
                 src="/static/images/avatar/1.jpg"
                 className={classes.large}
+                style={{background:"#ff3019"}}
               />
             ))}
           </AvatarGroup>
