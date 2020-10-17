@@ -77,7 +77,7 @@ export default function JobView() {
                 <div
                   style={{
                     textAlign: "center",
-                    fontSize: 22,
+                    fontSize: 18,
                     marginTop: 55,
                     marginLeft:15,
                     marginRight:15,
