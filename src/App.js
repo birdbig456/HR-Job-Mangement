@@ -152,7 +152,7 @@ export default function App() {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h6" noWrap>
+              <Typography variant="h6" noWrap style={{fontFamily:"Oswald"}}>
                 JOB - JAB
               </Typography>
             </Toolbar>

@@ -33,9 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paperTop: {
     margin: "auto",
-    marginTop: 20,
-    paddingTop: 40,
-    paddingBottom: 40,
+    height:"100%",
   },
   paperAccord: {
     margin: "auto",
@@ -44,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paperInFor: {
     margin: "auto",
-    marginTop: 20,
+    height:"100%",
   },
   heading: {
     // textAlign:"center",
@@ -53,9 +51,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightRegular,
   },
   large: {
-    margin:"auto",
     width: theme.spacing(25),
     height: theme.spacing(25),
+    marginTop:50
+
   },
 }));
 
@@ -66,20 +65,29 @@ export default function Profile() {
       <Grid container>
         <Grid item xs={12} sm={3}>
           {/*ส่วนของ profile picture */}
-          <div style={{margin:10}}>
-            <Paper className={classes.paperTop} style={{textAlign:"center"}}>
-            <Avatar src="https://sv1.picz.in.th/images/2020/09/16/ORllZe.jpg" className={classes.large}></Avatar>
-            <h2 style={{ color:"#385A7C"}}>Birdy Pongsakorn</h2>
-            <h3 style={{ color:"#FEC566"}}>React Developer</h3>
+            <Paper  className={classes.paperTop} 
+                    style={{textAlign:"center",
+                            display:"flex",
+                            flexDirection:"column",
+                            alignItems:"center",
+                            margin:0}}>
+            <Avatar src="https://sv1.picz.in.th/images/2020/09/16/ORllZe.jpg" 
+                    className={classes.large}
+             ></Avatar>
+            <h2 style={{ color:"#385A7C", fontFamily:"Oswald",marginBottom:0}}>Birdy Pongsakorn</h2>
+            <h3 style={{ color:"#36a69a", fontFamily:"Noto Sans"}}>React Developer</h3>
             </Paper>
-          </div>
         </Grid>
         <Grid item xs={12} sm={9}>
           {/*ส่วนของ main infomation */}
-          <Paper className={classes.paperInFor} style={{paddingTop:10,paddingBottom:20}}>
-            <h2 style={{textAlign:"center",color:"#385A7C",fontWeight:"bold"}}>Main Information</h2>
+          <Paper className={classes.paperInFor} style={{}}>
             <Grid container >
-              <Grid item xs={6} sm={6} style={{fontSize:16},{lineHeight:3}}>
+              <Grid item xs={12} sm={12}
+                    style={{textAlign:"center",color:"#385A7C",fontWeight:"bold",fontFamily:"Oswald",fontSize:24}}
+                    >
+                      <h3>Main Information</h3>
+              </Grid>
+              <Grid item xs={6} sm={6} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans"}}>
                   <div style={{marginLeft:60}}>Employee ID : </div>
                   <div style={{marginLeft:60}}>Birthday : </div>
                   <div style={{marginLeft:60}}>Nationality : </div>
@@ -88,7 +96,7 @@ export default function Profile() {
                   <div style={{marginLeft:60}}>Department : </div>
                   <div style={{marginLeft:60}}>Section : </div>
               </Grid>
-              <Grid item xs={6} sm={6} style={{fontSize:16},{lineHeight:3}}>
+              <Grid item xs={6} sm={6} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans"}}>
                   <div style={{marginLeft:60}}>ESY : </div>
                   <div style={{marginLeft:60}}>OESY : </div>
                   <div style={{marginLeft:60}}>TIG : </div>

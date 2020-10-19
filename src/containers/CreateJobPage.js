@@ -47,11 +47,10 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     margin: 20,
     width: 360,
-    height:300,
+    height:"auto",
     backgroundColor: "#fff",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
     border: "0px",
-    fontSize: 14,
   },
   paperCreate: {
     height: 134,
@@ -284,14 +283,14 @@ export default function CreateJobPage() {
 
   return (
     <div className={classes.root} style={{ fontSize: 18 }}>
-      <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"space-between",alignItems:'center'}}>
-      <h3 style={{fontSize:20,color: "#385A7C"}}>All Job Structure</h3>
+      <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"space-between",alignItems:'center',marginLeft:50,marginRight:50}}>
+      <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>All Job Structure</h3>
       <ColorButton
         variant="contained"
-        color="primary"
         className={classes.margin}
         startIcon={<AddIcon />}
         onClick={handleClickOpen}
+        style={{fontFamily:"Oswald"}}
       >
         Create Job
       </ColorButton>
@@ -306,7 +305,7 @@ export default function CreateJobPage() {
           >
             <Grid container>
               {CreateJobReducer.JobFamily.map((item, index) => (
-                <Grid key={index} item xs={12} sm={4}>
+                <Grid key={index} item xs={12} sm={4} style={{display:"flex", justifyContent:"center"}}>
                   <Paper
                     className={classes.paper}
                     type="button"
@@ -320,6 +319,7 @@ export default function CreateJobPage() {
                         marginTop: 15,
                         fontWeight: "bold",
                         paddingTop:20,
+                        fontFamily:"Oswald"
                       }}
                     >
                       {item.NameJob}
@@ -337,9 +337,9 @@ export default function CreateJobPage() {
                         </Paper>
                       </Grid>
                       <Grid item xs={6} sm={6}>
-                        <div className={classes.marginAt} style={{lineHeight:"2"}}>
+                        <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
                           <div>
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 1</label>
                             </div>
                             <BorderLinearProgress
@@ -348,7 +348,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 2</label>
                             </div>
                             <BorderLinearProgress
@@ -357,7 +357,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 3</label>
                             </div>
                             <BorderLinearProgress
@@ -366,7 +366,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 4</label>
                             </div>
                             <BorderLinearProgress
@@ -375,7 +375,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 5</label>
                             </div>
                             <BorderLinearProgress
@@ -401,7 +401,7 @@ export default function CreateJobPage() {
         <Grid container>
           <Grid xs={12} sm={12} item>
             <DialogTitle style={{ textAlign: "center",}}>
-            <h3 style={{fontSize:20,color: "#FF3019"}}>Create New Job</h3>
+            <h3 style={{fontSize:20,color: "#FF3019",fontFamily:"Oswald"}}>Create New Job</h3>
             </DialogTitle>
           </Grid>
           <DialogContent>

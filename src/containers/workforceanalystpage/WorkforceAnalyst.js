@@ -10,11 +10,12 @@ import ScatterChart from "./contents/ScatterChart"
 import TrendLabour from "./contents/TrendLabour"
 
 
+
 export default function WorkforceAnalyst() {
     return (
-        <Grid container>
+        <Grid container >
             <Grid item xs={12} sm={12} style={{textAlign:"center"}}>
-                <h3 style={{fontSize:20,color: "#385A7C"}}>Workforce Analytic Overall</h3>
+                <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>Workforce Analytic Overall</h3>
             </Grid>
             <Grid item xs={12} sm={6}  style={{marginTop:15}}>
                 <ManAct/>
