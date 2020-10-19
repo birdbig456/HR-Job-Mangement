@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color:'#FF3019'
+    color:'#FF3019',
   },
   drawerHeader: {
     display: "flex",
@@ -191,9 +191,9 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <LibraryAddOutlinedIcon style={{color:"#ff3019"}}/>
+                    <LibraryAddOutlinedIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
-                  <ListItemText primary={"Create Job"}  />
+                  <ListItemText primary={"Create Job"}/>
                 </ListItem>
               </Link>
 
@@ -204,7 +204,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <AccountBoxOutlinedIcon style={{color:"#ff3019"}}/>
+                    <AccountBoxOutlinedIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"My Profile"} />
                 </ListItem>
@@ -216,7 +216,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <StorageOutlinedIcon style={{color:"#ff3019"}}/>
+                    <StorageOutlinedIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Show Job"} />
                 </ListItem>
@@ -228,7 +228,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <GroupOutlinedIcon style={{color:"#ff3019"}}/>
+                    <GroupOutlinedIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Workforce Capacity"} />
                 </ListItem>
@@ -240,7 +240,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <EqualizerOutlinedIcon style={{color:"#ff3019"}}/>
+                    <EqualizerOutlinedIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Workforce Analyst"} />
                 </ListItem>
@@ -252,7 +252,7 @@ export default function App() {
               >
                 <ListItem button>
                   <ListItemIcon>
-                    <MailIcon style={{color:"#ff3019"}}/>
+                    <MailIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Job & Department"} />
                 </ListItem>

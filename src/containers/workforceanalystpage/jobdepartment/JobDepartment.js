@@ -24,7 +24,7 @@ export default function JobDepartment() {
     return (
         <Grid container >
             <Grid item xs={12} sm={12} style={{textAlign:"center",marginBottom:25}}>
-                <h3 style={{fontSize:20,color: "#385A7C"}}>Workforce Analytic Job & Department Level</h3>
+                <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>Workforce Analytic Job & Department Level</h3>
             </Grid>
             <Grid item xs={12} sm={9} >
                 <div className={classes.Block} style={{textAlign:"center"}}>

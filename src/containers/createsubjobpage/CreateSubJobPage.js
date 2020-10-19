@@ -324,16 +324,15 @@ export default function CreateSubJobPage({ match }) {
                   <Grid item xs={12} sm={12}>
                     <Grid container>
                       <Grid key={index} item xs={12} sm={12}>
-                        <div style={{ borderBottom: "1px Solid #000200" ,marginRight:30 }}>
+                        <div style={{ borderBottom: "1px Solid #385A7C" ,marginRight:30 }}>
                           <Paper className={classes.paperJob} type="button">
                             <div
                               style={{
                                 color:"#FF3019",
                                 textAlign: "center",
                                 fontSize: 20,
-                                marginTop: 15,
                                 fontWeight: "bold",
-                                paddingTop:20,
+                                paddingTop:30,
                                 fontFamily:"Oswald"
                               }}
                             >
@@ -352,10 +351,10 @@ export default function CreateSubJobPage({ match }) {
                                 </Paper>
                               </Grid>
                               <Grid item xs={6} sm={6}>
-                                <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
+                                <div className={classes.marginAt} style={{lineHeight:"2",fontFamily:"Noto Sans"}}>
                                   <div>
                                     <div
-                                      style={{ fontSize: 16,color:"#385A7C" }}
+                                      style={{ fontSize: 14,color:"#385A7C" }}
                                     >
                                       <label>Attribute 1</label>
                                     </div>
@@ -366,7 +365,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 16 ,color:"#385A7C"}}
+                                      style={{ fontSize: 14 ,color:"#385A7C"}}
                                     >
                                       <label>Attribute 2</label>
                                     </div>
@@ -377,7 +376,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 16 ,color:"#385A7C"}}
+                                      style={{ fontSize: 14 ,color:"#385A7C"}}
                                     >
                                       <label>Attribute 3</label>
                                     </div>
@@ -388,7 +387,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 16 ,color:"#385A7C"}}
+                                      style={{ fontSize: 14 ,color:"#385A7C"}}
                                     >
                                       <label>Attribute 4</label>
                                     </div>
@@ -399,7 +398,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 16,color:"#385A7C" }}
+                                      style={{ fontSize: 14,color:"#385A7C" }}
                                     >
                                       <label>Attribute 5</label>
                                     </div>

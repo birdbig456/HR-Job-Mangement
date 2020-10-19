@@ -46,7 +46,7 @@ export default function TrendLabour() {
   const classes = useStyles();
   return (
     <Grid container>
-      <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" ,fontWeight:"bolder"}}>
+      <p style={{ marginLeft: 40, fontSize: 20, color: "#FF3019" ,fontWeight:"bolder",fontFamily:"Oswald",}}>
         Trend Labour
       </p>
       <Grid

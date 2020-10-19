@@ -31,7 +31,7 @@ export default function JobView() {
     <div style={{ backgroundColor: "#fafafa", padding: 20 }}>
       <Grid container>
         <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"space-between",alignItems:'center'}}>
-          <h3 style={{fontSize:20,color: "#385A7C"}}>Workforce Capacity</h3>
+          <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>Workforce Capacity</h3>
           <Button
             className={classes.button}
             variant="contained"
@@ -48,24 +48,26 @@ export default function JobView() {
 
       {CreateTeamReducer.Team.map((num, index) => (
         <Accordion key={index}
-          style={{ marginTop: 20, boxShadow: "0px 0px 0px rgba(0,0,0,0)" }}
+          style={{ marginTop: 20, boxShadow: "0px 0px 0px rgba(0,0,0,0)",background:"#ff3019",borderRadius:15 }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#FF3019" }} />}
+            expandIcon={<ExpandMoreIcon style={{ color: "#ffffff" }} />}
             aria-controls="panel2a-content"
             id="panel2a-header"
-            style={{ border: "1px solid #E5E5E5", boxShadow:"0px 1px 1px rgba(0, 0, 0, 0.1)" }}
+            style={{ border: "0px", boxShadow:"0px 1px 1px rgba(0, 0, 0, 0.1)" ,borderRadius:15}}
           >
             <Typography
               className={classes.heading}
               style={{
-                color: "#FF3019",
-                textAlign: "left",
+                color: "#ffffff",
+                textAlign: "center",
                 width: "100%",
-                fontSize: 18,
+                fontSize: 17,
+                fontFamily:"Noto Sans",
+                fontWeight:"bold"
               }}
             >
-              Team : {num}
+              TEAM : {num}
             </Typography>
           </AccordionSummary>
           <AccordionDetails style={{ background: "#fff" }}>

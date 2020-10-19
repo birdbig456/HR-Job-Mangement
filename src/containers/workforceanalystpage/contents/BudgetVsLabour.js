@@ -30,12 +30,12 @@ export default function BudgetVsLabour() {
   return (
     <Grid container>
       <Grid item xs={5} sm={5}>
-        <p style={{ marginLeft: 40, fontSize: 16, color: "#ff3019" ,fontWeight:"bolder"}}>
+        <p style={{ marginLeft: 40, fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
           Budget
         </p>
         <div className={classes.LeftBlock}>
           <Box style={{ display: "flex", justifyContent: "center" }}>
-            <h2 style={{ marginTop: 60 ,color:"#FEC566"}}>202,000,000</h2>
+            <h1 style={{ marginTop: 50 ,color:"#FEC566",fontFamily:"Oswald"}}>202,000,000</h1>
           </Box>
           <Box
             style={{
@@ -43,9 +43,10 @@ export default function BudgetVsLabour() {
               justifyContent: "flex-end",
               marginRight: 25,
               color:"#FEC566"
+              ,fontFamily:"Oswald"
             }}
           >
-            <h3>Baht</h3>
+            <h3>baht</h3>
           </Box>
         </div>
       </Grid>
@@ -58,16 +59,19 @@ export default function BudgetVsLabour() {
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
-          color:"#ff3019"
+          color:"#ff3019",
+          fontSize:20,
+          fontFamily:"Oswald",
+          fontWeight:"bolder",
         }}
       >
         <h4>VS</h4>
       </Grid>
       <Grid item xs={5} sm={5}>
-        <p style={{ fontSize: 16, color: "#ff3019" ,fontWeight:"bolder"}}>Labour Cost</p>
+        <p style={{ fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Labour Cost</p>
         <div className={classes.RightBlock}>
           <Box style={{ display: "flex", justifyContent: "center" }}>
-            <h2 style={{ marginTop: 60 ,color:"#FEC566"}}>249,000,000</h2>
+            <h1 style={{ marginTop: 50 ,color:"#FEC566",fontFamily:"Oswald"}}>249,000,000</h1>
           </Box>
           <Box
             style={{
@@ -75,9 +79,10 @@ export default function BudgetVsLabour() {
               justifyContent: "flex-end",
               marginRight: 25,
               color:"#FEC566"
+              ,fontFamily:"Oswald"
             }}
           >
-            <h3>Baht</h3>
+            <h3>baht</h3>
           </Box>
         </div>
       </Grid>

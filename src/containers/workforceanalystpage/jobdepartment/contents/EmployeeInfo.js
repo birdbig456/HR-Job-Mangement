@@ -20,7 +20,7 @@ export default function EmployeeInfo() {
     
         <Grid
         className={classes.Block}
-        style={{ textAlign: "left", lineHeight: 4, height:"70%"}}
+        style={{ textAlign: "left", lineHeight: 4, height:"70%",fontFamily:"Noto Sans"}}
       >
         <Grid style={{ margin: 25 }}>
           <div style={{ marginLeft: 20 }}>Name : </div>

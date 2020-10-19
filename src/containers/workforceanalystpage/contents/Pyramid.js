@@ -42,7 +42,7 @@ export default function Pyramid() {
         <Route exact path="/JobDepartment" component={JobDepartment} />
       </Switch>
       </BrowserRouter> */}
-      <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" ,fontWeight:"bolder"}}>Pyramid</p>
+      <p style={{ marginLeft: 40,fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Pyramid</p>
       <Grid
         item
         xs={12}

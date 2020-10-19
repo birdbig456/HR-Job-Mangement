@@ -19,7 +19,7 @@ export default function TotalAmount() {
     return (
         <Grid className={classes.Block} style={{height:"30%"}} >
         <Grid style={{ margin: 25 }}>
-          <div style={{ marginLeft: 20 }}>Total Amount : </div>
+          <div style={{ marginLeft: 20 ,fontFamily:"Noto Sans" }}>Total Amount : </div>
           <div
             style={{
               alignItems: "center",
@@ -27,7 +27,8 @@ export default function TotalAmount() {
               justifyContent: "center",
                 marginTop:20,
                 marginBottom:20,
-                color:"#36a69a"
+                color:"#36a69a",
+                fontFamily:"Oswald",
             }}
           >
               <h1>500</h1>
