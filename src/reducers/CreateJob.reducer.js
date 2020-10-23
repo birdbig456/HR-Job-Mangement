@@ -13,24 +13,39 @@ const JobFamily = [
     Employee : ["bird","nay"]
   },
   {
-    NameJob: "Job 3 ",
+    NameJob: "Job 7 ",
     Description: "",
-    Employee : ["bird","nay","Pro"]
+    Employee : ["bird","nay","M","PK","Pro","LL","aa","sss"]
   },
   {
     NameJob: "Job 4 ",
     Description: "",
-    Employee : ["bird","nay","M","Pro"]
+    Employee : ["bird","nay","M","PK","Pro","LL","aaa0","aaaaaa","sasasa","asqsqw"]
+  },
+  {
+    NameJob: "Job 4 ",
+    Description: "",
+    Employee : ["bird","nay","M","PK","Pro","LL","aaaaaa","sasasa","asqsqw","bird","nay","M","PK","Pro","LL","aaa0","aaaaaa","sasasa","asqsqw"]
+  },
+  {
+    NameJob: "Job 3 ",
+    Description: "",
+    Employee : ["bird","nay","M","PK","IT"]
+  },
+  {
+    NameJob: "Job 4 ",
+    Description: "",
+    Employee : ["bird","nay","M","PK","Pro","LL"]
   },
   {
     NameJob: "Job 5 ",
     Description: "",
-    Employee : ["bird","nay","M","PK","Pro"]
+    Employee : ["bird","nay","M","Pro"]
   },
   {
     NameJob: "Job 6 ",
     Description: "",
-    Employee : ["bird","nay","M","PK","IT"]
+    Employee : ["bird","nay","Pro"]
   },
 ];
 

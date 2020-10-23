@@ -147,6 +147,7 @@ export default function CreateJobPage() {
     Description: "",
     preview: "",
     raw: "",
+    Employee:[]
   });
 
   const handleClickOpen = () => {
@@ -411,7 +412,7 @@ export default function CreateJobPage() {
 
                 dataSend.preview = newJob.preview;
                 dataSend.raw = newJob.raw;
-
+                dataSend.Employee = newJob.Employee;
                 dispatch(CreateAction.CreateJob(dataSend));
 
                 handleClose();
