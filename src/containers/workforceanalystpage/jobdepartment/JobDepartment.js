@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
       border: "solid 1px #e5e5e5",
       borderRadius: 5,
       height: "auto",
-      width:600,
       marginLeft:5,
       marginRight:5,
       boxShadow:"0px 2px 2px rgba(0, 0, 0, 0.1)"
@@ -28,7 +27,9 @@ export default function JobDepartment() {
                 <h3 style={{fontSize:20,color: "#385A7C"}}>Workforce Analytic Job & Department Level</h3>
             </Grid>
             <Grid item xs={12} sm={9} >
-                <PyramidJob/>
+                <div className={classes.Block} style={{textAlign:"center"}}>
+                    <PyramidJob/>
+                </div>
             </Grid>
             <Grid item xs={12} sm={3}>
                     <EmployeeInfo/>
