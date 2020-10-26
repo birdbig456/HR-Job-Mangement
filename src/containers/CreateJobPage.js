@@ -31,7 +31,7 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
   bar: {
     borderRadius: 15,
-    background:"#36a69a"
+    background:"#26A69A"
   },
 }))(LinearProgress);
 
@@ -147,6 +147,7 @@ export default function CreateJobPage() {
     Description: "",
     preview: "",
     raw: "",
+    Employee:[]
   });
 
   const handleClickOpen = () => {
@@ -290,7 +291,7 @@ export default function CreateJobPage() {
         className={classes.margin}
         startIcon={<AddIcon />}
         onClick={handleClickOpen}
-        style={{fontFamily:"Noto Sans"}}
+        style={{fontFamily:"Oswald"}}
       >
         Create Job
       </ColorButton>
@@ -316,17 +317,18 @@ export default function CreateJobPage() {
                         color:"#FF3019",
                         textAlign: "center",
                         fontSize: 20,
+                        marginTop: 15,
                         fontWeight: "bold",
-                        paddingTop:30,
+                        paddingTop:20,
                         fontFamily:"Oswald"
                       }}
                     >
                       {item.NameJob}
                     </div>
                     <Grid container>
-                      <Grid item xs={6} sm={6} style={{ display:"flex",justifyContent:"flex-end"}}>
+                      <Grid item xs={6} sm={6} style={{ display:"flex",alignItems:"center",justifyContent:"flex-end"}}>
                         <Paper className={classes.avatarInPut} 
-                              style={{marginTop:28,
+                              style={{marginTop:10,
                                       borderTopLeftRadius:0,
                                       borderTopRightRadius:0,
                                       borderBottomLeftRadius:0,
@@ -336,9 +338,9 @@ export default function CreateJobPage() {
                         </Paper>
                       </Grid>
                       <Grid item xs={6} sm={6}>
-                        <div className={classes.marginAt} style={{lineHeight:"2",fontFamily:"Noto Sans",marginBottom:70}}>
+                        <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
                           <div>
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 1</label>
                             </div>
                             <BorderLinearProgress
@@ -347,7 +349,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 2</label>
                             </div>
                             <BorderLinearProgress
@@ -356,7 +358,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 3</label>
                             </div>
                             <BorderLinearProgress
@@ -365,7 +367,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 4</label>
                             </div>
                             <BorderLinearProgress
@@ -374,7 +376,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 14 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
                               <label>Attribute 5</label>
                             </div>
                             <BorderLinearProgress
@@ -410,7 +412,7 @@ export default function CreateJobPage() {
 
                 dataSend.preview = newJob.preview;
                 dataSend.raw = newJob.raw;
-
+                dataSend.Employee = newJob.Employee;
                 dispatch(CreateAction.CreateJob(dataSend));
 
                 handleClose();
