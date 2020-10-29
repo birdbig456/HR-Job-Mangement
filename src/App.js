@@ -36,12 +36,14 @@ import PositionCrate from "./containers/createsubjobpage/positionpage/PositionCr
 import WorkforceCapacity from "./containers/workforcecapacitypage/WorkforceCapacity"
 import WorkforceAnalyst from "./containers/workforceanalystpage/WorkforceAnalyst"
 import JobDepartment from "./containers/workforceanalystpage/jobdepartment/JobDepartment"
+import WorkforcePersonal from './containers/WorkforcePersonalpage.js/WorkforcePersonal';
+
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
   palette: {
 
     primary: {
-      main: '#FF3019',
+      main: '#Ff3019',
 
     secondary: {
       main: green[500],
@@ -131,7 +133,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className={classes.root} >
+      <div className={classes.root} style={{backgroundImage:"linear-gradient(to bottom right, #ffff,#ffffff )"}}>
         
           <CssBaseline />
           <ThemeProvider theme={outerTheme}>
@@ -144,7 +146,7 @@ export default function App() {
           >
             <Toolbar>
               <IconButton
-              style={{color:"#ffffff"}}
+              style={{color:"#ffff"}}
                 aria-label="open drawer"
                 onClick={handleDrawerOpen}
                 edge="start"
@@ -152,7 +154,7 @@ export default function App() {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h6" noWrap style={{fontFamily:"Oswald"}}>
+              <Typography variant="h6" noWrap style={{fontFamily:"Oswald",color:"#ffff"}}>
                 JOB - JAB
               </Typography>
             </Toolbar>
@@ -170,7 +172,7 @@ export default function App() {
           >
             <div className={classes.drawerHeader}>
               <IconButton
-              style={{color:"#FF3019"}}
+              style={{color:"#ff3019"}}
                 className={classes.palette}
                 onClick={handleDrawerClose}
               >
@@ -258,6 +260,18 @@ export default function App() {
                 </ListItem>
               </Link>
 
+              <Link
+                to="/WorkforcePersonal"
+                className={classes.link}
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <MailIcon style={{color:"#385A7C"}}/>
+                  </ListItemIcon>
+                  <ListItemText primary={"Workforce Personal"} />
+                </ListItem>
+              </Link>
+
             </List>
             
           </Drawer>
@@ -275,6 +289,7 @@ export default function App() {
               <Route exact path="/WorkforceCapacity" component={WorkforceCapacity} />
               <Route exact path="/WorkforceAnalyst" component={WorkforceAnalyst}/>
               <Route exact path="/JobDepartment" component={JobDepartment} />
+              <Route exact path="/WorkforcePersonal" component={WorkforcePersonal} />
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
               <Route exact path="/:JobName/:SubJobName/Position" component={PositionPage} />

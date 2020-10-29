@@ -58,7 +58,7 @@ export default function PyramidJob() {
   },[]);
 
   return (
-    <div style={{ marginLeft:200,marginRight:200,marginTop:40}}>
+    <div style={{ marginLeft:250,marginRight:250,marginTop:40}}>
       
         {result.map((item, index) => (   
           <div
@@ -72,6 +72,8 @@ export default function PyramidJob() {
             borderRadius:20,    
             padding: 7,
             textAlign: "center",
+            display:"flex",
+            justifyContent:"center"
           }}
           key={index}
         >   
@@ -82,7 +84,7 @@ export default function PyramidJob() {
                   <Avatar
                     alt={itemEmp}
                     src="/static/images/avatar/1.jpg"
-                    style={{ background: "#ff3019" }}
+                    style={{ background: "#ff3019", marginLeft:"auto",marginRight:"auto" }}
                   />
                   
                 ))}

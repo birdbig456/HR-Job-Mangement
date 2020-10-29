@@ -27,11 +27,11 @@ const BorderLinearProgress = withStyles((theme) => ({
     borderRadius: 5,
   },
   colorPrimary: {
-    backgroundColor: theme.palette.grey[theme.palette.type === "" ? 200 : 700],
+    backgroundColor:"",
   },
   bar: {
     borderRadius: 15,
-    background:"#26A69A"
+    background:"#385A7C"
   },
 }))(LinearProgress);
 
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 20,
     width: 360,
     height:"auto",
-    backgroundColor: "#fff",
+    background:"#f3f6fc",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
     border: "0px",
   },
@@ -125,9 +125,9 @@ export default function CreateJobPage() {
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress(() => {
-        return Math.min(100), console.log();
+        return 80
       });
-    }, 500);
+    }, 100);
 
     return () => {
       clearInterval(timer);
@@ -314,7 +314,7 @@ export default function CreateJobPage() {
                   >
                     <div
                       style={{
-                        color:"#FF3019",
+                        color:"#ff3019",
                         textAlign: "center",
                         fontSize: 20,
                         marginTop: 15,
@@ -340,7 +340,7 @@ export default function CreateJobPage() {
                       <Grid item xs={6} sm={6}>
                         <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
                           <div>
-                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
                               <label>Attribute 1</label>
                             </div>
                             <BorderLinearProgress
@@ -349,7 +349,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
                               <label>Attribute 2</label>
                             </div>
                             <BorderLinearProgress
@@ -358,7 +358,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
                               <label>Attribute 3</label>
                             </div>
                             <BorderLinearProgress
@@ -367,7 +367,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
                               <label>Attribute 4</label>
                             </div>
                             <BorderLinearProgress
@@ -376,7 +376,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
                               <label>Attribute 5</label>
                             </div>
                             <BorderLinearProgress
