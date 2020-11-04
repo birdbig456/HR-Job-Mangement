@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Bar } from "react-chartjs-2";
+import React, { Component } from "react";
+import { Line, Pie, HorizontalBar } from "react-chartjs-2";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -16,21 +16,52 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ManpowerVsActual() {
-  const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
+
+function ManpowerVsActual() {
+  
+
+const optionsBar = {
+  scales: {
+    xAxes: [
       {
-        label: 'My First dataset',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-        hoverBorderColor: 'rgba(255,99,132,1)',
-        data: [65, 59, 80, 81, 56, 55, 40,0]
+        stacked: false,
+        ticks: {
+          beginAtZero: true,
+          callback: (v) => {
+            return v < 0 ? -v : v;
+          },
+        },
+      },
+    ],
+    yAxes: [
+      {
+        stacked: true,
+        ticks: {
+          beginAtZero: true,
+        },
+        position: "left",
       }
-    ]
-  };
+    ],
+  }
+}
+
+let dataBar ={ 
+  datasets: [
+    {
+      label: "Male",
+      stack: "Stack 0",
+      backgroundColor: "#d41111",
+      data: [10, 20, 30, 40, 50, 60],
+    },
+    {
+      label: "Female",
+      stack: "Stack 0",
+      backgroundColor: "#3765b0",
+      data: [10, 15, 30, 60, 50].map((k) => -k),
+    },
+  ],
+   labels: ["January", "February", "March", "April", "May", "June", "July"],
+}
   const classes = useStyles();
   return (
     <Grid container>
@@ -38,8 +69,11 @@ export default function ManpowerVsActual() {
         Man Power VS Actual
       </p>
       <Grid container className={classes.Block}>
-      
+      ⠀⠀⠀
+      <HorizontalBar   data={dataBar} options={optionsBar} />
       </Grid>
     </Grid>
   );
 }
+
+export default ManpowerVsActual;
