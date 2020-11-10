@@ -4,6 +4,7 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
+import * as CreateAction from "../../actions/CreateJob.action";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     card:{
         marginLeft:"10%",
         marginRight:"10%",
+        marginBottom:10
     },
     button: {
       background: "#FF3019",
@@ -25,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JobClassified() {
     const classes = useStyles();
+
+    const [count, setCount] = useState(4);
+  const dispatch = useDispatch();
+  const CreateLevelReducer = useSelector(
+    ({ CreateLevelReducer }) => CreateLevelReducer
+  );
     return (
         <div style={{ backgroundColor: "#fafafa", padding: 20 }} >
         <Grid container>
@@ -33,18 +41,19 @@ export default function JobClassified() {
           <Button 
             className={classes.button}
             variant="contained"
-            // onMouseEnter={() => {}}
-            // onClick={() => {
-            //   dispatch(CreateAction.CreateTeam(count));
-            //   setCount(count + 1);
-            // }}
+            onMouseEnter={() => {}}
+            onClick={() => {
+              dispatch(CreateAction.CreateLevel(count));
+              setCount(count + 1);
+            }}
           >
             Create Level
           </Button>
           </Grid>
         </Grid>
 
-        <Card className={classes.card}>
+        {CreateLevelReducer.Level.map((num, index) => (
+        <Card  key={index} className={classes.card}>
             <CardContent style={{}}>
                 <Grid item xs={12} sm={12} style={{display:"flex", justifyContent:"space-between",alignItems:'center'}}>
                     <Typography 
@@ -57,7 +66,7 @@ export default function JobClassified() {
                             fontWeight:"bold"
                             }}
                         >
-                         Level 1
+                         Level {num}
                   </Typography>
                     <CardActions style={{padding:0}}>
                         <IconButton style={{padding:0,color:"#ff3019"}}><CancelIcon/></IconButton>
@@ -71,7 +80,7 @@ export default function JobClassified() {
                 </Grid>
             </CardContent>
         </Card>
-
+        ))}
         </div>
     )
 }

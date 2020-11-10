@@ -7,6 +7,8 @@ import { CREATECOMPETENCY_ACTION_CREATE } from "../constants/Constants";
 import { CREATEJOBFIT_ACTION_CREATE } from "../constants/Constants";
 import { CREATETEAM_ACTION_CREATE } from "../constants/Constants";
 import { CREATEDIVISION_ACTION_CREATE } from "../constants/Constants";
+import { CREATELEVEL_ACTION_CREATE } from "../constants/Constants";
+
 export const setStateToCreateJob = (payload) => ({
     type: CREATEJOB_ACTION_CREATE,
     payload
@@ -49,6 +51,11 @@ export const setStateToCreateTeam = (payload) => ({
 
 export const setStateToCreateDivision = (payload) => ({
     type: CREATEDIVISION_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateLevel = (payload) => ({
+    type: CREATELEVEL_ACTION_CREATE,
     payload
 })
 
@@ -108,5 +115,11 @@ export const CreateDivision= (payload) => {
     return dispatch => {
         console.log(payload)
         dispatch(setStateToCreateDivision(payload))
+    }
+}
+export const CreateLevel= (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateLevel(payload))
     }
 }
