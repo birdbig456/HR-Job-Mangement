@@ -19,6 +19,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import LibraryAddOutlinedIcon from '@material-ui/icons/LibraryAddOutlined';
 import AccountBoxOutlinedIcon from '@material-ui/icons/AccountBoxOutlined';
 import StorageOutlinedIcon from '@material-ui/icons/StorageOutlined';
@@ -37,6 +38,7 @@ import WorkforceCapacity from "./containers/workforcecapacitypage/WorkforceCapac
 import WorkforceAnalyst from "./containers/workforceanalystpage/WorkforceAnalyst"
 import JobDepartment from "./containers/workforceanalystpage/jobdepartment/JobDepartment"
 import WorkforcePersonal from './containers/WorkforcePersonalpage.js/WorkforcePersonal';
+import JobClassified from './containers/JobClassifiedpage/JobClassified'
 
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
@@ -272,6 +274,18 @@ export default function App() {
                 </ListItem>
               </Link>
 
+              <Link
+                to="/JobClassified"
+                className={classes.link}
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <FormatListBulletedIcon style={{color:"#385A7C"}}/>
+                  </ListItemIcon>
+                  <ListItemText primary={"Job Classified"} />
+                </ListItem>
+              </Link>
+
             </List>
             
           </Drawer>
@@ -290,6 +304,7 @@ export default function App() {
               <Route exact path="/WorkforceAnalyst" component={WorkforceAnalyst}/>
               <Route exact path="/JobDepartment" component={JobDepartment} />
               <Route exact path="/WorkforcePersonal" component={WorkforcePersonal} />
+              <Route exact path="/JobClassified" component={JobClassified} />
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
               <Route exact path="/:JobName/:SubJobName/Position" component={PositionPage} />

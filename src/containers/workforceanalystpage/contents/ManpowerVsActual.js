@@ -48,16 +48,16 @@ const optionsBar = {
 let dataBar ={ 
   datasets: [
     {
-      label: "Male",
+      label: "Best fit",
       stack: "Stack 0",
-      backgroundColor: "#d41111",
+      backgroundColor: "#ff3019",
       data: [10, 20, 30, 40, 50, 60],
     },
     {
-      label: "Female",
+      label: "Actual",
       stack: "Stack 0",
-      backgroundColor: "#3765b0",
-      data: [10, 15, 30, 60, 50].map((k) => -k),
+      backgroundColor: "#385A7C",
+      data: [10, 15, 30, 60, 50,40].map((k) => -k),
     },
   ],
    labels: ["January", "February", "March", "April", "May", "June", "July"],
