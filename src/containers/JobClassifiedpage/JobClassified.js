@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 export default function JobClassified() {
     const classes = useStyles();
 
-    const [count, setCount] = useState(4);
+    const [count, setCount] = useState(2);
   const dispatch = useDispatch();
   const CreateLevelReducer = useSelector(
     ({ CreateLevelReducer }) => CreateLevelReducer
@@ -72,11 +72,14 @@ export default function JobClassified() {
                         <IconButton style={{padding:0,color:"#ff3019"}}><CancelIcon/></IconButton>
                     </CardActions>
                 </Grid>
-                <Grid style={{display:"flex", justifyContent:"space-evenly"}}>
+                <Grid style={{display:"flex", justifyContent:"space-evenly",marginBottom:20}}>
                 <TextField style={{marginTop:15}} id="outlined-basic" label="Min" variant="outlined" />
                 <TextField style={{marginTop:15}} id="outlined-basic" label="Max" variant="outlined" />
                 <TextField style={{marginTop:15}} id="outlined-basic" label="Average" variant="outlined" />
                 <TextField style={{marginTop:15}} id="outlined-basic" label="Market Public" variant="outlined" />
+                </Grid>
+                <Grid style={{display:"flex", justifyContent:"flex-end"}}>
+                  <Button className={classes.button}>Submit</Button>
                 </Grid>
             </CardContent>
         </Card>

@@ -71,7 +71,7 @@ export default function Profile() {
                             flexDirection:"column",
                             alignItems:"center",
                             margin:0}}>
-            <Avatar src="https://sv1.picz.in.th/images/2020/09/16/ORllZe.jpg" 
+            <Avatar src="https://sv1.picz.in.th/images/2020/11/11/bPU7oa.png" 
                     className={classes.large}
              ></Avatar>
             <h2 style={{ color:"#ff3019", fontFamily:"Oswald",marginBottom:0}}>Birdy Pongsakorn</h2>

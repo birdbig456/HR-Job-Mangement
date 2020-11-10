@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     height: "auto",
     width: 300,
-    backgroundColor: "#303f9f",
+    backgroundColor: "#ff3019",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
     border: "1px solid #D2CBCB",
     textAlign: "center",
