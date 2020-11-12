@@ -15,8 +15,8 @@ import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
     card:{
-        marginLeft:"10%",
-        marginRight:"10%",
+        marginLeft:"15%",
+        marginRight:"15%",
         marginBottom:10
     },
     button: {
@@ -72,12 +72,28 @@ export default function JobClassified() {
                         <IconButton style={{padding:0,color:"#ff3019"}}><CancelIcon/></IconButton>
                     </CardActions>
                 </Grid>
-                <Grid style={{display:"flex", justifyContent:"space-evenly",marginBottom:20}}>
-                <TextField style={{marginTop:15}} id="outlined-basic" label="Min" variant="outlined" />
-                <TextField style={{marginTop:15}} id="outlined-basic" label="Max" variant="outlined" />
-                <TextField style={{marginTop:15}} id="outlined-basic" label="Average" variant="outlined" />
-                <TextField style={{marginTop:15}} id="outlined-basic" label="Market Public" variant="outlined" />
+                <Grid style={{display:"flex",textAlign:"center",marginTop:10}}>
+                <Grid item xs={4} sm={4}> 
+                <TextField style={{margin:10}} id="outlined-basic" label="Level" variant="outlined" />
                 </Grid>
+                <Grid item xs={4} sm={4}> 
+                <TextField style={{margin:10}} id="outlined-basic" label="Min" variant="outlined" />
+                </Grid>
+                <Grid item xs={4} sm={4}> 
+                <TextField style={{margin:10}} id="outlined-basic" label="Max" variant="outlined" />
+                </Grid>
+                </Grid>
+                <Grid style={{display:"flex",textAlign:"center"}}>
+                <Grid item xs={4} sm={4}> 
+                <TextField style={{margin:10}} id="outlined-basic" label="Average" variant="outlined" />
+                </Grid>
+                <Grid item xs={4} sm={4}> 
+                <TextField style={{margin:10}} id="outlined-basic" label="Market Public" variant="outlined" />
+                </Grid>
+                <Grid item xs={4} sm={4}> 
+                </Grid>
+                </Grid>
+                
                 <Grid style={{display:"flex", justifyContent:"flex-end"}}>
                   <Button className={classes.button}>Submit</Button>
                 </Grid>
