@@ -340,7 +340,7 @@ export default function CreateJobPage() {
                       <Grid item xs={6} sm={6}>
                         <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
                           <div>
-                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#000000",}}>
                               <label>Attribute 1</label>
                             </div>
                             <BorderLinearProgress
@@ -349,7 +349,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#000000",}}>
                               <label>Attribute 2</label>
                             </div>
                             <BorderLinearProgress
@@ -358,7 +358,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#000000",}}>
                               <label>Attribute 3</label>
                             </div>
                             <BorderLinearProgress
@@ -367,7 +367,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#000000",}}>
                               <label>Attribute 4</label>
                             </div>
                             <BorderLinearProgress
@@ -376,7 +376,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"##385A7C",}}>
+                            <div style={{ fontSize: 16 ,color:"#000000",}}>
                               <label>Attribute 5</label>
                             </div>
                             <BorderLinearProgress

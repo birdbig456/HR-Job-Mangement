@@ -37,7 +37,6 @@ import PositionCrate from "./containers/createsubjobpage/positionpage/PositionCr
 import WorkforceCapacity from "./containers/workforcecapacitypage/WorkforceCapacity"
 import WorkforceAnalyst from "./containers/workforceanalystpage/WorkforceAnalyst"
 import JobDepartment from "./containers/workforceanalystpage/jobdepartment/JobDepartment"
-import WorkforcePersonal from './containers/WorkforcePersonalpage.js/WorkforcePersonal';
 import JobClassified from './containers/JobClassifiedpage/JobClassified'
 
 const drawerWidth = 240;
@@ -197,7 +196,7 @@ export default function App() {
                   <ListItemIcon>
                     <LibraryAddOutlinedIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
-                  <ListItemText primary={"Create Job"}/>
+                  <ListItemText primary={"Job Display"}/>
                 </ListItem>
               </Link>
 
@@ -263,18 +262,6 @@ export default function App() {
               </Link>
 
               <Link
-                to="/WorkforcePersonal"
-                className={classes.link}
-              >
-                <ListItem button>
-                  <ListItemIcon>
-                    <MailIcon style={{color:"#385A7C"}}/>
-                  </ListItemIcon>
-                  <ListItemText primary={"Workforce Personal"} />
-                </ListItem>
-              </Link>
-
-              <Link
                 to="/JobClassified"
                 className={classes.link}
               >
@@ -303,7 +290,6 @@ export default function App() {
               <Route exact path="/WorkforceCapacity" component={WorkforceCapacity} />
               <Route exact path="/WorkforceAnalyst" component={WorkforceAnalyst}/>
               <Route exact path="/JobDepartment" component={JobDepartment} />
-              <Route exact path="/WorkforcePersonal" component={WorkforcePersonal} />
               <Route exact path="/JobClassified" component={JobClassified} />
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />

@@ -37,7 +37,7 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
   bar: {
     borderRadius: 15,
-    background:"#26A69A"
+    background:"#385A7C"
   },
 }))(LinearProgress);
 const ColorButton = withStyles((theme) => ({
@@ -102,15 +102,13 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
   },
   paperJob: {
-    
+    margin: "auto",
+    marginBottom: 40,
     width: 360,
-    height:300,
-    backgroundColor: "#fff",
+    height:"auto",
+    background:"#f3f6fc",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
     border: "0px",
-    fontSize: 14,
-    margin:"auto",
-    marginBottom:40
   },
   marginAt: {
     margin: theme.spacing(3),
@@ -351,10 +349,10 @@ export default function CreateSubJobPage({ match }) {
                                 </Paper>
                               </Grid>
                               <Grid item xs={6} sm={6}>
-                                <div className={classes.marginAt} style={{lineHeight:"2",fontFamily:"Noto Sans"}}>
+                                <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
                                   <div>
                                     <div
-                                      style={{ fontSize: 14,color:"#385A7C" }}
+                                      style={{ fontSize: 16,color:"000000" }}
                                     >
                                       <label>Attribute 1</label>
                                     </div>
@@ -365,7 +363,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 14 ,color:"#385A7C"}}
+                                      style={{ fontSize: 16 ,color:"000000"}}
                                     >
                                       <label>Attribute 2</label>
                                     </div>
@@ -376,7 +374,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 14 ,color:"#385A7C"}}
+                                      style={{ fontSize: 16 ,color:"000000"}}
                                     >
                                       <label>Attribute 3</label>
                                     </div>
@@ -387,7 +385,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 14 ,color:"#385A7C"}}
+                                      style={{ fontSize: 16 ,color:"000000"}}
                                     >
                                       <label>Attribute 4</label>
                                     </div>
@@ -398,7 +396,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div >
                                     <div
-                                      style={{ fontSize: 14,color:"#385A7C" }}
+                                      style={{ fontSize: 16,color:"000000" }}
                                     >
                                       <label>Attribute 5</label>
                                     </div>
