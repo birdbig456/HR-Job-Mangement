@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-
 const useStyles = makeStyles((theme) => ({
   Block: {
     background:"#ffff",
-    border: "solid 1px #e5e5e5",
+    border: "solid 1px #E5E5E5",
     borderRadius: 5,
     marginRight: 40,
     marginLeft: 40,
@@ -15,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
   },
 }));
-
 export default function TrendLabour() {
   const data = {
     labels: ["January", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug","Sep","Oct","Nov","Dec"],
@@ -25,7 +23,7 @@ export default function TrendLabour() {
         fill: false,
         lineTension: 0.1,
         backgroundColor: "#385A7C)",
-        borderColor: "#ff3019",
+        borderColor: "#FF3019",
         borderCapStyle: "butt",
         borderDash: [],
         borderDashOffset: 0.0,

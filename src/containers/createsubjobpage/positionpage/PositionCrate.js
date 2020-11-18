@@ -19,18 +19,17 @@ import { green, orange } from "@material-ui/core/colors";
 import { useHistory } from "react-router-dom";
 import { purple } from "@material-ui/core/colors";
 import LinearProgress from "@material-ui/core/LinearProgress";
-
+import { items } from "fusioncharts";
 const ColorButton = withStyles((theme) => ({
-    root: {
-      color: theme.palette.getContrastText(purple[500]),
-      backgroundColor: green[500],
-      marginRight: 20,
-      "&:hover": {
-        backgroundColor: green[700],
-      },
+  root: {
+    color: theme.palette.getContrastText(purple[500]),
+    backgroundColor: green[500],
+    marginRight: 20,
+    "&:hover": {
+      backgroundColor: green[700],
     },
-  }))(Button);
-
+  },
+}))(Button);
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -49,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     height: "auto",
     width: 300,
-    backgroundColor: "#303f9f",
+    backgroundColor: "#303F9F",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
     border: "1px solid #D2CBCB",
     textAlign: "center",
@@ -84,14 +83,14 @@ const useStyles = makeStyles((theme) => ({
   paperJob: {
     margin: "auto",
     width: 360,
-    backgroundColor: "#ff9800",
+    backgroundColor: "#FF9800",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
     border: "1px solid #D2CBCB",
     fontSize: 14,
   },
   marginAt: {
     margin: theme.spacing(3),
-    fontSize: 20
+    fontSize: 20,
   },
   avatarPosition: {
     width: 35,
@@ -134,7 +133,6 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 8px 4px rgba(0, 0, 0, 0.25);",
   },
 }));
-
 export default function PositionCrate({ match }) {
   const classes = useStyles();
   const CreateSubJobReducer = useSelector(
@@ -143,47 +141,54 @@ export default function PositionCrate({ match }) {
   const CreateJobReducer = useSelector(
     ({ CreateJobReducer }) => CreateJobReducer
   );
+  console.log(CreateJobReducer);
   const history = useHistory();
   const handleClickToPosition = (itemSubJob, item) => {
     history.push(`/${item.NameJob}/${itemSubJob.NameSubJob}/Position`);
   };
   const {
-    params: {}, 
+    params: {},
   } = match;
+  console.log(match.params.SubJobName)
   return (
     <div>
       {CreateSubJobReducer != null ? (
         <div>
-          {CreateSubJobReducer.map((itemSubJob, index) => {
-            return match.params.SubJobName == itemSubJob.NameSubJob ? (
+          {CreateSubJobReducer.SubJob.map((itemSubJob, index) => {
+            return match.params.SubJobName == itemSubJob.NameSubJob ?  (
               <div key={index}>
                 <Grid container className={classes.root}>
                   <Paper className={classes.paper}>
                     <div style={{ margin: 20 }}>{itemSubJob.NameSubJob}</div>
                     <Paper style={{ margin: 20 }}>
-                      <img src={itemSubJob.preview} width="200"  height="250"/>
+                      <img src={itemSubJob.preview} width="200" height="250" />
                     </Paper>
                   </Paper>
                 </Grid>
                 <Grid container>
-                <Grid item xs={12} sm={12} style={{marginTop:40}}>
-                {CreateJobReducer.map((item,index) =>(
-                    <div key={index}>
-                        <span style={{fontSize:20}}>All Job Positions</span>
-                        <ColorButton
-                          variant="contained"
-                          color="primary"
-                          style={{ float: "right" }}
-                          startIcon={<AddIcon />}
-                          onClick={() =>
-                            handleClickToPosition(itemSubJob, item)
-                          }
-                        >
-                          Create Position
-                        </ColorButton>
-                    </div>
-                ))}
-                      </Grid>
+                  <Grid item xs={12} sm={12} style={{ marginTop: 40 }}>
+                    {CreateJobReducer.JobFamily.map((item, index) => {
+                      console.log(item.NameJob,itemSubJob.NameSubJob)
+                      return item.NameJob == itemSubJob.ParentJobName ?  (
+                        <div key={index}>
+                          <span style={{ fontSize: 20 }}>
+                            All Job Positions
+                          </span>
+                          <ColorButton
+                            variant="contained"
+                            color="primary"
+                            style={{ float: "right" }}
+                            startIcon={<AddIcon />}
+                            onClick={() =>
+                              handleClickToPosition(itemSubJob, item)
+                            }
+                          >
+                            Create Position
+                          </ColorButton>
+                        </div>
+                      ) : ""
+                    })}
+                  </Grid>
                 </Grid>
               </div>
             ) : (

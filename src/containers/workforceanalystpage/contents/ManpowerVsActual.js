@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import { Line, Pie, HorizontalBar } from "react-chartjs-2";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-
 const useStyles = makeStyles((theme) => ({
   Block: {
     background:"#ffff",
-    border: "solid 1px #e5e5e5",
+    border: "solid 1px #E5E5E5",
     borderRadius: 5,
     marginRight: 40,
     marginLeft: 40,
@@ -15,11 +14,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
   },
 }));
-
-
 function ManpowerVsActual() {
-  
-
 const optionsBar = {
   scales: {
     xAxes: [
@@ -44,28 +39,27 @@ const optionsBar = {
     ],
   }
 }
-
 let dataBar ={ 
   datasets: [
     {
       label: "Best fit",
       stack: "Stack 0",
-      backgroundColor: "#ff3019",
+      backgroundColor: "#385A7C",
       data: [10, 20, 30, 40, 50, 60],
     },
     {
       label: "Actual",
       stack: "Stack 0",
-      backgroundColor: "#385A7C",
+      backgroundColor: "#FF3019",
       data: [10, 15, 30, 60, 50,40].map((k) => -k),
     },
   ],
-   labels: ["January", "February", "March", "April", "May", "June", "July"],
+   labels: ["Job1", "Job2", "Job3", "Job4", "Job5", "Job6", "Job7"],
 }
   const classes = useStyles();
   return (
     <Grid container>
-      <p style={{ marginLeft: 40, fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
+      <p style={{ marginLeft: 40, fontSize: 20, color: "#FF3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
         Man Power VS Actual
       </p>
       <Grid container className={classes.Block}>
@@ -75,5 +69,4 @@ let dataBar ={
     </Grid>
   );
 }
-
 export default ManpowerVsActual;

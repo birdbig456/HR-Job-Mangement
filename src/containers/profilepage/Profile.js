@@ -25,8 +25,6 @@ import AcCareer from "./Accorditons/AcCareer"
 import AcPerform from "./Accorditons/AcPerform"
 import Avatar from '@material-ui/core/Avatar';
 import AcLearnPro from "./Accorditons/AcLearnPro"
-
-
 const useStyles = makeStyles((theme) => ({
   marginPaper: {
     margin: "auto",
@@ -46,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     // textAlign:"center",
-    // color:"#ffffff",
+    // color:"#FFFFFF",
     fontSize: theme.typography.pxToRem(16),
     fontWeight: theme.typography.fontWeightRegular,
   },
@@ -54,10 +52,8 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(25),
     height: theme.spacing(25),
     marginTop:50
-
   },
 }));
-
 export default function Profile() {
   const classes = useStyles();
   return (
@@ -74,8 +70,8 @@ export default function Profile() {
             <Avatar src="https://sv1.picz.in.th/images/2020/11/11/bPU7oa.png" 
                     className={classes.large}
              ></Avatar>
-            <h2 style={{ color:"#ff3019", fontFamily:"Oswald",marginBottom:0}}>Birdy Pongsakorn</h2>
-            <h3 style={{ color:"#36a69a", fontFamily:"Noto Sans"}}>React Developer</h3>
+            <h2 style={{ color:"#FF3019", fontFamily:"Oswald",marginBottom:0}}>Birdy Pongsakorn</h2>
+            <h3 style={{ color:"#36A69A", fontFamily:"Noto Sans"}}>React Developer</h3>
             </Paper>
         </Grid>
         <Grid item xs={12} sm={9}>
@@ -118,7 +114,7 @@ export default function Profile() {
                 id="panel1a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading}  style={{color:"#ffffff",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>ATTRIBUTE</Typography>
+                <Typography className={classes.heading}  style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>ATTRIBUTE</Typography>
               </AccordionSummary>
               <AccordionDetails >
                   <AcAttribute/>
@@ -131,7 +127,7 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%",fontWeight:"bold", fontFamily:"Noto Sans"}}>JOB</Typography>
+                <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%",fontWeight:"bold", fontFamily:"Noto Sans"}}>JOB</Typography>
               </AccordionSummary>
               <AccordionDetails>
                   <AcJob />
@@ -144,12 +140,10 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>EDUCATION</Typography>
+                <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>EDUCATION</Typography>
               </AccordionSummary>
               <AccordionDetails>
-               
                   <AcEducation />
-                
               </AccordionDetails>
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
@@ -159,12 +153,10 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>EXPERIENCE PROFILE</Typography>
+                <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>EXPERIENCE PROFILE</Typography>
               </AccordionSummary>
               <AccordionDetails>
-               
                   <AcExp />
-                
               </AccordionDetails>
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
@@ -174,15 +166,12 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>PROJECT PROFILE EXPERIENCE</Typography>
+                <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>PROJECT PROFILE EXPERIENCE</Typography>
               </AccordionSummary>
               <AccordionDetails>
-               
                  <AcProjExp/>
-                
               </AccordionDetails>
             </Accordion>
-
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
@@ -190,15 +179,12 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>LEARNING PROFILE</Typography>
+                <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>LEARNING PROFILE</Typography>
               </AccordionSummary>
               <AccordionDetails>
-               
                  <AcLearnPro/>
-                
               </AccordionDetails>
             </Accordion>
-
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
@@ -206,15 +192,12 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>CAREER & SUCCESSOR</Typography>
+                <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>CAREER & SUCCESSOR</Typography>
               </AccordionSummary>
               <AccordionDetails>
-               
                  <AcCareer/>
-                
               </AccordionDetails>
             </Accordion>
-
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
@@ -222,16 +205,12 @@ export default function Profile() {
                 id="panel2a-header"
                 style={{background:"#FF3019", borderRadius:15}}
               >
-                <Typography className={classes.heading} style={{color:"#ffffff",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>PERFORMANCE POTENTIAL</Typography>
+                <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>PERFORMANCE POTENTIAL</Typography>
               </AccordionSummary>
               <AccordionDetails>
-               
                  <AcPerform/>
-                
               </AccordionDetails>
             </Accordion>
-            
-            
           </div>
         </Grid>
       </Grid>
