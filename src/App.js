@@ -38,6 +38,7 @@ import WorkforceCapacity from "./containers/workforcecapacitypage/WorkforceCapac
 import WorkforceAnalyst from "./containers/workforceanalystpage/WorkforceAnalyst"
 import JobDepartment from "./containers/workforceanalystpage/jobdepartment/JobDepartment"
 import JobClassified from './containers/JobClassifiedpage/JobClassified'
+import JobClassDisplay from './containers/JobClassifiedpage/JobClassDisplay/JobClassDisplay';
 
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
@@ -294,6 +295,8 @@ export default function App() {
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
               <Route exact path="/:JobName/:SubJobName/Position" component={PositionPage} />
+              <Route exact path="/JobClassDisplay" component={JobClassDisplay} />
+
             </Switch>
           </main>
         

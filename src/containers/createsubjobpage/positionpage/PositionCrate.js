@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     height: "auto",
     width: 300,
-    backgroundColor: "#303F9F",
+    backgroundColor: "#ff3019",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
     border: "1px solid #D2CBCB",
     textAlign: "center",
@@ -170,14 +170,11 @@ export default function PositionCrate({ match }) {
                     {CreateJobReducer.JobFamily.map((item, index) => {
                       console.log(item.NameJob,itemSubJob.NameSubJob)
                       return item.NameJob == itemSubJob.ParentJobName ?  (
-                        <div key={index}>
-                          <span style={{ fontSize: 20 }}>
-                            All Job Positions
-                          </span>
+                        <Grid item xs={12} sm={12} style={{ marginTop: 40 ,display:"flex",justifyContent:"space-between",alignItems:'center',marginLeft:50,marginRight:50}} key={index}>
+                          <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>All Job Positions</h3>
                           <ColorButton
                             variant="contained"
-                            color="primary"
-                            style={{ float: "right" }}
+                            style={{ float: "right",background:"#ff3019" }}
                             startIcon={<AddIcon />}
                             onClick={() =>
                               handleClickToPosition(itemSubJob, item)
@@ -185,7 +182,7 @@ export default function PositionCrate({ match }) {
                           >
                             Create Position
                           </ColorButton>
-                        </div>
+                        </Grid>
                       ) : ""
                     })}
                   </Grid>

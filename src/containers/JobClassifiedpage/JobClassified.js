@@ -11,6 +11,9 @@ import CardActions from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
 import CancelIcon from "@material-ui/icons/Cancel";
 import TextField from "@material-ui/core/TextField";
+import { useHistory } from "react-router-dom";
+
+
 const useStyles = makeStyles((theme) => ({
   card: {
     marginLeft: "15%",
@@ -21,6 +24,15 @@ const useStyles = makeStyles((theme) => ({
     background: "#FF3019",
     color: "#ffff",
   },
+  button2:{
+    background: "#385a7c",
+    color: "#ffff",
+    marginRight:10
+  },
+  button3: {
+    background: "#36a69a",
+    color: "#ffff",
+  },
 }));
 export default function JobClassified() {
   const classes = useStyles();
@@ -29,6 +41,7 @@ export default function JobClassified() {
   const [valueMax, setValueMax] = useState();
   const [valueAvg, setValueAvg] = useState([]);
   const [marketPB, setMarketPB] = useState();
+  const history = useHistory();
   const onChangeNameLevel = (event) => {
     setNameLevel(event.target.value);
   };
@@ -55,6 +68,10 @@ export default function JobClassified() {
   const CreateLevelReducer = useSelector(
     ({ CreateLevelReducer }) => CreateLevelReducer
   );
+  const handleClickToJobClassDisplay = () => {
+    history.push(`/JobClassDisplay`);
+  };
+
   return (
     <div style={{ backgroundColor: "#FAFAFA", padding: 20 }}>
       <Grid container>
@@ -173,6 +190,10 @@ export default function JobClassified() {
             </Grid>
             <Grid style={{ display: "flex", justifyContent: "flex-end" }}>
               <Button
+              className={classes.button2}>
+                Edit
+              </Button>
+              <Button
                 className={classes.button}
                 onClick={() => {
                   let dataSend = Object.assign({},);
@@ -185,12 +206,33 @@ export default function JobClassified() {
                   dispatch(CreateAction.CreateClass(dataSend));
                 }}
               >
-                Submit
+                Save
               </Button>
             </Grid>
           </CardContent>
         </Card>
       ))}
+      <Grid
+          item
+          xs={12}
+          sm={12}
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+          }}
+        >
+          <Button
+          className={classes.button}
+          onClick = {() => handleClickToJobClassDisplay()}
+          style={{paddingLeft:25,paddingRight:25}}
+          >
+            SUBMIT
+          </Button>
+        </Grid>
+        <div>
+          
+        </div>
     </div>
   );
 }
