@@ -20,6 +20,7 @@ import { useHistory } from "react-router-dom";
 import { purple } from "@material-ui/core/colors";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { items } from "fusioncharts";
+import CreatePositionReducer from "../../../reducers/CreatePosition.reducer";
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
@@ -141,21 +142,37 @@ export default function PositionCrate({ match }) {
   const CreateJobReducer = useSelector(
     ({ CreateJobReducer }) => CreateJobReducer
   );
+  const CreatePositionReducer = useSelector(
+    ({ CreatePositionReducer }) => CreatePositionReducer
+  );
   console.log(CreateJobReducer);
+  const dispatch = useDispatch();
+  const [positionName, setPositionName] = useState("")
+  const [open, setOpen] = React.useState(false);
   const history = useHistory();
-  const handleClickToPosition = (itemSubJob, item) => {
-    history.push(`/${item.NameJob}/${itemSubJob.NameSubJob}/Position`);
+  const handleClickToPosition = (itemSubJob, item,itemPosition) => {
+    history.push(`/${item.NameJob}/${itemSubJob.NameSubJob}/${itemPosition.NamePosition}`);
+  };
+  const handlechange  = (event) => {
+    setPositionName(event.target.value);
+  };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
   const {
     params: {},
   } = match;
-  console.log(match.params.SubJobName)
+  console.log(match.params.SubJobName);
   return (
     <div>
       {CreateSubJobReducer != null ? (
         <div>
           {CreateSubJobReducer.SubJob.map((itemSubJob, index) => {
-            return match.params.SubJobName == itemSubJob.NameSubJob ?  (
+            return match.params.SubJobName == itemSubJob.NameSubJob ? (
               <div key={index}>
                 <Grid container className={classes.root}>
                   <Paper className={classes.paper}>
@@ -168,22 +185,117 @@ export default function PositionCrate({ match }) {
                 <Grid container>
                   <Grid item xs={12} sm={12} style={{ marginTop: 40 }}>
                     {CreateJobReducer.JobFamily.map((item, index) => {
-                      console.log(item.NameJob,itemSubJob.NameSubJob)
-                      return item.NameJob == itemSubJob.ParentJobName ?  (
-                        <Grid item xs={12} sm={12} style={{ marginTop: 40 ,display:"flex",justifyContent:"space-between",alignItems:'center',marginLeft:50,marginRight:50}} key={index}>
-                          <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>All Job Positions</h3>
+                      console.log(item.NameJob, itemSubJob.NameSubJob);
+                      return item.NameJob == itemSubJob.ParentJobName ? (
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          style={{
+                            marginTop: 40,
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginLeft: 50,
+                            marginRight: 50,
+                          }}
+                          key={index}
+                        >
+                          <h3
+                            style={{
+                              fontSize: 28,
+                              color: "#385A7C",
+                              fontFamily: "Oswald",
+                            }}
+                          >
+                            All Job Positions
+                          </h3>
                           <ColorButton
                             variant="contained"
-                            style={{ float: "right",background:"#ff3019" }}
+                            style={{ float: "right", background: "#ff3019" }}
                             startIcon={<AddIcon />}
-                            onClick={() =>
-                              handleClickToPosition(itemSubJob, item)
-                            }
+                            onClick={handleClickOpen}
                           >
                             Create Position
                           </ColorButton>
+                          <Dialog
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="form-dialog-title"
+                          >
+                            <Grid container>
+                              <Grid xs={12} sm={12} item>
+                                <DialogTitle
+                                  style={{
+                                    textAlign: "center",
+                                    color: "#5B5656",
+                                  }}
+                                >
+                                  <h3
+                                    style={{ fontSize: 20, color: "#FF3019" }}
+                                  >
+                                    Create New Position
+                                  </h3>
+                                </DialogTitle>
+                              </Grid>
+                              <DialogContent>
+                                <TextField
+                                  id="standard-basic"
+                                  label="Input Position Name"
+                                  size="medium"
+                                  fullWidth
+                                  onChange={handlechange}
+                                  
+                                />
+                                <Button
+                                  onClick={() => {
+                                    console.log(positionName)
+                                    dispatch(CreateAction.CreatePosition(positionName),handleClose());
+                                  }}
+                                  className={classes.palette}
+                                  color="primary"
+                                  variant="contained"
+                                  size="small"
+                                  style={{
+                                    margin: 7,
+                                    background: "#FF3019",
+                                    color: "#ffffff",
+                                  }}
+                                >
+                                  Save
+                                </Button>
+                                <Button
+                                  onClick={handleClose}
+                                  variant="contained"
+                                  size="small"
+                                  style={{ margin: 7 }}
+                                >
+                                  Cancel
+                                </Button>
+                              </DialogContent>
+                            </Grid>
+                          </Dialog>
+
+                          {CreatePositionReducer.Position.map((itemPosition, index) => (
+                              <Grid key={index} item xs={12} sm={4}>
+                                <Paper
+                                  className={classes.paper}
+                                  onClick={() =>
+                                    handleClickToPosition(itemSubJob, item,itemPosition)
+                                  }
+                                >
+                                  <div style={{ margin: 20 }}>
+                                    {itemPosition.NamePosition}
+                                  </div>
+                                  
+                                </Paper>
+                              </Grid>
+                            ))}
+
                         </Grid>
-                      ) : ""
+                      ) : (
+                        ""
+                      );
                     })}
                   </Grid>
                 </Grid>

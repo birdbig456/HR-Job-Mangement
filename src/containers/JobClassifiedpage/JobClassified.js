@@ -12,8 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import CancelIcon from "@material-ui/icons/Cancel";
 import TextField from "@material-ui/core/TextField";
 import { useHistory } from "react-router-dom";
-
-
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   card: {
     marginLeft: "15%",
@@ -24,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
     background: "#FF3019",
     color: "#ffff",
   },
-  button2:{
+  button2: {
     background: "#385a7c",
     color: "#ffff",
-    marginRight:10
+    marginRight: 10,
   },
   button3: {
     background: "#36a69a",
@@ -56,11 +55,11 @@ export default function JobClassified() {
   };
   useEffect(() => {
     let AverageValue = (parseInt(valueMax) + parseInt(valueMin)) / 2;
-    if (AverageValue != NaN){
-    let arr = valueAvg
-      arr.splice(0,1,AverageValue)
-    console.log(arr)
-    setValueAvg(arr);
+    if (AverageValue != NaN) {
+      let arr = valueAvg;
+      arr.splice(0, 1, AverageValue);
+      console.log(arr);
+      setValueAvg(arr);
     }
   });
   const [count, setCount] = useState(2);
@@ -69,7 +68,7 @@ export default function JobClassified() {
     ({ CreateLevelReducer }) => CreateLevelReducer
   );
   const handleClickToJobClassDisplay = () => {
-    history.push(`/JobClassDisplay`);
+    history.push("/JobClassDisplay");
   };
 
   return (
@@ -189,20 +188,17 @@ export default function JobClassified() {
               <Grid item xs={4} sm={4}></Grid>
             </Grid>
             <Grid style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Button
-              className={classes.button2}>
-                Edit
-              </Button>
+              <Button className={classes.button2}>Edit</Button>
               <Button
                 className={classes.button}
                 onClick={() => {
-                  let dataSend = Object.assign({},);
+                  let dataSend = Object.assign({});
                   dataSend.NameLevel = nameLevel;
                   dataSend.valueMax = valueMax;
                   dataSend.valueMin = valueMin;
                   dataSend.valueAvg = valueAvg;
                   dataSend.marketPB = marketPB;
-                  console.log(dataSend.NameLevel)
+                  console.log(dataSend.NameLevel);
                   dispatch(CreateAction.CreateClass(dataSend));
                 }}
               >
@@ -213,26 +209,26 @@ export default function JobClassified() {
         </Card>
       ))}
       <Grid
-          item
-          xs={12}
-          sm={12}
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-          }}
-        >
+        item
+        xs={12}
+        sm={12}
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+        }}
+      >
+        <Link to="/JobClassDisplay" className={classes.link}>
           <Button
-          className={classes.button}
-          onClick = {() => handleClickToJobClassDisplay()}
-          style={{paddingLeft:25,paddingRight:25}}
+            className={classes.button}
+            
+            style={{ paddingLeft: 25, paddingRight: 25 }}
           >
             SUBMIT
           </Button>
-        </Grid>
-        <div>
-          
-        </div>
+        </Link>
+      </Grid>
+      <div></div>
     </div>
   );
 }
