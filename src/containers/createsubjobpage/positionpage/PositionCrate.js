@@ -183,25 +183,15 @@ export default function PositionCrate({ match }) {
                   </Paper>
                 </Grid>
                 <Grid container>
-                  <Grid item xs={12} sm={12} style={{ marginTop: 40 }}>
-                    {CreateJobReducer.JobFamily.map((item, index) => {
-                      console.log(item.NameJob, itemSubJob.NameSubJob);
-                      return item.NameJob == itemSubJob.ParentJobName ? (
-                        <Grid
-                          item
-                          xs={12}
-                          sm={12}
-                          style={{
+                  <Grid item xs={12} sm={12} style={{
                             marginTop: 40,
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "center",
                             marginLeft: 50,
                             marginRight: 50,
-                          }}
-                          key={index}
-                        >
-                          <h3
+                          }}>
+                            <h3
                             style={{
                               fontSize: 28,
                               color: "#385A7C",
@@ -212,12 +202,23 @@ export default function PositionCrate({ match }) {
                           </h3>
                           <ColorButton
                             variant="contained"
-                            style={{ float: "right", background: "#ff3019" }}
+                            style={{ background: "#ff3019" }}
                             startIcon={<AddIcon />}
                             onClick={handleClickOpen}
                           >
                             Create Position
                           </ColorButton>
+                  </Grid>
+
+                    {CreateJobReducer.JobFamily.map((item, index) => {
+                      console.log(item.NameJob, itemSubJob.NameSubJob);
+                      return item.NameJob == itemSubJob.ParentJobName ? (
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          key={index}
+                        >
                           <Dialog
                             open={open}
                             onClose={handleClose}
@@ -276,6 +277,12 @@ export default function PositionCrate({ match }) {
                             </Grid>
                           </Dialog>
 
+                          <Grid item xs={12} sm={12} 
+                                style={{display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        marginTop:40}}
+                                        >
                           {CreatePositionReducer.Position.map((itemPosition, index) => (
                               <Grid key={index} item xs={12} sm={4}>
                                 <Paper
@@ -291,14 +298,18 @@ export default function PositionCrate({ match }) {
                                 </Paper>
                               </Grid>
                             ))}
+                            </Grid>
 
                         </Grid>
+                        // Reducer
                       ) : (
                         ""
                       );
                     })}
-                  </Grid>
-                </Grid>
+                  
+
+                </Grid> 
+                {/* container */}
               </div>
             ) : (
               ""

@@ -16,9 +16,9 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import InputLabel from "@material-ui/core/InputLabel";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
 function MinusSquare(props) {
   return (
     <SvgIcon
@@ -47,7 +47,7 @@ function PlusSquare(props) {
 
 function CloseSquare(props) {
   return (
-    <SvgIcon 
+    <SvgIcon
       className="close"
       fontSize="inherit"
       style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
@@ -190,7 +190,6 @@ export default function TeamView() {
   const handleToggle = (event, nodeIds) => {
     setExpanded(nodeIds);
   };
-  
 
   const handleSelect = (event, nodeIds) => {
     setSelected(nodeIds);
@@ -217,9 +216,9 @@ export default function TeamView() {
   const [open2, setOpen2] = React.useState(false);
 
   const [state, setState] = React.useState({
-    JobGroup: '',
-    SubJobGroup: '',
-    JobPosition:'',
+    JobGroup: "",
+    SubJobGroup: "",
+    JobPosition: "",
   });
 
   const handleChange = (event) => {
@@ -239,7 +238,12 @@ export default function TeamView() {
         defaultEndIcon={<CloseSquare />}
       >
         {CreateDivisionReducer.NameDivision.map((item, index) => (
-          <StyledTreeItem key={index} onClick={handleClickOpen} nodeId="1" label={item}>
+          <StyledTreeItem
+            key={index}
+            onClick={handleClickOpen}
+            nodeId="1"
+            label={item}
+          >
             <StyledTreeItem2
               nodeId="2"
               label="Workforce Create"
@@ -268,7 +272,7 @@ export default function TeamView() {
             required
             color="primary"
             label="Enter Division Name"
-            style={{width:500}}
+            style={{ width: 500 }}
             id="CreateDivision"
             name="CreateDivision"
             onChange={(e) => {
@@ -304,7 +308,7 @@ export default function TeamView() {
             <Select
               native
               value={state.age}
-              style={{width:250}}
+              style={{ width: 250 }}
               onChange={handleChange}
               inputProps={{
                 name: "JobGroup",
@@ -318,11 +322,13 @@ export default function TeamView() {
             </Select>
           </FormControl>
           <FormControl className={classes.formControl}>
-            <InputLabel htmlFor="JobGroup" style={{marginLeft:20}}>Sub Job Group</InputLabel>
+            <InputLabel htmlFor="JobGroup" style={{ marginLeft: 20 }}>
+              Sub Job Group
+            </InputLabel>
             <Select
               native
               value={state.age}
-              style={{width:250,marginLeft:20}}
+              style={{ width: 250, marginLeft: 20 }}
               onChange={handleChange}
               inputProps={{
                 name: "JobGroup",
@@ -335,12 +341,15 @@ export default function TeamView() {
               <option value={"Job3"}>Job 3</option>
             </Select>
           </FormControl>
-          <FormControl className={classes.formControl} style={{marginTop:20}}>
+          <FormControl
+            className={classes.formControl}
+            style={{ marginTop: 20 }}
+          >
             <InputLabel htmlFor="JobGroup">Job Position</InputLabel>
             <Select
               native
               value={state.age}
-              style={{width:250}}
+              style={{ width: 250 }}
               onChange={handleChange}
               inputProps={{
                 name: "JobGroup",
@@ -354,9 +363,16 @@ export default function TeamView() {
             </Select>
           </FormControl>
 
-          <FormControl className={classes.formControl} style={{marginTop:20}}>
-            <InputLabel htmlFor="JobGroup" style={{marginLeft:20}}>Job Seat</InputLabel>
-            {/* <Select
+          <FormControl
+            className={classes.formControl}
+            style={{ marginTop: 20 }}
+          >
+           
+            <TextField
+              htmlFor="JobGroup"
+              label="Job Seat"
+              placeholder=""
+              multiline
               native
               value={state.age}
               style={{width:250,marginLeft:20}}
@@ -365,12 +381,7 @@ export default function TeamView() {
                 name: "JobGroup",
                 id: "JobGroup",
               }}
-            >
-              <option aria-label="None" value="" />
-              <option value={"Job1"}>Job 1</option>
-              <option value={"Job2"}>Job 2</option>
-              <option value={"Job3"}>Job 3</option>
-            </Select> */}
+            />
           </FormControl>
         </DialogContent>
         <DialogActions>
@@ -378,8 +389,12 @@ export default function TeamView() {
             Cancel
           </Button>
           <Button
-            onClick={() => {
-              dispatch(CreateAction.CreateDivision(nameDivision));
+            // onClick={() => {
+            //   dispatch(CreateAction.CreateDivision(nameDivision));
+            //   handleClose2();
+            // }}
+            onClick={()=>{
+              
               handleClose2();
             }}
             color="primary"

@@ -9,6 +9,8 @@ import { CREATETEAM_ACTION_CREATE } from "../constants/Constants";
 import { CREATEDIVISION_ACTION_CREATE } from "../constants/Constants";
 import { CREATELEVEL_ACTION_CREATE } from "../constants/Constants";
 import { CREATECLASS_ACTION_CREATE } from "../constants/Constants";
+import { CREATEWORKFORCE_ACTION_CREATE } from "../constants/Constants";
+
 export const setStateToCreateJob = (payload) => ({
     type: CREATEJOB_ACTION_CREATE,
     payload
@@ -53,6 +55,11 @@ export const setStateToCreateClass = (payload) => ({
     type: CREATECLASS_ACTION_CREATE,
     payload
 })
+export const setStateToCreateWorkforce = (payload) => ({
+    type: CREATEWORKFORCE_ACTION_CREATE,
+    payload
+})
+
 //----------------------------------------------------------------
 export const CreateJob = (payload) => {
     return dispatch => {
@@ -120,5 +127,10 @@ export const CreateClass = (payload) => {
         dispatch(setStateToCreateClass(payload))
     }
 }
-
+export const CreateWorkforce = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateWorkforce(payload))
+    }
+}
 //--------------------------------------------------------
