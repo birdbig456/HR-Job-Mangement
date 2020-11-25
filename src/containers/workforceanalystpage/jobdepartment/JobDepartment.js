@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 export default function JobDepartment() {
     const classes = useStyles();
     return (
+        <div style={{ backgroundColor: "#FAFAFA", padding: 20 }}>
         <Grid container >
             <Grid item xs={12} sm={12} style={{textAlign:"center",marginBottom:25}}>
                 <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>Workforce Analytic Job & Department Level</h3>
@@ -37,5 +38,6 @@ export default function JobDepartment() {
             </Grid>
 
         </Grid>
+        </div>
     )
 }

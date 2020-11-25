@@ -26,6 +26,7 @@ import StorageOutlinedIcon from '@material-ui/icons/StorageOutlined';
 import GroupOutlinedIcon from '@material-ui/icons/GroupOutlined';
 import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 import BuildIcon from '@material-ui/icons/Build';
+import AirplayIcon from '@material-ui/icons/Airplay';
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import CreateJobPage from "./containers/CreateJobPage";
 import CreateSubJobPage from "./containers/createsubjobpage/CreateSubJobPage";
@@ -41,6 +42,7 @@ import JobDepartment from "./containers/workforceanalystpage/jobdepartment/JobDe
 import JobClassified from './containers/JobClassifiedpage/JobClassified'
 import JobClassDisplay from './containers/JobClassifiedpage/JobClassDisplay/JobClassDisplay';
 import WorkforceManagement from "./containers/workforcemanagementpage/WorkforceManagement"
+import JobclassDisplay from "./containers/jobclassdisplaypage/JobclassDisplay"
 
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
@@ -288,6 +290,18 @@ export default function App() {
                 </ListItem>
               </Link>
 
+              <Link
+                to="/JobclassDisplay"
+                className={classes.link}
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <AirplayIcon style={{color:"#385A7C"}}/>
+                  </ListItemIcon>
+                  <ListItemText primary={"Jobclass Display"} />
+                </ListItem>
+              </Link>
+
             </List>
             
           </Drawer>
@@ -307,10 +321,11 @@ export default function App() {
               <Route exact path="/JobDepartment" component={JobDepartment} />
               <Route exact path="/JobClassified" component={JobClassified} />
               <Route exact path="/WorkforceManagement" component={WorkforceManagement}/>
+              <Route exact path="/JobclassDisplay" component={JobclassDisplay}/>
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
-              <Route exact path="/:JobName/:SubJobName/:PositionName" component={PositionPage} />
-              <Route exact path="/JobClassDisplay" component={JobClassDisplay} />
+              <Route exact path="/:JobName/:SubJobName/Position" component={PositionPage} />
+
 
             </Switch>
           </main>
