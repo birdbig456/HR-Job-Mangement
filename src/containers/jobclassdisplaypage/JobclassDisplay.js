@@ -24,14 +24,14 @@ export default function JobClassDisplay() {
     return (
       <div className={classes.root}>
         {CreateclassReducer.map((item, index) => (
-          <div style={{backgroundColor:"orange",marginTop:`${28 + (2-(index+2))}%`,textAlign:"center",height:"auto",borderRadius:"15"}}>
-          <div style={{borderBottom:"solid"}}>
+          <div style={{backgroundColor:"#ffffff",marginTop:`${28 + (2-(index+2))}%`,textAlign:"center",height:"auto",borderRadius:"15"}}>
+          <div style={{backgroundColor:"#385A7C",borderBottom:"solid"}}>
                 <h4>{item.valueMax}</h4>
           </div>
-          <div style={{borderBottom:"solid"}}>
+          <div style={{backgroundColor:"#ff3019",borderBottom:"solid"}}>
                 <h4>{item.NameLevel}</h4>
           </div>
-          <div>
+          <div style={{backgroundColor:"#36a69a"}}>
                 <h4>{item.valueMin}</h4>
           </div>
       </div>
