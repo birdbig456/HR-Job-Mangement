@@ -355,8 +355,8 @@ export default function TeamView() {
           </FormControl>
 
           <FormControl className={classes.formControl} style={{marginTop:20}}>
-            <InputLabel htmlFor="JobGroup" style={{marginLeft:20}}>Job Area</InputLabel>
-            <Select
+            <InputLabel htmlFor="JobGroup" style={{marginLeft:20}}>Job Seat</InputLabel>
+            {/* <Select
               native
               value={state.age}
               style={{width:250,marginLeft:20}}
@@ -370,7 +370,7 @@ export default function TeamView() {
               <option value={"Job1"}>Job 1</option>
               <option value={"Job2"}>Job 2</option>
               <option value={"Job3"}>Job 3</option>
-            </Select>
+            </Select> */}
           </FormControl>
         </DialogContent>
         <DialogActions>
