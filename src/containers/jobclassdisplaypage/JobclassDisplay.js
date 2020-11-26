@@ -35,7 +35,7 @@ export default function JobClassDisplay() {
     return (
       <div style={{backgroundColor:"#fafafa"}} className={classes.root}>
         {CreateclassReducer.map((item, index) => (
-          <div className={classes.Block} style={{backgroundColor:"#ffffff",marginTop:`${28 + (2-(index+2))}%`,textAlign:"center",height:180}}>
+          <div className={classes.Block} style={{backgroundColor:"#ffffff",marginTop:`${50 - (4*(index+1))}%`,textAlign:"center",height:180}}>
           <div style={{color:"#FF3319",fontFamily:"Oswald"}}>
                 <h3>{item.valueMax}</h3>
           </div><hr style={{boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",border: "solid 1px #E5E5E5"}} />
