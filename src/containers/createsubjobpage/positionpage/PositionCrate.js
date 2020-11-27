@@ -133,6 +133,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#F0F3EF",
     boxShadow: "0px 8px 4px rgba(0, 0, 0, 0.25);",
   },
+  positionCreated:{
+    background:"#ffffff",
+    border: "0px",
+    borderRadius: 5,
+    boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
+    height: 100,
+    width: 300,
+    margin: "auto",
+    marginBottom:20,
+    textAlign:"center",
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+  }
 }));
 export default function PositionCrate({ match }) {
   const classes = useStyles();
@@ -286,15 +300,12 @@ export default function PositionCrate({ match }) {
                           {CreatePositionReducer.Position.map((itemPosition, index) => (
                               <Grid key={index} item xs={12} sm={4}>
                                 <Paper
-                                  className={classes.paper}
+                                  className={classes.positionCreated}
                                   onClick={() =>
                                     handleClickToPosition(itemSubJob, item,itemPosition)
                                   }
                                 >
-                                  <div style={{ margin: 20 }}>
-                                    {itemPosition.NamePosition}
-                                  </div>
-                                  
+                                  <h2 style={{color:"#ff3019",fontFamily:"Oswald"}}>{itemPosition.NamePosition}</h2>
                                 </Paper>
                               </Grid>
                             ))}
