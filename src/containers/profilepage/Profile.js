@@ -83,22 +83,39 @@ export default function Profile() {
                     >
                       <h3>Main Information</h3>
               </Grid>
-              <Grid item xs={6} sm={6} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans"}}>
-                  <div style={{marginLeft:60}}>Employee ID : </div>
-                  <div style={{marginLeft:60}}>Birthday : </div>
-                  <div style={{marginLeft:60}}>Nationality : </div>
-                  <div style={{marginLeft:60}}>Age : </div>
-                  <div style={{marginLeft:60}}>Job group : </div>
-                  <div style={{marginLeft:60}}>Department : </div>
-                  <div style={{marginLeft:60}}>Section : </div>
+              <Grid item xs={2} sm={2} style={{fontSize:22,},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#385a7c",fontWeight:"bold"}}>
+                  <div style={{marginLeft:60}}>Employee ID :</div>
+                  <div style={{marginLeft:60}}>Birthday :</div>
+                  <div style={{marginLeft:60}}>Nationality :</div>
+                  <div style={{marginLeft:60}}>Age :</div>
+                  <div style={{marginLeft:60}}>Job group :</div>
+                  <div style={{marginLeft:60}}>Department :</div>
+                  <div style={{marginLeft:60}}>Section :</div>
               </Grid>
-              <Grid item xs={6} sm={6} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans"}}>
+              <Grid item xs={4} sm={4} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans,",textAlign:"left"}}>
+                  <div style={{}}>000000</div>
+                  <div style={{}}>1 Jan 1998</div>
+                  <div style={{}}>Thai</div>
+                  <div style={{}}>22</div>
+                  <div style={{}}>sale marketing</div>
+                  <div style={{}}>in country sale marketing</div>
+                  <div style={{}}>Bangkok sale marketing</div>
+              </Grid>
+              <Grid item xs={2} sm={2} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#385a7c",fontWeight:"bold"}}>
                   <div style={{marginLeft:60}}>ESY : </div>
                   <div style={{marginLeft:60}}>OESY : </div>
                   <div style={{marginLeft:60}}>TIG : </div>
                   <div style={{marginLeft:60}}>Tip : </div>
                   <div style={{marginLeft:60}}>Report to : </div>
                   <div style={{marginLeft:60}}>Email : </div>
+              </Grid>
+              <Grid item xs={4} sm={4} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans,",textAlign:"left"}}>
+                  <div style={{}}>xxxxxxxx</div>
+                  <div style={{}}>xxxxxxxx</div>
+                  <div style={{}}>xxxxxxxx</div>
+                  <div style={{}}>xxxxxxxx</div>
+                  <div style={{}}>xxxxxxxx</div>
+                  <div style={{}}>xxxxxxxx@gmail.com</div>
               </Grid>
             </Grid>
           </Paper>
