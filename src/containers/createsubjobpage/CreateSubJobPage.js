@@ -37,17 +37,17 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
   bar: {
     borderRadius: 15,
-    background:"#385A7C"
+    background: "#385A7C",
   },
 }))(LinearProgress);
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
-    height:40,
+    height: 40,
     background: "#FF3019",
-    marginRight:20,
+    marginRight: 20,
     "&:hover": {
-      background:"#FF4F3C",
+      background: "#FF4F3C",
     },
   },
 }))(Button);
@@ -105,8 +105,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     marginBottom: 40,
     width: 360,
-    height:"auto",
-    background:"#f3f6fc",
+    height: "auto",
+    background: "#f3f6fc",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
     border: "0px",
   },
@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatarInPut: {
     width: 150,
-    height:190,
+    height: 190,
     margin: theme.spacing(0),
     backgroundColor: "#fafafa",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
@@ -230,80 +230,84 @@ export default function CreateSubJobPage({ match }) {
     };
     return (
       <form onSubmit={handleSubmit}>
-        
-          <Grid container>
-            <Grid item xs={12} sm={12} style={{ textAlign: "center" }}>
-              <Paper className={classes.avatarInPut} style={{ margin: "auto" ,alignItems:"center", display:"flex",justifyContent:"center" }}>
-                <input
-                  id="file"
-                  name="file"
-                  type="file"
-                  onChange={handleChangeImg}
-                  value={values.preview}
-                  className={classes.input}
-                />
-                <label htmlFor="file">
-                  {newSubJob.preview ? (
-                    <img src={newSubJob.preview} width="100%" height="100%" />
-                  ) : (
-                    <>
-                      <IconButton
-                        className={classes.white}
-                        className={classes.palette}
-                        aria-label="upload picture"
-                        component="span"
-                        style={{color:"#FF3019"}}
-                      >
-                        <PhotoCamera />
-                      </IconButton>
-                    </>
-                  )}
-                </label>
-              </Paper>
+        <Grid container>
+          <Grid item xs={12} sm={12} style={{ textAlign: "center" }}>
+            <Paper
+              className={classes.avatarInPut}
+              style={{
+                margin: "auto",
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <input
+                id="file"
+                name="file"
+                type="file"
+                onChange={handleChangeImg}
+                value={values.preview}
+                className={classes.input}
+              />
+              <label htmlFor="file">
+                {newSubJob.preview ? (
+                  <img src={newSubJob.preview} width="100%" height="100%" />
+                ) : (
+                  <>
+                    <IconButton
+                      className={classes.white}
+                      className={classes.palette}
+                      aria-label="upload picture"
+                      component="span"
+                      style={{ color: "#FF3019" }}
+                    >
+                      <PhotoCamera />
+                    </IconButton>
+                  </>
+                )}
+              </label>
+            </Paper>
+          </Grid>
+          <Grid container style={{ marginTop: 30 }}>
+            <Grid item xs={12} sm={5}>
+              <TextField disabled label="Name SubJob :" />
             </Grid>
-            <Grid container style={{ marginTop: 30 }}>
-              <Grid item xs={12} sm={5}>
-                <TextField disabled label="Name SubJob :" />
-              </Grid>
-              <Grid item xs={12} sm={7}>
-                <TextField
-                  required
-                  className={classes.palette}
-                  color="primary"
-                  label="Enter SubJob Name"
-                  fullWidth
-                  id="NameSubJob"
-                  name="NameSubJob"
-                  value={values.NameSubJob}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-              </Grid>
+            <Grid item xs={12} sm={7}>
+              <TextField
+                required
+                className={classes.palette}
+                color="primary"
+                label="Enter SubJob Name"
+                fullWidth
+                id="NameSubJob"
+                name="NameSubJob"
+                value={values.NameSubJob}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
             </Grid>
           </Grid>
-          <div
-            style={{ display: "flex", justifyContent: "center", margin: 25 }}
+        </Grid>
+        <div style={{ display: "flex", justifyContent: "center", margin: 25 }}>
+          <Button
+            type="submit"
+            className={classes.palette}
+            color="primary"
+            variant="contained"
+            size="small"
+            style={{ margin: 7, background: "#FF3019", color: "#ffffff" }}
           >
-            <Button
-              type="submit"
-              className={classes.palette}
-              color="primary"
-              variant="contained"
-              size="small"
-              style={{ margin: 7 , background:"#FF3019",color:"#ffffff" }}
-            >
-              Save
-            </Button>
-            <Button
-              onClick={handleClose}
-              variant="contained"
-              size="small"
-              style={{ margin: 7 }}
-            >
-              Cancel
-            </Button>
-          </div>
-        
+            Save
+          </Button>
+          <Button
+            onClick={handleClose}
+            variant="contained"
+            size="small"
+            style={{ margin: 7 }}
+          >
+            Cancel
+          </Button>
+        </div>
       </form>
     );
   };
@@ -322,37 +326,61 @@ export default function CreateSubJobPage({ match }) {
                   <Grid item xs={12} sm={12}>
                     <Grid container>
                       <Grid key={index} item xs={12} sm={12}>
-                        <div style={{ borderBottom: "1px Solid #385A7C" ,marginRight:30 }}>
+                        <div
+                          style={{
+                            borderBottom: "1px Solid #385A7C",
+                            marginRight: 30,
+                          }}
+                        >
                           <Paper className={classes.paperJob} type="button">
                             <div
                               style={{
-                                color:"#FF3019",
+                                color: "#FF3019",
                                 textAlign: "center",
                                 fontSize: 20,
                                 fontWeight: "bold",
-                                paddingTop:30,
-                                fontFamily:"Oswald"
+                                paddingTop: 30,
+                                fontFamily: "Oswald",
                               }}
                             >
                               {item.NameJob}
                             </div>
                             <Grid container>
-                              <Grid item xs={6} sm={6} style={{ display:"flex",alignItems:"center",justifyContent:"flex-end"}}>
-                                <Paper className={classes.avatarInPut}
-                                      style={{marginTop:10,
-                                              borderTopLeftRadius:0,
-                                              borderTopRightRadius:0,
-                                              borderBottomLeftRadius:0,
-                                              borderBottomRightRadius:0,
-                                        }}>
+                              <Grid
+                                item
+                                xs={6}
+                                sm={6}
+                                style={{
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "flex-end",
+                                }}
+                              >
+                                <Paper
+                                  className={classes.avatarInPut}
+                                  style={{
+                                    marginTop: 10,
+                                    borderTopLeftRadius: 0,
+                                    borderTopRightRadius: 0,
+                                    borderBottomLeftRadius: 0,
+                                    borderBottomRightRadius: 0,
+                                  }}
+                                >
                                   <img src={item.preview} />
                                 </Paper>
                               </Grid>
                               <Grid item xs={6} sm={6}>
-                                <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
+                                <div
+                                  className={classes.marginAt}
+                                  style={{
+                                    lineHeight: "2",
+                                    fontWeight: "bold",
+                                    fontFamily: "Open Sans Condensed",
+                                  }}
+                                >
                                   <div>
                                     <div
-                                      style={{ fontSize: 16,color:"000000" }}
+                                      style={{ fontSize: 16, color: "000000" }}
                                     >
                                       <label>Attribute 1</label>
                                     </div>
@@ -361,9 +389,9 @@ export default function CreateSubJobPage({ match }) {
                                       value={progress}
                                     />
                                   </div>
-                                  <div >
+                                  <div>
                                     <div
-                                      style={{ fontSize: 16 ,color:"000000"}}
+                                      style={{ fontSize: 16, color: "000000" }}
                                     >
                                       <label>Attribute 2</label>
                                     </div>
@@ -372,9 +400,9 @@ export default function CreateSubJobPage({ match }) {
                                       value={progress}
                                     />
                                   </div>
-                                  <div >
+                                  <div>
                                     <div
-                                      style={{ fontSize: 16 ,color:"000000"}}
+                                      style={{ fontSize: 16, color: "000000" }}
                                     >
                                       <label>Attribute 3</label>
                                     </div>
@@ -383,9 +411,9 @@ export default function CreateSubJobPage({ match }) {
                                       value={progress}
                                     />
                                   </div>
-                                  <div >
+                                  <div>
                                     <div
-                                      style={{ fontSize: 16 ,color:"000000"}}
+                                      style={{ fontSize: 16, color: "000000" }}
                                     >
                                       <label>Attribute 4</label>
                                     </div>
@@ -394,9 +422,9 @@ export default function CreateSubJobPage({ match }) {
                                       value={progress}
                                     />
                                   </div>
-                                  <div >
+                                  <div>
                                     <div
-                                      style={{ fontSize: 16,color:"000000" }}
+                                      style={{ fontSize: 16, color: "000000" }}
                                     >
                                       <label>Attribute 5</label>
                                     </div>
@@ -411,13 +439,33 @@ export default function CreateSubJobPage({ match }) {
                           </Paper>
                         </div>
                       </Grid>
-                      <Grid item xs={12} sm={12} style={{ marginTop: 40 ,display:"flex",justifyContent:"space-between",alignItems:'center',marginLeft:50,marginRight:50}}>
-                      <h3 style={{fontSize:28,color: "#385A7C",fontFamily:"Oswald"}}>All SubJob Structure</h3>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        style={{
+                          marginTop: 40,
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          marginLeft: 50,
+                          marginRight: 50,
+                        }}
+                      >
+                        <h3
+                          style={{
+                            fontSize: 28,
+                            color: "#385A7C",
+                            fontFamily: "Oswald",
+                          }}
+                        >
+                          All SubJob Structure
+                        </h3>
                         <ColorButton
                           variant="contained"
                           startIcon={<AddIcon />}
                           onClick={handleClickOpen}
-                          style={{fontFamily:"Oswald"}}
+                          style={{ fontFamily: "Oswald" }}
                         >
                           Create Sub Job
                         </ColorButton>
@@ -430,27 +478,30 @@ export default function CreateSubJobPage({ match }) {
                             spacing={3}
                             style={{ marginTop: 15 }}
                           >
-                            {CreateSubJobReducer.SubJob.filter((itemSubJob,index) => {
-                              console.log(itemSubJob.ParentJobName)
-                              console.log(item.NameJob)
-                              return item.NameJob === itemSubJob.ParentJobName;
-                            }).map((itemSubJob, index) => (
-                              <Grid key={index} item xs={12} sm={4}>
-                                <Paper
-                                  className={classes.paper}
-                                  onClick={() =>
-                                    handleClickToPosition(itemSubJob, item)
-                                  }
-                                >
-                                  <div style={{ margin: 20 }}>
-                                    {itemSubJob.NameSubJob}
-                                  </div>
-                                  <Paper style={{ margin: 20 }}>
-                                    <img src={itemSubJob.preview} width="200" height="250" />
+                            {CreateSubJobReducer.SubJob.map((itemSubJob, index) => {
+                              console.log("bird",itemSubJob);
+                              return (
+                                <Grid key={index} item xs={12} sm={4}>
+                                  <Paper
+                                    className={classes.paper}
+                                    onClick={() =>
+                                      handleClickToPosition(itemSubJob, item)
+                                    }
+                                  >
+                                    <div style={{ margin: 20 }}>
+                                      {itemSubJob.NameSubJob}
+                                    </div>
+                                    <Paper style={{ margin: 20 }}>
+                                      <img
+                                        src={itemSubJob.preview}
+                                        width="200"
+                                        height="250"
+                                      />
+                                    </Paper>
                                   </Paper>
-                                </Paper>
-                              </Grid>
-                            ))}
+                                </Grid>
+                              );
+                            })}
                           </Grid>
                         </Grid>
                       </Grid>
@@ -467,7 +518,9 @@ export default function CreateSubJobPage({ match }) {
                         <DialogTitle
                           style={{ textAlign: "center", color: "#5B5656" }}
                         >
-                          <h3 style={{fontSize:20,color: "#FF3019"}}>Create New SubJob</h3>
+                          <h3 style={{ fontSize: 20, color: "#FF3019" }}>
+                            Create New SubJob
+                          </h3>
                         </DialogTitle>
                       </Grid>
                       <DialogContent>

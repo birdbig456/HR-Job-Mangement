@@ -263,9 +263,15 @@ export default function PositionCrate({ match }) {
                                   
                                 />
                                 <Button
+                                  
                                   onClick={() => {
-                                    console.log(positionName)
-                                    dispatch(CreateAction.CreatePosition(positionName),handleClose());
+                                    let dataSend = Object.assign({});
+                                    dataSend.NamePosition = positionName;
+                                    dataSend.ParentJobName = item.NameJob;
+                                    dataSend.ParentSubJob = itemSubJob.NameSubJob;
+                                    
+                                    console.log(dataSend);
+                                    dispatch(CreateAction.CreatePosition(dataSend),handleClose());
                                   }}
                                   className={classes.palette}
                                   color="primary"

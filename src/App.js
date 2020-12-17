@@ -253,8 +253,8 @@ export default function App() {
                   <ListItemText primary={"Workforce Analyst"} />
                 </ListItem>
               </Link>
-
-              <Link
+                  
+              {/* <Link
                 to="/JobDepartment"
                 className={classes.link}
               >
@@ -264,7 +264,7 @@ export default function App() {
                   </ListItemIcon>
                   <ListItemText primary={"Job & Department"} />
                 </ListItem>
-              </Link>
+              </Link>  */}
 
               <Link
                 to="/JobClassified"
@@ -324,7 +324,7 @@ export default function App() {
               <Route exact path="/JobclassDisplay" component={JobclassDisplay}/>
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
-              <Route exact path="/:JobName/:SubJobName/Position" component={PositionPage} />
+              <Route exact path="/:JobName/:SubJobName/:Position" component={PositionPage} />
 
 
             </Switch>

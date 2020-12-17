@@ -3,7 +3,7 @@ import { CREATEJOB_ACTION_CREATE } from "../constants/Constants";
 const JobFamily = [
   {
     
-    NameJob: "Job 1 ",
+    NameJob: "Human Resource ",
     Description : "",
     Employee:["Bird"]
   },

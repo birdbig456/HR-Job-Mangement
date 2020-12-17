@@ -42,8 +42,8 @@ export default function StatusView() {
           marginTop: 20,
         }}
       >
-        <p>Production PE</p>
-        <p>3</p>
+        <p>Sale Marketing Seat</p>
+        <p>300</p>
       </div>
 
       <div style={{ textAlign: "center" }}>
@@ -51,21 +51,14 @@ export default function StatusView() {
       </div>
       <div style={{ marginBottom: 20, marginTop: 20 }}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>HD 1 Production</p>
-          <p>4</p>
+          <p>In country Sale Marketing Seat</p>
+          <p>150</p>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>HD 2 Production</p>
-          <p>4</p>
+          <p>International Sale Marketing Seat</p>
+          <p>150</p>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>HD 3 Production</p>
-          <p>3</p>
-        </div>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>HD 4 Production</p>
-          <p>2</p>
-        </div>
+        
       </div>
 
       <div style={{ textAlign: "center" }}>
@@ -73,25 +66,25 @@ export default function StatusView() {
       </div>
       <div style={{ marginBottom: 20, marginTop: 20 }}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>LLDPE 1</p>
-          <p>5</p>
+          <p>Chiang Mai Sell Marketing Seat</p>
+          <p>70</p>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>LLDPE 2</p>
-          <p>4</p>
+          <p>Bangkok Sell Marketing Seat</p>
+          <p>80</p>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>LLDPE 3</p>
-          <p>2</p>
+          <p>Europe Sell Marketing Seat</p>
+          <p>70</p>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <p>LLDPE 4</p>
-          <p>4</p>
+          <p>North America Sell Marketing Seat</p>
+          <p>80</p>
         </div>
       </div>
       <div style={{ textAlign: "right" }}>
         <p className={classes.Topic}>Total workforce seat : </p>
-        <h2 style={{color:"#ff3019"}}>30</h2>
+        <h2 style={{color:"#ff3019"}}>300</h2>
       </div>
     </Grid>
   );

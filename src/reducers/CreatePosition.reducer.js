@@ -2,20 +2,16 @@ import { CREATEPOSITION_ACTION_CREATE } from "../constants/Constants";
 
 const Position = [
     {
-        ParentJobName: "Job 1",
-        ParentSubJob: "SubJob 1",
-        NamePosition:"Position 1"
+        ParentJobName: "Human Resource",
+        ParentSubJob: "HRBP",
+        NamePosition:"HRBP Manager"
     },
     {
-        ParentJobName: "Job 1",
-        ParentSubJob: "SubJob 1",
-        NamePosition:"Position 2"
+        ParentJobName: "Human Resource",
+        ParentSubJob: "HRBP",
+        NamePosition:"HRBP Officer"
     },
-    {
-        ParentJobName: "Job 1",
-        ParentSubJob: "SubJob 1",
-        NamePosition:"Position 3"
-    },
+    
 ]
 
 export default (state = {Position}, { type, payload }) => {

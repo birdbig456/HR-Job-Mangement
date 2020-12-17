@@ -38,7 +38,7 @@ export default function JobClassDisplay() {
           <div className={classes.Block} style={{backgroundColor:"#ffffff",marginTop:`${50 - (4*(index+1))}%`,textAlign:"center",height:180}}>
           <div style={{color:"#FF3319",fontFamily:"Oswald"}}>
                 <h3>{item.valueMax}</h3>
-          </div><hr style={{boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",border: "solid 1px #E5E5E5"}} />
+          </div><hr npstyle={{boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",border: "solid 1px #E5E5E5"}} />
           <div style={{color:"#385A7C",fontFamily:"Oswald"}}>
                 <h3>{item.NameLevel}</h3>
           </div><hr style={{boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",border: "solid 1px #E5E5E5"}}/> 
