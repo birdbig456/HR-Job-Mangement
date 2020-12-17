@@ -345,7 +345,7 @@ export default function CreateJobPage() {
                             </div>
                             <BorderLinearProgress
                               variant="determinate"
-                              value={progress}
+                              value={75}
                             />
                           </div>
                           <div >
@@ -354,7 +354,7 @@ export default function CreateJobPage() {
                             </div>
                             <BorderLinearProgress
                               variant="determinate"
-                              value={progress}
+                              value={90}
                             />
                           </div>
                           <div >
@@ -363,7 +363,7 @@ export default function CreateJobPage() {
                             </div>
                             <BorderLinearProgress
                               variant="determinate"
-                              value={progress}
+                              value={40}
                             />
                           </div>
                           <div >
@@ -372,7 +372,7 @@ export default function CreateJobPage() {
                             </div>
                             <BorderLinearProgress
                               variant="determinate"
-                              value={progress}
+                              value={75}
                             />
                           </div>
                           <div >
@@ -381,7 +381,7 @@ export default function CreateJobPage() {
                             </div>
                             <BorderLinearProgress
                               variant="determinate"
-                              value={progress}
+                              value={25}
                             />
                           </div>
                         </div>

@@ -43,7 +43,7 @@ export default function JobView() {
               setCount(count + 1);
             }}
           >
-            Create Team
+            Create Division
           </Button>
           </Grid>
       </Grid>
@@ -69,7 +69,7 @@ export default function JobView() {
                 fontWeight:"bold"
               }}
             >
-              TEAM : {num}
+              Division : {num}
             </Typography>
           </AccordionSummary>
           <AccordionDetails style={{ background: "#fff" }}>
@@ -92,7 +92,7 @@ export default function JobView() {
                     color:'white'
                   }}
                 >
-                  Team : {num}
+                  Division : {num}
                 </div>
                 <StatusView />
               </Grid>

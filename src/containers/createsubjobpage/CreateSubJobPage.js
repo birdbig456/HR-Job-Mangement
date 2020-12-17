@@ -33,7 +33,7 @@ const BorderLinearProgress = withStyles((theme) => ({
     borderRadius: 5,
   },
   colorPrimary: {
-    backgroundColor: theme.palette.grey[theme.palette.type === "" ? 200 : 700],
+    backgroundColor:"",
   },
   bar: {
     borderRadius: 15,
@@ -386,7 +386,7 @@ export default function CreateSubJobPage({ match }) {
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
-                                      value={progress}
+                                      value={75}
                                     />
                                   </div>
                                   <div>
@@ -397,7 +397,7 @@ export default function CreateSubJobPage({ match }) {
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
-                                      value={progress}
+                                      value={90}
                                     />
                                   </div>
                                   <div>
@@ -408,7 +408,7 @@ export default function CreateSubJobPage({ match }) {
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
-                                      value={progress}
+                                      value={40}
                                     />
                                   </div>
                                   <div>
@@ -419,7 +419,7 @@ export default function CreateSubJobPage({ match }) {
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
-                                      value={progress}
+                                      value={75}
                                     />
                                   </div>
                                   <div>
@@ -430,7 +430,7 @@ export default function CreateSubJobPage({ match }) {
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
-                                      value={progress}
+                                      value={25}
                                     />
                                   </div>
                                 </div>

@@ -54,7 +54,7 @@ let dataBar ={
       data: [10, 15, 30, 60, 50,40].map((k) => -k),
     },
   ],
-   labels: ["Job1", "Job2", "Job3", "Job4", "Job5", "Job6", "Job7"],
+   labels: ["TEAM 1", "TEAM 2", "TEAM 3", "TEAM 4", "TEAM 5", "TEAM 6", ""],
 }
   const classes = useStyles();
   return (

@@ -250,17 +250,24 @@ export default function TeamView() {
               onClick={handleClickOpen2}
             />
             <StyledTreeItem nodeId="3" label="Create Department">
-              <StyledTreeItem2 nodeId="4" label="In country Sale Marketing" >
-              <StyledTreeItem nodeId="5" label="Create Section">
-                <StyledTreeItem2 nodeId="6" label="Chiang Mai Sell Marketing" />
-                <StyledTreeItem2 nodeId="7" label="Bangkok Sell Marketing" />
-              </StyledTreeItem>
+              <StyledTreeItem2 nodeId="4" label="In country Sale Marketing">
+                <StyledTreeItem nodeId="5" label="Create Section">
+                  <StyledTreeItem2
+                    nodeId="6"
+                    label="Chiang Mai Sell Marketing"
+                  />
+                  <StyledTreeItem2 nodeId="7" label="Bangkok Sell Marketing" />
+                </StyledTreeItem>
               </StyledTreeItem2>
-              <StyledTreeItem2 nodeId="9" label="International Sale Marketing" >
-              <StyledTreeItem2 nodeId="6" label="Europe Sell Marketing" />
-                <StyledTreeItem2 nodeId="7" label="North America Sell Marketing" />
+              <StyledTreeItem2 nodeId="9" label="International Sale Marketing">
+                <StyledTreeItem nodeId="5" label="Create Section">
+                  <StyledTreeItem2 nodeId="6" label="Europe Sell Marketing" />
+                  <StyledTreeItem2
+                    nodeId="7"
+                    label="North America Sell Marketing"
+                  />
+                </StyledTreeItem>
               </StyledTreeItem2>
-              
             </StyledTreeItem>
           </StyledTreeItem>
         ))}
