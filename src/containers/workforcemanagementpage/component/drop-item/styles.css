@@ -1,9 +1,11 @@
 .container {
-    width: 50%;
-    background: #dfe3e6;
+    width: 90%;
+    height: 200px;
+    background: #b8d5ce;
     border-radius: 5px;
-    margin-right: 40px;
-    padding: 0 10px;
+    padding: 0 20px;
+    margin: auto;
+
   }
   
   h3 {
