@@ -249,9 +249,9 @@ export default function TeamView() {
               label="Workforce Create"
               onClick={handleClickOpen2}
             />
-            <StyledTreeItem nodeId="3" label="Create Department">
+            <StyledTreeItem nodeId="3" label="Create Section">
               <StyledTreeItem2 nodeId="4" label="In country Sale Marketing">
-                <StyledTreeItem nodeId="5" label="Create Section">
+                <StyledTreeItem nodeId="5" label="Create Department">
                   <StyledTreeItem2
                     nodeId="6"
                     label="Chiang Mai Sell Marketing"
@@ -260,7 +260,7 @@ export default function TeamView() {
                 </StyledTreeItem>
               </StyledTreeItem2>
               <StyledTreeItem2 nodeId="9" label="International Sale Marketing">
-                <StyledTreeItem nodeId="5" label="Create Section">
+                <StyledTreeItem nodeId="5" label="Create Department">
                   <StyledTreeItem2 nodeId="6" label="Europe Sell Marketing" />
                   <StyledTreeItem2
                     nodeId="7"

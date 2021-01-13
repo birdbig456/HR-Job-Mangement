@@ -83,7 +83,7 @@ export default function Profile() {
                     >
                       <h3>Main Information</h3>
               </Grid>
-              <Grid item xs={2} sm={2} style={{fontSize:22,},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#385a7c",fontWeight:"bold"}}>
+              <Grid item xs={2} sm={2} style={{fontSize:22,},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#36a69a",fontWeight:"bold"}}>
                   <div style={{marginLeft:60}}>Employee ID :</div>
                   <div style={{marginLeft:60}}>Birthday :</div>
                   <div style={{marginLeft:60}}>Nationality :</div>
@@ -101,7 +101,7 @@ export default function Profile() {
                   <div style={{}}>in country sale marketing</div>
                   <div style={{}}>Bangkok sale marketing</div>
               </Grid>
-              <Grid item xs={2} sm={2} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#385a7c",fontWeight:"bold"}}>
+              <Grid item xs={2} sm={2} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#36a69a",fontWeight:"bold"}}>
                   <div style={{marginLeft:60}}>ESY : </div>
                   <div style={{marginLeft:60}}>OESY : </div>
                   <div style={{marginLeft:60}}>TIG : </div>
