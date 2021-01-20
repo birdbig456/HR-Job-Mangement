@@ -92,7 +92,7 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C1-Strong Performers
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
@@ -130,8 +130,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                    B1-Key Talent 3
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -167,8 +167,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                  A1-Key Talent 1
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -204,8 +204,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                    C2-Contributors
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -241,8 +241,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                    B2-Solid Contributors
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -278,8 +278,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                    A2-Key Talent 2
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -315,8 +315,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                    C3-Need Improvement
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -352,8 +352,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                    B3-Watch List
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -389,8 +389,8 @@ export default function WorkforceManagement() {
                     marginRight: 10,
                   }}
                 >
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#000000" }}>
-                    C1-Strong Performers
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
+                    C3-Reassign
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
                     22
@@ -436,7 +436,7 @@ export default function WorkforceManagement() {
               <Grid item sm={12} xs={12}><hr style={{boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",border: "solid 1px #E5E5E5"}} /></Grid>
               <Grid container>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>C1</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>C1</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -445,7 +445,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>B1</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>B1</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -454,7 +454,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>A1</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>A1</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -463,7 +463,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>C2</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>C2</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -472,7 +472,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>B2</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>B2</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -481,7 +481,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>A2</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>A2</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -490,7 +490,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>C3</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>C3</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -499,7 +499,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>B3</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>B3</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
@@ -508,7 +508,7 @@ export default function WorkforceManagement() {
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
-                  <h3 style={{ color: "#000000", fontFamily: "Oswald",margin:0 ,marginTop:7}}>A3</h3>
+                  <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>A3</h3>
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>

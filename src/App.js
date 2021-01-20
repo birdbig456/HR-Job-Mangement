@@ -27,6 +27,7 @@ import GroupOutlinedIcon from '@material-ui/icons/GroupOutlined';
 import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 import BuildIcon from '@material-ui/icons/Build';
 import AirplayIcon from '@material-ui/icons/Airplay';
+import LocalActivityOutlinedIcon from '@material-ui/icons/LocalActivityOutlined';
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import CreateJobPage from "./containers/CreateJobPage";
 import CreateSubJobPage from "./containers/createsubjobpage/CreateSubJobPage";
@@ -43,6 +44,7 @@ import JobClassified from './containers/JobClassifiedpage/JobClassified'
 import JobClassDisplay from './containers/JobClassifiedpage/JobClassDisplay/JobClassDisplay';
 import WorkforceManagement from "./containers/workforcemanagementpage/WorkforceManagement"
 import JobclassDisplay from "./containers/jobclassdisplaypage/JobclassDisplay"
+import SuccessionPlan from "./containers/successionplanpage/SuccessionPlan"
 
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
@@ -290,7 +292,7 @@ export default function App() {
                 </ListItem>
               </Link>
 
-              <Link
+              {/* <Link
                 to="/JobclassDisplay"
                 className={classes.link}
               >
@@ -299,6 +301,18 @@ export default function App() {
                     <AirplayIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
                   <ListItemText primary={"Jobclass Display"} />
+                </ListItem>
+              </Link> */}
+
+              <Link
+                to="/SuccessionPlan"
+                className={classes.link}
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <LocalActivityOutlinedIcon style={{color:"#385A7C"}}/>
+                  </ListItemIcon>
+                  <ListItemText primary={"Succession Plan"} />
                 </ListItem>
               </Link>
 
@@ -322,6 +336,7 @@ export default function App() {
               <Route exact path="/JobClassified" component={JobClassified} />
               <Route exact path="/WorkforceManagement" component={WorkforceManagement}/>
               <Route exact path="/JobclassDisplay" component={JobclassDisplay}/>
+              <Route exact path="/SuccessionPlan" component={SuccessionPlan}/>
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
               <Route exact path="/:JobName/:SubJobName/:Position" component={PositionPage} />
