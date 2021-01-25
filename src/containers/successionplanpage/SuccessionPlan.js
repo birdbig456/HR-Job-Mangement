@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#385a7c",
     color: "#ffff",
   },
-  OKButton: {
+  SubmitButton: {
     background: "#ff3019",
     color: "#ffff",
   },
@@ -103,7 +103,7 @@ export default function SuccessionPlan() {
           </Button>
           <Dialog open={open} onClose={handleClose}>
             <DialogTitle style={{ textAlign: "center" }}>
-              <Typography style={{fontWeight:"bold",color:"#ff3019"}}>PLEASE SELECT</Typography>
+              <Typography style={{fontWeight:"bold",color:"#ff3019",fontFamily:"Oswald"}}>PLEASE SELECT</Typography>
             </DialogTitle>
             <DialogContent>
               <DialogContentText
@@ -173,10 +173,10 @@ export default function SuccessionPlan() {
                 variant="contained"
                 size="small"
                 onClick={handleClose}
-                className={classes.OKButton}
+                className={classes.SubmitButton}
                 autoFocus
               >
-                OK
+                Submit
               </Button>
             </DialogActions>
           </Dialog>
@@ -191,7 +191,7 @@ export default function SuccessionPlan() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            color: "#36a69a",
+            color: "#385a7c",
           }}
         >
           <h4>add your first node to use this.</h4>
