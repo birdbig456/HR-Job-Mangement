@@ -16,7 +16,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-
+import Dashboard from "./organized/organizeChart"
 const useStyles = makeStyles((theme) => ({
   CandidateCard: {
     background: "#ffff",
@@ -194,7 +194,7 @@ export default function SuccessionPlan() {
             color: "#385a7c",
           }}
         >
-          <h4>add your first node to use this.</h4>
+          <Dashboard/>
         </Grid>
 
         <Grid item sm={4} xs={4}>

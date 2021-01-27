@@ -9,6 +9,7 @@ import ReactDOM from "react-dom";
 import DragItem from "./component/drag-item";
 import DropItem from "./component/drop-item";
 import "./styles.css";
+import { bindActionCreators } from "redux";
 
 const todos = {
   1: {
@@ -223,7 +224,8 @@ export default function WorkforceManagement() {
                     .filter((todo) => todo.state === "box4")
                     .map((todo) => (
                       <DragItem id={todo.id} data={todo} key={todo.id} />
-                    ))}
+                    ))} 
+                    
                 </DropItem>
               </Grid>
 
