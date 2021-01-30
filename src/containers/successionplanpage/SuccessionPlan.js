@@ -200,7 +200,7 @@ export default function SuccessionPlan() {
         <Grid item sm={4} xs={4}>
           <Grid
             container
-            style={{ background: "#e5e5e5", width: "95%", paddingBottom: 15 }}
+            style={{ background: "#e5e5e5", width: "100%", paddingBottom: 15 }}
           >
             <Grid
               item

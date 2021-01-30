@@ -96,7 +96,7 @@ const ShowDetail = ({ data, open, setOpen }) => {
   return (
     open && (
       <Dialog open={open} onClose={() => setOpen(false)} className="p-2">
-        <DialogTitle style={{ backgroundColor: data[1] }}>
+        <DialogTitle style={{ backgroundColor: data[1], color: "#ff3019" }}>
           Planning detail
         </DialogTitle>
         <DialogContent style={{ backgroundColor: data[1] }}>
@@ -160,42 +160,49 @@ const MyNode = ({ nodeData, color }) => {
       className="shadow text-dark rounded p-3 border"
       style={{ backgroundColor: color ? color : "#FFF2E6" }}
     >
-        <Grid container>
-            <Grid item xs={8} sm={8}>
-      <div className="h5">{nodeData.position}</div>
-      <div className="py-1">
-        <img
-          src={nodeData.img}
-          alt="img"
-          style={{ width: 40, borderRadius: "50%" }}
-        />
-        &nbsp;{nodeData.name}
-      </div>
-      <div className="py-1">
-        <Flag className="colorDefault3" /> &nbsp;{nodeData.objective}
-      </div>
-      {nodeData.crossTeam && (
-        <div className="pt-3">
-          Work with{" "}
-          {nodeData.crossTeam.map((value, index) => {
-            return index === 0 ? value : ", " + value;
-          })}
-        </div>
-      )}
-      {nodeData.score && (
-        <div className="pt-3">
-          {nodeData.score * 100}%
-          <BorderLinearProgress
-            variant="determinate"
-            color="secondary"
-            value={nodeData.score * 100}
-          />
-        </div>
-      )}
-      </Grid>
-      <Grid item xs={4} sm={4}>
+      <Grid container style={{padding:10}}>
+        <Grid item xs={8} sm={8} style={{}}>
+          <div className="h5">{nodeData.position}</div>
+          <div className="py-1">
+            <img
+              src={nodeData.img}
+              alt="img"
+              style={{ width: 40, borderRadius: "50%" }}
+            />
+            &nbsp;{nodeData.name}
+          </div>
+          <div className="py-1">
+            <Flag className="colorDefault3" /> &nbsp;{nodeData.objective}
+          </div>
+          {nodeData.crossTeam && (
+            <div className="pt-3">
+              Work with{" "}
+              {nodeData.crossTeam.map((value, index) => {
+                return index === 0 ? value : ", " + value;
+              })}
+            </div>
+          )}
+          {nodeData.score && (
+            <div className="pt-3">
+              {nodeData.score * 100}%
+              <BorderLinearProgress
+                variant="determinate"
+                color="secondary"
+                value={nodeData.score * 100}
+              />
+            </div>
+          )}
+        </Grid>
+        <Grid
+          item
+          xs={4}
+          sm={4}
+          style={{
+            background: "#dce6ec"
+          }}
+        >
           {/* ฝากใส่กรอบแบบหน้า workforce mangement ที ที่แบบลากไอเทมมาวางได้อ่ะ  แต่อันนี้ลากคนมาวางงง */}
-      </Grid>
+        </Grid>
       </Grid>
     </div>
   );
@@ -557,8 +564,6 @@ const Dashboard = () => {
     successQuery && (
       <div className="row py-4">
         <div className="col-12">
-          
-          
           <div className="row justify-content-center px-5 pb-4">
             <div
               className={
@@ -609,8 +614,6 @@ const Dashboard = () => {
 
             <ShowDetail data={selectedNode} open={open} setOpen={setOpen} />
           </div>
-
-          
         </div>
       </div>
     )

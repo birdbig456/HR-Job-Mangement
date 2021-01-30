@@ -254,17 +254,17 @@ export default function TeamView() {
                 <StyledTreeItem nodeId="5" label="Create Department">
                   <StyledTreeItem2
                     nodeId="6"
-                    label="Chiang Mai Sell Marketing"
+                    label="Chiang Mai Sale Marketing"
                   />
-                  <StyledTreeItem2 nodeId="7" label="Bangkok Sell Marketing" />
+                  <StyledTreeItem2 nodeId="7" label="Bangkok Sale Marketing" />
                 </StyledTreeItem>
               </StyledTreeItem2>
               <StyledTreeItem2 nodeId="9" label="International Sale Marketing">
                 <StyledTreeItem nodeId="5" label="Create Department">
-                  <StyledTreeItem2 nodeId="6" label="Europe Sell Marketing" />
+                  <StyledTreeItem2 nodeId="6" label="Europe Sale Marketing" />
                   <StyledTreeItem2
                     nodeId="7"
-                    label="North America Sell Marketing"
+                    label="North America Sale Marketing"
                   />
                 </StyledTreeItem>
               </StyledTreeItem2>
