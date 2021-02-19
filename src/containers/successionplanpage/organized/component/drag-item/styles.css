@@ -1,0 +1,16 @@
+.item {
+    background:#ff3019;
+    border-radius: 5px;
+    margin: 5px;
+    width: auto;
+    padding: 10px 30px;
+    text-align: center;
+    color: #FFF6E6;
+    box-shadow: 0 1px 0 rgba(9, 45, 66, 0.25);
+  }
+  
+  .item:hover {
+    cursor: pointer;
+    background: #FF5542;
+  }
+  

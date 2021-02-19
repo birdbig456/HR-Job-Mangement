@@ -30,18 +30,7 @@ import "./styles.css";
 import { Flag, Edit, Visibility } from "@material-ui/icons";
 
 const todos = {
-  1: {
-    text: "First thing",
-    state: "todo",
-  },
-  2: {
-    text: "Second thing",
-    state: "todo",
-  },
-  3: {
-    text: "Third thing",
-    state: "todo",
-  },
+  
 };
 
 const BorderLinearProgress = withStyles({
@@ -176,7 +165,7 @@ const MyNode = ({ nodeData, color }) => {
   return (
     <div
       className="shadow text-dark rounded p-3 border"
-      style={{ backgroundColor: color ? color : "#FFF2E6" }}
+      style={{ backgroundColor: color ? color : "#FFF2E6"  }}
     >
       <Grid container>
         <Grid item xs={8} sm={8}>
@@ -187,7 +176,7 @@ const MyNode = ({ nodeData, color }) => {
               alt="img"
               style={{ width: 60, borderRadius: "50%" }}
             />
-            &nbsp;<div style={{marginBottom:1}}>{nodeData.name}</div>
+            &nbsp;<div >{nodeData.name}</div>
           </div>
           <div className="py-1">
             <Flag className="colorDefault3" /> &nbsp;{nodeData.objective}
@@ -232,17 +221,16 @@ const MyNode = ({ nodeData, color }) => {
           </div>
         </Grid>
         <Grid item xs={4} sm={4} style={{marginTop:28}}>
-          <DropItem
-            heading="Todos"
+        <DropItem
             onDrop={(id) => {
               const currentTodo = { ...todoValues[id] };
-              currentTodo.state = "todo";
+              currentTodo.state = "box3";
               setValue({ ...todoValues, ...{ [id]: currentTodo } });
             }}
           >
             {Object.keys(todoValues)
               .map((key) => ({ id: key, ...todoValues[key] }))
-              .filter((todo) => todo.state === "todo")
+              .filter((todo) => todo.state === "box3")
               .map((todo) => (
                 <DragItem id={todo.id} data={todo} key={todo.id} />
               ))}
