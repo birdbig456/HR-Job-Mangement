@@ -16,7 +16,9 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-import Dashboard from "./organized/organizeChart"
+import Dashboard from "./organized/organizeChart";
+import DragItem from "./organized/component/drag-item";
+import DropItem from "./organized/component/drop-item";
 const useStyles = makeStyles((theme) => ({
   CandidateCard: {
     background: "#ffff",
@@ -50,6 +52,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const todos = {
+  1: {
+    text: "First ",
+    state: "box2",
+  },
+  2: {
+    text: "Second ",
+    state: "box2",
+  },
+  3: {
+    text: "Third ",
+    state: "box2",
+  },
+  4: {
+    text: "Fourth ",
+    state: "box2",
+  },
+};
+
 export default function SuccessionPlan() {
   const [open, setOpen] = React.useState(false);
 
@@ -75,13 +96,12 @@ export default function SuccessionPlan() {
   const jobpositionselect = (event) => {
     setJobposition(event.target.value);
   };
-
-
+  const [todoValues, setValue] = useState(todos);
   const classes = useStyles();
   return (
     <div style={{ backgroundColor: "#FAFAFA" }}>
       <Grid container>
-        <Grid item sm={12} xs={12} style={{ marginBottom: 5 }}>
+        <Grid item sm={8} xs={8} style={{ marginBottom: 5 }}>
           <h3
             style={{
               fontSize: 28,
@@ -103,12 +123,18 @@ export default function SuccessionPlan() {
           </Button>
           <Dialog open={open} onClose={handleClose}>
             <DialogTitle style={{ textAlign: "center" }}>
-              <Typography style={{fontWeight:"bold",color:"#ff3019",fontFamily:"Oswald"}}>PLEASE SELECT</Typography>
+              <Typography
+                style={{
+                  fontWeight: "bold",
+                  color: "#ff3019",
+                  fontFamily: "Oswald",
+                }}
+              >
+                PLEASE SELECT
+              </Typography>
             </DialogTitle>
             <DialogContent>
-              <DialogContentText
-                style={{ marginLeft:10, marginRight:10, }}
-              >
+              <DialogContentText style={{ marginLeft: 10, marginRight: 10 }}>
                 <FormControl className={classes.FormControl}>
                   <InputLabel>Division</InputLabel>
                   <Select value={division} onChange={divisionselect}>
@@ -157,7 +183,6 @@ export default function SuccessionPlan() {
                     <MenuItem value={7}>Job Position 7</MenuItem>
                   </Select>
                 </FormControl>
-               
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -194,261 +219,30 @@ export default function SuccessionPlan() {
             color: "#385a7c",
           }}
         >
-          <Dashboard/>
+          <Dashboard />
         </Grid>
 
         <Grid item sm={4} xs={4}>
+<<<<<<< HEAD
           <Grid
             container
             style={{ background: "#e5e5e5", width: "100%", paddingBottom: 15 }}
+=======
+          <DropItem
+            onDrop={(id) => {
+              const currentTodo = { ...todoValues[id] };
+              currentTodo.state = "box2";
+              setValue({ ...todoValues, ...{ [id]: currentTodo } });
+            }}
+>>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
           >
-            <Grid
-              item
-              sm={12}
-              xs={12}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                fontFamily: "Oswald",
-                background: "#ff3019",
-                color: "#ffff",
-              }}
-            >
-              <h3 style={{ marginLeft: 20 }}>TALENT POOL</h3>
-              <p style={{ marginRight: 10 }}>
-                <ChevronRightOutlinedIcon />
-              </p>
-            </Grid>
-
-            {/* card1 */}
-            <div className={classes.CandidateCard}>
-              <Grid
-                item
-                sm={3}
-                xs={3}
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  style={{
-                    height: "60%",
-                    width: "100%",
-                    paddingRight: 5,
-                    paddingLeft: 5,
-                    display: "flex",
-                  }}
-                  src="https://sv1.picz.in.th/images/2021/01/20/lPt88Z.png"
-                  alt="lPt88Z.png"
-                  border="0"
-                />
-                <h4 style={{ height: "10%", marginBottom: 0, marginTop: 15 }}>
-                  Candidate
-                </h4>
-                <StarIcon
-                  style={{
-                    height: "10%",
-                    marginBottom: 0,
-                    color: "#fec566",
-                    marginTop: 0,
-                    marginInline: "auto",
-                  }}
-                ></StarIcon>
-              </Grid>
-              <Grid item sm={6} xs={6}>
-                <h3
-                  style={{
-                    color: "#ff3019",
-                    marginLeft: 23,
-                    fontFamily: "Oswald",
-                  }}
-                >
-                  Amad Diallo Traore
-                </h3>
-                <p style={{ marginLeft: 23 }}>HDPE 4 Production Section..</p>
-                <div
-                  style={{ display: "flex", justifyContent: "space-around" }}
-                >
-                  <lebel>PL</lebel>
-                  <lebel>Age</lebel>
-                  <lebel>TIP</lebel>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    fontFamily: "Oswald",
-                    color: "#36a69a",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <p>S4</p>
-                  <p>19/1</p>
-                  <p>0/0</p>
-                </div>
-              </Grid>
-              <Grid item sm={3} xs={3} style={{ textAlign: "center" }}>
-                <h4 style={{ color: "#36a69a" }}>Matched</h4>
-                <p>95%</p>
-              </Grid>
-            </div>
-
-            {/* card2 */}
-            <div className={classes.CandidateCard}>
-              <Grid
-                item
-                sm={3}
-                xs={3}
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  style={{
-                    height: "60%",
-                    width: "100%",
-                    paddingRight: 5,
-                    paddingLeft: 5,
-                    display: "flex",
-                  }}
-                  src="https://sv1.picz.in.th/images/2021/01/20/lPt88Z.png"
-                  alt="lPt88Z.png"
-                  border="0"
-                />
-                <h4 style={{ height: "10%", marginBottom: 0, marginTop: 15 }}>
-                  Candidate
-                </h4>
-                <StarIcon
-                  style={{
-                    height: "10%",
-                    marginBottom: 0,
-                    color: "#fec566",
-                    marginTop: 0,
-                    marginInline: "auto",
-                  }}
-                ></StarIcon>
-              </Grid>
-              <Grid item sm={6} xs={6}>
-                <h3
-                  style={{
-                    color: "#ff3019",
-                    marginLeft: 23,
-                    fontFamily: "Oswald",
-                  }}
-                >
-                  Jack Grealish
-                </h3>
-                <p style={{ marginLeft: 23 }}>HDPE 4 Production Section..</p>
-                <div
-                  style={{ display: "flex", justifyContent: "space-around" }}
-                >
-                  <lebel>PL</lebel>
-                  <lebel>Age</lebel>
-                  <lebel>TIP</lebel>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    fontFamily: "Oswald",
-                    color: "#36a69a",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <p>S4</p>
-                  <p>24/6</p>
-                  <p>0/0</p>
-                </div>
-              </Grid>
-              <Grid item sm={3} xs={3} style={{ textAlign: "center" }}>
-                <h4 style={{ color: "#36a69a" }}>Matched</h4>
-                <p>35%</p>
-              </Grid>
-            </div>
-
-            {/* card3 */}
-            <div className={classes.CandidateCard}>
-              <Grid
-                item
-                sm={3}
-                xs={3}
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  style={{
-                    height: "60%",
-                    width: "100%",
-                    paddingRight: 5,
-                    paddingLeft: 5,
-                    display: "flex",
-                  }}
-                  src="https://sv1.picz.in.th/images/2021/01/20/lPt88Z.png"
-                  alt="lPt88Z.png"
-                  border="0"
-                />
-                <h4 style={{ height: "10%", marginBottom: 0, marginTop: 15 }}>
-                  Candidate
-                </h4>
-                <StarIcon
-                  style={{
-                    height: "10%",
-                    marginBottom: 0,
-                    color: "#fec566",
-                    marginTop: 0,
-                    marginInline: "auto",
-                  }}
-                ></StarIcon>
-              </Grid>
-              <Grid item sm={6} xs={6}>
-                <h3
-                  style={{
-                    color: "#ff3019",
-                    marginLeft: 23,
-                    fontFamily: "Oswald",
-                  }}
-                >
-                  Jadon Sancho
-                </h3>
-                <p style={{ marginLeft: 23 }}>HDPE 4 Production Section..</p>
-                <div
-                  style={{ display: "flex", justifyContent: "space-around" }}
-                >
-                  <lebel>PL</lebel>
-                  <lebel>Age</lebel>
-                  <lebel>TIP</lebel>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    fontFamily: "Oswald",
-                    color: "#36a69a",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <p>S4</p>
-                  <p>20/4</p>
-                  <p>0/0</p>
-                </div>
-              </Grid>
-              <Grid item sm={3} xs={3} style={{ textAlign: "center" }}>
-                <h4 style={{ color: "#36a69a" }}>Matched</h4>
-                <p>75%</p>
-              </Grid>
-            </div>
-          </Grid>
+            {Object.keys(todoValues)
+              .map((key) => ({ id: key, ...todoValues[key] }))
+              .filter((todo) => todo.state === "box2")
+              .map((todo) => (
+                <DragItem id={todo.id} data={todo} key={todo.id} />
+              ))}
+          </DropItem>
         </Grid>
       </Grid>
     </div>

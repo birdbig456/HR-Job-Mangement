@@ -27,6 +27,13 @@ import JSONDigger from "json-digger";
 // Icons
 import { Flag, Edit, Visibility } from "@material-ui/icons";
 
+<<<<<<< HEAD
+=======
+const todos = {
+  
+};
+
+>>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
 const BorderLinearProgress = withStyles({
   root: {
     height: 10,
@@ -158,7 +165,7 @@ const MyNode = ({ nodeData, color }) => {
   return (
     <div
       className="shadow text-dark rounded p-3 border"
-      style={{ backgroundColor: color ? color : "#FFF2E6" }}
+      style={{ backgroundColor: color ? color : "#FFF2E6"  }}
     >
       <Grid container style={{padding:10}}>
         <Grid item xs={8} sm={8} style={{}}>
@@ -169,7 +176,11 @@ const MyNode = ({ nodeData, color }) => {
               alt="img"
               style={{ width: 40, borderRadius: "50%" }}
             />
+<<<<<<< HEAD
             &nbsp;{nodeData.name}
+=======
+            &nbsp;<div >{nodeData.name}</div>
+>>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
           </div>
           <div className="py-1">
             <Flag className="colorDefault3" /> &nbsp;{nodeData.objective}
@@ -193,6 +204,7 @@ const MyNode = ({ nodeData, color }) => {
             </div>
           )}
         </Grid>
+<<<<<<< HEAD
         <Grid
           item
           xs={4}
@@ -202,6 +214,23 @@ const MyNode = ({ nodeData, color }) => {
           }}
         >
           {/* ฝากใส่กรอบแบบหน้า workforce mangement ที ที่แบบลากไอเทมมาวางได้อ่ะ  แต่อันนี้ลากคนมาวางงง */}
+=======
+        <Grid item xs={4} sm={4} style={{marginTop:28}}>
+        <DropItem
+            onDrop={(id) => {
+              const currentTodo = { ...todoValues[id] };
+              currentTodo.state = "box3";
+              setValue({ ...todoValues, ...{ [id]: currentTodo } });
+            }}
+          >
+            {Object.keys(todoValues)
+              .map((key) => ({ id: key, ...todoValues[key] }))
+              .filter((todo) => todo.state === "box3")
+              .map((todo) => (
+                <DragItem id={todo.id} data={todo} key={todo.id} />
+              ))}
+          </DropItem>
+>>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
         </Grid>
       </Grid>
     </div>
