@@ -23,17 +23,16 @@ import { Autocomplete } from "@material-ui/lab";
 import { lighten, withStyles } from "@material-ui/core/styles";
 import OrganizationChart from "@dabeng/react-orgchart";
 import JSONDigger from "json-digger";
-
+import DragItem from "../../workforcemanagementpage/component/drag-item";
+import DropItem from "../../workforcemanagementpage/component/drop-item";
+import "./style.css";
 // Icons
 import { Flag, Edit, Visibility } from "@material-ui/icons";
 
-<<<<<<< HEAD
-=======
 const todos = {
   
 };
 
->>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
 const BorderLinearProgress = withStyles({
   root: {
     height: 10,
@@ -103,7 +102,7 @@ const ShowDetail = ({ data, open, setOpen }) => {
   return (
     open && (
       <Dialog open={open} onClose={() => setOpen(false)} className="p-2">
-        <DialogTitle style={{ backgroundColor: data[1], color: "#ff3019" }}>
+        <DialogTitle style={{ backgroundColor: data[1] }}>
           Planning detail
         </DialogTitle>
         <DialogContent style={{ backgroundColor: data[1] }}>
@@ -162,59 +161,65 @@ const ShowDetail = ({ data, open, setOpen }) => {
 };
 
 const MyNode = ({ nodeData, color }) => {
+  const [todoValues, setValue] = useState(todos);
   return (
     <div
       className="shadow text-dark rounded p-3 border"
       style={{ backgroundColor: color ? color : "#FFF2E6"  }}
     >
-      <Grid container style={{padding:10}}>
-        <Grid item xs={8} sm={8} style={{}}>
-          <div className="h5">{nodeData.position}</div>
-          <div className="py-1">
+      <Grid container>
+        <Grid item xs={8} sm={8}>
+          <div className="h5" style={{marginTop:10}}>{nodeData.position}</div>
+          <div className="py-1" style={{textAlign:"center"}}>
             <img
               src={nodeData.img}
               alt="img"
-              style={{ width: 40, borderRadius: "50%" }}
+              style={{ width: 60, borderRadius: "50%" }}
             />
-<<<<<<< HEAD
-            &nbsp;{nodeData.name}
-=======
             &nbsp;<div >{nodeData.name}</div>
->>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
           </div>
           <div className="py-1">
             <Flag className="colorDefault3" /> &nbsp;{nodeData.objective}
           </div>
-          {nodeData.crossTeam && (
-            <div className="pt-3">
-              Work with{" "}
-              {nodeData.crossTeam.map((value, index) => {
-                return index === 0 ? value : ", " + value;
-              })}
-            </div>
-          )}
-          {nodeData.score && (
-            <div className="pt-3">
-              {nodeData.score * 100}%
-              <BorderLinearProgress
-                variant="determinate"
-                color="secondary"
-                value={nodeData.score * 100}
-              />
-            </div>
-          )}
+          
+          <div>
+            <Grid container>
+              <Grid item xs={4} sm={4}>
+                <div style={{ backgroundColor: "#e5e5e5" }}>
+                  ⠀<br />
+                  <div style={{ color: "#ff3019", fontSize: 14 }}> PL</div>
+                  <br />
+                  <div style={{ margin: "20", fontSize: 18 }}>
+                    {nodeData.pl}
+                  </div>
+                  <br />
+                </div>
+              </Grid>
+              <Grid item xs={4} sm={4}>
+                <div style={{ backgroundColor: "#e5e5e5" }}>
+                  ⠀<br />
+                  <div style={{ color: "#ff3019", fontSize: 14 }}> Age</div>
+                  <br />
+                  <div style={{ margin: "20", fontSize: 18 }}>
+                    {nodeData.age}
+                  </div>
+                  <br />
+                </div>
+              </Grid>
+              <Grid item xs={4} sm={4}>
+                <div style={{ backgroundColor: "#e5e5e5" }}>
+                  ⠀<br />
+                  <div style={{ color: "#ff3019", fontSize: 14 }}> TIP</div>
+                  <br />
+                  <div style={{ margin: "20", fontSize: 18 }}>
+                    {nodeData.tip}
+                  </div>
+                  <br />
+                </div>
+              </Grid>
+            </Grid>
+          </div>
         </Grid>
-<<<<<<< HEAD
-        <Grid
-          item
-          xs={4}
-          sm={4}
-          style={{
-            background: "#dce6ec"
-          }}
-        >
-          {/* ฝากใส่กรอบแบบหน้า workforce mangement ที ที่แบบลากไอเทมมาวางได้อ่ะ  แต่อันนี้ลากคนมาวางงง */}
-=======
         <Grid item xs={4} sm={4} style={{marginTop:28}}>
         <DropItem
             onDrop={(id) => {
@@ -230,7 +235,6 @@ const MyNode = ({ nodeData, color }) => {
                 <DragItem id={todo.id} data={todo} key={todo.id} />
               ))}
           </DropItem>
->>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
         </Grid>
       </Grid>
     </div>
@@ -269,6 +273,9 @@ const Dashboard = () => {
         "https://previews.123rf.com/images/jemastock/jemastock1802/jemastock180208051/96119229-beautiful-girl-face-cartoon-vector-illustration-graphic-design.jpg",
       name: "Alicia Lee",
       position: "Manager Director",
+      pl: "M2",
+      age: "52/7",
+      tip: "6/7",
     });
   };
 
@@ -286,6 +293,9 @@ const Dashboard = () => {
         "https://image.shutterstock.com/image-vector/beautiful-girl-face-cartoon-600w-1032904255.jpg",
       name: "Isabelle Cerys",
       position: "Manager",
+      pl: "S4",
+      age: "50/3",
+      tip: "2/3",
     });
   };
 
@@ -304,6 +314,9 @@ const Dashboard = () => {
         name: "Isabelle Cerys",
         position: "Manager",
         score: 0.75,
+        pl: "O5",
+        age: "35/7",
+        tip: "6/7",
       },
       {
         id: "4",
@@ -318,6 +331,9 @@ const Dashboard = () => {
         name: "Darren Ryan",
         position: "Asst. Manager",
         score: 0.67,
+        pl: "O5",
+        age: "35/7",
+        tip: "6/7",
       },
       {
         id: "5",
@@ -332,6 +348,9 @@ const Dashboard = () => {
         name: "Xavier Musa",
         position: "Asst. Manager",
         score: 0.8,
+        pl: "O5",
+        age: "35/7",
+        tip: "6/7",
       },
       {
         id: "6",
@@ -346,6 +365,9 @@ const Dashboard = () => {
         name: "Chris Otis",
         position: "Asst. Manager",
         score: 0.78,
+        pl: "O5",
+        age: "35/7",
+        tip: "6/7",
       },
     ]);
   };

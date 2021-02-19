@@ -54,19 +54,19 @@ const useStyles = makeStyles((theme) => ({
 
 const todos = {
   1: {
-    text: "First ",
+    text: "First Candidate",
     state: "box2",
   },
   2: {
-    text: "Second ",
+    text: "Second Candidate",
     state: "box2",
   },
   3: {
-    text: "Third ",
+    text: "Third Candidate",
     state: "box2",
   },
   4: {
-    text: "Fourth ",
+    text: "Fourth Candidate",
     state: "box2",
   },
 };
@@ -223,19 +223,34 @@ export default function SuccessionPlan() {
         </Grid>
 
         <Grid item sm={4} xs={4}>
-<<<<<<< HEAD
-          <Grid
-            container
-            style={{ background: "#e5e5e5", width: "100%", paddingBottom: 15 }}
-=======
+        <Grid container style={{background:"#e5e5e5",width:"100%",paddingBottom:15}}>
+        <Grid
+              item
+              sm={12}
+              xs={12}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                fontFamily: "Oswald",
+                background: "#ff3019",
+                color: "#ffff",
+              }}
+            >
+              <h3 style={{ marginLeft: 20 }}>TALENT POOL</h3>
+              <p style={{ marginRight: 10 }}>
+                <ChevronRightOutlinedIcon />
+              </p>
+            </Grid>
+            
           <DropItem
             onDrop={(id) => {
               const currentTodo = { ...todoValues[id] };
               currentTodo.state = "box2";
               setValue({ ...todoValues, ...{ [id]: currentTodo } });
             }}
->>>>>>> 9a99ecd9c1fec30299d29ba049cd2c9e74d8bdb4
           >
+
             {Object.keys(todoValues)
               .map((key) => ({ id: key, ...todoValues[key] }))
               .filter((todo) => todo.state === "box2")
@@ -243,6 +258,7 @@ export default function SuccessionPlan() {
                 <DragItem id={todo.id} data={todo} key={todo.id} />
               ))}
           </DropItem>
+          </Grid>
         </Grid>
       </Grid>
     </div>
