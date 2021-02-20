@@ -1,7 +1,7 @@
 .container {
-    width: 90%;
+    width: 100%;
     height: 185px;
-    background: #FFF6E6;
+    background: none;
     border-radius: 5px;
     padding: 0 20px;
     margin: auto;
