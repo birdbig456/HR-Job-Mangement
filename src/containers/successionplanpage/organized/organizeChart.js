@@ -20,18 +20,20 @@ import {
   Grid,
 } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
-import { lighten, withStyles } from "@material-ui/core/styles";
+import { lighten, withStyles, makeStyles } from "@material-ui/core/styles";
 import OrganizationChart from "@dabeng/react-orgchart";
 import JSONDigger from "json-digger";
 import DragItem from "../../workforcemanagementpage/component/drag-item";
 import DropItem from "../../workforcemanagementpage/component/drop-item";
+import Box from "@material-ui/core/Box";
+import Paper from '@material-ui/core/Paper';
+
 import "./style.css";
 // Icons
 import { Flag, Edit, Visibility } from "@material-ui/icons";
+// import classes from "*.module.css";
 
-const todos = {
-  
-};
+const todos = {};
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -43,6 +45,7 @@ const BorderLinearProgress = withStyles({
     backgroundColor: "#ff6c5c",
   },
 })(LinearProgress);
+
 
 const TransactionTable = ({ columns, data, error }) => {
   return (
@@ -159,69 +162,72 @@ const ShowDetail = ({ data, open, setOpen }) => {
     )
   );
 };
+ 
+const useStyles = makeStyles((theme) => ({
+  
+  BG: {
+    background: "#fff",
+    color: "#385a7c",
+    margin:"10px 2px"
+  },
+  Paper:{
+    display:"flex",
+
+  }
+}));
 
 const MyNode = ({ nodeData, color }) => {
+  const classes = useStyles();
   const [todoValues, setValue] = useState(todos);
   return (
     <div
       className="shadow text-dark rounded p-3 border"
-      style={{ backgroundColor: color ? color : "#FFF2E6"  }}
+      style={{ backgroundColor: color ? color : "#FFF2E6" }}
     >
-      <Grid container>
-        <Grid item xs={8} sm={8}>
-          <div className="h5" style={{marginTop:10}}>{nodeData.position}</div>
-          <div className="py-1" style={{textAlign:"center"}}>
+      <Paper className={classes.Paper}>
+        <Grid item xs={8} sm={8} style={{background:"#fff6e6"}}>
+          <p
+            style={{
+              color: "#ff3019",
+              fontFamily: "Oswald",
+              letterSpacing: "1px",
+              fontWeight: "bold",
+            }}
+          >
+            {nodeData.position}
+          </p>
+          <div style={{ textAlign: "center" }}>
             <img
               src={nodeData.img}
               alt="img"
               style={{ width: 60, borderRadius: "50%" }}
             />
-            &nbsp;<div >{nodeData.name}</div>
+            <p style={{ fontWeight: "bold" ,color:"#385a7c"}}>{nodeData.name}</p>
           </div>
-          <div className="py-1">
-            <Flag className="colorDefault3" /> &nbsp;{nodeData.objective}
-          </div>
-          
+          <Box style={{color:"#385a7c"}}>
+            {/* <Flag className="colorDefault3" />  */}
+            {nodeData.objective}
+          </Box>
+
           <div>
-            <Grid container>
+            <Grid container style={{ fontFamily: "" }}>
               <Grid item xs={4} sm={4}>
-                <div style={{ backgroundColor: "#e5e5e5" }}>
-                  ⠀<br />
-                  <div style={{ color: "#ff3019", fontSize: 14 }}> PL</div>
-                  <br />
-                  <div style={{ margin: "20", fontSize: 18 }}>
-                    {nodeData.pl}
-                  </div>
-                  <br />
-                </div>
+                ⠀<Box style={{ color: "#ff3019", fontSize: 14 }}> PL</Box>
+                <Box className={classes.BG}>{nodeData.pl}</Box >
               </Grid>
               <Grid item xs={4} sm={4}>
-                <div style={{ backgroundColor: "#e5e5e5" }}>
-                  ⠀<br />
-                  <div style={{ color: "#ff3019", fontSize: 14 }}> Age</div>
-                  <br />
-                  <div style={{ margin: "20", fontSize: 18 }}>
-                    {nodeData.age}
-                  </div>
-                  <br />
-                </div>
+                ⠀<Box style={{ color: "#ff3019", fontSize: 14 }}> Age</Box >
+                <Box className={classes.BG}>{nodeData.age}</Box >
               </Grid>
               <Grid item xs={4} sm={4}>
-                <div style={{ backgroundColor: "#e5e5e5" }}>
-                  ⠀<br />
-                  <div style={{ color: "#ff3019", fontSize: 14 }}> TIP</div>
-                  <br />
-                  <div style={{ margin: "20", fontSize: 18 }}>
-                    {nodeData.tip}
-                  </div>
-                  <br />
-                </div>
+                ⠀<Box style={{ color: "#ff3019", fontSize: 14 }}> TIP</Box >
+                <Box className={classes.BG}>{nodeData.tip}</Box >
               </Grid>
             </Grid>
           </div>
         </Grid>
-        <Grid item xs={4} sm={4} style={{marginTop:28}}>
-        <DropItem
+        <Grid item xs={4} sm={4} style={{ marginTop: 28 }}>
+          <DropItem
             onDrop={(id) => {
               const currentTodo = { ...todoValues[id] };
               currentTodo.state = "box3";
@@ -236,7 +242,7 @@ const MyNode = ({ nodeData, color }) => {
               ))}
           </DropItem>
         </Grid>
-      </Grid>
+      </Paper>
     </div>
   );
 };

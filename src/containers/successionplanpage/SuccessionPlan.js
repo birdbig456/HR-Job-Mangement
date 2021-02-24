@@ -99,9 +99,9 @@ export default function SuccessionPlan() {
   const [todoValues, setValue] = useState(todos);
   const classes = useStyles();
   return (
-    <div style={{ backgroundColor: "#FAFAFA" }}>
+    <div style={{ backgroundColor: "#FAFAFA"}}>
       <Grid container>
-        <Grid item sm={8} xs={8} style={{ marginBottom: 5 }}>
+        <Grid item sm={12} xs={12} style={{ marginBottom: 5 }}>
           <h3
             style={{
               fontSize: 28,
@@ -128,13 +128,15 @@ export default function SuccessionPlan() {
                   fontWeight: "bold",
                   color: "#ff3019",
                   fontFamily: "Oswald",
+                  letterSpacing:"1px",
+                  fontSize:"18px"
                 }}
               >
-                PLEASE SELECT
+                Please select
               </Typography>
             </DialogTitle>
             <DialogContent>
-              <DialogContentText style={{ marginLeft: 10, marginRight: 10 }}>
+              <DialogContentText style={{ marginLeft: 10, marginRight: 10 ,display:"flex",flexDirection:"column"}}>
                 <FormControl className={classes.FormControl}>
                   <InputLabel>Division</InputLabel>
                   <Select value={division} onChange={divisionselect}>
@@ -208,8 +210,8 @@ export default function SuccessionPlan() {
         </Grid>
         <Grid
           item
-          sm={8}
-          xs={8}
+          sm={9}
+          xs={9}
           style={{
             border: "solid 2px #e5e5e5",
             background: "#FFF6E6",
@@ -222,7 +224,7 @@ export default function SuccessionPlan() {
           <Dashboard />
         </Grid>
 
-        <Grid item sm={4} xs={4}>
+        <Grid item sm={3} xs={3}>
         <Grid container style={{width:"100%",paddingBottom:15}}>
         <Grid
               item
@@ -235,11 +237,13 @@ export default function SuccessionPlan() {
                 fontFamily: "Oswald",
                 background: "#ff3019",
                 color: "#ffff",
+                letterSpacing:"1px",
+                borderRadius:5,
               }}
             >
               <h3 style={{ marginLeft: 20 }}>TALENT POOL</h3>
               <p style={{ marginRight: 10 }}>
-                <ChevronRightOutlinedIcon />
+                {/* <ChevronRightOutlinedIcon /> */}
               </p>
             </Grid>
             
