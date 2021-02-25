@@ -42,13 +42,13 @@ const useStyles = makeStyles((theme) => ({
     width: "auto",
     paddingTop: 20,
     paddingBottom: 20,
-    background: "#f3f6fc",
+    background: "#fff6e6",
     border: "0px",
     borderRadius: 15,
     margin: 5,
     marginLeft: 0,
     textAlign: "center",
-    color: "#36a69a",
+    color: "#385a7c",
   },
 }));
 
@@ -96,7 +96,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C1-Strong Performers
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -134,7 +134,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     B1-Key Talent 3
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -171,7 +171,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                   A1-Key Talent 1
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -208,7 +208,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C2-Contributors
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -246,7 +246,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     B2-Solid Contributors
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -283,7 +283,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     A2-Key Talent 2
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -320,7 +320,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C3-Need Improvement
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -357,7 +357,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     B3-Watch List
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -394,7 +394,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C3-Reassign
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#36a69a" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
                     22
                   </h4>
                 </Grid>
@@ -419,8 +419,8 @@ export default function WorkforceManagement() {
         </Grid>
 
         <Grid item sm={5} sm={5}>
-        <Card style={{ marginLeft: 5,paddingBottom:15 ,borderRadius: 15,}}>
-            <Grid container>
+        <Card style={{ marginLeft: 5,borderRadius: 15,}}>
+            <Grid container >
               <Grid
                 item
                 sm={12}
@@ -429,14 +429,15 @@ export default function WorkforceManagement() {
                   display: "flex",
                   justifyContent: "flex-start",
                   alignItems: "center",
-                  color: "#ff3019",
+                  color: "#ffff",
+                  background:"#ff3019",
+                  letterSpacing:"1px",
                   fontFamily: "Oswald",
                 }}
               >
                 <h3 style={{ marginLeft: 17 }}>Classes Percentage</h3>
               </Grid>
-              <Grid item sm={12} xs={12}><hr style={{boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",border: "solid 1px #E5E5E5"}} /></Grid>
-              <Grid container>
+              <Grid container style={{padding:"15px 0px"}}>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
                   <h3 style={{ color: "#385a7c", fontFamily: "Oswald",margin:0 ,marginTop:7}}>C1</h3>
                 </Grid>
