@@ -61,6 +61,9 @@ export default function PositionPage() {
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    
+
+    
   };
 
   const handleBack = () => {

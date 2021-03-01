@@ -24,6 +24,7 @@ import FormControl from "@material-ui/core/FormControl";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import InputLabel from "@material-ui/core/InputLabel";
 import { FormLabel } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
 import * as CreateAction from "../../../../actions/CreateJob.action";
 
 const outerTheme = createMuiTheme({
@@ -201,7 +202,8 @@ useImperativeHandle(
             variant="outlined"
             id="jobfit"
             style={{ margin: "auto", width: "85%", marginBottom: 20 }}
-            defaultValue="Input Jobfit"
+            placeholder="Input Jobfit"
+            // defaultValue="Input Jobfit"
           />
         </Grid>
         <Grid

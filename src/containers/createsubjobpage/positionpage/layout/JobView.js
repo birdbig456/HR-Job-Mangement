@@ -19,6 +19,8 @@ import { useHistory } from "react-router-dom";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import Typography from "@material-ui/core/Typography";
+
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
     height: 20,
@@ -41,22 +43,36 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(3),
   },
   paperJobfit: {
+    border: "solid 1px #e5e5e5",
+    textAlign:"center",
+    marginLeft:30,
+    marginRight:30,
+  },
+  Newpaper: {
+    background: "#ffff",
     height: "auto",
-    width: 1200,
+    width: 800,
     marginTop: theme.spacing(3),
-    border: "solid",
+    border: "solid 1px #e5e5e5",
+    borderRadius: 5,
+    boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
     margin: "auto",
     fontSize: 14,
+    paddingBottom:20,
     marginBottom: 20,
   },
   paperAttribute: {
-    height: 349,
-    width: 1000,
-    marginTop: theme.spacing(5),
-
-    textAlign: "center",
+    boxFlexGroup:"#fff",
+    height: "auto",
+    width: 1200,
+    marginTop: theme.spacing(3),
+    border: "solid 1px #e5e5e5",
     margin: "auto",
     fontSize: 14,
+    marginBottom: 20,
+    boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
+    paddingBottom:20,
+    marginBottom: 20,
   },
   paperPeople: {
     border: "1px solid #000000",
@@ -84,15 +100,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 20,
   },
   paperBox: {
-    paddingBottom: 40,
-    height: 150,
-    width: 600,
-    marginTop: theme.spacing(3),
-    border: "solid 1px",
-    margin: "auto",
-    fontSize: 14,
-    marginTop: 20,
-    marginBottom: 50,
+    border: "solid 1px #e5e5e5",
+    textAlign:"center",
+    marginLeft:10,
+    marginRight:10,
   },
 }));
 
@@ -101,7 +112,7 @@ export default function JobView() {
   const CreateAttributeReducer = useSelector(
     ({ CreateAttributeReducer }) => CreateAttributeReducer
   );
-  
+
   const CreateJobFitReducer = useSelector(
     ({ CreateJobFitReducer }) => CreateJobFitReducer
   );
@@ -122,27 +133,103 @@ export default function JobView() {
   }, []);
   return (
     <div style={{ backgroundColor: "#fff", padding: 20 }}>
-      <div className={classes.paperJobfit}>
-        <div style={{ textAlign: "center" }}>
-          <h3>Job Fit</h3>
-          <div className={classes.paperBox}>
+      {/* <h3 style={{color:"#ff3019",}}>{itemPosition.NamePosition}</h3> */}
+      <div className={classes.Newpaper}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop:20,
+            paddingBottom:10,
+          }}
+        >
+          HRBP Manager
+        </Typography>
+        <Grid container style={{fontFamily:"Noto Sans"}}>
+        <Grid item xs={3} sm={3}>
+          <div style={{marginLeft:65,color:"#385a7c",fontWeight:"bold"}}>
+          <p>Job group : </p>
+          <p>Department : </p>
+          <p>Company : </p>
+          <p>Job Level : </p>
+          <p>Experience need : </p>
+          </div>
+        </Grid>
+        <Grid item xs={3} sm={3}>
+          <div style={{marginLeft:50}}>
+          <p>HR</p>
+          <p>HRBP</p>
+          <p>TPE</p>
+          <p>20</p>
+          <p>5-8 y</p>
+          </div>
+        </Grid>
+        <Grid item xs={3} sm={3}>
+        <div style={{color:"#385a7c",fontWeight:"bold"}}>
+          <p>SubJob group : </p>
+          <p>Section : </p>
+          <p>Location : </p>
+          <p>Job Grade : </p>
+          <p>Education Require :</p>
+          </div>
+        </Grid>
+        <Grid item xs={3} sm={3}>
+          <p>HRBP</p>
+          <p>-</p>
+          <p>Rayong</p>
+          <p>S2 - S4</p>
+          <p>Any Field</p>
+        </Grid>
+        </Grid>
+      </div>
+      <div className={classes.Newpaper}>
+        <div style={{}}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop:20,
+            paddingBottom:10,
+          }}
+        >
+          Job Fit Detail
+        </Typography>
+          <div className={classes.paperJobfit}>
+            <p style={{textAlign:"center"}}>xxxxxxxxxxxxx</p>
             {CreateJobFitReducer.map((itemJobFit, index) => ({ itemJobFit }))}
           </div>
         </div>
       </div>
-      <div className={classes.paperJobfit}>
-        <div style={{ textAlign: "center", paddingBottom: 30 }}>
-          <h3>Attribute</h3>
+      <div className={classes.paperAttribute}>
+        <div style={{}}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop:20,
+            paddingBottom:10,
+          }}
+        >
+          Attributes
+        </Typography>
           <Grid container>
             {CreateAttributeReducer[0].Attribute.map((itemAttribute, index) => (
               <Grid
                 item
-                
                 xs={6}
                 sm={4}
                 style={{ paddingLeft: 80, marginTop: 20 }}
               >
-                <Grid container key={index}>
+                <Grid container key={index} style={{marginBottom:10}}>
                   <Grid item xs={6} sm={6} style={{ textAlign: "left" }}>
                     {itemAttribute}
                   </Grid>
@@ -155,39 +242,63 @@ export default function JobView() {
           </Grid>
         </div>
       </div>
-      
-        <div className={classes.paperJobProfile}>
-          <div style={{ textAlign: "center" }}>
-            <h3>Job Profile</h3>
-            <div style={{ marginTop: 30 }}>
+
+      <div className={classes.Newpaper}>
+        <div style={{}}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop:20,
+            paddingBottom:10,
+          }}
+        >
+          Job Profile
+        </Typography>
+          <div style={{ marginTop: 30 }}>
             {CreateJobPeopleReducer.map((itemJobPeople, index) => (
-              <Grid container key={index}>
-                <Grid item xs={12} sm={4}>
-                  <span style={{ border: "1px solid #000000", padding: 20 }}>
-                    Job Level :{itemJobPeople.JobLevel}
-                  </span>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <span style={{ border: "1px solid #000000", padding: 20 }}>
-                    Job Classified : {itemJobPeople.JobClassifield}
-                  </span>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <span style={{ border: "1px solid #000000", padding: 20 }}>
-                    Experience Need : {itemJobPeople.Exp} Years
-                  </span>
-                </Grid>
+              <Grid container key={index} style={{}}>
+                  <Grid item xs={12} sm={4}>
+                   <div className={classes.paperBox} ><p>Job Level :{itemJobPeople.JobLevel}</p></div>
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <div className={classes.paperBox} ><p>Job Classified : {itemJobPeople.JobClassifield}</p></div>
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <div className={classes.paperBox} ><p>Experience Need : {itemJobPeople.Exp} Years</p></div>
+                  </Grid>
               </Grid>
-               ))}
-            </div>
+            ))}
           </div>
         </div>
-     
-      <div className={classes.paperJobfit}>
-        <div style={{ textAlign: "center" }}>
-          <h3>Project Pass Need</h3>
+      </div>
 
-          <div className={classes.paperBox}></div>
+      <div className={classes.Newpaper}>
+        <div style={{ }}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop:20,
+            paddingBottom:10,
+          }}
+        >
+          Project Pass Need
+        </Typography>
+        <div style={{marginLeft:65,color:"",fontWeight:"bold"}}>
+          *<p>xxxxxxxxx</p>
+          *<p>xxxxxxxxx</p>
+          *<p>xxxxxxxxx</p>
+          *<p>xxxxxxxxx</p>
+         *<p>xxxxxxxxx</p>
+          *</div>
+          
         </div>
       </div>
     </div>
