@@ -20,6 +20,10 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Typography from "@material-ui/core/Typography";
+import PieChart from "./Charts/PieChart";
+import MyRadarComp from "./Charts/MyRadarComp";
+import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -44,9 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   paperJobfit: {
     border: "solid 1px #e5e5e5",
-    textAlign:"center",
-    marginLeft:30,
-    marginRight:30,
+    textAlign: "center",
+    marginLeft: 30,
+    marginRight: 30,
   },
   Newpaper: {
     background: "#ffff",
@@ -58,11 +62,11 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
     margin: "auto",
     fontSize: 14,
-    paddingBottom:20,
+    paddingBottom: 20,
     marginBottom: 20,
   },
   paperAttribute: {
-    boxFlexGroup:"#fff",
+    boxFlexGroup: "#fff",
     height: "auto",
     width: 1200,
     marginTop: theme.spacing(3),
@@ -71,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     marginBottom: 20,
     boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
-    paddingBottom:20,
+    paddingBottom: 20,
     marginBottom: 20,
   },
   paperPeople: {
@@ -101,10 +105,21 @@ const useStyles = makeStyles((theme) => ({
   },
   paperBox: {
     border: "solid 1px #e5e5e5",
-    textAlign:"center",
-    marginLeft:10,
-    marginRight:10,
+    textAlign: "center",
+    marginLeft: 10,
+    marginRight: 10,
   },
+  paperRecom:{
+    border: "solid 1px #e5e5e5",
+    textAlign: "center",
+    marginLeft:30,
+    marginRight:30,
+    marginTop:5,
+    marginBottom:5,
+    paddingLeft:30,
+    paddingRight:30,
+    borderRadius:20
+  }
 }));
 
 export default function JobView() {
@@ -142,85 +157,87 @@ export default function JobView() {
             fontSize: 22,
             fontWeight: "bold",
             marginLeft: 120,
-            paddingTop:20,
-            paddingBottom:10,
+            paddingTop: 20,
+            paddingBottom: 10,
           }}
         >
           HRBP Manager
         </Typography>
-        <Grid container style={{fontFamily:"Noto Sans"}}>
-        <Grid item xs={3} sm={3}>
-          <div style={{marginLeft:65,color:"#385a7c",fontWeight:"bold"}}>
-          <p>Job group : </p>
-          <p>Department : </p>
-          <p>Company : </p>
-          <p>Job Level : </p>
-          <p>Experience need : </p>
-          </div>
-        </Grid>
-        <Grid item xs={3} sm={3}>
-          <div style={{marginLeft:50}}>
-          <p>HR</p>
-          <p>HRBP</p>
-          <p>TPE</p>
-          <p>20</p>
-          <p>5-8 y</p>
-          </div>
-        </Grid>
-        <Grid item xs={3} sm={3}>
-        <div style={{color:"#385a7c",fontWeight:"bold"}}>
-          <p>SubJob group : </p>
-          <p>Section : </p>
-          <p>Location : </p>
-          <p>Job Grade : </p>
-          <p>Education Require :</p>
-          </div>
-        </Grid>
-        <Grid item xs={3} sm={3}>
-          <p>HRBP</p>
-          <p>-</p>
-          <p>Rayong</p>
-          <p>S2 - S4</p>
-          <p>Any Field</p>
-        </Grid>
+        <Grid container style={{ fontFamily: "Noto Sans" }}>
+          <Grid item xs={3} sm={3}>
+            <div
+              style={{ marginLeft: 65, color: "#385a7c", fontWeight: "bold" }}
+            >
+              <p>Job group : </p>
+              <p>Department : </p>
+              <p>Company : </p>
+              <p>Job Level : </p>
+              <p>Experience need : </p>
+            </div>
+          </Grid>
+          <Grid item xs={3} sm={3}>
+            <div style={{ marginLeft: 50 }}>
+              <p>HR</p>
+              <p>HRBP</p>
+              <p>TPE</p>
+              <p>20</p>
+              <p>5-8 y</p>
+            </div>
+          </Grid>
+          <Grid item xs={3} sm={3}>
+            <div style={{ color: "#385a7c", fontWeight: "bold" }}>
+              <p>SubJob group : </p>
+              <p>Section : </p>
+              <p>Location : </p>
+              <p>Job Grade : </p>
+              <p>Education Require :</p>
+            </div>
+          </Grid>
+          <Grid item xs={3} sm={3}>
+            <p>HRBP</p>
+            <p>-</p>
+            <p>Rayong</p>
+            <p>S2 - S4</p>
+            <p>Any Field</p>
+          </Grid>
         </Grid>
       </div>
       <div className={classes.Newpaper}>
         <div style={{}}>
-        <Typography
-          style={{
-            color: "#ff3019",
-            fontFamily: "Oswald",
-            fontSize: 22,
-            fontWeight: "bold",
-            marginLeft: 120,
-            paddingTop:20,
-            paddingBottom:10,
-          }}
-        >
-          Job Fit Detail
-        </Typography>
+          <Typography
+            style={{
+              color: "#ff3019",
+              fontFamily: "Oswald",
+              fontSize: 22,
+              fontWeight: "bold",
+              marginLeft: 120,
+              paddingTop: 20,
+              paddingBottom: 10,
+            }}
+          >
+            Job Fit Detail
+          </Typography>
           <div className={classes.paperJobfit}>
-            <p style={{textAlign:"center"}}>xxxxxxxxxxxxx</p>
+            <p style={{ textAlign: "center" }}>xxxxxxxxxxxxx</p>
             {CreateJobFitReducer.map((itemJobFit, index) => ({ itemJobFit }))}
           </div>
         </div>
       </div>
       <div className={classes.paperAttribute}>
         <div style={{}}>
-        <Typography
-          style={{
-            color: "#ff3019",
-            fontFamily: "Oswald",
-            fontSize: 22,
-            fontWeight: "bold",
-            marginLeft: 120,
-            paddingTop:20,
-            paddingBottom:10,
-          }}
-        >
-          Attributes
-        </Typography>
+          <Typography
+            style={{
+              color: "#ff3019",
+              fontFamily: "Oswald",
+              fontSize: 22,
+              fontWeight: "bold",
+              marginLeft: 120,
+              paddingTop: 20,
+              paddingBottom: 10,
+            }}
+          >
+            Attributes
+          </Typography>
           <Grid container>
             {CreateAttributeReducer[0].Attribute.map((itemAttribute, index) => (
               <Grid
@@ -229,7 +246,7 @@ export default function JobView() {
                 sm={4}
                 style={{ paddingLeft: 80, marginTop: 20 }}
               >
-                <Grid container key={index} style={{marginBottom:10}}>
+                <Grid container key={index} style={{ marginBottom: 10 }}>
                   <Grid item xs={6} sm={6} style={{ textAlign: "left" }}>
                     {itemAttribute}
                   </Grid>
@@ -245,31 +262,37 @@ export default function JobView() {
 
       <div className={classes.Newpaper}>
         <div style={{}}>
-        <Typography
-          style={{
-            color: "#ff3019",
-            fontFamily: "Oswald",
-            fontSize: 22,
-            fontWeight: "bold",
-            marginLeft: 120,
-            paddingTop:20,
-            paddingBottom:10,
-          }}
-        >
-          Job Profile
-        </Typography>
+          <Typography
+            style={{
+              color: "#ff3019",
+              fontFamily: "Oswald",
+              fontSize: 22,
+              fontWeight: "bold",
+              marginLeft: 120,
+              paddingTop: 20,
+              paddingBottom: 10,
+            }}
+          >
+            Job Profile
+          </Typography>
           <div style={{ marginTop: 30 }}>
             {CreateJobPeopleReducer.map((itemJobPeople, index) => (
               <Grid container key={index} style={{}}>
-                  <Grid item xs={12} sm={4}>
-                   <div className={classes.paperBox} ><p>Job Level :{itemJobPeople.JobLevel}</p></div>
-                  </Grid>
-                  <Grid item xs={12} sm={4}>
-                    <div className={classes.paperBox} ><p>Job Classified : {itemJobPeople.JobClassifield}</p></div>
-                  </Grid>
-                  <Grid item xs={12} sm={4}>
-                    <div className={classes.paperBox} ><p>Experience Need : {itemJobPeople.Exp} Years</p></div>
-                  </Grid>
+                <Grid item xs={12} sm={4}>
+                  <div className={classes.paperBox}>
+                    <p>Job Level :{itemJobPeople.JobLevel}</p>
+                  </div>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <div className={classes.paperBox}>
+                    <p>Job Classified : {itemJobPeople.JobClassifield}</p>
+                  </div>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <div className={classes.paperBox}>
+                    <p>Experience Need : {itemJobPeople.Exp} Years</p>
+                  </div>
+                </Grid>
               </Grid>
             ))}
           </div>
@@ -277,7 +300,31 @@ export default function JobView() {
       </div>
 
       <div className={classes.Newpaper}>
-        <div style={{ }}>
+        <div style={{}}>
+          <Typography
+            style={{
+              color: "#ff3019",
+              fontFamily: "Oswald",
+              fontSize: 22,
+              fontWeight: "bold",
+              marginLeft: 120,
+              paddingTop: 20,
+              paddingBottom: 10,
+            }}
+          >
+            Project Pass Need
+          </Typography>
+          <div style={{ marginLeft: 65, color: "", fontWeight: "bold" }}>
+            <p>xxxxxxxxx</p>
+            <p>xxxxxxxxx</p>
+            <p>xxxxxxxxx</p>
+            <p>xxxxxxxxx</p>
+            <p>xxxxxxxxx</p>
+          </div>
+        </div>
+      </div>
+
+      <div className={classes.Newpaper}>
         <Typography
           style={{
             color: "#ff3019",
@@ -285,21 +332,156 @@ export default function JobView() {
             fontSize: 22,
             fontWeight: "bold",
             marginLeft: 120,
-            paddingTop:20,
-            paddingBottom:10,
+            paddingTop: 20,
+            paddingBottom: 10,
           }}
         >
-          Project Pass Need
+          Competency Need
         </Typography>
-        <div style={{marginLeft:65,color:"",fontWeight:"bold"}}>
-          *<p>xxxxxxxxx</p>
-          *<p>xxxxxxxxx</p>
-          *<p>xxxxxxxxx</p>
-          *<p>xxxxxxxxx</p>
-         *<p>xxxxxxxxx</p>
-          *</div>
-          
+        <div style={{display:"flex",justifyContent:"center"}}>
+        <MyRadarComp />
         </div>
+
+        
+      </div>
+
+      <div className={classes.Newpaper}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop: 20,
+            paddingBottom: 10,
+          }}
+        >
+          Job Task
+        </Typography>
+        <PieChart />
+        <div style={{display:"flex",justifyContent:"flex-end"}}>
+        <Button
+          variant="contained"
+          size="small"
+          style={{ background: "#ff3019", color: "#ffffff" ,marginRight:40}}
+        >
+          View Job Task
+        </Button>
+        </div>
+      </div>
+
+      <div className={classes.Newpaper}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop: 20,
+            paddingBottom: 10,
+          }}
+        >
+          Lastes Person Inxxxxxx
+        </Typography>
+        <Grid container>
+          <Grid item xs={12} sm={4} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+           <p>Graph</p>
+          </Grid>
+          <Grid item xs={12} sm={8}>
+            <p
+              style={{
+                textAlign: "center",
+                color: "#385a7c",
+                fontWeight: "bold",
+                fontFamily: "Oswald",
+                letterSpacing: "1px",
+                fontSize: 18,
+              }}
+            >
+              Puttinun Moungprasert
+            </p>
+            <Grid container style={{ fontFamily: "Noto Sans" }}>
+              <Grid
+                item
+                xs={3}
+                sm={3}
+                style={{ color: "#", fontWeight: "bold" }}
+              >
+                <div style={{ marginLeft: 40 }}>
+                  <p>ESY : </p>
+                  <p>TIP : </p>
+                </div>
+              </Grid>
+              <Grid item xs={3} sm={3}>
+                <div>
+                  <p>11/2</p>
+                  <p>4/2</p>
+                </div>
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                sm={3}
+                style={{ color: "#", fontWeight: "bold" }}
+              >
+                <div style={{ marginLeft: 40 }}>
+                  <p>Service year :</p>
+                  <p>Age : </p>
+                </div>
+              </Grid>
+              <Grid item xs={3} sm={3}>
+                <div>
+                  <p>8/4</p>
+                  <p>36/2</p>
+                </div>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </div>
+
+      <div className={classes.Newpaper}>
+        <Typography
+          style={{
+            color: "#ff3019",
+            fontFamily: "Oswald",
+            fontSize: 22,
+            fontWeight: "bold",
+            marginLeft: 120,
+            paddingTop: 20,
+            paddingBottom: 10,
+          }}
+        >
+          Recommendation
+        </Typography>
+        <Grid container style={{alignItems:"center",marginLeft:60}}>
+          <Avatar>
+            B
+          </Avatar>
+          <div className={classes.paperRecom}>
+          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          </div>
+        </Grid>
+        <Grid container style={{alignItems:"center",marginLeft:60}}>
+          <Avatar>
+            M
+          </Avatar>
+          <div className={classes.paperRecom}>
+          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          </div>
+        </Grid>
+        <Grid container style={{alignItems:"center",marginLeft:60}}>
+          <Avatar>
+            A
+          </Avatar>
+          <div className={classes.paperRecom}>
+          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          </div>
+        </Grid>
+        
+
       </div>
     </div>
   );
