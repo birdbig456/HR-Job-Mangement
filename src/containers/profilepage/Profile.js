@@ -70,7 +70,7 @@ export default function Profile() {
             <Avatar src="https://sv1.picz.in.th/images/2020/11/11/bPU7oa.png" 
                     className={classes.large}
              ></Avatar>
-            <h2 style={{ color:"#FF3019", fontFamily:"Oswald",marginBottom:0}}>Birdy Pongsakorn</h2>
+            <h2 style={{ color:"#13b5ea", fontFamily:"Oswald",marginBottom:0}}>Birdy Pongsakorn</h2>
             <h3 style={{ color:"#606060", fontFamily:"Noto Sans",fontSize:16}}>React Developer</h3>
             </Paper>
         </Grid>
@@ -128,10 +128,10 @@ export default function Profile() {
           <div style={{ marginTop: 20 }}>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading}  style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>ATTRIBUTE</Typography>
               </AccordionSummary>
@@ -141,10 +141,10 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%",fontWeight:"bold", fontFamily:"Noto Sans"}}>JOB</Typography>
               </AccordionSummary>
@@ -154,10 +154,10 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>EDUCATION</Typography>
               </AccordionSummary>
@@ -167,10 +167,10 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>EXPERIENCE PROFILE</Typography>
               </AccordionSummary>
@@ -180,10 +180,10 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>PROJECT PROFILE EXPERIENCE</Typography>
               </AccordionSummary>
@@ -193,10 +193,10 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>LEARNING PROFILE</Typography>
               </AccordionSummary>
@@ -206,10 +206,10 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>CAREER & SUCCESSOR</Typography>
               </AccordionSummary>
@@ -219,10 +219,10 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#fff"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                style={{background:"#FF3019", borderRadius:15}}
+                style={{background:"#262626", borderRadius:15}}
               >
                 <Typography className={classes.heading} style={{color:"#FFFFFF",textAlign:"center",width:"100%" ,fontWeight:"bold", fontFamily:"Noto Sans"}}>PERFORMANCE POTENTIAL</Typography>
               </AccordionSummary>

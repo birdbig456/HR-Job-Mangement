@@ -150,11 +150,11 @@ export default function JobView() {
   }, []);
   return (
     <div style={{ backgroundColor: "#fff", padding: 20 }}>
-      {/* <h3 style={{color:"#ff3019",}}>{itemPosition.NamePosition}</h3> */}
+      {/* <h3 style={{color:"#13b5ea",}}>{itemPosition.NamePosition}</h3> */}
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#ff3019",
+            color: "#13b5ea",
             fontFamily: "Oswald",
             fontSize: 22,
             fontWeight: "bold",
@@ -208,7 +208,7 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#ff3019",
+              color: "#13b5ea",
               fontFamily: "Oswald",
               fontSize: 22,
               fontWeight: "bold",
@@ -229,7 +229,7 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#ff3019",
+              color: "#13b5ea",
               fontFamily: "Oswald",
               fontSize: 22,
               fontWeight: "bold",
@@ -266,7 +266,7 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#ff3019",
+              color: "#13b5ea",
               fontFamily: "Oswald",
               fontSize: 22,
               fontWeight: "bold",
@@ -305,7 +305,7 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#ff3019",
+              color: "#13b5ea",
               fontFamily: "Oswald",
               fontSize: 22,
               fontWeight: "bold",
@@ -329,7 +329,7 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#ff3019",
+            color: "#13b5ea",
             fontFamily: "Oswald",
             fontSize: 22,
             fontWeight: "bold",
@@ -348,7 +348,7 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#ff3019",
+            color: "#13b5ea",
             fontFamily: "Oswald",
             fontSize: 22,
             fontWeight: "bold",
@@ -364,7 +364,7 @@ export default function JobView() {
           <Button
             variant="contained"
             size="small"
-            style={{ background: "#ff3019", color: "#ffffff", marginRight: 40 }}
+            style={{ background: "#82b440", color: "#ffffff", marginRight: 40 }}
           >
             View Job Task
           </Button>
@@ -374,7 +374,7 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#ff3019",
+            color: "#13b5ea",
             fontFamily: "Oswald",
             fontSize: 22,
             fontWeight: "bold",
@@ -454,7 +454,7 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#ff3019",
+            color: "#13b5ea",
             fontFamily: "Oswald",
             fontSize: 22,
             fontWeight: "bold",
@@ -493,9 +493,9 @@ export default function JobView() {
           variant="contained"
           size="small"
           style={{
-            background: "#ff3019",
+            background: "#13b5ea",
             color: "#ffffff",
-            float: "right",
+            float: "left",
             marginRight: 40,
           }}
         >

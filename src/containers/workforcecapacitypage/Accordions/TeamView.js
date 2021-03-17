@@ -23,7 +23,7 @@ function MinusSquare(props) {
   return (
     <SvgIcon
       fontSize="inherit"
-      style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
+      style={{ width: 20, height: 20, background: "#13b5ea", color: "white" }}
       {...props}
     >
       {/* tslint:disable-next-line: max-line-length */}
@@ -36,7 +36,7 @@ function PlusSquare(props) {
   return (
     <SvgIcon
       fontSize="inherit"
-      style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
+      style={{ width: 20, height: 20, background: "#13b5ea", color: "white" }}
       {...props}
     >
       {/* tslint:disable-next-line: max-line-length */}
@@ -50,7 +50,7 @@ function CloseSquare(props) {
     <SvgIcon
       className="close"
       fontSize="inherit"
-      style={{ width: 20, height: 20, background: "#FF3019", color: "white" }}
+      style={{ width: 20, height: 20, background: "#13b5ea", color: "white" }}
       {...props}
     >
       {/* tslint:disable-next-line: max-line-length */}
@@ -98,7 +98,7 @@ const StyledTreeItem = withStyles((theme) => ({
     textTransform: "capitalize",
     fontSize: 16,
     background: "#ffffff",
-    color: "#36a69a",
+    color: "#13b5ea",
     fontWeight: "medium",
     marginLeft: 15,
     border: "1px solid #e5e5e5",

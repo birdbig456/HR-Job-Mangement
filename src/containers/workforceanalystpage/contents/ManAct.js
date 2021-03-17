@@ -30,19 +30,19 @@ export default function ManAct() {
   return (
     <Grid container>
       <Grid item xs={5} sm={5}>
-        <p style={{ marginLeft: 40, fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
+        <p style={{ marginLeft: 40, fontSize: 20, color: "#13b5ea" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
           Man Power
         </p>
         <div className={classes.LeftBlock}>
           <Box style={{ display: "flex", justifyContent: "center" }}>
-            <h1 style={{ marginTop: 50 ,color:"#36a69a",fontFamily:"Oswald"}}>500</h1>
+            <h1 style={{ marginTop: 50 ,color:"#FEC566",fontFamily:"Oswald"}}>500</h1>
           </Box>
           <Box
             style={{
               display: "flex",
               justifyContent: "flex-end",
               marginRight: 25,
-              color:"#36a69a"
+              color:"#FEC566"
               ,fontFamily:"Oswald",
               marginTop:0
             }}
@@ -60,7 +60,7 @@ export default function ManAct() {
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
-          color:"#ff3019",
+          color:"#13b5ea",
           fontSize:20,
           fontFamily:"Oswald",
           fontWeight:"bolder",
@@ -70,10 +70,10 @@ export default function ManAct() {
         <h4>VS</h4>
       </Grid>
       <Grid item xs={5} sm={5}>
-        <p style={{ fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Actual</p>
+        <p style={{ fontSize: 20, color: "#13b5ea" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Actual</p>
         <div className={classes.RightBlock}>
           <Box style={{ display: "flex", justifyContent: "center" }}>
-            <h1 style={{ marginTop: 50 ,color:"#36a69a",fontFamily:"Oswald"}}>516</h1>
+            <h1 style={{ marginTop: 50 ,color:"#FEC566",fontFamily:"Oswald"}}>516</h1>
           </Box>
           <Box
             style={{
@@ -81,7 +81,7 @@ export default function ManAct() {
               justifyContent: "flex-end",
               marginRight: 25,
               fontFamily:"Oswald",
-              color:"#36a69a"
+              color:"#FEC566"
             }}
           >
             <h3>people</h3>

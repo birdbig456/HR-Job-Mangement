@@ -108,9 +108,9 @@ const useStyles = makeStyles((theme) => ({
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
-    background: "#FF3019",
+    background: "#82b440",
     "&:hover": {
-      background:"#FF4F3C",
+      background:"#6A8F38",
     },
   },
 }))(Button);
@@ -209,7 +209,7 @@ export default function CreateJobPage() {
                       className={classes.palette}
                       aria-label="upload picture"
                       component="span"
-                      style={{color:"#FF3019"}}
+                      style={{color:"#13b5ea"}}
                     >
                       <PhotoCamera/>
                     </IconButton>
@@ -265,7 +265,7 @@ export default function CreateJobPage() {
             className={classes.palette}
             variant="contained"
             size="small"
-            style={{ margin: 7, background:"#FF3019",color:"#ffffff" }}
+            style={{ margin: 7, background:"#13b5ea",color:"#ffffff" }}
           >
             Save
           </Button>
@@ -314,7 +314,7 @@ export default function CreateJobPage() {
                   >
                     <div
                       style={{
-                        color:"#ff3019",
+                        color:"#13b5ea",
                         textAlign: "center",
                         fontSize: 20,
                         marginTop: 15,
@@ -402,7 +402,7 @@ export default function CreateJobPage() {
         <Grid container>
           <Grid xs={12} sm={12} item>
             <DialogTitle style={{ textAlign: "center",}}>
-            <h3 style={{fontSize:20,color: "#FF3019",fontFamily:"Oswald"}}>Create New Job</h3>
+            <h3 style={{fontSize:20,color: "#13b5ea",fontFamily:"Oswald"}}>Create New Job</h3>
             </DialogTitle>
           </Grid>
           <DialogContent>

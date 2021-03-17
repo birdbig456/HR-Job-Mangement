@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     height: "auto",
     width: 300,
-    backgroundColor: "#ff3019",
+    backgroundColor: "#13b5ea",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
     border: "1px solid #D2CBCB",
     textAlign: "center",
@@ -216,7 +216,7 @@ export default function PositionCrate({ match }) {
                           </h3>
                           <ColorButton
                             variant="contained"
-                            style={{ background: "#ff3019" }}
+                            style={{ background: "#82b440" }}
                             startIcon={<AddIcon />}
                             onClick={handleClickOpen}
                           >
@@ -247,7 +247,7 @@ export default function PositionCrate({ match }) {
                                   }}
                                 >
                                   <h3
-                                    style={{ fontSize: 20, color: "#FF3019" }}
+                                    style={{ fontSize: 20, color: "#13b5ea" }}
                                   >
                                     Create New Position
                                   </h3>
@@ -279,7 +279,7 @@ export default function PositionCrate({ match }) {
                                   size="small"
                                   style={{
                                     margin: 7,
-                                    background: "#FF3019",
+                                    background: "#13b5ea",
                                     color: "#ffffff",
                                   }}
                                 >
@@ -311,7 +311,7 @@ export default function PositionCrate({ match }) {
                                     handleClickToPosition(itemSubJob, item,itemPosition)
                                   }
                                 >
-                                  <h2 style={{color:"#ff3019",fontFamily:"Oswald"}}>{itemPosition.NamePosition}</h2>
+                                  <h2 style={{color:"#13b5ea",fontFamily:"Oswald"}}>{itemPosition.NamePosition}</h2>
                                 </Paper>
                               </Grid>
                             ))}

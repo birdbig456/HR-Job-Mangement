@@ -30,7 +30,7 @@ export default function BudgetVsLabour() {
   return (
     <Grid container>
       <Grid item xs={5} sm={5}>
-        <p style={{ marginLeft: 40, fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
+        <p style={{ marginLeft: 40, fontSize: 20, color: "#13b5ea" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
           Budget
         </p>
         <div className={classes.LeftBlock}>
@@ -59,7 +59,7 @@ export default function BudgetVsLabour() {
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
-          color:"#ff3019",
+          color:"#13b5ea",
           fontSize:20,
           fontFamily:"Oswald",
           fontWeight:"bolder",
@@ -68,7 +68,7 @@ export default function BudgetVsLabour() {
         <h4>VS</h4>
       </Grid>
       <Grid item xs={5} sm={5}>
-        <p style={{ fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Labour Cost</p>
+        <p style={{ fontSize: 20, color: "#13b5ea" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Labour Cost</p>
         <div className={classes.RightBlock}>
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <h1 style={{ marginTop: 50 ,color:"#FEC566",fontFamily:"Oswald"}}>249,000,000</h1>

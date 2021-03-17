@@ -188,7 +188,7 @@ const MyNode = ({ nodeData, color }) => {
         <Grid item xs={8} sm={8} style={{background:"#fff6e6"}}>
           <p
             style={{
-              color: "#ff3019",
+              color: "#13b5ea",
               fontFamily: "Oswald",
               letterSpacing: "1px",
               fontWeight: "bold",
@@ -212,15 +212,15 @@ const MyNode = ({ nodeData, color }) => {
           <div>
             <Grid container style={{ fontFamily: "" }}>
               <Grid item xs={4} sm={4}>
-                ⠀<Box style={{ color: "#ff3019", fontSize: 14 }}> PL</Box>
+                ⠀<Box style={{ color: "#13b5ea", fontSize: 14 }}> PL</Box>
                 <Box className={classes.BG}>{nodeData.pl}</Box >
               </Grid>
               <Grid item xs={4} sm={4}>
-                ⠀<Box style={{ color: "#ff3019", fontSize: 14 }}> Age</Box >
+                ⠀<Box style={{ color: "#13b5ea", fontSize: 14 }}> Age</Box >
                 <Box className={classes.BG}>{nodeData.age}</Box >
               </Grid>
               <Grid item xs={4} sm={4}>
-                ⠀<Box style={{ color: "#ff3019", fontSize: 14 }}> TIP</Box >
+                ⠀<Box style={{ color: "#13b5ea", fontSize: 14 }}> TIP</Box >
                 <Box className={classes.BG}>{nodeData.tip}</Box >
               </Grid>
             </Grid>

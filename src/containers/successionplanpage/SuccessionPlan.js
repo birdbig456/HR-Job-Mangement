@@ -35,15 +35,15 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
   },
   CreateButton: {
-    background: "#ff3019",
+    background: "#82b440",
     color: "#ffff",
   },
   CancelButton: {
-    background: "#385a7c",
-    color: "#ffff",
+    background: "#fafafa",
+    color: "#385a7c",
   },
   SubmitButton: {
-    background: "#ff3019",
+    background: "#13b5ea",
     color: "#ffff",
   },
   FormControl: {
@@ -126,7 +126,7 @@ export default function SuccessionPlan() {
               <Typography
                 style={{
                   fontWeight: "bold",
-                  color: "#ff3019",
+                  color: "#13b5ea",
                   fontFamily: "Oswald",
                   letterSpacing:"1px",
                   fontSize:"18px"
@@ -235,7 +235,7 @@ export default function SuccessionPlan() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 fontFamily: "Oswald",
-                background: "#ff3019",
+                background: "#13b5ea",
                 color: "#ffff",
                 letterSpacing:"1px",
                 borderRadius:5,

@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
   Topic:{
-    color:"#36a69a",
+    color:"#385a7c",
     fontSize:16,
     fontWeight:"bolder",
   }
@@ -84,7 +84,7 @@ export default function StatusView() {
       </div>
       <div style={{ textAlign: "right" }}>
         <p className={classes.Topic}>Total workforce seat : </p>
-        <h2 style={{color:"#ff3019"}}>300</h2>
+        <h2 style={{color:"#82b440"}}>300</h2>
       </div>
     </Grid>
   );

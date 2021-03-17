@@ -23,7 +23,7 @@ export default function TrendLabour() {
         fill: false,
         lineTension: 0.1,
         backgroundColor: "#385A7C)",
-        borderColor: "#FF3019",
+        borderColor: "#385a7c",
         borderCapStyle: "butt",
         borderDash: [],
         borderDashOffset: 0.0,
@@ -44,7 +44,7 @@ export default function TrendLabour() {
   const classes = useStyles();
   return (
     <Grid container>
-      <p style={{ marginLeft: 40, fontSize: 20, color: "#FF3019" ,fontWeight:"bolder",fontFamily:"Oswald",}}>
+      <p style={{ marginLeft: 40, fontSize: 20, color: "#13b5ea" ,fontWeight:"bolder",fontFamily:"Oswald",}}>
         Trend Labour
       </p>
       <Grid
