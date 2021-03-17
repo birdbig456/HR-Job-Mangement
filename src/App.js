@@ -163,7 +163,7 @@ export default function App() {
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" noWrap style={{fontFamily:"Oswald",color:"#ffff"}}>
-                JOB - JAB
+                J&WF Management
               </Typography>
             </Toolbar>
           </AppBar>

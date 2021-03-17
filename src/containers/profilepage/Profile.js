@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import NavigationIcon from "@material-ui/icons/Navigation";
 import IconButton from "@material-ui/core/IconButton";
-import AcJob from "./Accorditons/AcJob";
+import AcJob from  "./Accorditons/AcJob"
 import AcAttribute from "./Accorditons/AcAttribute";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import LinearProgress from "@material-ui/core/LinearProgress";
@@ -71,7 +71,7 @@ export default function Profile() {
                     className={classes.large}
              ></Avatar>
             <h2 style={{ color:"#FF3019", fontFamily:"Oswald",marginBottom:0}}>Birdy Pongsakorn</h2>
-            <h3 style={{ color:"#36A69A", fontFamily:"Noto Sans"}}>React Developer</h3>
+            <h3 style={{ color:"#606060", fontFamily:"Noto Sans",fontSize:16}}>React Developer</h3>
             </Paper>
         </Grid>
         <Grid item xs={12} sm={9}>
@@ -83,7 +83,8 @@ export default function Profile() {
                     >
                       <h3>Main Information</h3>
               </Grid>
-              <Grid item xs={2} sm={2} style={{fontSize:22,},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#36a69a",fontWeight:"bold"}}>
+              <Grid item xs={1} sm={1}></Grid>
+              <Grid item xs={2} sm={2} style={{fontSize:22,},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#606060",fontWeight:"bold"}}>
                   <div style={{marginLeft:60}}>Employee ID :</div>
                   <div style={{marginLeft:60}}>Birthday :</div>
                   <div style={{marginLeft:60}}>Nationality :</div>
@@ -92,7 +93,7 @@ export default function Profile() {
                   <div style={{marginLeft:60}}>Department :</div>
                   <div style={{marginLeft:60}}>Section :</div>
               </Grid>
-              <Grid item xs={4} sm={4} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans,",textAlign:"left"}}>
+              <Grid item xs={3} sm={3} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans,",textAlign:"left",color:"#606060"}}>
                   <div style={{}}>000000</div>
                   <div style={{}}>1 Jan 1998</div>
                   <div style={{}}>Thai</div>
@@ -101,7 +102,7 @@ export default function Profile() {
                   <div style={{}}>in country sale marketing</div>
                   <div style={{}}>Bangkok sale marketing</div>
               </Grid>
-              <Grid item xs={2} sm={2} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#36a69a",fontWeight:"bold"}}>
+              <Grid item xs={2} sm={2} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#606060",fontWeight:"bold"}}>
                   <div style={{marginLeft:60}}>ESY : </div>
                   <div style={{marginLeft:60}}>OESY : </div>
                   <div style={{marginLeft:60}}>TIG : </div>
@@ -109,7 +110,7 @@ export default function Profile() {
                   <div style={{marginLeft:60}}>Report to : </div>
                   <div style={{marginLeft:60}}>Email : </div>
               </Grid>
-              <Grid item xs={4} sm={4} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans,",textAlign:"left"}}>
+              <Grid item xs={3} sm={3} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans,",textAlign:"left",color:"#606060"}}>
                   <div style={{}}>xxxxxxxx</div>
                   <div style={{}}>xxxxxxxx</div>
                   <div style={{}}>xxxxxxxx</div>
@@ -117,6 +118,7 @@ export default function Profile() {
                   <div style={{}}>xxxxxxxx</div>
                   <div style={{}}>xxxxxxxx@gmail.com</div>
               </Grid>
+              <Grid item xs={1} sm={1}></Grid>
             </Grid>
           </Paper>
         </Grid>

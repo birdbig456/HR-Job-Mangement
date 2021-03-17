@@ -17,7 +17,7 @@ export default class MyRadarComp extends React.Component {
         visibility: 'hidden',
         width: '220px',
         backgroundColor: 'black',
-        color: '#fff',
+        color: '#ff3019',
         textAlign: 'center',
         borderRadius: '6px',
         padding: '5px 0',
@@ -36,7 +36,7 @@ export default class MyRadarComp extends React.Component {
           speed: 0.57,
           weight: 0.7
         },
-        meta: { color: '#26A69A' }
+        meta: { color: '#fec566' }
       },
      
     ];
@@ -91,7 +91,7 @@ export default class MyRadarComp extends React.Component {
       };
  
     return (
-      <div >
+      <div style={{display:"flex",justifyContent:"center"}}>
         <RadarChart 
         
             captions={{
