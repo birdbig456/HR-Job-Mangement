@@ -10,7 +10,7 @@ import { CREATEDIVISION_ACTION_CREATE } from "../constants/Constants";
 import { CREATELEVEL_ACTION_CREATE } from "../constants/Constants";
 import { CREATECLASS_ACTION_CREATE } from "../constants/Constants";
 import { CREATEWORKFORCE_ACTION_CREATE } from "../constants/Constants";
-
+import { CREATEATTRIBUTE_ACTION_UPDATE } from "../constants/Constants";
 export const setStateToCreateJob = (payload) => ({
     type: CREATEJOB_ACTION_CREATE,
     payload
@@ -57,6 +57,10 @@ export const setStateToCreateClass = (payload) => ({
 })
 export const setStateToCreateWorkforce = (payload) => ({
     type: CREATEWORKFORCE_ACTION_CREATE,
+    payload
+})
+export const setStateToUpdateAttribute = (payload) => ({
+    type: CREATEATTRIBUTE_ACTION_UPDATE,
     payload
 })
 
@@ -131,6 +135,12 @@ export const CreateWorkforce = (payload) => {
     return dispatch => {
         console.log(payload)
         dispatch(setStateToCreateWorkforce(payload))
+    }
+}
+export const UpdateAttribute = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToUpdateAttribute(payload))
     }
 }
 //--------------------------------------------------------

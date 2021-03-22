@@ -293,7 +293,7 @@ export default function CreateJobPage() {
         onClick={handleClickOpen}
         style={{fontFamily:"Oswald"}}
       >
-        Create sUb Job
+        Create Job
       </ColorButton>
       </Grid>
       <Grid container spacing={2}>
@@ -324,7 +324,6 @@ export default function CreateJobPage() {
                       }}
                     >
                       {item.NameJob}
-                      
                     </div>
                     <Grid container>
                       <Grid item xs={6} sm={6} style={{ display:"flex",alignItems:"center",justifyContent:"flex-end"}}>
