@@ -61,10 +61,10 @@ export default function AcAttribute() {
             container
             style={{ textAlign: "left", paddingBottom: 20, lineHeight: 4 }}
           >
-            {CreateAttributeReducer[0].Attribute.map((itemAttribute, index) => (
+            {CreateAttributeReducer.map((itemAttribute,index) => (
               <Grid item key={index} xs={6} sm={6} style={{ paddingLeft: 40 }}>
-                {itemAttribute}
-                {console.log(CreateAttributeReducer[0].Attribute)}
+                {itemAttribute.name}
+                {console.log()}
                 <BorderLinearProgress variant="determinate" value={80} />
               </Grid>
             ))}
