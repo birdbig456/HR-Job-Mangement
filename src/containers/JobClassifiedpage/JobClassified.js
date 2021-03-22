@@ -20,16 +20,17 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   button: {
-    background: "#FF3019",
+    background: "#82b440",
     color: "#ffff",
   },
   button2: {
-    background: "#385a7c",
-    color: "#ffff",
+    background: "#fafafa",
+    color: "#385a7c",
     marginRight: 10,
+    border:"1px solid #385a7c"
   },
   button3: {
-    background: "#36a69a",
+    background: "#13b5ea",
     color: "#ffff",
   },
 }));
@@ -115,7 +116,7 @@ export default function JobClassified() {
             >
               <Typography
                 style={{
-                  color: "#FF3019",
+                  color: "#13b5ea",
                   textAlign: "Left",
                   width: "100%",
                   fontSize: 18,
@@ -126,7 +127,7 @@ export default function JobClassified() {
                 Level {num}
               </Typography>
               <CardActions style={{ padding: 0 }}>
-                <IconButton style={{ padding: 0, color: "#FF3019" }}>
+                <IconButton style={{ padding: 0, color: "#13b5ea" }}>
                   <CancelIcon />
                 </IconButton>
               </CardActions>
@@ -188,9 +189,9 @@ export default function JobClassified() {
               <Grid item xs={4} sm={4}></Grid>
             </Grid>
             <Grid style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Button className={classes.button2}>Edit</Button>
+              <Button  variant="outlined" className={classes.button2}>Edit</Button>
               <Button
-                className={classes.button}
+                className={classes.button3}
                 onClick={() => {
                   let dataSend = Object.assign({});
                   dataSend.NameLevel = nameLevel;
@@ -221,7 +222,7 @@ export default function JobClassified() {
         <Link to="/JobClassDisplay" className={classes.link}>
           <Button
             className={classes.button}
-            
+            variant="contained"
             style={{ paddingLeft: 25, paddingRight: 25 }}
           >
             SUBMIT

@@ -101,7 +101,7 @@ export default function PositionPage() {
               >
                 Back
               </Button>
-              <Button variant="contained"  style={{background:"#ff3019", color:"#ffffff"}} onClick={handleNext}>
+              <Button variant="contained"  style={{background:"#13b5ea", color:"#ffffff"}} onClick={handleNext}>
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
               </Button>
             </div>

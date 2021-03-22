@@ -36,7 +36,7 @@ export default class MyRadarComp extends React.Component {
           speed: 0.57,
           weight: 0.7
         },
-        meta: { color: '#fec566' }
+        meta: { color: '#82b440' }
       },
      
     ];

@@ -96,7 +96,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C1-Strong Performers
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -134,7 +134,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     B1-Key Talent 3
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -171,7 +171,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                   A1-Key Talent 1
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -208,7 +208,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C2-Contributors
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -246,7 +246,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     B2-Solid Contributors
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -283,7 +283,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     A2-Key Talent 2
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -320,7 +320,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C3-Need Improvement
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -357,7 +357,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     B3-Watch List
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -394,7 +394,7 @@ export default function WorkforceManagement() {
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
                     C3-Reassign
                   </h4>
-                  <h4 style={{ margin: 0, marginTop: 10, color: "#ff3019" }}>
+                  <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
                   </h4>
                 </Grid>
@@ -430,7 +430,7 @@ export default function WorkforceManagement() {
                   justifyContent: "flex-start",
                   alignItems: "center",
                   color: "#ffff",
-                  background:"#ff3019",
+                  background:"#13b5ea",
                   letterSpacing:"1px",
                   fontFamily: "Oswald",
                 }}

@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     height: 270,
     marginLeft: 5,
     marginRight: 5,
-    color:"#fec566"
+    color:"#13b5ea"
   },
   Block2: {
     border: "solid 1px #e5e5e5",
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     height: 110,
     marginLeft: 5,
     marginRight: 5,
-    color:"#ff3019"
+    color:"#82b440"
   },
 }));
 

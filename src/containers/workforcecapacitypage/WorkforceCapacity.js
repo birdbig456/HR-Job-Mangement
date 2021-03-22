@@ -16,7 +16,7 @@ import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    background: "#FF3019",
+    background: "#82b440",
     color: "#ffff",
   },
 }));
@@ -50,7 +50,7 @@ export default function JobView() {
 
       {CreateTeamReducer.Team.map((num, index) => (
         <Accordion key={index}
-          style={{ marginTop: 20, boxShadow: "0px 0px 0px rgba(0,0,0,0)",background:"#ff3019",borderRadius:15 }}
+          style={{ marginTop: 20, boxShadow: "0px 0px 0px rgba(0,0,0,0)",background:"#13b5ea",borderRadius:15 }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon style={{ color: "#ffffff" }} />}
@@ -85,7 +85,7 @@ export default function JobView() {
                     marginTop: 55,
                     marginLeft:15,
                     marginRight:15,
-                    backgroundColor: "#FF3019",
+                    backgroundColor: "#13b5ea",
                     padding: 10,
                     border: 0,
                     borderRadius: 5,

@@ -11,7 +11,7 @@ import { useHistory } from "react-router-dom";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: "#26A69A",
+    backgroundColor: "#13b5ea",
     color: theme.palette.common.white,
   },
   body: {

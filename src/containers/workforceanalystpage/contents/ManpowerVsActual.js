@@ -50,7 +50,7 @@ let dataBar ={
     {
       label: "Actual",
       stack: "Stack 0",
-      backgroundColor: "#FF3019",
+      backgroundColor: "#82b440",
       data: [10, 15, 30, 60, 50,40].map((k) => -k),
     },
   ],
@@ -59,7 +59,7 @@ let dataBar ={
   const classes = useStyles();
   return (
     <Grid container>
-      <p style={{ marginLeft: 40, fontSize: 20, color: "#FF3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
+      <p style={{ marginLeft: 40, fontSize: 20, color: "#13b5ea" ,fontWeight:"bolder",fontFamily:"OSwald"}}>
         Man Power VS Actual
       </p>
       <Grid container className={classes.Block}>

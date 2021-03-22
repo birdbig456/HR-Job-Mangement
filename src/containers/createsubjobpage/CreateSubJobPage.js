@@ -44,10 +44,10 @@ const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
     height: 40,
-    background: "#FF3019",
+    background: "#82b440",
     marginRight: 20,
     "&:hover": {
-      background: "#FF4F3C",
+      background: "#6A8F38",
     },
   },
 }))(Button);
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     height: "auto",
     width: 300,
-    backgroundColor: "#ff3019",
+    backgroundColor: "#13b5ea",
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
     border: "1px solid #D2CBCB",
     textAlign: "center",
@@ -259,7 +259,7 @@ export default function CreateSubJobPage({ match }) {
                       className={classes.palette}
                       aria-label="upload picture"
                       component="span"
-                      style={{ color: "#FF3019" }}
+                      style={{ color: "#13b5ea" }}
                     >
                       <PhotoCamera />
                     </IconButton>
@@ -295,7 +295,7 @@ export default function CreateSubJobPage({ match }) {
             color="primary"
             variant="contained"
             size="small"
-            style={{ margin: 7, background: "#FF3019", color: "#ffffff" }}
+            style={{ margin: 7, background: "#13b5ea", color: "#ffffff" }}
           >
             Save
           </Button>
@@ -335,7 +335,7 @@ export default function CreateSubJobPage({ match }) {
                           <Paper className={classes.paperJob} type="button">
                             <div
                               style={{
-                                color: "#FF3019",
+                                color: "#13b5ea",
                                 textAlign: "center",
                                 fontSize: 20,
                                 fontWeight: "bold",
@@ -518,7 +518,7 @@ export default function CreateSubJobPage({ match }) {
                         <DialogTitle
                           style={{ textAlign: "center", color: "#5B5656" }}
                         >
-                          <h3 style={{ fontSize: 20, color: "#FF3019" }}>
+                          <h3 style={{ fontSize: 20, color: "#13b5ea" }}>
                             Create New SubJob
                           </h3>
                         </DialogTitle>

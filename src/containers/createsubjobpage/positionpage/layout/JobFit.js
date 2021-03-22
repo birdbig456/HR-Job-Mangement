@@ -164,10 +164,9 @@ useImperativeHandle(
             <Button
               type="submit"
               className={classes.palette}
-              color="primary"
               variant="contained"
               size="small"
-              style={{ margin: 7 }}
+              style={{ margin: 7 ,background:"#13b5ea",color:"#ffff"}}
             >
               Save
             </Button>
@@ -225,7 +224,7 @@ useImperativeHandle(
           ))}
           <Grid item sm={10}></Grid>
           <Grid item xs={12} sm={2}>
-            <Button variant="contained" style={{background:"#ff3019", color:"#ffffff"}} onClick={handleClickOpen}>
+            <Button variant="contained" style={{background:"#82b440", color:"#ffffff"}} onClick={handleClickOpen}>
               Create New
             </Button>
           </Grid>
@@ -239,7 +238,7 @@ useImperativeHandle(
       >
         <Grid container>
           <Grid xs={12} sm={12} item>
-            <DialogTitle style={{ textAlign: "center", color: "#5B5656" }}>
+            <DialogTitle style={{ textAlign: "center", color: "#13b5ea" }}>
               Create New Attribute
             </DialogTitle>
           </Grid>

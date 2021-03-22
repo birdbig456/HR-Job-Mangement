@@ -51,7 +51,7 @@ const outerTheme = createMuiTheme({
   palette: {
 
     primary: {
-      main: '#Ff3019',
+      main: '#262626',
 
     secondary: {
       main: green[500],
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color:'#FF3019',
+    color:'#13d5ea',
   },
   drawerHeader: {
     display: "flex",
@@ -154,7 +154,7 @@ export default function App() {
           >
             <Toolbar>
               <IconButton
-              style={{color:"#ffff"}}
+              style={{color:"#82b440"}}
                 aria-label="open drawer"
                 onClick={handleDrawerOpen}
                 edge="start"
@@ -180,7 +180,7 @@ export default function App() {
           >
             <div className={classes.drawerHeader}>
               <IconButton
-              style={{color:"#ff3019"}}
+              style={{color:"#13d5ea"}}
                 className={classes.palette}
                 onClick={handleDrawerClose}
               >

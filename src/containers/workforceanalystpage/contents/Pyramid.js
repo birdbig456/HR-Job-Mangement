@@ -33,16 +33,7 @@ export default function Pyramid() {
   const classes = useStyles();
   return (
     <Grid container>
-      {/* <BrowserRouter>
-      <Link 
-      to="/JobDepartment">
-          <p style={{ marginLeft: 40, fontSize: 16, color: "#FF3019" }}>Pyramid</p>
-      </Link>
-      <Switch>
-        <Route exact path="/JobDepartment" component={JobDepartment} />
-      </Switch>
-      </BrowserRouter> */}
-      <p style={{ marginLeft: 40,fontSize: 20, color: "#ff3019" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Pyramid</p>
+      <p style={{ marginLeft: 40,fontSize: 20, color: "#13b5ea" ,fontWeight:"bolder",fontFamily:"OSwald"}}>Pyramid</p>
       <Grid
         item
         xs={12}

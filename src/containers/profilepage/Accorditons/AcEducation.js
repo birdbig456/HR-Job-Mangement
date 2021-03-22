@@ -17,7 +17,7 @@ export default function AcEducation() {
   return (
     <Grid container>
       <Grid item xs={4} sm={4}>
-        <h3 style={{ marginLeft: 10 ,fontFamily:"Oswald",color:"#385a7c"}}>Level 1</h3>
+        <h3 style={{ marginLeft: 10 ,fontFamily:"Oswald",color:"#13b5ea"}}>Level 1</h3>
         <div className={classes.levelBlock} style={{ textAlign: "center" }}>
           <p >Bachelor Degree</p>
           <p>2002 - 2006</p>
@@ -28,7 +28,7 @@ export default function AcEducation() {
         </div>
       </Grid>
       <Grid item xs={4} sm={4}>
-        <h3 style={{ marginLeft: 10 ,fontFamily:"Oswald",color:"#385a7c"}}>Level 2</h3>
+        <h3 style={{ marginLeft: 10 ,fontFamily:"Oswald",color:"#13b5ea"}}>Level 2</h3>
         <div className={classes.levelBlock} style={{ textAlign: "center" }}>
           <p>Master Degree</p>
           <p>2007 - 2009</p>
@@ -39,7 +39,7 @@ export default function AcEducation() {
         </div>
       </Grid>
       <Grid item xs={4} sm={4}>
-        <h3 style={{ marginLeft: 10 ,fontFamily:"Oswald",color:"#385a7c"}}>Level 3</h3>
+        <h3 style={{ marginLeft: 10 ,fontFamily:"Oswald",color:"#13b5ea"}}>Level 3</h3>
         <div
           className={classes.levelBlock}
           style={{ textAlign: "center" }}

@@ -22,13 +22,13 @@ export default function ScatterChart() {
       {
         label: 'My First dataset',
         fill: true,
-        backgroundColor: '#385A7C',
-        pointBorderColor: '#385A7C',
-        pointBackgroundColor: '#385A7C',
+        backgroundColor: '#82b440',
+        pointBorderColor: '#82b440',
+        pointBackgroundColor: '#82b440',
         pointBorderWidth: 1,
         pointHoverRadius: 5,
-        pointHoverBackgroundColor: '#385A7C',
-        pointHoverBorderColor: '#385A7C',
+        pointHoverBackgroundColor: '#82b440',
+        pointHoverBorderColor: '#82b440',
         pointHoverBorderWidth: 2,
         pointRadius: 4,
         pointHitRadius: 10,
@@ -54,7 +54,7 @@ export default function ScatterChart() {
   const classes = useStyles();
   return (
     <Grid container>
-      <p style={{ marginLeft: 40, fontSize: 20, color: "#FF3019",fontFamily:"Oswald",fontWeight:"bolder",}}>
+      <p style={{ marginLeft: 40, fontSize: 20, color: "#13b5ea",fontFamily:"Oswald",fontWeight:"bolder",}}>
         Scatter Age / Level
       </p>
       <Grid
