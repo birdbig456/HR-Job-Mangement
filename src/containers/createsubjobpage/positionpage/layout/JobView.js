@@ -22,10 +22,8 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Typography from "@material-ui/core/Typography";
 import PieChart from "./Charts/PieChart";
 import MyRadarComp from "./Charts/MyRadarComp";
-import CardHeader from "@material-ui/core/CardHeader";
-import Avatar from "@material-ui/core/Avatar";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-
+import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -111,17 +109,17 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 10,
     marginRight: 10,
   },
-  paperRecom: {
+  paperRecom:{
     border: "solid 1px #e5e5e5",
     textAlign: "center",
-    marginLeft: 30,
-    marginRight: 30,
-    marginTop: 5,
-    marginBottom: 5,
-    paddingLeft: 30,
-    paddingRight: 30,
-    borderRadius: 20,
-  },
+    marginLeft:30,
+    marginRight:30,
+    marginTop:5,
+    marginBottom:5,
+    paddingLeft:30,
+    paddingRight:30,
+    borderRadius:20
+  }
 }));
 
 export default function JobView() {
@@ -241,7 +239,7 @@ export default function JobView() {
             Attributes
           </Typography>
           <Grid container>
-            {CreateAttributeReducer[0].Attribute.map((itemAttribute, index) => (
+            {CreateAttributeReducer.map((itemAttribute,index) => (
               <Grid
                 item
                 xs={6}
@@ -250,7 +248,7 @@ export default function JobView() {
               >
                 <Grid container key={index} style={{ marginBottom: 10 }}>
                   <Grid item xs={6} sm={6} style={{ textAlign: "left" }}>
-                    {itemAttribute}
+                    {itemAttribute.name}
                   </Grid>
                   <Grid item xs={6} sm={6} style={{ marginLeft: -80 }}>
                     <BorderLinearProgress variant="determinate" value={30} />
@@ -340,9 +338,11 @@ export default function JobView() {
         >
           Competency Need
         </Typography>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <MyRadarComp />
+        <div style={{display:"flex",justifyContent:"center"}}>
+        <MyRadarComp />
         </div>
+
+        
       </div>
 
       <div className={classes.Newpaper}>
@@ -360,6 +360,7 @@ export default function JobView() {
           Job Task
         </Typography>
         <PieChart />
+<<<<<<< HEAD
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Button
             variant="contained"
@@ -368,6 +369,16 @@ export default function JobView() {
           >
             View Job Task
           </Button>
+=======
+        <div style={{display:"flex",justifyContent:"flex-end"}}>
+        <Button
+          variant="contained"
+          size="small"
+          style={{ background: "#ff3019", color: "#ffffff" ,marginRight:40}}
+        >
+          View Job Task
+        </Button>
+>>>>>>> 569ea5fb62213679ce54da4b7aee1204d1f11376
         </div>
       </div>
 
@@ -386,17 +397,8 @@ export default function JobView() {
           Lastes Person Inxxxxxx
         </Typography>
         <Grid container>
-          <Grid
-            item
-            xs={12}
-            sm={4}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <p>Graph</p>
+          <Grid item xs={12} sm={4} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+           <p>Graph</p>
           </Grid>
           <Grid item xs={12} sm={8}>
             <p
@@ -465,28 +467,33 @@ export default function JobView() {
         >
           Recommendation
         </Typography>
-        <Grid container style={{ alignItems: "center", marginLeft: 60 }}>
-          <Avatar>B</Avatar>
+        <Grid container style={{alignItems:"center",marginLeft:60}}>
+          <Avatar>
+            B
+          </Avatar>
           <div className={classes.paperRecom}>
-            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
           </div>
         </Grid>
-        <Grid container style={{ alignItems: "center", marginLeft: 60 }}>
-          <Avatar>M</Avatar>
+        <Grid container style={{alignItems:"center",marginLeft:60}}>
+          <Avatar>
+            M
+          </Avatar>
           <div className={classes.paperRecom}>
-            <p>
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-            </p>
+          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
           </div>
         </Grid>
-        <Grid container style={{ alignItems: "center", marginLeft: 60 }}>
-          <Avatar>A</Avatar>
+        <Grid container style={{alignItems:"center",marginLeft:60}}>
+          <Avatar>
+            A
+          </Avatar>
           <div className={classes.paperRecom}>
-            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
           </div>
         </Grid>
-      </div>
+        
 
+<<<<<<< HEAD
       <Link
       to="/CreateJob">
         <Button
@@ -502,6 +509,9 @@ export default function JobView() {
           View Job Family
         </Button>
       </Link>
+=======
+      </div>
+>>>>>>> 569ea5fb62213679ce54da4b7aee1204d1f11376
     </div>
   );
 }
