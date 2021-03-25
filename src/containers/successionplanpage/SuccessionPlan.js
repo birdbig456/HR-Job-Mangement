@@ -117,7 +117,7 @@ export default function SuccessionPlan() {
     }
   }
   return (
-    <div style={{ backgroundColor: "#FAFAFA"}}>
+    <div style={{ backgroundColor: "#ffff"}}>
       <Grid container>
         <Grid item sm={12} xs={12} style={{ marginBottom: 5 }}>
           <h3
@@ -125,7 +125,7 @@ export default function SuccessionPlan() {
               fontSize: 28,
               color: "#385A7C",
               fontFamily: "Oswald",
-              marginTop: 0,
+              marginTop: 15,
               textAlign: "center",
               marginBottom: 15,
             }}
@@ -243,7 +243,6 @@ export default function SuccessionPlan() {
         </Grid>
 
         <Grid item sm={3} xs={3}>
-        <Grid container style={{width:"100%",paddingBottom:15}}>
         <Grid
               item
               sm={12}
@@ -260,11 +259,8 @@ export default function SuccessionPlan() {
               }}
             >
               <h3 style={{ marginLeft: 20 }}>TALENT POOL</h3>
-              <p style={{ marginRight: 10 }}>
-                {/* <ChevronRightOutlinedIcon /> */}
-              </p>
             </Grid>
-            
+        <Grid style={{width:"100%",height:"92%",overflow:"scroll"}}>
           <DropItem
             onDrop={(id) => {
               const currentTodo = { ...todoValues[id] };
@@ -280,6 +276,7 @@ export default function SuccessionPlan() {
               ))}
           </DropItem>
           </Grid>
+          
         </Grid>
       </Grid>
     </div>

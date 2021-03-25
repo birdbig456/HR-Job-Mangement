@@ -18,29 +18,37 @@ import {
   Button,
   Switch,
   Grid,
+  Box,
 } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
-import { lighten, withStyles } from "@material-ui/core/styles";
+import { lighten, withStyles, makeStyles } from "@material-ui/core/styles";
 import OrganizationChart from "@dabeng/react-orgchart";
 import JSONDigger from "json-digger";
+
 import DragItem from "../../workforcemanagementpage/component/drag-item";
 import DropItem from "../../workforcemanagementpage/component/drop-item";
 import "./style.css";
 // Icons
 import { Flag, Edit, Visibility } from "@material-ui/icons";
 
-const todos = {
-  
-};
+const useStyles = makeStyles((theme) => ({
+  BG: {
+    background: "#fff",
+    color: "#385a7c",
+    marginTop: 10,
+  },
+}));
+
+const todos = {};
 
 const BorderLinearProgress = withStyles({
   root: {
     height: 10,
-    backgroundColor: lighten("#ff6c5c", 0.5),
+    backgroundColor: lighten("#82b440", 0.5),
   },
   bar: {
     borderRadius: 20,
-    backgroundColor: "#ff6c5c",
+    backgroundColor: "#82b440",
   },
 })(LinearProgress);
 
@@ -98,6 +106,7 @@ const TransactionTable = ({ columns, data, error }) => {
   );
 };
 
+//dialog popup when clicked----start
 const ShowDetail = ({ data, open, setOpen }) => {
   return (
     open && (
@@ -159,69 +168,62 @@ const ShowDetail = ({ data, open, setOpen }) => {
     )
   );
 };
+//dialog popup when clicked---------end
 
+//organizeCard-----start
 const MyNode = ({ nodeData, color }) => {
   const [todoValues, setValue] = useState(todos);
+  const classes = useStyles();
+
   return (
-    <div
-      className="shadow text-dark rounded p-3 border"
-      style={{ backgroundColor: color ? color : "#FFF2E6"  }}
-    >
-      <Grid container>
-        <Grid item xs={8} sm={8}>
-          <div className="h5" style={{marginTop:10}}>{nodeData.position}</div>
-          <div className="py-1" style={{textAlign:"center"}}>
-            <img
-              src={nodeData.img}
-              alt="img"
-              style={{ width: 60, borderRadius: "50%" }}
-            />
-            &nbsp;<div >{nodeData.name}</div>
-          </div>
-          <div className="py-1">
-            <Flag className="colorDefault3" /> &nbsp;{nodeData.objective}
-          </div>
-          
-          <div>
-            <Grid container>
-              <Grid item xs={4} sm={4}>
-                <div style={{ backgroundColor: "#e5e5e5" }}>
-                  ⠀<br />
-                  <div style={{ color: "#ff3019", fontSize: 14 }}> PL</div>
-                  <br />
-                  <div style={{ margin: "20", fontSize: 18 }}>
-                    {nodeData.pl}
-                  </div>
-                  <br />
-                </div>
-              </Grid>
-              <Grid item xs={4} sm={4}>
-                <div style={{ backgroundColor: "#e5e5e5" }}>
-                  ⠀<br />
-                  <div style={{ color: "#ff3019", fontSize: 14 }}> Age</div>
-                  <br />
-                  <div style={{ margin: "20", fontSize: 18 }}>
-                    {nodeData.age}
-                  </div>
-                  <br />
-                </div>
-              </Grid>
-              <Grid item xs={4} sm={4}>
-                <div style={{ backgroundColor: "#e5e5e5" }}>
-                  ⠀<br />
-                  <div style={{ color: "#ff3019", fontSize: 14 }}> TIP</div>
-                  <br />
-                  <div style={{ margin: "20", fontSize: 18 }}>
-                    {nodeData.tip}
-                  </div>
-                  <br />
-                </div>
-              </Grid>
+    <div style={{ backgroundColor: color ? color : "#FFF2E6" }}>
+      <Grid container style={{ width: 240 }}>
+        <Grid item xs={8} sm={8} style={{padding:4}}>
+          <p
+            style={{
+              fontWeight: "bold",
+              fontFamily: "Oswald",
+              letterSpacing: "1px",
+              textTransform: "uppercase",
+            }}
+          >
+            {nodeData.position}
+          </p>
+          <div style={{ fontWeight: "bold" }}>{nodeData.name}</div>
+          <img
+            src={nodeData.img}
+            alt="img"
+            style={{ width: 60, borderRadius: "50%" }}
+          />
+
+          <div>{nodeData.objective}</div>
+
+          <Grid
+            item
+            container
+            style={{
+              textAlign: "center",
+              justifyContent: "space-between",
+              marginBottom: 8,
+              marginTop:8
+            }}
+          >
+            <Grid item xs={3} sm={3}>
+              <Box>PL</Box>
+              <Box className={classes.BG}>{nodeData.pl}</Box>
             </Grid>
-          </div>
+            <Grid item xs={3} sm={3}>
+              <Box>Age</Box>
+              <Box className={classes.BG}>{nodeData.age}</Box>
+            </Grid>
+            <Grid item xs={3} sm={3}>
+              <Box>TIP</Box>
+              <Box className={classes.BG}>{nodeData.tip}</Box>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={4} sm={4} style={{marginTop:28}}>
-        <DropItem
+        <Grid item xs={4} sm={4} style={{ backgroundColor: "#fafafa"}}>
+          <DropItem
             onDrop={(id) => {
               const currentTodo = { ...todoValues[id] };
               currentTodo.state = "box3";
@@ -240,7 +242,9 @@ const MyNode = ({ nodeData, color }) => {
     </div>
   );
 };
+//organizeCard-----end
 
+//inside info-----start
 const Dashboard = () => {
   const [successQuery, setSuccessQuery] = useState(false);
   const [open, setOpen] = useState(false);
@@ -613,62 +617,61 @@ const Dashboard = () => {
 
   return (
     successQuery && (
-      <div className="row py-4">
-        <div className="col-12">
-          <div className="row justify-content-center px-5 pb-4">
-            <div
-              className={
-                ("px-0 text-center",
-                departmentToCompare ? "col-6 pl-5 pr-1" : "col-12 px-md-5")
+      <div className="BigLeftPaper">
+        <div className="row justify-content-center px-5 pb-4">
+          <div
+            className={
+              ("px-0 text-center",
+              departmentToCompare ? "col-6 pl-5 pr-1" : "col-12 px-md-5")
+            }
+          >
+            <OrganizationChart
+              datasource={chartSource}
+              chartClass="orgChart"
+              collapsible={false}
+              NodeTemplate={MyNode}
+              onClickNode={
+                !isEditMode
+                  ? (nodeData) => {
+                      setSelectedNode([nodeData, "#FFF2E6"]);
+                      setOpen(true);
+                    }
+                  : (nodeData) => {
+                      setSelectedNode(nodeData);
+                    }
               }
-            >
+              pan={true}
+            />
+          </div>
+
+          {departmentToCompare && (
+            <div className="col-6 px-0 pr-5 text-center">
               <OrganizationChart
-                datasource={chartSource}
+                datasource={chartSourceCompare}
                 chartClass="orgChart"
                 collapsible={false}
-                NodeTemplate={MyNode}
+                NodeTemplate={(nodeData) => (
+                  <MyNode nodeData={nodeData.nodeData} color="#E6FFF8" />
+                )}
                 onClickNode={
                   !isEditMode
                     ? (nodeData) => {
-                        setSelectedNode([nodeData, "#FFF2E6"]);
+                        setSelectedNode([nodeData, "#E6FFF8"]);
                         setOpen(true);
                       }
-                    : (nodeData) => {
-                        setSelectedNode(nodeData);
-                      }
+                    : null
                 }
                 pan={true}
               />
             </div>
+          )}
 
-            {departmentToCompare && (
-              <div className="col-6 px-0 pr-5 text-center">
-                <OrganizationChart
-                  datasource={chartSourceCompare}
-                  chartClass="orgChart"
-                  collapsible={false}
-                  NodeTemplate={(nodeData) => (
-                    <MyNode nodeData={nodeData.nodeData} color="#E6FFF8" />
-                  )}
-                  onClickNode={
-                    !isEditMode
-                      ? (nodeData) => {
-                          setSelectedNode([nodeData, "#E6FFF8"]);
-                          setOpen(true);
-                        }
-                      : null
-                  }
-                  pan={true}
-                />
-              </div>
-            )}
-
-            <ShowDetail data={selectedNode} open={open} setOpen={setOpen} />
-          </div>
+          <ShowDetail data={selectedNode} open={open} setOpen={setOpen} />
         </div>
       </div>
     )
   );
 };
+//inside info-----end
 
 export default Dashboard;
