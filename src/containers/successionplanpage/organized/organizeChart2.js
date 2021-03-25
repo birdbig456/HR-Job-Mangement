@@ -241,7 +241,7 @@ const MyNode = ({ nodeData, color }) => {
   );
 };
 
-const Dashboard = () => {
+const Dashboard2 = () => {
   const [successQuery, setSuccessQuery] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedNode, setSelectedNode] = useState(null);
@@ -270,9 +270,9 @@ const Dashboard = () => {
         "3nd Organization key result",
       ],
       img:
-        "https://previews.123rf.com/images/jemastock/jemastock1802/jemastock180208051/96119229-beautiful-girl-face-cartoon-vector-illustration-graphic-design.jpg",
-      name: "Alicia Lee",
-      position: "Manager Director",
+        "https://previews.123rf.com/images/farhad73/farhad731807/farhad73180700006/104271850-man-cartoon-face-with-glasses-vector-illustration-.jpg",
+      name: "Pongsakorn P",
+      position: "Manager Saler",
       pl: "M2",
       age: "52/7",
       tip: "6/7",
@@ -290,6 +290,23 @@ const Dashboard = () => {
       ],
       crossTeam: ["HR", "Security"],
       img:
+        "https://previews.123rf.com/images/jemastock/jemastock1802/jemastock180208043/96119220-cute-boy-face-cartoon-vector-illustration-graphic-design.jpg",
+      name: "Isabelle Cerys",
+      position: "Manager",
+      pl: "S4",
+      age: "50/3",
+      tip: "2/3",
+    },
+    {
+      id: "9",
+      objective: "Team Objective",
+      keyResult: [
+        "1st Team key result",
+        "2nd Team key result",
+        "3nd Team key result",
+      ],
+      crossTeam: ["HR", "Security"],
+      img:
         "https://image.shutterstock.com/image-vector/beautiful-girl-face-cartoon-600w-1032904255.jpg",
       name: "Isabelle Cerys",
       position: "Manager",
@@ -298,6 +315,7 @@ const Dashboard = () => {
       tip: "2/3",
     });
   };
+  
 
   const queryManager = async () => {
     setManager([
@@ -436,6 +454,7 @@ const Dashboard = () => {
         objective: "Objective detail",
         keyResult: ["1st key result", "2nd key result", "3nd key result"],
       },
+      
     ]);
   };
 
@@ -671,4 +690,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Dashboard2;
