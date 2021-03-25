@@ -17,8 +17,11 @@ import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Dashboard from "./organized/organizeChart";
+import Dashboard2 from "./organized/organizeChart2";
+import Dashboard3 from "./organized/organizeChart3";
 import DragItem from "./organized/component/drag-item";
 import DropItem from "./organized/component/drop-item";
+
 const useStyles = makeStyles((theme) => ({
   CandidateCard: {
     background: "#ffff",
@@ -98,6 +101,21 @@ export default function SuccessionPlan() {
   };
   const [todoValues, setValue] = useState(todos);
   const classes = useStyles();
+  const Condition = (jobgroup) =>{
+    if(division===1&&jobgroup===1&&subjobgroup===1&&jobposition===1&&todoValues===1)
+    return(
+      <Dashboard2></Dashboard2>
+    )
+    if(division==2&&jobgroup==2&&subjobgroup==2&&jobposition==2&&todoValues==2)
+    return(
+      <Dashboard3></Dashboard3>
+    )
+    else{
+    return(
+      <Dashboard></Dashboard>
+    )
+    }
+  }
   return (
     <div style={{ backgroundColor: "#FAFAFA"}}>
       <Grid container>
@@ -221,7 +239,7 @@ export default function SuccessionPlan() {
             color: "#385a7c",
           }}
         >
-          <Dashboard />
+          <Condition jobgroup={jobgroup} subjobgroup={subjobgroup} jobposition={jobposition} division={division}></Condition>
         </Grid>
 
         <Grid item sm={3} xs={3}>
