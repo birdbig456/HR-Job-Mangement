@@ -24,9 +24,11 @@ import { Autocomplete } from "@material-ui/lab";
 import { lighten, withStyles, makeStyles } from "@material-ui/core/styles";
 import OrganizationChart from "@dabeng/react-orgchart";
 import JSONDigger from "json-digger";
-
+import IconButton from "@material-ui/core/IconButton";
+import CloseIcon from "@material-ui/icons/Close";
 import DragItem from "../../workforcemanagementpage/component/drag-item";
 import DropItem from "../../workforcemanagementpage/component/drop-item";
+import CardHeader from "@material-ui/core/CardHeader";
 import "./style.css";
 // Icons
 import { Flag, Edit, Visibility } from "@material-ui/icons";
@@ -108,61 +110,83 @@ const TransactionTable = ({ columns, data, error }) => {
 
 //dialog popup when clicked----start
 const ShowDetail = ({ data, open, setOpen }) => {
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     open && (
       <Dialog open={open} onClose={() => setOpen(false)} className="p-2">
-        <DialogTitle style={{ backgroundColor: data[1] }}>
-          Planning detail
+        <DialogTitle
+          style={{
+            background:"#262626",
+            alignItems: "center",
+          }}
+          onClose={handleClose}
+        >
+          <a
+            style={{
+              color: "#FFFF",
+              fontFamily: "Oswald",
+              fontWeight: "bold",
+            }}
+          >
+            Planning detail
+          </a>
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            size="small"
+            style={{ float: "right", marginTop: 3 }}
+          >
+            <CloseIcon style={{ color: "#82B440" }} fontSize="small" />
+          </IconButton>
         </DialogTitle>
-        <DialogContent style={{ backgroundColor: data[1] }}>
-          <div className="pb-3">
-            <div className="pb-2">
+        <DialogContent style={{ backgroundColor: "#ffff",paddingTop:""}}>
+          <CardHeader
+          style={{paddingTop:0}}
+            avatar={
               <img
                 src={data[0].img}
                 alt="img"
-                style={{ width: 40, borderRadius: "50%" }}
+                style={{ width: 50, borderRadius: "50%" }}
               />
-              &nbsp;{data[0].name}
-              <span className="text-muted">
-                &nbsp; - &nbsp;{data[0].position}
-              </span>
-            </div>
-            <div className="py-2">
-              <Flag className="colorDefault3" /> &nbsp;Objective
-              <br />
-              <span className="p-1">{data[0].objective}</span>
-            </div>
-            <div className="py-3">
-              <Flag className="colorDefault2" /> &nbsp;Key Result
-              <br />
-              {data[0].keyResult.map((value, index) => {
-                return (
-                  <span key={index} className="p-1">
-                    {value}
-                    <br />
-                  </span>
-                );
+            }
+            title={data[0].name}
+            subheader={data[0].position}
+          />
+          <div>
+            <a style={{color:"#fec566"}}>Objective :</a>
+            <p style={{marginTop:0}}>{data[0].objective}</p>
+          </div>
+          <div>
+            <a style={{color:"#fec566"}}>Key Result :</a>
+            {data[0].keyResult.map((value, index) => {
+              return (
+                <p style={{marginTop:0}} key={index}>
+                  {value}
+                </p>
+              );
+            })}
+          </div>
+          {data[0].crossTeam && (
+            <div className="py-3 text-center">
+              Work with{" "}
+              {data[0].crossTeam.map((value, index) => {
+                return index === 0 ? value : ", " + value;
               })}
             </div>
-            {data[0].crossTeam && (
-              <div className="py-3 text-center">
-                Work with{" "}
-                {data[0].crossTeam.map((value, index) => {
-                  return index === 0 ? value : ", " + value;
-                })}
-              </div>
-            )}
-            {data[0].score && (
-              <div className="py-3 text-center">
-                {data[0].score * 100}%
-                <BorderLinearProgress
-                  variant="determinate"
-                  color="secondary"
-                  value={data[0].score * 100}
-                />
-              </div>
-            )}
-          </div>
+          )}
+          {data[0].score && (
+            <div className="py-3 text-center">
+              {data[0].score * 100}%
+              <BorderLinearProgress
+                variant="determinate"
+                color="secondary"
+                value={data[0].score * 100}
+              />
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     )
@@ -178,18 +202,27 @@ const MyNode = ({ nodeData, color }) => {
   return (
     <div style={{ backgroundColor: color ? color : "#FFF2E6" }}>
       <Grid container style={{ width: 240 }}>
-        <Grid item xs={8} sm={8} style={{padding:4}}>
+        <Grid item xs={8} sm={8} style={{ padding: 4 }}>
           <p
             style={{
               fontWeight: "bold",
               fontFamily: "Oswald",
               letterSpacing: "1px",
               textTransform: "uppercase",
+              color:"#385a7c"
             }}
           >
             {nodeData.position}
           </p>
-          <div style={{ fontWeight: "bold" }}>{nodeData.name}</div>
+          <div
+            style={{
+              fontWeight: "",
+              fontFamily: "",
+              color:"#385a7c"
+            }}
+          >
+            {nodeData.name}
+          </div>
           <img
             src={nodeData.img}
             alt="img"
@@ -205,7 +238,7 @@ const MyNode = ({ nodeData, color }) => {
               textAlign: "center",
               justifyContent: "space-between",
               marginBottom: 8,
-              marginTop:8
+              marginTop: 8,
             }}
           >
             <Grid item xs={3} sm={3}>
@@ -222,7 +255,7 @@ const MyNode = ({ nodeData, color }) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={4} sm={4} style={{ backgroundColor: "#fafafa"}}>
+        <Grid item xs={4} sm={4} style={{ backgroundColor: "#fafafa" }}>
           <DropItem
             onDrop={(id) => {
               const currentTodo = { ...todoValues[id] };

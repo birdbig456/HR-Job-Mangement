@@ -57,19 +57,19 @@ const useStyles = makeStyles((theme) => ({
 
 const todos = {
   1: {
-    text: "First Candidate",
+    text: "Pongsakorn Panprasert",
     state: "box2",
   },
   2: {
-    text: "Second Candidate",
+    text: "Thanuch Kiatkajonboworn",
     state: "box2",
   },
   3: {
-    text: "Third Candidate",
+    text: "Jocelyn flores",
     state: "box2",
   },
   4: {
-    text: "Fourth Candidate",
+    text: "Brandon willams",
     state: "box2",
   },
 };
@@ -252,7 +252,7 @@ export default function SuccessionPlan() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 fontFamily: "Oswald",
-                background: "#13b5ea",
+                background: "#262626",
                 color: "#ffff",
                 letterSpacing:"1px",
                 borderRadius:5,
