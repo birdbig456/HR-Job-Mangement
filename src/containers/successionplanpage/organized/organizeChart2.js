@@ -44,6 +44,7 @@ const BorderLinearProgress = withStyles({
   },
 })(LinearProgress);
 
+
 const TransactionTable = ({ columns, data, error }) => {
   return (
     <div>
