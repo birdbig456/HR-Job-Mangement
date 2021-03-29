@@ -182,7 +182,7 @@ export default function App() {
           >
             <div className={classes.drawerHeader}>
               <IconButton
-              style={{color:"#13d5ea"}}
+              style={{color:"#385a7c"}}
                 className={classes.palette}
                 onClick={handleDrawerClose}
               >
@@ -326,7 +326,7 @@ export default function App() {
                   <ListItemIcon>
                     <FormatAlignLeftIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
-                  <ListItemText primary={"Form Info"} />
+                  <ListItemText primary={"Form Information"} />
                 </ListItem>
               </Link>
 
