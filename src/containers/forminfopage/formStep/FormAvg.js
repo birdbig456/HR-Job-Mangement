@@ -61,21 +61,35 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FormAvg() {
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
-  
-  const [values, setValues] = React.useState({
-    Task: '',
-    Frequency: '',
-    ManHours: '',
-    Type: '',
+  const [reMark, setReMark] = React.useState({
+    ReUnexpected: '',
+    ReMeeting: '',
+    ReVoyage: '',
+    RePrepare: '',
+    ReTraing: '',
+    ReOther: '',
   });
 
 
-  const handleChange2 = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
+  const handleChange = (prop) => (event) => {
+    setReMark({ ...reMark, [prop]: event.target.value });
+  };
+  
+  const [manHour, setManHour] = React.useState({
+    Unexpected: '',
+    Meeting: '',
+    Voyage: '',
+    Prepare: '',
+    Traing: '',
+    Other: '',
+  });
+
+
+  const handleChange2 = (prop1) => (event) => {
+    setManHour({ ...manHour, [prop1]: event.target.value });
   };
 
-console.log(values)
+console.log(reMark,manHour)
   return (
     <div className={classes.root}>
         <Grid container>
@@ -84,152 +98,152 @@ console.log(values)
             </Grid>
             <Grid item xs={6} sm={5}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">ManHour/Month</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={manHour.Unexpected}
+            onChange={handleChange2('Unexpected')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={6} sm={2}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">Remark</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={reMark.ReUnexpected}
+            onChange={handleChange('ReUnexpected')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={12} sm={5}>
-                Average Unexpected Task
+                Average Meeting Time
             </Grid>
             <Grid item xs={6} sm={5}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="-adornment-amount">ManHour/Month</InputLabel>
           <OutlinedInput
-            id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            id=""
+            value={manHour.Meeting}
+            onChange={handleChange2('Meeting')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={6} sm={2}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">Remark</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={reMark.ReMeeting}
+            onChange={handleChange('ReMeeting')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={12} sm={5}>
-                Average Unexpected Task
+                Average Voyage Time
             </Grid>
             <Grid item xs={6} sm={5}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">ManHour/Month</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={manHour.Voyage}
+            onChange={handleChange2('Voyage')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={6} sm={2}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">Remark</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={reMark.ReVoyage}
+            onChange={handleChange('ReVoyage')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={12} sm={5}>
-                Average Unexpected Task
+                Average Prepare Date Time
             </Grid>
             <Grid item xs={6} sm={5}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">ManHour/Month</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={manHour.Prepare}
+            onChange={handleChange2('Prepare')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={6} sm={2}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">Remark</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={reMark.RePrepare}
+            onChange={handleChange('RePrepare')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={12} sm={5}>
-                Average Unexpected Task
+                Average Traing Time
             </Grid>
             <Grid item xs={6} sm={5}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">ManHour/Month</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={manHour.Traing}
+            onChange={handleChange2('Traing')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={6} sm={2}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">Remark</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={reMark.ReTraing}
+            onChange={handleChange('ReTraing')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={12} sm={5}>
-                Average Unexpected Task
+                Other Task Time 
             </Grid>
             <Grid item xs={6} sm={5}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">ManHour/Month</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={manHour.Other}
+            onChange={handleChange2('Other')}
             
           />
         </FormControl>
             </Grid>
             <Grid item xs={6} sm={2}>
             <FormControl fullWidth className={classes.margin} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-amount">Remark</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
-            value={values.Task}
-            onChange={handleChange2('Task')}
+            value={reMark.ReOther}
+            onChange={handleChange('ReOther')}
             
           />
         </FormControl>
             </Grid>
-            
+
         </Grid>        
     </div>
   );
