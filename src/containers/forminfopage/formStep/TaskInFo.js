@@ -9,6 +9,8 @@ import Select from "@material-ui/core/Select";
 import InputBase from "@material-ui/core/InputBase";
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import Grid from "@material-ui/core/Grid";
+
 
 
 
@@ -19,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
     
   },
   boxwidth:{
-    margin: theme.spacing(1),
-    minWidth: "32.6%",
+    minWidth: "100%",
   },
 }));
 
@@ -44,9 +45,9 @@ export default function TaskInFo() {
 
   console.log(values);
   return (
-    <div>
-       <div style={{display:"flex",justifyContent:"center"}}>
-      <FormControl className={classes.margin} variant="outlined">
+    <div style={{paddingInline:"15%"}}>
+       <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"center"}}>
+      <FormControl fullWidth variant="outlined">
         <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
         <OutlinedInput
           id="outlined-adornment-amount"
@@ -56,10 +57,11 @@ export default function TaskInFo() {
           onChange={handleChange2("Task")}
         />
       </FormControl>
-      </div>
+      </Grid>
     
-    <div style={{display:"flex",justifyContent:"center"}}>
-      <FormControl variant="outlined" className={classes.boxwidth}>
+    <Grid style={{display:"flex",justifyContent:"center",marginTop:10}}>
+    <Grid item xs={4} sm={4}>
+      <FormControl variant="outlined" className={classes.boxwidth} style={{paddingRight:5}}>
         <InputLabel id="1">Frequency</InputLabel>
         <Select
           labelId="1"
@@ -77,8 +79,10 @@ export default function TaskInFo() {
           <MenuItem value={30}>Monthly</MenuItem>
         </Select>
       </FormControl>
+      </Grid>
 
-      <FormControl className={classes.boxwidth} variant="outlined">
+      <Grid item xs={4} sm={4}>
+      <FormControl className={classes.boxwidth} variant="outlined" style={{paddingInline:5}}>
           <InputLabel htmlFor="outlined-adornment-amount">ManHours Use</InputLabel>
           <OutlinedInput
             id="2"
@@ -89,8 +93,10 @@ export default function TaskInFo() {
             
           />
         </FormControl>
+        </Grid>
 
-        <FormControl variant="outlined" className={classes.boxwidth}>
+        <Grid item xs={4} sm={4}>
+        <FormControl variant="outlined" className={classes.boxwidth} style={{paddingLeft:5}}>
         <InputLabel id="3">Type</InputLabel>
         <Select
           labelId="3"
@@ -108,8 +114,11 @@ export default function TaskInFo() {
           
         </Select>
       </FormControl>
-      </div>
-    <IconButton style={{float:"right",marginRight:200}}>
+      </Grid>
+
+      </Grid>
+
+    <IconButton style={{float:"right"}}>
       <AddCircleIcon fontSize="medium" style={{color:"#82b440"}} />
     </IconButton>
     </div>
