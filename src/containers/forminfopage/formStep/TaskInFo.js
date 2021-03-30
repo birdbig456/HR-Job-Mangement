@@ -15,12 +15,12 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
-    minWidth: 614,
+    minWidth: "100%",
     
   },
   boxwidth:{
     margin: theme.spacing(1),
-    minWidth: 180,
+    minWidth: "32.6%",
   },
 }));
 
