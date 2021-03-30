@@ -11,6 +11,9 @@ import { CREATELEVEL_ACTION_CREATE } from "../constants/Constants";
 import { CREATECLASS_ACTION_CREATE } from "../constants/Constants";
 import { CREATEWORKFORCE_ACTION_CREATE } from "../constants/Constants";
 import { CREATEATTRIBUTE_ACTION_UPDATE } from "../constants/Constants";
+import { CREATEPROJECT_ACTION_CREATE } from "../constants/Constants";
+
+
 export const setStateToCreateJob = (payload) => ({
     type: CREATEJOB_ACTION_CREATE,
     payload
@@ -61,6 +64,11 @@ export const setStateToCreateWorkforce = (payload) => ({
 })
 export const setStateToUpdateAttribute = (payload) => ({
     type: CREATEATTRIBUTE_ACTION_UPDATE,
+    payload
+})
+
+export const setStateToCreateProject = (payload) => ({
+    type: CREATEPROJECT_ACTION_CREATE,
     payload
 })
 
@@ -141,6 +149,12 @@ export const UpdateAttribute = (payload) => {
     return dispatch => {
         console.log(payload)
         dispatch(setStateToUpdateAttribute(payload))
+    }
+}
+export const CreateProject = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateProject(payload))
     }
 }
 //--------------------------------------------------------

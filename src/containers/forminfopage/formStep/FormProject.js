@@ -12,6 +12,7 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import TextField from "@material-ui/core/TextField";
 import { useHistory } from "react-router-dom";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import * as CreateAction from "../../../actions/CreateJob.action";
 const useStyles = makeStyles((theme) => ({
   card: {
     marginLeft: "15%",
@@ -64,8 +65,8 @@ export default function FormProject() {
   });
   const [count, setCount] = useState(2);
   const dispatch = useDispatch();
-  const CreateLevelReducer = useSelector(
-    ({ CreateLevelReducer }) => CreateLevelReducer
+  const CreateProjectReducer = useSelector(
+    ({ CreateProjectReducer }) => CreateProjectReducer
   );
   const handleClickToJobClassDisplay = () => {
     history.push("/JobClassDisplay");
@@ -92,15 +93,15 @@ export default function FormProject() {
             variant="contained"
             onMouseEnter={() => {}}
             onClick={() => {
-              
+              dispatch(CreateAction.CreateProject(count));
               setCount(count + 1);
             }}
           >
-            Create Level
+            Add Project
           </Button>
         </Grid>
       </Grid>
-      {CreateLevelReducer.Level.map((num, index) => (
+      {CreateProjectReducer.Project.map((num, index) => (
         <Card key={index} className={classes.card}>
           <CardContent style={{}}>
             <Grid

@@ -10,6 +10,7 @@ import CreateTeamReducer from "./CreateTeam.reducer";
 import CreateDivisionReducer from "./CreateDivision.reducer";
 import CreateLevelReducer from "./CreateLevel.reducer";
 import CreateclassReducer from "./CreateClass.reducer";
+import CreateProjectReducer from "./CreateProject.reducer";
 export default combineReducers({
     CreateJobReducer,
     CreateSubJobReducer,
@@ -21,5 +22,6 @@ export default combineReducers({
     CreateTeamReducer,
     CreateDivisionReducer,
     CreateLevelReducer,
-    CreateclassReducer
+    CreateclassReducer,
+    CreateProjectReducer
 });
