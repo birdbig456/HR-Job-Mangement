@@ -129,12 +129,12 @@ export default function TaskInFo() {
       ))}
       
 
-    <IconButton style={{float:"right"}}>
-      <AddCircleIcon onMouseEnter={() => {}}
+    <IconButton onMouseEnter={() => {}}
             onClick={() => {
               dispatch(CreateAction.CreateTask(count));
               setCount(count + 1);
-            }} fontSize="medium" style={{color:"#82b440"}} />
+            }} style={{float:"right"}}>
+      <AddCircleIcon  fontSize="medium" style={{color:"#82b440"}} />
     </IconButton>
     </div>
   );

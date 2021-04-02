@@ -329,9 +329,9 @@ export default function CreateJobPage() {
                       <Grid item xs={6} sm={6} style={{ display:"flex",alignItems:"center",justifyContent:"flex-end"}}>
                         <Avatar className={classes.avatarInPut}
                               style={{
-                                      borderRadius:0
+                                      borderRadius:5
                                       }}
-                                      src="https://sv1.picz.in.th/images/2021/04/02/Debphf.jpg" >
+                                      src={item.JobPic} >
                         </Avatar>
                       </Grid>
                       <Grid item xs={6} sm={6}>
