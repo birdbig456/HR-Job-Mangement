@@ -78,8 +78,8 @@ const useStyles = makeStyles((theme) => ({
   avatarInPut: {
     width: 150,
     height:190,
-    margin: theme.spacing(0),
-    backgroundColor: "#fafafa",
+    margin: theme.spacing(1),
+    // backgroundColor: "#fafafa",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
   },
   marginAt: {
@@ -327,15 +327,12 @@ export default function CreateJobPage() {
                     </div>
                     <Grid container>
                       <Grid item xs={6} sm={6} style={{ display:"flex",alignItems:"center",justifyContent:"flex-end"}}>
-                        <Paper className={classes.avatarInPut} 
-                              style={{marginTop:10,
-                                      borderTopLeftRadius:0,
-                                      borderTopRightRadius:0,
-                                      borderBottomLeftRadius:0,
-                                      borderBottomRightRadius:0,
-                                      }}>
-                          <img src={item.preview} />
-                        </Paper>
+                        <Avatar className={classes.avatarInPut}
+                              style={{
+                                      borderRadius:0
+                                      }}
+                                      src="https://sv1.picz.in.th/images/2021/04/02/Debphf.jpg" >
+                        </Avatar>
                       </Grid>
                       <Grid item xs={6} sm={6}>
                         <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>

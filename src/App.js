@@ -290,7 +290,7 @@ export default function App() {
                   <ListItemIcon>
                     <BuildIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
-                  <ListItemText primary={"Workforce Management"} />
+                  <ListItemText primary={"Workforce Manage"} />
                 </ListItem>
               </Link>
 
