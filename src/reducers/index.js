@@ -11,6 +11,8 @@ import CreateDivisionReducer from "./CreateDivision.reducer";
 import CreateLevelReducer from "./CreateLevel.reducer";
 import CreateclassReducer from "./CreateClass.reducer";
 import CreateProjectReducer from "./CreateProject.reducer";
+import CreateTaskReducer from "./CreateTask.reducer";
+
 export default combineReducers({
     CreateJobReducer,
     CreateSubJobReducer,
@@ -23,5 +25,6 @@ export default combineReducers({
     CreateDivisionReducer,
     CreateLevelReducer,
     CreateclassReducer,
-    CreateProjectReducer
+    CreateProjectReducer,
+    CreateTaskReducer
 });
