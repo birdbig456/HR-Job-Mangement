@@ -3,15 +3,15 @@ import { CREATEJOB_ACTION_CREATE } from "../constants/Constants";
 const JobFamily = [
   {
     
-    NameJob: "Human Resources",
+    NameJob: "Human Resource",
     Description : "",
-    JobPic:"https://sv1.picz.in.th/images/2021/04/02/Deymw8.jpg",
+    JobPic:"https://sv1.picz.in.th/images/2021/04/03/Dmaw0R.jpg",
     Employee:["Bird"]
   },
   {
     NameJob: "Information Technology",
     Description: "",
-    JobPic:"https://sv1.picz.in.th/images/2021/04/02/DeFXev.jpg",
+    JobPic:"https://sv1.picz.in.th/images/2021/04/03/DmaXlb.jpg",
     Employee : ["bird","nay"]
   },
   {
