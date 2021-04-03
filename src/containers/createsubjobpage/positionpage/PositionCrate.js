@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginTop: theme.spacing(5),
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(1),
+    borderBottom: "1px Solid #385A7C",
   },
   paperCreate: {
     height: 134,
@@ -48,13 +49,12 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     height: "auto",
-    width: 300,
-    backgroundColor: "#13b5ea",
-    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
-    border: "1px solid #D2CBCB",
+    width: 240,
+    backgroundColor: "#f3f6fc",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
+    border: "1px solid #f3f6fc",
     textAlign: "center",
     fontSize: 20,
-    color: "white",
     margin: "auto",
   },
   paperposition: {
@@ -129,24 +129,25 @@ const useStyles = makeStyles((theme) => ({
   },
   avatarInPut: {
     width: 150,
-    margin: theme.spacing(3),
-    backgroundColor: "#F0F3EF",
-    boxShadow: "0px 8px 4px rgba(0, 0, 0, 0.25);",
+    height: 190,
+    margin: theme.spacing(1),
+    // backgroundColor: "#ff3019",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
   },
-  positionCreated:{
-    background:"#ffffff",
+  positionCreated: {
+    background: "#ffffff",
     border: "0px",
     borderRadius: 5,
-    boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.1)",
+    boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
     height: 100,
     width: 300,
     margin: "auto",
-    marginBottom:20,
-    textAlign:"center",
-    display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
-  }
+    marginBottom: 20,
+    textAlign: "center",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 }));
 export default function PositionCrate({ match }) {
   const classes = useStyles();
@@ -161,13 +162,15 @@ export default function PositionCrate({ match }) {
   );
   console.log(CreateJobReducer);
   const dispatch = useDispatch();
-  const [positionName, setPositionName] = useState("")
+  const [positionName, setPositionName] = useState("");
   const [open, setOpen] = React.useState(false);
   const history = useHistory();
-  const handleClickToPosition = (itemSubJob, item,itemPosition) => {
-    history.push(`/${item.NameJob}/${itemSubJob.NameSubJob}/${itemPosition.NamePosition}`);
+  const handleClickToPosition = (itemSubJob, item, itemPosition) => {
+    history.push(
+      `/${item.NameJob}/${itemSubJob.NameSubJob}/${itemPosition.NamePosition}`
+    );
   };
-  const handlechange  = (event) => {
+  const handlechange = (event) => {
     setPositionName(event.target.value);
   };
   const handleClickOpen = () => {
@@ -189,143 +192,175 @@ export default function PositionCrate({ match }) {
             return match.params.SubJobName == itemSubJob.NameSubJob ? (
               <div key={index}>
                 <Grid container className={classes.root}>
-                  <Paper className={classes.paper}>
-                    <div style={{ margin: 20 }}>{itemSubJob.NameSubJob}</div>
-                    <Paper style={{ margin: 20 }}>
-                      <img src={itemSubJob.preview} width="200" height="250" />
-                    </Paper>
+                  <Paper
+                    className={classes.paper}
+                    style={{marginBottom:40}}
+                  >
+                    <div
+                      style={{
+                        margin: 20,
+                        color: "#13b5ea",
+                        fontFamily: "Oswald",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {itemSubJob.NameSubJob}
+                    </div>
+                    <Avatar
+                      className={classes.avatarInPut}
+                      style={{
+                        borderRadius: 5,
+                        margin: "auto",
+                        marginBottom: 20,
+                      }}
+                      src={itemSubJob.SubJobPic}
+                    ></Avatar>
                   </Paper>
                 </Grid>
                 <Grid container>
-                  <Grid item xs={12} sm={12} style={{
-                            marginTop: 40,
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            marginLeft: 50,
-                            marginRight: 50,
-                          }}>
-                            <h3
-                            style={{
-                              fontSize: 28,
-                              color: "#385A7C",
-                              fontFamily: "Oswald",
-                            }}
-                          >
-                            All Job Positions
-                          </h3>
-                          <ColorButton
-                            variant="contained"
-                            style={{ background: "#82b440" }}
-                            startIcon={<AddIcon />}
-                            onClick={handleClickOpen}
-                          >
-                            Create Position
-                          </ColorButton>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    style={{
+                      marginTop: 40,
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      marginLeft: 50,
+                      marginRight: 50,
+                    }}
+                  >
+                    <h3
+                      style={{
+                        fontSize: 28,
+                        color: "#385A7C",
+                        fontFamily: "Oswald",
+                      }}
+                    >
+                      All Job Positions
+                    </h3>
+                    <ColorButton
+                      variant="contained"
+                      style={{ background: "#82b440" }}
+                      startIcon={<AddIcon />}
+                      onClick={handleClickOpen}
+                    >
+                      Create Position
+                    </ColorButton>
                   </Grid>
 
-                    {CreateJobReducer.JobFamily.map((item, index) => {
-                      console.log(item.NameJob, itemSubJob.NameSubJob);
-                      return item.NameJob == itemSubJob.ParentJobName ? (
+                  {CreateJobReducer.JobFamily.map((item, index) => {
+                    console.log(item.NameJob, itemSubJob.NameSubJob);
+                    return item.NameJob == itemSubJob.ParentJobName ? (
+                      <Grid item xs={12} sm={12} key={index}>
+                        <Dialog
+                          open={open}
+                          onClose={handleClose}
+                          aria-labelledby="form-dialog-title"
+                        >
+                          <Grid container>
+                            <Grid xs={12} sm={12} item>
+                              <DialogTitle
+                                style={{
+                                  textAlign: "center",
+                                  color: "#5B5656",
+                                }}
+                              >
+                                <h3 style={{ fontSize: 20, color: "#13b5ea" }}>
+                                  Create New Position
+                                </h3>
+                              </DialogTitle>
+                            </Grid>
+                            <DialogContent>
+                              <TextField
+                                id="standard-basic"
+                                label="Input Position Name"
+                                size="medium"
+                                fullWidth
+                                onChange={handlechange}
+                              />
+                              <Button
+                                onClick={() => {
+                                  let dataSend = Object.assign({});
+                                  dataSend.NamePosition = positionName;
+                                  dataSend.ParentJobName = item.NameJob;
+                                  dataSend.ParentSubJob = itemSubJob.NameSubJob;
+
+                                  console.log(dataSend);
+                                  dispatch(
+                                    CreateAction.CreatePosition(dataSend),
+                                    handleClose()
+                                  );
+                                }}
+                                className={classes.palette}
+                                color="primary"
+                                variant="contained"
+                                size="small"
+                                style={{
+                                  margin: 7,
+                                  background: "#13b5ea",
+                                  color: "#ffffff",
+                                }}
+                              >
+                                Save
+                              </Button>
+                              <Button
+                                onClick={handleClose}
+                                variant="contained"
+                                size="small"
+                                style={{ margin: 7 }}
+                              >
+                                Cancel
+                              </Button>
+                            </DialogContent>
+                          </Grid>
+                        </Dialog>
+
                         <Grid
                           item
                           xs={12}
                           sm={12}
-                          key={index}
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginTop: 40,
+                          }}
                         >
-                          <Dialog
-                            open={open}
-                            onClose={handleClose}
-                            aria-labelledby="form-dialog-title"
-                          >
-                            <Grid container>
-                              <Grid xs={12} sm={12} item>
-                                <DialogTitle
-                                  style={{
-                                    textAlign: "center",
-                                    color: "#5B5656",
-                                  }}
-                                >
-                                  <h3
-                                    style={{ fontSize: 20, color: "#13b5ea" }}
-                                  >
-                                    Create New Position
-                                  </h3>
-                                </DialogTitle>
-                              </Grid>
-                              <DialogContent>
-                                <TextField
-                                  id="standard-basic"
-                                  label="Input Position Name"
-                                  size="medium"
-                                  fullWidth
-                                  onChange={handlechange}
-                                  
-                                />
-                                <Button
-                                  
-                                  onClick={() => {
-                                    let dataSend = Object.assign({});
-                                    dataSend.NamePosition = positionName;
-                                    dataSend.ParentJobName = item.NameJob;
-                                    dataSend.ParentSubJob = itemSubJob.NameSubJob;
-                                    
-                                    console.log(dataSend);
-                                    dispatch(CreateAction.CreatePosition(dataSend),handleClose());
-                                  }}
-                                  className={classes.palette}
-                                  color="primary"
-                                  variant="contained"
-                                  size="small"
-                                  style={{
-                                    margin: 7,
-                                    background: "#13b5ea",
-                                    color: "#ffffff",
-                                  }}
-                                >
-                                  Save
-                                </Button>
-                                <Button
-                                  onClick={handleClose}
-                                  variant="contained"
-                                  size="small"
-                                  style={{ margin: 7 }}
-                                >
-                                  Cancel
-                                </Button>
-                              </DialogContent>
-                            </Grid>
-                          </Dialog>
-
-                          <Grid item xs={12} sm={12} 
-                                style={{display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        marginTop:40}}
-                                        >
-                          {CreatePositionReducer.Position.map((itemPosition, index) => (
+                          {CreatePositionReducer.Position.map(
+                            (itemPosition, index) => (
                               <Grid key={index} item xs={12} sm={4}>
                                 <Paper
                                   className={classes.positionCreated}
                                   onClick={() =>
-                                    handleClickToPosition(itemSubJob, item,itemPosition)
+                                    handleClickToPosition(
+                                      itemSubJob,
+                                      item,
+                                      itemPosition
+                                    )
                                   }
                                 >
-                                  <h2 style={{color:"#13b5ea",fontFamily:"Oswald"}}>{itemPosition.NamePosition}</h2>
+                                  <h2
+                                    style={{
+                                      color: "#13b5ea",
+                                      fontFamily: "Oswald",
+                                    }}
+                                  >
+                                    {itemPosition.NamePosition}
+                                  </h2>
                                 </Paper>
                               </Grid>
-                            ))}
-                            </Grid>
-
+                            )
+                          )}
                         </Grid>
-                        // Reducer
-                      ) : (
-                        ""
-                      );
-                    })}
-                  
-
-                </Grid> 
+                      </Grid>
+                    ) : (
+                      // Reducer
+                      ""
+                    );
+                  })}
+                </Grid>
                 {/* container */}
               </div>
             ) : (
