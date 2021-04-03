@@ -164,6 +164,12 @@ export const CreateProject = (payload) => {
         dispatch(setStateToCreateProject(payload))
     }
 }
+<<<<<<< HEAD
+//--------------------------------------------------------
+function  nirs( ) {
+    
+}
+=======
 
 export const CreateTask = (payload) => {
     return dispatch => {
@@ -172,3 +178,4 @@ export const CreateTask = (payload) => {
     }
 }
 //--------------------------------------------------------
+>>>>>>> ce0d8e4878e2239ab07261872a668dea85cdd76d
