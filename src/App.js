@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color:'#13d5ea',
+    color:'#13b5ea',
   },
   drawerHeader: {
     display: "flex",
@@ -290,7 +290,7 @@ export default function App() {
                   <ListItemIcon>
                     <BuildIcon style={{color:"#385A7C"}}/>
                   </ListItemIcon>
-                  <ListItemText primary={"Workforce Management"} />
+                  <ListItemText primary={"Workforce Manage"} />
                 </ListItem>
               </Link>
 

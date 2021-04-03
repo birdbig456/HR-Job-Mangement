@@ -33,7 +33,7 @@ const BorderLinearProgress = withStyles((theme) => ({
     borderRadius: 5,
   },
   colorPrimary: {
-    backgroundColor:"",
+    backgroundColor: "",
   },
   bar: {
     borderRadius: 15,
@@ -150,8 +150,8 @@ const useStyles = makeStyles((theme) => ({
   avatarInPut: {
     width: 150,
     height: 190,
-    margin: theme.spacing(0),
-    backgroundColor: "#fafafa",
+    margin: theme.spacing(1),
+    // backgroundColor: "#ff3019",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
   },
 }));
@@ -356,18 +356,13 @@ export default function CreateSubJobPage({ match }) {
                                   justifyContent: "flex-end",
                                 }}
                               >
-                                <Paper
+                                <Avatar
                                   className={classes.avatarInPut}
                                   style={{
-                                    marginTop: 10,
-                                    borderTopLeftRadius: 0,
-                                    borderTopRightRadius: 0,
-                                    borderBottomLeftRadius: 0,
-                                    borderBottomRightRadius: 0,
+                                    borderRadius: 5,
                                   }}
-                                >
-                                  <img src={item.preview} />
-                                </Paper>
+                                  src={item.JobPic}
+                                ></Avatar>
                               </Grid>
                               <Grid item xs={6} sm={6}>
                                 <div
@@ -478,30 +473,32 @@ export default function CreateSubJobPage({ match }) {
                             spacing={3}
                             style={{ marginTop: 15 }}
                           >
-                            {CreateSubJobReducer.SubJob.map((itemSubJob, index) => {
-                              console.log("bird",itemSubJob);
-                              return (
-                                <Grid key={index} item xs={12} sm={4}>
-                                  <Paper
-                                    className={classes.paper}
-                                    onClick={() =>
-                                      handleClickToPosition(itemSubJob, item)
-                                    }
-                                  >
-                                    <div style={{ margin: 20 }}>
-                                      {itemSubJob.NameSubJob}
-                                    </div>
-                                    <Paper style={{ margin: 20 }}>
-                                      <img
-                                        src={itemSubJob.preview}
-                                        width="200"
-                                        height="250"
-                                      />
+                            {CreateSubJobReducer.SubJob.map(
+                              (itemSubJob, index) => {
+                                console.log("bird", itemSubJob);
+                                return (
+                                  <Grid key={index} item xs={12} sm={4}>
+                                    <Paper
+                                      className={classes.paper}
+                                      onClick={() =>
+                                        handleClickToPosition(itemSubJob, item)
+                                      }
+                                    >
+                                      <div style={{ margin: 20 }}>
+                                        {itemSubJob.NameSubJob}
+                                      </div>
+                                      <Paper style={{ margin: 20 }}>
+                                        <img
+                                          src={itemSubJob.preview}
+                                          width="200"
+                                          height="250"
+                                        />
+                                      </Paper>
                                     </Paper>
-                                  </Paper>
-                                </Grid>
-                              );
-                            })}
+                                  </Grid>
+                                );
+                              }
+                            )}
                           </Grid>
                         </Grid>
                       </Grid>

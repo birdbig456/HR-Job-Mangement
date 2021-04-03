@@ -10,9 +10,8 @@ import InputBase from "@material-ui/core/InputBase";
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import Grid from "@material-ui/core/Grid";
-
-
-
+import { useSelector, useDispatch } from "react-redux";
+import * as CreateAction from "../../../actions/CreateJob.action";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -43,9 +42,18 @@ export default function TaskInFo() {
     setValues({ ...values, [prop]: event.target.value });
   };
 
+  const [count, setCount] = useState(2);
+  const dispatch = useDispatch();
+  const CreateTaskReducer = useSelector(
+    ({ CreateTaskReducer }) => CreateTaskReducer
+  );
+
   console.log(values);
   return (
     <div style={{paddingInline:"15%"}}>
+    {CreateTaskReducer.Task.map((num,index) => (
+      <Grid key={index} style={{}}>
+        <h3 style={{fontFamily:"Oswald",color:"#13b5ea",fontWeight:"normal"}}>Task : {num}</h3>
        <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"center"}}>
       <FormControl fullWidth variant="outlined">
         <InputLabel htmlFor="outlined-adornment-amount">Job Task</InputLabel>
@@ -59,7 +67,7 @@ export default function TaskInFo() {
       </FormControl>
       </Grid>
     
-    <Grid style={{display:"flex",justifyContent:"center",marginTop:10}}>
+    <Grid  style={{display:"flex",justifyContent:"center",marginTop:10}}>
     <Grid item xs={4} sm={4}>
       <FormControl variant="outlined" className={classes.boxwidth} style={{paddingRight:5}}>
         <InputLabel id="1">Frequency</InputLabel>
@@ -117,9 +125,16 @@ export default function TaskInFo() {
       </Grid>
 
       </Grid>
+      </Grid>
+      ))}
+      
 
-    <IconButton style={{float:"right"}}>
-      <AddCircleIcon fontSize="medium" style={{color:"#82b440"}} />
+    <IconButton onMouseEnter={() => {}}
+            onClick={() => {
+              dispatch(CreateAction.CreateTask(count));
+              setCount(count + 1);
+            }} style={{float:"right"}}>
+      <AddCircleIcon  fontSize="medium" style={{color:"#82b440"}} />
     </IconButton>
     </div>
   );
