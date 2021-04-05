@@ -69,7 +69,6 @@ export default function WorkforceManagement() {
               fontSize: 28,
               color: "#385A7C",
               fontFamily: "Oswald",
-              marginTop: 0,
             }}
           >
             Workforce Management

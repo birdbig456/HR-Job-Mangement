@@ -54,8 +54,7 @@ const ColorButton = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginTop: theme.spacing(5),
-    marginLeft: theme.spacing(3),
+    marginTop: theme.spacing(2),
   },
   paperCreate: {
     height: 134,

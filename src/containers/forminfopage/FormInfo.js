@@ -83,7 +83,6 @@ export default function FormInfo() {
               fontSize: 28,
               color: "#385A7C",
               fontFamily: "Oswald",
-              marginTop: 0,
               textAlign: "center",
               marginBottom: 15,
             }}

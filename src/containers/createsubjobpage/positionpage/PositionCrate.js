@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginTop: theme.spacing(5),
-    marginLeft: theme.spacing(1),
     borderBottom: "1px Solid #385A7C",
   },
   paperCreate: {
