@@ -72,6 +72,8 @@ export default function JobClassified() {
     history.push("/JobClassDisplay");
   };
 
+  console.log(nameLevel)
+
   return (
     <div style={{ backgroundColor: "#FAFAFA", padding: 20 }}>
       <Grid container>

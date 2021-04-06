@@ -3,7 +3,7 @@ import { CREATEJOB_ACTION_CREATE } from "../constants/Constants";
 const JobFamily = [
   {
     
-    NameJob: "Human Resources",
+    NameJob: "Human Resource",
     Description : "",
     JobPic:"https://sv1.picz.in.th/images/2021/04/02/Deymw8.jpg",
     Employee:["Bird"]

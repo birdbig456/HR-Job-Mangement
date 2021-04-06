@@ -12,7 +12,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import Grid from "@material-ui/core/Grid";
 import { useSelector, useDispatch } from "react-redux";
 import * as CreateAction from "../../../actions/CreateJob.action";
-
+import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
   },
   boxwidth:{
     minWidth: "100%",
+  },
+  button3: {
+    background: "#13b5ea",
+    color: "#ffff",
   },
 }));
 
@@ -64,6 +68,7 @@ export default function TaskInFo() {
           value={values.Task}
           onChange={handleChange2("Task")}
         />
+        
       </FormControl>
       </Grid>
     
@@ -82,9 +87,9 @@ export default function TaskInFo() {
           <MenuItem value="None">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Daily</MenuItem>
-          <MenuItem value={20}>Weekly</MenuItem>
-          <MenuItem value={30}>Monthly</MenuItem>
+          <MenuItem value={"Daily"}>Daily</MenuItem>
+          <MenuItem value={"Weekly"}>Weekly</MenuItem>
+          <MenuItem value={"Monthly"}>Monthly</MenuItem>
         </Select>
       </FormControl>
       </Grid>
@@ -117,8 +122,8 @@ export default function TaskInFo() {
           <MenuItem value="None">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Routine</MenuItem>
-          <MenuItem value={20}>Abnormal</MenuItem>
+          <MenuItem value={"Routine"}>Routine</MenuItem>
+          <MenuItem value={"Abnormal"}>Abnormal</MenuItem>
           
         </Select>
       </FormControl>
@@ -128,6 +133,16 @@ export default function TaskInFo() {
       </Grid>
       ))}
       
+      <Button
+                className={classes.button3}
+                onClick={() => {
+                  dispatch(CreateAction.CreateTaskValue(values))
+                  console.log();
+                  ;
+                }}
+              >
+                Save
+              </Button>
 
     <IconButton onMouseEnter={() => {}}
             onClick={() => {

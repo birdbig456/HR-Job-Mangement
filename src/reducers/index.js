@@ -12,7 +12,7 @@ import CreateLevelReducer from "./CreateLevel.reducer";
 import CreateclassReducer from "./CreateClass.reducer";
 import CreateProjectReducer from "./CreateProject.reducer";
 import CreateTaskReducer from "./CreateTask.reducer";
-
+import CreateTaskValueReducer from "./CreateTaskValue.reducer";
 export default combineReducers({
     CreateJobReducer,
     CreateSubJobReducer,
@@ -26,5 +26,6 @@ export default combineReducers({
     CreateLevelReducer,
     CreateclassReducer,
     CreateProjectReducer,
-    CreateTaskReducer
+    CreateTaskReducer,
+    CreateTaskValueReducer
 });

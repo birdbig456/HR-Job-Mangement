@@ -355,8 +355,6 @@ export default function App() {
               <Route exact path="/:JobName" component={CreateSubJobPage} />
               <Route exact path="/:JobName/:SubJobName" component={PositionCrate} />
               <Route exact path="/:JobName/:SubJobName/:Position" component={PositionPage} />
-
-
             </Switch>
           </main>
         

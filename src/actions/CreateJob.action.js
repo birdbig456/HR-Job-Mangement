@@ -13,7 +13,7 @@ import { CREATEWORKFORCE_ACTION_CREATE } from "../constants/Constants";
 import { CREATEATTRIBUTE_ACTION_UPDATE } from "../constants/Constants";
 import { CREATEPROJECT_ACTION_CREATE } from "../constants/Constants";
 import { CREATETASK_ACTION_CREATE } from "../constants/Constants";
-
+import { CREATETASKVALUE_ACTION_CREATE } from "../constants/Constants";
 
 
 export const setStateToCreateJob = (payload) => ({
@@ -76,6 +76,11 @@ export const setStateToCreateProject = (payload) => ({
 
 export const setStateToCreateTask = (payload) => ({
     type: CREATETASK_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateTaskValue = (payload) => ({
+    type: CREATETASKVALUE_ACTION_CREATE,
     payload
 })
 
@@ -164,12 +169,6 @@ export const CreateProject = (payload) => {
         dispatch(setStateToCreateProject(payload))
     }
 }
-<<<<<<< HEAD
-//--------------------------------------------------------
-function  nirs( ) {
-    
-}
-=======
 
 export const CreateTask = (payload) => {
     return dispatch => {
@@ -177,5 +176,12 @@ export const CreateTask = (payload) => {
         dispatch(setStateToCreateTask(payload))
     }
 }
+
+export const CreateTaskValue = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateTaskValue(payload))
+    }
+}
+
 //--------------------------------------------------------
->>>>>>> ce0d8e4878e2239ab07261872a668dea85cdd76d
