@@ -10,6 +10,8 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import "./HomePage.css";
 
+import { longdo, map, LongdoMap } from "./LongdoMap/LongdoMap";
+
 const useStyles = makeStyles((theme) => ({
   expand: {
     transform: "rotate(0deg)",
@@ -22,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const mapkey = "a552c00673d239dac04f173966e3a398";
+
 export default function HomePage() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -30,6 +34,9 @@ export default function HomePage() {
     setExpanded(!expanded);
   };
 
+  const initMap = () => {
+    map.Layers.setBase(longdo.Layers.GRAY);
+  };
   return (
     <Grid container style={{}}>
       <Grid
@@ -93,15 +100,15 @@ export default function HomePage() {
           style={{ marginInline: "20%" }}
         >
           <Grid
-            style={{ fontFamily: "Kanit", padding: 30 }}
+            style={{padding:30,marginTop:50}}
             className="HomeCard"
           >
             <p
               style={{
                 fontWeight: "bold",
-                color: "#13d5ea",
+                color: "#13b5ea",
                 margin: 0,
-                fontSize: 24,
+                fontSize: 22,
               }}
             >
               เอสซีจี โฮมโซลูชั่น ระยอง
@@ -109,7 +116,7 @@ export default function HomePage() {
             <p
               style={{
                 color: "#ffff",
-                fontSize: 20,
+                fontSize: 18,
                 marginTop: 2,
                 fontWeight: "bold",
               }}
@@ -133,9 +140,21 @@ export default function HomePage() {
               จากสินค้าและบริการ ที่ครบครันอย่างแท้จริง
             </a>
           </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            style={{ marginBottom: 50, marginTop: 50 }}
+          >
+            <LongdoMap id="longdo-map" mapKey={mapkey} callback={initMap} />
+          </Grid>
         </Collapse>
       </Grid>
-      {/* <Grid item xs={12} sm={12} style={{textAlign:"center"}}>MAP</Grid> */}
+      {/* <Grid item xs={12} sm={12} style={{marginBottom:50}}>
+      <LongdoMap
+      id="longdo-map" mapKey={mapkey} callback={initMap} 
+      />
+      </Grid> */}
     </Grid>
   );
 }

@@ -15,12 +15,16 @@ width: 100%;
     box-shadow: 0 5px 15px rgba(0,0,0,.2);
 }
 .HomeCardbg{
-    background-image: url("https://sv1.picz.in.th/images/2021/04/06/AW3cKa.png");
+    /* background-image: url("https://sv1.picz.in.th/images/2021/04/06/AW3cKa.png"); */
     background-position:top left;
-    /* background-color: #5999bd; */
+    /* background-color: #262626; */
+    background: rgb(63,73,111);
+background: radial-gradient(circle, rgba(63,73,111,1) 0%, rgba(144,156,188,1) 100%);
 }
 
 .HomeCard{
     background:rgba(0,0,0,.2);
     box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    font-family: 'Kanit';
+    
 }

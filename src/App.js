@@ -6,6 +6,7 @@ import { makeStyles, responsiveFontSizes, useTheme } from "@material-ui/core/sty
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
+import Grid from "@material-ui/core/Grid"
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
@@ -48,6 +49,8 @@ import JobclassDisplay from "./containers/jobclassdisplaypage/JobclassDisplay"
 import SuccessionPlan from "./containers/successionplanpage/SuccessionPlan"
 import FormInfo from "./containers/forminfopage/FormInfo"
 import HomePage from "./containers/homepage/HomePage"
+import HomeIcon from '@material-ui/icons/Home';
+
 
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
@@ -155,7 +158,8 @@ export default function App() {
               [classes.appBarShift]: open,
             })}
           >
-            <Toolbar>
+            <Toolbar style={{display:"flex",justifyContent:"space-between"}}>
+              <Grid style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
               <IconButton
               style={{color:"#82b440"}}
                 aria-label="open drawer"
@@ -168,6 +172,30 @@ export default function App() {
               <Typography variant="h6" noWrap style={{fontFamily:"Oswald",color:"#ffff"}}>
                 J&WF Management
               </Typography>
+              </Grid>
+              <Grid style={{display:"flex",alignItems:"center"}}>
+              <Link to="/">
+                <IconButton>
+                  <HomeIcon style={{color:"#82b440"}}/>
+                </IconButton>
+                </Link>
+              </Grid>
+              {/* <IconButton
+              style={{color:"#82b440"}}
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                className={clsx(classes.menuButton, open && classes.hide)}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="h6" noWrap style={{fontFamily:"Oswald",color:"#ffff"}}>
+                J&WF Management
+              </Typography>
+              <Link to="/">
+              <IconButton>
+                  <HomeIcon style={{color:"#82b440"}}/>
+                </IconButton></Link> */}
             </Toolbar>
           </AppBar>
           </ThemeProvider>
