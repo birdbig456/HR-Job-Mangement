@@ -47,6 +47,7 @@ import WorkforceManagement from "./containers/workforcemanagementpage/WorkforceM
 import JobclassDisplay from "./containers/jobclassdisplaypage/JobclassDisplay"
 import SuccessionPlan from "./containers/successionplanpage/SuccessionPlan"
 import FormInfo from "./containers/forminfopage/FormInfo"
+import HomePage from "./containers/homepage/HomePage"
 
 const drawerWidth = 240;
 const outerTheme = createMuiTheme({
@@ -107,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -341,6 +342,7 @@ export default function App() {
             <div className={classes.drawerHeader} />
 
             <Switch>
+            <Route exact path="/" component={HomePage} />
               <Route exact path="/CreateJob" component={CreateJobPage} />
               <Route exact path="/Profile" component={Profile} />
               <Route exact path="/ShowJob" component={ShowJob} />

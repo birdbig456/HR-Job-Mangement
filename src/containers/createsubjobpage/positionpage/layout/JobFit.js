@@ -1,4 +1,4 @@
-import React,{forwardRef, useState, useImperativeHandle} from "react";
+import React, { forwardRef, useState, useImperativeHandle } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -25,6 +25,8 @@ import OutlinedInput from "@material-ui/core/OutlinedInput";
 import InputLabel from "@material-ui/core/InputLabel";
 import { FormLabel } from "@material-ui/core";
 import * as CreateAction from "../../../../actions/CreateJob.action";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const outerTheme = createMuiTheme({
   palette: {
@@ -82,45 +84,46 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginLeft: 80,
   },
+  formSelect: {
+    marginBottom:20,
+    minWidth: 120,
+  },
 }));
 
 const JobFit = forwardRef((props, ref) => {
-  console.log(ref)
+  console.log(ref);
   const classes = useStyles();
 
   const CreateAttributeReducer = useSelector(
     ({ CreateAttributeReducer }) => CreateAttributeReducer
   );
-  
+
   const dispatch = useDispatch();
   const [newAttribute, setNewAttribute] = useState({
     NameAttribute: " ",
-    ParentSubJobName:""
-  })
-  
-const [isShow, setIsShow] = useState(false);
-const handleChange = (event) => {
-  console.log(event.target)
-  dispatch(CreateAction.UpdateAttribute(event.target))
-};
-const [open, setOpen] = React.useState(false);
+    ParentSubJobName: "",
+  });
 
-console.log(CreateAttributeReducer[0])
+  const [isShow, setIsShow] = useState(false);
+  const handleChange = (event) => {
+    console.log(event.target);
+    dispatch(CreateAction.UpdateAttribute(event.target));
+  };
+  const [open, setOpen] = React.useState(false);
 
-const handleClickOpen = () => {
-  setOpen(true);
-};
+  console.log(CreateAttributeReducer[0]);
 
-const handleClose = () => {
-  setOpen(false);
-};
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
-useImperativeHandle(
-  ref,
-  () => {
-    console.log("K")
-  }
-)
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  useImperativeHandle(ref, () => {
+    console.log("K");
+  });
 
   const showForm = ({
     values,
@@ -137,7 +140,6 @@ useImperativeHandle(
       <form onSubmit={handleSubmit}>
         <ThemeProvider theme={outerTheme}>
           <Grid container>
-            
             <Grid container style={{ marginTop: 30 }}>
               <Grid item xs={12} sm={5}>
                 <TextField disabled label="Name SubJob :" />
@@ -145,7 +147,6 @@ useImperativeHandle(
               <Grid item xs={12} sm={7}>
                 <TextField
                   required
-                  
                   color="primary"
                   label="Enter Name Attribute"
                   fullWidth
@@ -166,7 +167,7 @@ useImperativeHandle(
               className={classes.palette}
               variant="contained"
               size="small"
-              style={{ margin: 7 ,background:"#13b5ea",color:"#ffff"}}
+              style={{ margin: 7, background: "#13b5ea", color: "#ffff" }}
             >
               Save
             </Button>
@@ -184,87 +185,118 @@ useImperativeHandle(
     );
   };
 
-
   return (
     <div style={{ backgroundColor: "#fff" }}>
       <Grid container>
-      <Grid item xs={12} sm={12} style={{ textAlign: "center" ,padding:20,margin:20}}>
-          <span style={{ border: "solid" ,fontSize:24 , padding:20 }}>
-           Job Fit
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          style={{ textAlign: "center", padding: 20, margin: 20 }}
+        >
+          <span style={{ border: "solid", fontSize: 24, padding: 20 }}>
+            Job Fit
           </span>
         </Grid>
 
         <div className={classes.paperPeople}>
-        <Grid item xs={12} sm={12} style={{ textAlign: "center" }}>
-          
-          <TextField
-            rows={6}
-            fullWidth
-            required
-            multiline
-            variant="outlined"
-            id="jobfit"
-            style={{ margin: "auto", width: "85%", marginBottom: 20 }}
-            defaultValue="Input Jobfit"
-          />
-        </Grid>
-        <Grid
-          container
-          style={{ margin: "auto", width: "98%", paddingLeft: 90 }}
-        >
-          {CreateAttributeReducer.map((itemAttribute,index) => (
-            <Grid item key={index} xs={6} sm={3}>
-              <FormControlLabel
-                control={<Checkbox name={itemAttribute.name} checked={itemAttribute.value} id={itemAttribute.id} color="primary"
-                 onChange={handleChange}
-                  />}
-                label={itemAttribute.name}
-              />
-              
+          <Grid item xs={12} sm={12} style={{ textAlign: "center" }}>
+            <TextField
+              rows={6}
+              fullWidth
+              required
+              multiline
+              variant="outlined"
+              id="jobfit"
+              style={{ margin: "auto", width: "85%", marginBottom: 20 }}
+              defaultValue="Input Jobfit"
+            />
+          </Grid>
+          <Grid
+            container
+            style={{ margin: "auto", width: "98%", paddingLeft: 90 }}
+          >
+            {CreateAttributeReducer.map((itemAttribute, index) => (
+              <Grid
+                item
+                key={index}
+                xs={6}
+                sm={3}
+              >
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      name={itemAttribute.name}
+                      checked={itemAttribute.value}
+                      id={itemAttribute.id}
+                      color="primary"
+                      onChange={handleChange}
+                    />
+                  }
+                  label={itemAttribute.name}
+                />
+                <FormControl className={classes.formSelect}>
+                  <InputLabel>Value</InputLabel>
+                  <Select label="Value">
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={1}>1</MenuItem>
+                    <MenuItem value={2}>2</MenuItem>
+                    <MenuItem value={3}>3</MenuItem>
+                    <MenuItem value={4}>4</MenuItem>
+                    <MenuItem value={5}>5</MenuItem>
+                    <MenuItem value={6}>6</MenuItem>
+                    <MenuItem value={7}>7</MenuItem>
+                    <MenuItem value={8}>8</MenuItem>
+                    <MenuItem value={9}>9</MenuItem>
+                    <MenuItem value={10}>10</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+            ))}
+            <Grid item sm={10}></Grid>
+            <Grid item xs={12} sm={2}>
+              <Button
+                variant="contained"
+                style={{ background: "#82b440", color: "#ffffff" }}
+                onClick={handleClickOpen}
+              >
+                Create New
+              </Button>
             </Grid>
-          ))}
-          <Grid item sm={10}></Grid>
-          <Grid item xs={12} sm={2}>
-            <Button variant="contained" style={{background:"#82b440", color:"#ffffff"}} onClick={handleClickOpen}>
-              Create New
-            </Button>
-          </Grid>
-        
 
-
-          <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="form-dialog-title"
-      >
-        <Grid container>
-          <Grid xs={12} sm={12} item>
-            <DialogTitle style={{ textAlign: "center", color: "#13b5ea" }}>
-              Create New Attribute
-            </DialogTitle>
-          </Grid>
-          <DialogContent>
-            <Formik
-              onSubmit={(values, { setSubmitting }) => {
-                
-                dispatch(CreateAction.CreateAttribute(values));
-                handleClose();
-              }}
-              
-              initialValues={newAttribute}
+            <Dialog
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="form-dialog-title"
             >
-              {(props) => showForm(props)}
-            </Formik>
-          </DialogContent>
-        </Grid>
-      </Dialog>
-
-
-        </Grid>
+              <Grid container>
+                <Grid xs={12} sm={12} item>
+                  <DialogTitle
+                    style={{ textAlign: "center", color: "#13b5ea" }}
+                  >
+                    Create New Attribute
+                  </DialogTitle>
+                </Grid>
+                <DialogContent>
+                  <Formik
+                    onSubmit={(values, { setSubmitting }) => {
+                      dispatch(CreateAction.CreateAttribute(values));
+                      handleClose();
+                    }}
+                    initialValues={newAttribute}
+                  >
+                    {(props) => showForm(props)}
+                  </Formik>
+                </DialogContent>
+              </Grid>
+            </Dialog>
+          </Grid>
         </div>
       </Grid>
     </div>
   );
-})
+});
 
-export default JobFit
+export default JobFit;

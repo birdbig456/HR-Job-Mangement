@@ -1,0 +1,26 @@
+.HomeImage {
+/* background-image: url("https://sv1.picz.in.th/images/2021/04/05/DM5umy.jpg"); */
+background-image: url("https://sv1.picz.in.th/images/2021/04/06/AW3cKa.png");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+position: static;
+width: 100%;
+}
+
+.HomeTitle{
+    border-radius: 5px;
+    padding:40px 40px;
+    background:rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.HomeCardbg{
+    background-image: url("https://sv1.picz.in.th/images/2021/04/06/AW3cKa.png");
+    background-position:top left;
+    /* background-color: #5999bd; */
+}
+
+.HomeCard{
+    background:rgba(0,0,0,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}

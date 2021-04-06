@@ -9,8 +9,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import JobTable from "./Components/JobTable";
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: 100,
-    width: "95%",
+    marginTop: 20,
+    width: "100%",
   },
   content: {
     marginTop: theme.spacing(0),

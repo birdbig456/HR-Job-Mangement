@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginTop: theme.spacing(2),
-    marginLeft: theme.spacing(3),
+    
   },
   input: {
     display: "none",

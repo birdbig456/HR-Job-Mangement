@@ -54,8 +54,7 @@ const ColorButton = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginTop: theme.spacing(5),
-    marginLeft: theme.spacing(3),
+    marginTop: theme.spacing(2),
   },
   paperCreate: {
     height: 134,
@@ -68,13 +67,12 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     height: "auto",
-    width: 300,
-    backgroundColor: "#13b5ea",
-    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
-    border: "1px solid #D2CBCB",
+    width: 240,
+    backgroundColor: "#f3f6fc",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1);",
+    border: "1px solid #f3f6fc",
     textAlign: "center",
     fontSize: 20,
-    color: "white",
     margin: "auto",
   },
   paperposition: {
@@ -484,16 +482,20 @@ export default function CreateSubJobPage({ match }) {
                                         handleClickToPosition(itemSubJob, item)
                                       }
                                     >
-                                      <div style={{ margin: 20 }}>
+                                      <div style={{ margin: 20 ,color:"#13b5ea",fontFamily:"Oswald",fontWeight:"bold"}}>
                                         {itemSubJob.NameSubJob}
                                       </div>
-                                      <Paper style={{ margin: 20 }}>
-                                        <img
-                                          src={itemSubJob.preview}
-                                          width="200"
-                                          height="250"
-                                        />
-                                      </Paper>
+                                      <Avatar
+                                        className={classes.avatarInPut}
+                                        style={{
+                                          borderRadius: 5,
+                                          margin:"auto",
+                                          marginBottom:20
+                                          
+                                        }}
+                                        src={itemSubJob.SubJobPic}
+                                      ></Avatar>
+                                      
                                     </Paper>
                                   </Grid>
                                 );
