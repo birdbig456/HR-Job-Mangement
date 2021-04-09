@@ -32,18 +32,21 @@ export default function TaskInFo() {
   const classes = useStyles();
   const [age, setAge] = React.useState("");
 
-  const [values, setValues] = React.useState({
+  const [values, setValues] = React.useState([{
     Task: "",
     Frequency: "",
     ManHours: "",
     Type: "",
-  });
+  }]);
   const handleChange = (event) => {
     setValues(...values, event.target.value);
   };
 
-  const handleChange2 = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
+  const handleChange2 = (index, prop) => (event) => {
+    var arr = [...values]
+    // console.log(arr, event.target.value)
+    arr[index][prop] = event.target.value
+    setValues(arr);
   };
 
   const [count, setCount] = useState(2);
@@ -65,8 +68,9 @@ export default function TaskInFo() {
           id="outlined-adornment-amount"
           label="Job Task" 
           variant="outlined" 
-          value={values.Task}
-          onChange={handleChange2("Task")}
+          name="Task"
+          value={values[index].Task}
+          onChange={handleChange2(index ,"Task")}
         />
         
       </FormControl>
@@ -80,8 +84,8 @@ export default function TaskInFo() {
           labelId="1"
           label="Frequency"
           id="1"
-          value={values.Frequency}
-          onChange={handleChange2('Frequency')}
+          value={values[index].Frequency}
+          onChange={handleChange2(index ,'Frequency')}
           // input={<BootstrapInput />}
         >
           <MenuItem value="None">
@@ -99,10 +103,10 @@ export default function TaskInFo() {
           <InputLabel htmlFor="outlined-adornment-amount">ManHours Use</InputLabel>
           <OutlinedInput
             id="2"
-            value={values.ManHours}
+            value={values[index].ManHours}
             label="ManHours Use" 
           variant="outlined" 
-            onChange={handleChange2('ManHours')}
+            onChange={handleChange2(index ,'ManHours')}
             
           />
         </FormControl>
@@ -115,8 +119,8 @@ export default function TaskInFo() {
           labelId="3"
           id="3"
           label="Type"
-          value={values.Type}
-          onChange={handleChange2('Type')}
+          value={values[index].Type}
+          onChange={handleChange2(index ,'Type')}
           // input={<BootstrapInput />}
         >
           <MenuItem value="None">
@@ -146,6 +150,12 @@ export default function TaskInFo() {
 
     <IconButton onMouseEnter={() => {}}
             onClick={() => {
+              setValues([...values, {
+                Task: "",
+                Frequency: "",
+                ManHours: "",
+                Type: "",
+              }])
               dispatch(CreateAction.CreateTask(count));
               setCount(count + 1);
             }} style={{float:"right"}}>
