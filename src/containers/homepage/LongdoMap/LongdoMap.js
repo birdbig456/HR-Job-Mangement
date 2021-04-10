@@ -41,7 +41,7 @@ export class LongdoMap extends Component {
 
   render() {
     return (
-        <div id={this.props.id} style={{height:"60vh"}}>
+        <div id={this.props.id} style={{height:"78vh",padding:60}}>
         
         </div>
     );

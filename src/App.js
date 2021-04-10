@@ -161,22 +161,24 @@ export default function App() {
             <Toolbar style={{display:"flex",justifyContent:"space-between"}}>
               <Grid style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
               <IconButton
-              style={{color:"#82b440"}}
+              style={{color:"#13b5ea"}}
                 aria-label="open drawer"
                 onClick={handleDrawerOpen}
                 edge="start"
                 className={clsx(classes.menuButton, open && classes.hide)}
               >
-                <MenuIcon />
+                <MenuIcon title="Menu" />
               </IconButton>
-              <Typography variant="h6" noWrap style={{fontFamily:"Oswald",color:"#ffff"}}>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+              <Typography  variant="h6" title="Job & Workforce Management" noWrap style={{fontFamily:"Oswald",color:"#ffff"}}>
                 J&WF Management
               </Typography>
+              </Link>
               </Grid>
               <Grid style={{display:"flex",alignItems:"center"}}>
               <Link to="/">
                 <IconButton>
-                  <HomeIcon style={{color:"#82b440"}}/>
+                  <HomeIcon style={{color:"#13b5ea"}}/>
                 </IconButton>
                 </Link>
               </Grid>
