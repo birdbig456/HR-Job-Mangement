@@ -62,44 +62,85 @@ export default function FormPersonal() {
   return (
     <div id="Wrapper" style={{ paddingInline:"15%"}}>
       {Object.values(CreateTaskValueReducer).map((item, index) => (
-        <div id="Form control" style={{display:"flex",justifyContent:"space-between",marginBottom:15}}>
-          <TextField
+        <Grid container style={{marginBottom:40}}>
+          <Grid item xs={12} sm={12}>
+            <TextField
+            style={{width:"100%"}}
             id=""
             label="Job Task"
             defaultValue={item.Task}
-            InputProps={{
-              readOnly: true,
-            }}
-            variant="outlined"
-          />
+            inputProps={{readOnly:true}}
+            variant="outlined"/>
+
+          </Grid>
+          
+          <Grid item xs={4} sm={4} style={{marginTop:10,paddingRight:5}}>
           <TextField
+          style={{width:"100%"}}
             id=""
             label="Frequency"
             defaultValue={item.Frequency}
-            InputProps={{
-              readOnly: true,
-            }}
-            variant="outlined"
-          />
+            inputProps={{readOnly:true}}
+            variant="outlined"/>
+          </Grid>
+          <Grid item xs={4} sm={4} style={{marginTop:10,paddingInline:5}}>
           <TextField
+          style={{width:"100%"}}
             id=""
             label="ManHours Use"
             defaultValue={item.ManHours}
-            InputProps={{
-              readOnly: true,
-            }}
-            variant="outlined"
-          />
+            inputProps={{readOnly:true}}
+            variant="outlined"/>
+          </Grid> 
+          <Grid item xs={4} sm={4} style={{marginTop:10,paddingLeft:5}}>
           <TextField
+          style={{width:"100%"}}
             id=""
             label="Type"
             defaultValue={item.Type}
-            InputProps={{
-              readOnly: true,
-            }}
-            variant="outlined"
-          />
-        </div>
+            inputProps={{readOnly:true}}
+            variant="outlined"/>
+          </Grid>
+        </Grid>
+        // <div id="Form control" style={{display:"flex",justifyContent:"space-between",marginBottom:15}}>
+        //   <TextField
+        //     id=""
+        //     label="Job Task"
+        //     defaultValue={item.Task}
+        //     InputProps={{
+        //       readOnly: true,
+        //     }}
+        //     variant="outlined"
+        //   />
+        //   <TextField
+        //     id=""
+        //     label="Frequency"
+        //     defaultValue={item.Frequency}
+        //     InputProps={{
+        //       readOnly: true,
+        //     }}
+        //     variant="outlined"
+        //   />
+        //   <TextField
+        //     id=""
+        //     label="ManHours Use"
+        //     defaultValue={item.ManHours}
+        //     InputProps={{
+        //       readOnly: true,
+        //     }}
+        //     variant="outlined"
+        //   />
+        //   <TextField
+        //     id=""
+        //     label="Type"
+        //     defaultValue={item.Type}
+        //     InputProps={{
+        //       readOnly: true,
+        //     }}
+        //     variant="outlined"
+        //   />
+        // </div>
+        
       ))}
 
       <Button
