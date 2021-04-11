@@ -73,7 +73,7 @@ export default function FormProject() {
   };
 
   return (
-    <div style={{ backgroundColor: "#ffff", padding: 20 }}>
+    <div style={{ backgroundColor: "#ffff", padding:0,}}>
       <Grid container>
         <Grid
           item
@@ -199,7 +199,6 @@ export default function FormProject() {
           </Button>
         </Link>
       </Grid>
-      <div></div>
     </div>
   );
 }
