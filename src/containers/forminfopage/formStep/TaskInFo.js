@@ -160,7 +160,7 @@ export default function TaskInFo() {
               dispatch(CreateAction.CreateTask(count));
               setCount(count + 1);
             }} style={{float:"right"}}>
-      <AddCircleIcon  fontSize="medium" style={{color:"#82b440"}} />
+      <AddCircleIcon  fontSize="medium" style={{color:"#fec566"}} />
     </IconButton>
     </div>
   );

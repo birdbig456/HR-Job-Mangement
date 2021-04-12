@@ -259,7 +259,7 @@ const JobFit = forwardRef((props, ref) => {
             <Grid item xs={12} sm={2}>
               <Button
                 variant="contained"
-                style={{ background: "#82b440", color: "#ffffff" }}
+                style={{ background: "#fec566", color: "#ffff",fontFamily:"Oswald" }}
                 onClick={handleClickOpen}
               >
                 Create New

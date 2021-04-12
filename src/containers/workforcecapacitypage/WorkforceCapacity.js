@@ -16,8 +16,12 @@ import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    background: "#82b440",
+    background: "#fec566",
+    "&:hover": {
+      background:"#ffbb4b",
+    },
     color: "#ffff",
+    fontFamily:"Oswald"
   },
 }));
 

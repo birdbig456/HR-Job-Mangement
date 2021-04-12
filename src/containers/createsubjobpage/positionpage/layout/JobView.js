@@ -153,11 +153,12 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#13b5ea",
-            fontFamily: "Oswald",
-            fontSize: 22,
+            color: "#fec566",
+            fontFamily: "Montserrat",
+            textTransform:"uppercase",
+            fontSize: 16,
             fontWeight: "bold",
-            marginLeft: 120,
+            marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
           }}
@@ -207,11 +208,12 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#13b5ea",
-              fontFamily: "Oswald",
-              fontSize: 22,
+              color: "#fec566",
+              fontFamily: "Montserrat",
+              textTransform:"uppercase",
+              fontSize: 16,
               fontWeight: "bold",
-              marginLeft: 120,
+              marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
             }}
@@ -228,11 +230,12 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#13b5ea",
-              fontFamily: "Oswald",
-              fontSize: 22,
+              color: "#fec566",
+              fontFamily: "Montserrat",
+              textTransform:"uppercase",
+              fontSize: 16,
               fontWeight: "bold",
-              marginLeft: 120,
+              marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
             }}
@@ -265,11 +268,12 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#13b5ea",
-              fontFamily: "Oswald",
-              fontSize: 22,
+              color: "#fec566",
+              fontFamily: "Montserrat",
+              textTransform:"uppercase",
+              fontSize: 16,
               fontWeight: "bold",
-              marginLeft: 120,
+              marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
             }}
@@ -304,11 +308,12 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#13b5ea",
-              fontFamily: "Oswald",
-              fontSize: 22,
+              color: "#fec566",
+              fontFamily: "Montserrat",
+              textTransform:"uppercase",
+              fontSize: 16,
               fontWeight: "bold",
-              marginLeft: 120,
+              marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
             }}
@@ -328,11 +333,12 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#13b5ea",
-            fontFamily: "Oswald",
-            fontSize: 22,
+            color: "#fec566",
+            fontFamily: "Montserrat",
+            textTransform:"uppercase",
+            fontSize: 16,
             fontWeight: "bold",
-            marginLeft: 120,
+            marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
           }}
@@ -347,11 +353,12 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#13b5ea",
-            fontFamily: "Oswald",
-            fontSize: 22,
+            color: "#fec566",
+            fontFamily: "Montserrat",
+            textTransform:"uppercase",
+            fontSize: 16,
             fontWeight: "bold",
-            marginLeft: 120,
+            marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
           }}
@@ -363,7 +370,7 @@ export default function JobView() {
           <Button
             variant="contained"
             size="small"
-            style={{ background: "#82b440", color: "#ffffff", marginRight: 40 }}
+            style={{ background: "#fec566", color: "#ffffff", marginRight: 40 }}
           >
             View Job Task
           </Button>
@@ -373,11 +380,12 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#13b5ea",
-            fontFamily: "Oswald",
-            fontSize: 22,
+            color: "#fec566",
+            fontFamily: "Montserrat",
+            textTransform:"uppercase",
+            fontSize: 16,
             fontWeight: "bold",
-            marginLeft: 120,
+            marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
           }}
@@ -405,7 +413,7 @@ export default function JobView() {
                 fontWeight: "bold",
                 fontFamily: "Oswald",
                 letterSpacing: "1px",
-                fontSize: 18,
+                fontSize: 16,
               }}
             >
               Puttinun Moungprasert
@@ -453,11 +461,12 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#13b5ea",
-            fontFamily: "Oswald",
-            fontSize: 22,
+            color: "#fec566",
+            fontFamily: "Montserrat",
+            textTransform:"uppercase",
+            fontSize: 16,
             fontWeight: "bold",
-            marginLeft: 120,
+            marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
           }}
@@ -486,15 +495,16 @@ export default function JobView() {
         </Grid>
       </div>
       <Link
-      to="/CreateJob">
+      to="/CreateJob"
+      style={{textDecoration:"none"}}>
         <Button
           variant="contained"
           size="small"
           style={{
             background: "#13b5ea",
             color: "#ffffff",
-            float: "left",
-            marginLeft: 60,
+            display:"block",
+            margin:"auto"
           }}
         >
           View Job Family

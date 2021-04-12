@@ -61,6 +61,8 @@ export default function FormPersonal() {
   console.log(CreateTaskValueReducer);
   return (
     <div id="Wrapper" style={{ paddingInline:"15%"}}>
+                <h3 style={{fontFamily:"Montserrat",color:"#13b5ea",fontWeight:"bold",textAlign:"center"}}>PERSONAL TASK</h3>
+
       {Object.values(CreateTaskValueReducer).map((item, index) => (
         <Grid container style={{marginBottom:40}}>
           <Grid item xs={12} sm={12}>
@@ -170,7 +172,7 @@ export default function FormPersonal() {
         }}
         style={{ float: "right" }}
       >
-        <AddCircleIcon fontSize="medium" style={{ color: "#82b440" }} />
+        <AddCircleIcon fontSize="medium" style={{ color: "#fec566" }} />
       </IconButton>
     </div>
   );

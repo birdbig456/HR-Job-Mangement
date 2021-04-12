@@ -9,6 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
 import CancelIcon from "@material-ui/icons/Cancel";
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 import TextField from "@material-ui/core/TextField";
 import { useHistory } from "react-router-dom";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   button: {
-    background: "#82b440",
+    background: "#fec566",
     color: "#ffff",
   },
   button2: {
@@ -81,15 +82,14 @@ export default function FormProject() {
           sm={12}
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "flex-end",
             alignItems: "center",
           }}
         >
-          <h3 style={{ fontSize: 28, color: "#385A7C", fontFamily: "Oswald" }}>
-            Project
-          </h3>
-          <Button
+          
+          <IconButton
             className={classes.button}
+            title="Add Project"
             variant="contained"
             onMouseEnter={() => {}}
             onClick={() => {
@@ -97,8 +97,8 @@ export default function FormProject() {
               setCount(count + 1);
             }}
           >
-            Add Project
-          </Button>
+            <AddCircleIcon fontSize="medium" style={{color:"#ffff"}}/>
+          </IconButton>
         </Grid>
       </Grid>
       {CreateProjectReducer.Project.map((num, index) => (
@@ -189,11 +189,11 @@ export default function FormProject() {
           alignItems: "center",
         }}
       >
-        <Link to="/JobClassDisplay" className={classes.link}>
+        <Link to="/JobClassDisplay" style={{textDecoration:"none"}}>
           <Button
             className={classes.button}
             variant="contained"
-            style={{ paddingLeft: 25, paddingRight: 25 }}
+            style={{ paddingLeft: 25, paddingRight: 25,fontFamily:"Montserrat" }}
           >
             SUBMIT
           </Button>
