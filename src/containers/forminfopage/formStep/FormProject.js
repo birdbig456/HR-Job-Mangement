@@ -21,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   button: {
-    background: "#fec566",
-    color: "#ffff",
+    color:"#fec566"
   },
   button2: {
     background: "#fafafa",
@@ -34,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
     background: "#13b5ea",
     color: "#ffff",
   },
+  buttonSubmit:{
+    background: "#fec566",
+    color: "#ffff",
+  }
 }));
 export default function FormProject() {
   const classes = useStyles();
@@ -88,7 +91,6 @@ export default function FormProject() {
         >
           
           <IconButton
-            className={classes.button}
             title="Add Project"
             variant="contained"
             onMouseEnter={() => {}}
@@ -97,7 +99,7 @@ export default function FormProject() {
               setCount(count + 1);
             }}
           >
-            <AddCircleIcon fontSize="medium" style={{color:"#ffff"}}/>
+            <AddCircleIcon className={classes.button} fontSize="medium" />
           </IconButton>
         </Grid>
       </Grid>
@@ -191,7 +193,7 @@ export default function FormProject() {
       >
         <Link to="/JobClassDisplay" style={{textDecoration:"none"}}>
           <Button
-            className={classes.button}
+            className={classes.buttonSubmit}
             variant="contained"
             style={{ paddingLeft: 25, paddingRight: 25,fontFamily:"Montserrat" }}
           >
