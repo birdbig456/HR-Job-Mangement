@@ -61,6 +61,9 @@ export default function FormPersonal() {
   console.log(CreateTaskValueReducer);
   return (
     <div id="Wrapper" style={{ paddingInline:"15%"}}>
+      <h3 style={{ fontSize: 28, color: "#385A7C", fontFamily: "Oswald" }}>
+            Task Personal
+          </h3>
       {Object.values(CreateTaskValueReducer).map((item, index) => (
         <Grid container style={{marginBottom:40}}>
           <Grid item xs={12} sm={12}>
