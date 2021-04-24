@@ -38,8 +38,12 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
   },
   CreateButton: {
-    background: "#82b440",
+    background: "#fec566",
+    "&:hover":{
+background:"#ffbb40"
+    },
     color: "#ffff",
+    fontFamily:"Oswald"
   },
   CancelButton: {
     background: "#fafafa",
@@ -252,8 +256,8 @@ export default function SuccessionPlan() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 fontFamily: "Oswald",
-                background: "#262626",
-                color: "#ffff",
+                background: "#e5e5e5",
+                color: "#fec566",
                 letterSpacing:"1px",
                 borderRadius:5,
               }}

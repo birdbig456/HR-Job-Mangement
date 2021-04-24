@@ -20,8 +20,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   button: {
-    background: "#82b440",
+    background: "#fec566",
+    "&:hover":{
+background:"#ffbb4b"
+    },
     color: "#ffff",
+    fontFamily:"Oswald"
   },
   button2: {
     background: "#fafafa",
@@ -33,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
     background: "#13b5ea",
     color: "#ffff",
   },
+  Link:{
+    textDecoration:"none"
+  }
 }));
 export default function JobClassified() {
   const classes = useStyles();
@@ -221,7 +228,7 @@ export default function JobClassified() {
           alignItems: "center",
         }}
       >
-        <Link to="/JobClassDisplay" className={classes.link}>
+        <Link to="/JobClassDisplay" className={classes.Link}>
           <Button
             className={classes.button}
             variant="contained"

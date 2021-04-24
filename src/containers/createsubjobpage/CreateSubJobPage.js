@@ -44,10 +44,10 @@ const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
     height: 40,
-    background: "#82b440",
+    background: "#fec566",
     marginRight: 20,
     "&:hover": {
-      background: "#6A8F38",
+      background: "#ffbb4b",
     },
   },
 }))(Button);
@@ -368,12 +368,12 @@ export default function CreateSubJobPage({ match }) {
                                   style={{
                                     lineHeight: "2",
                                     fontWeight: "bold",
-                                    fontFamily: "Open Sans Condensed",
+                                    fontFamily: "Montserrat",
                                   }}
                                 >
                                   <div>
                                     <div
-                                      style={{ fontSize: 16, color: "000000" }}
+                                      style={{ fontSize: 12, color: "262626" }}
                                     >
                                       <label>Attribute 1</label>
                                     </div>
@@ -384,7 +384,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div>
                                     <div
-                                      style={{ fontSize: 16, color: "000000" }}
+                                      style={{ fontSize: 12, color: "262626" }}
                                     >
                                       <label>Attribute 2</label>
                                     </div>
@@ -395,7 +395,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div>
                                     <div
-                                      style={{ fontSize: 16, color: "000000" }}
+                                      style={{ fontSize: 12, color: "262626" }}
                                     >
                                       <label>Attribute 3</label>
                                     </div>
@@ -406,7 +406,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div>
                                     <div
-                                      style={{ fontSize: 16, color: "000000" }}
+                                      style={{ fontSize: 12, color: "262626" }}
                                     >
                                       <label>Attribute 4</label>
                                     </div>
@@ -417,7 +417,7 @@ export default function CreateSubJobPage({ match }) {
                                   </div>
                                   <div>
                                     <div
-                                      style={{ fontSize: 16, color: "000000" }}
+                                      style={{ fontSize: 12, color: "262626" }}
                                     >
                                       <label>Attribute 5</label>
                                     </div>

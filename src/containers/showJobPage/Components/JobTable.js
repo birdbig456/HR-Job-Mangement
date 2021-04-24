@@ -446,7 +446,7 @@ const useStyles = makeStyles((theme) => ({
                 <span className={classes.spacer} />
                 <Button
                   variant="contained"
-                  style={{background:"#82b440" , color:"#ffff"}}
+                  style={{background:"#fec566" , color:"#ffff",fontFamily:"Oswald"}}
                   onClick={() => {
                     props.history.push("/addEmployee");
                   }}

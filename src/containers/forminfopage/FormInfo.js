@@ -11,7 +11,8 @@ import Paper from '@material-ui/core/Paper';
 import TaskInFo from "./formStep/TaskInFo";
 import FormAvg from "./formStep/FormAvg";
 import FormProject from "./formStep/FormProject";
-import FormPersonal from "./formStep/FormPersonal";
+import TaskPosition from "./formStep/TaskPosition";
+import TaskPersonal from "./formStep/TaskPersonal"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -104,7 +105,9 @@ export default function FormInfo() {
               <LinkTab  label="Task InFo" href="/drafts" {...a11yProps(0)} />
               <LinkTab  label="Form Avg" href="/trash" {...a11yProps(1)} />
               <LinkTab  label="Form Project" href="/spam" {...a11yProps(2)} />
-              <LinkTab  label="Personal Task" href="/spam" {...a11yProps(3)} />
+              <LinkTab  label="Task Position" href="/spam" {...a11yProps(3)} />
+              <LinkTab  label="Task Personal" href="/spam" {...a11yProps(4)} />
+
             </Tabs>
           </Paper >
 
@@ -118,7 +121,10 @@ export default function FormInfo() {
             <FormProject />
           </TabPanel>
           <TabPanel value={value} index={3}>
-            <FormPersonal/>
+            <TaskPosition/>
+          </TabPanel>
+          <TabPanel value={value} index={4}>
+            <TaskPersonal/>
           </TabPanel>
         </div>
       </Grid>

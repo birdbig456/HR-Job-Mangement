@@ -201,7 +201,7 @@ const MyNode = ({ nodeData, color }) => {
 
   return (
     <div style={{ backgroundColor: color ? color : "#FFF2E6" }}>
-      <Grid container style={{ width: 240 }}>
+      <Grid container style={{width:200 }}>
         <Grid item xs={8} sm={8} style={{ padding: 4 }}>
           <p
             style={{

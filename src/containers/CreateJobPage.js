@@ -108,9 +108,9 @@ const useStyles = makeStyles((theme) => ({
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
-    background: "#82b440",
+    background: "#fec566",
     "&:hover": {
-      background:"#6A8F38",
+      background:"#ffbb4b",
     },
   },
 }))(Button);
@@ -335,9 +335,9 @@ export default function CreateJobPage() {
                         </Avatar>
                       </Grid>
                       <Grid item xs={6} sm={6}>
-                        <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Open Sans Condensed"}}>
+                        <div className={classes.marginAt} style={{lineHeight:"2",fontWeight:"bold",fontFamily:"Montserrat"}}>
                           <div>
-                            <div style={{ fontSize: 16 ,color:"#000000",}}>
+                            <div style={{ fontSize: 12 ,color:"#262626",}}>
                               <label>Attribute 1</label>
                             </div>
                             <BorderLinearProgress
@@ -346,7 +346,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#000000",}}>
+                            <div style={{ fontSize: 12 ,color:"#262626",}}>
                               <label>Attribute 2</label>
                             </div>
                             <BorderLinearProgress
@@ -355,7 +355,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#000000",}}>
+                            <div style={{ fontSize: 12 ,color:"#262626",}}>
                               <label>Attribute 3</label>
                             </div>
                             <BorderLinearProgress
@@ -364,7 +364,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#000000",}}>
+                            <div style={{ fontSize: 12 ,color:"#262626",}}>
                               <label>Attribute 4</label>
                             </div>
                             <BorderLinearProgress
@@ -373,7 +373,7 @@ export default function CreateJobPage() {
                             />
                           </div>
                           <div >
-                            <div style={{ fontSize: 16 ,color:"#000000",}}>
+                            <div style={{ fontSize: 12 ,color:"#262626",}}>
                               <label>Attribute 5</label>
                             </div>
                             <BorderLinearProgress
