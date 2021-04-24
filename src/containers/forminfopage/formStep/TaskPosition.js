@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import InputLabel from "@material-ui/core/InputLabel";
 import TextField from "@material-ui/core/TextField";
@@ -14,6 +14,7 @@ import Grid from "@material-ui/core/Grid";
 import { useSelector, useDispatch } from "react-redux";
 import * as CreateAction from "../../../actions/CreateJob.action";
 import Button from "@material-ui/core/Button";
+
 
 const useStyles = makeStyles((theme) => ({
   HeaderTable: {
@@ -39,16 +40,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TaskPosition() {
   const classes = useStyles();
-  const [age, setAge] = React.useState("");
-
-  const [values, setValues] = React.useState([
-    {
-      Task: "",
-      Frequency: "",
-      ManHours: "",
-      Type: "",
-    },
-  ]);
+  const [age, setAge] = useState("");
+  const [values, setValues] =useState([]);
   const handleChange = (event) => {
     setValues(...values, event.target.value);
   };
@@ -59,6 +52,23 @@ export default function TaskPosition() {
     arr[index][prop] = event.target.value;
     setValues(arr);
   };
+
+  useEffect(() => {
+    console.log(values)
+  }, [values])
+  
+  const handleList = (item, e) => {
+    if(e.target.checked){
+      setValues([
+        ...values, item
+      ])
+    }
+    else{
+      setValues(
+        values.filter(elem => elem.Task !== item.Task)
+      )
+    }
+  }
 
   const [count, setCount] = useState(2);
   const dispatch = useDispatch();
@@ -105,7 +115,7 @@ export default function TaskPosition() {
         }}
       >
         <Grid item xs={1} sm={1} className={classes.TextInfo}>
-          <Checkbox color="#fec566" classes={{ root: classes.CheckboxColor }} />
+          <Checkbox onChange={e => handleList(item, e)} color="#fec566" classes={{ root: classes.CheckboxColor }} />
         </Grid>
         <Grid item xs={5} sm={5} className={classes.TextInfo}>
           <a>{item.Task}</a>
@@ -139,6 +149,11 @@ export default function TaskPosition() {
             background: "#13b5ea",
             color: "#ffff",
             fontFamily: "Montserrat",
+          }}
+          onClick={() => {
+            dispatch(CreateAction.CreateTaskPersonal(values))
+            console.log();
+            ;
           }}
         >
           select to personal

@@ -14,6 +14,7 @@ import { CREATEATTRIBUTE_ACTION_UPDATE } from "../constants/Constants";
 import { CREATEPROJECT_ACTION_CREATE } from "../constants/Constants";
 import { CREATETASK_ACTION_CREATE } from "../constants/Constants";
 import { CREATETASKVALUE_ACTION_CREATE } from "../constants/Constants";
+import { CREATETASKPERSONAL_ACTION_CREATE } from "../constants/Constants";
 
 
 export const setStateToCreateJob = (payload) => ({
@@ -81,6 +82,11 @@ export const setStateToCreateTask = (payload) => ({
 
 export const setStateToCreateTaskValue = (payload) => ({
     type: CREATETASKVALUE_ACTION_CREATE,
+    payload
+})
+
+export const setStateToCreateTaskPersonal = (payload) => ({
+    type: CREATETASKPERSONAL_ACTION_CREATE,
     payload
 })
 
@@ -187,4 +193,10 @@ export const CreateTaskValue = (payload) => {
     }
 }
 
+export const CreateTaskPersonal = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateTaskPersonal(payload))
+    }
+}
 //--------------------------------------------------------
