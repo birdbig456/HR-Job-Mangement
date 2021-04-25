@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#13b5ea",
     color: "#ffff",
     marginTop:12,
+    float:"right",
   },
 }));
 
@@ -138,6 +139,19 @@ export default function TaskInFo() {
       </Grid>
       ))}
       
+      <IconButton onMouseEnter={() => {}}
+            onClick={() => {
+              setValues([...values, {
+                Task: "",
+                Frequency: "",
+                ManHours: "",
+                Type: "",
+              }])
+              dispatch(CreateAction.CreateTask(count));
+              setCount(count + 1);
+            }} style={{float:"left"}}>
+      <AddCircleIcon  fontSize="medium" style={{color:"#fec566"}} />
+    </IconButton>
       <Button
                 className={classes.button3}
                 onClick={() => {
@@ -149,19 +163,7 @@ export default function TaskInFo() {
                 Save
               </Button>
 
-    <IconButton onMouseEnter={() => {}}
-            onClick={() => {
-              setValues([...values, {
-                Task: "",
-                Frequency: "",
-                ManHours: "",
-                Type: "",
-              }])
-              dispatch(CreateAction.CreateTask(count));
-              setCount(count + 1);
-            }} style={{float:"right"}}>
-      <AddCircleIcon  fontSize="medium" style={{color:"#fec566"}} />
-    </IconButton>
+    
     </div>
   );
 }

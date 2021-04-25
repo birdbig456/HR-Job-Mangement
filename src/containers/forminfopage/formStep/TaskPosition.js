@@ -142,6 +142,10 @@ export default function TaskPosition() {
           marginTop: 0,
         }}
       >
+        <div>
+            <p style={{marginBottom:0,fontFamily:"Oswald",fontWeight:"bold",color:"#385a7c"}}>FTF PER MONTH :</p>
+            <a style={{fontFamily:"Oswald",fontWeight:"bold",color:"#fec566",fontSize:22}}>178<a> HRS.</a></a>
+        </div>
         <Button
           variant="contained"
           fontSize="small"
@@ -158,10 +162,7 @@ export default function TaskPosition() {
         >
           select to personal
         </Button>
-        <div>
-            <p style={{marginBottom:0,fontFamily:"Oswald",fontWeight:"bold",color:"#385a7c"}}>FTF PER MONTH :</p>
-            <a style={{fontFamily:"Oswald",fontWeight:"bold",color:"#fec566",fontSize:22}}>178<a> HRS.</a></a>
-        </div>
+        
       </div>
 
     </div>
