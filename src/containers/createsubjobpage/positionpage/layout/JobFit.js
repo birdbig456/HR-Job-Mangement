@@ -268,18 +268,13 @@ const JobFit = forwardRef((props, ref) => {
                 </FormControl>
               </Grid>
             ))}
-            <Grid item sm={10}></Grid>
-            <Grid item xs={12} sm={2}>
+            
+            <Grid item xs={12} sm={12} style={{display:"flex",flexDirection:"row",justifyContent:"space-between",marginTop:10}}>
               <Button
                 variant="contained"
-                style={{ background: "#fec566", color: "#ffff",fontFamily:"Oswald" }}
-                onClick={handleClickOpen}
-              >
-                Create New
-              </Button>
-              <Button
-                variant="contained"
-                style={{ background: "#fec566", color: "#ffff",fontFamily:"Oswald" }}
+                size="medium"
+
+                style={{ background: "#fec566", color: "#ffff",fontFamily:"Oswald"}}
                 onClick={() => {
                   dispatch(CreateAction.CreateAttributeSelect(values))
                   console.log();
@@ -287,6 +282,14 @@ const JobFit = forwardRef((props, ref) => {
                 }}
               >
                  Save
+              </Button>
+              <Button
+                variant="contained"
+                size="medium"
+                style={{ background: "#fec566", color: "#ffff",fontFamily:"Oswald" }}
+                onClick={handleClickOpen}
+              >
+                Create New
               </Button>
             </Grid>
 
