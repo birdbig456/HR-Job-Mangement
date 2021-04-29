@@ -70,13 +70,21 @@ export default function TaskPosition() {
     }
   }
 
+  var hoursTotal = values.reduce(function(prev, cur) {
+    return prev + parseInt(cur.ManHours);
+  }, 0);
+  
+  console.log(hoursTotal)
+
+  console.log(values.ManHours)
+
   const [count, setCount] = useState(2);
   const dispatch = useDispatch();
   const CreateTaskValueReducer = useSelector(
     ({ CreateTaskValueReducer }) => CreateTaskValueReducer
   );
 
-  console.log(CreateTaskValueReducer);
+  
   return (
     <div id="Wrapper" style={{ paddingInline:"10%"}}>
                 <Grid
@@ -142,10 +150,13 @@ export default function TaskPosition() {
           marginTop: 0,
         }}
       >
+        
         <div>
             <p style={{marginBottom:0,fontFamily:"Oswald",fontWeight:"bold",color:"#385a7c"}}>FTF PER MONTH :</p>
-            <a style={{fontFamily:"Oswald",fontWeight:"bold",color:"#fec566",fontSize:22}}>178<a> HRS.</a></a>
+            <a style={{fontFamily:"Oswald",fontWeight:"bold",color:"#fec566",fontSize:22}}>{hoursTotal}<a> HRS.</a></a>
         </div>
+      
+        
         <Button
           variant="contained"
           fontSize="small"

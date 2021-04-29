@@ -1,4 +1,4 @@
-import React, { forwardRef, useState, useImperativeHandle } from "react";
+import React, { forwardRef, useState, useImperativeHandle ,useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -103,7 +103,23 @@ const JobFit = forwardRef((props, ref) => {
     NameAttribute: " ",
     ParentSubJobName: "",
   });
-
+  const [values, setValues] =useState([]);
+  useEffect(() => {
+    console.log(values)
+  }, [values])
+  
+  const handleList = (itemAttribute, e) => {
+    if(e.target.checked){
+      setValues([
+        ...values, itemAttribute
+      ])
+    }
+    else{
+      setValues(
+        values.filter(elem => elem !== itemAttribute)
+      )
+    }
+  }
   const [isShow, setIsShow] = useState(false);
   const handleChange = (event) => {
     console.log(event.target);
@@ -226,11 +242,8 @@ const JobFit = forwardRef((props, ref) => {
                 <FormControlLabel
                   control={
                     <Checkbox
-                      name={itemAttribute.name}
-                      checked={itemAttribute.value}
-                      id={itemAttribute.id}
                       color="primary"
-                      onChange={handleChange}
+                      onChange={e => handleList(itemAttribute.name, e)}
                     />
                   }
                   label={itemAttribute.name}
@@ -263,6 +276,17 @@ const JobFit = forwardRef((props, ref) => {
                 onClick={handleClickOpen}
               >
                 Create New
+              </Button>
+              <Button
+                variant="contained"
+                style={{ background: "#fec566", color: "#ffff",fontFamily:"Oswald" }}
+                onClick={() => {
+                  dispatch(CreateAction.CreateAttributeSelect(values))
+                  console.log();
+                  ;
+                }}
+              >
+                 Save
               </Button>
             </Grid>
 

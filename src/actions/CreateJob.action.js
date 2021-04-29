@@ -2,6 +2,7 @@ import { CREATEJOB_ACTION_CREATE } from "../constants/Constants";
 import { CREATESUBJOB_ACTION_CREATE } from "../constants/Constants";
 import { CREATEPOSITION_ACTION_CREATE } from "../constants/Constants";
 import { CREATEATTRIBUTE_ACTION_CREATE } from "../constants/Constants";
+import { CREATEATTRIBUTESELECT_ACTION_CREATE } from "../constants/Constants";
 import { CREATEJOBPEOPLE_ACTION_CREATE } from "../constants/Constants";
 import { CREATECOMPETENCY_ACTION_CREATE } from "../constants/Constants";
 import { CREATEJOBFIT_ACTION_CREATE } from "../constants/Constants";
@@ -31,6 +32,10 @@ export const setStateToCreatePosition = (payload) => ({
 })
 export const setStateToCreateAttribute = (payload) => ({
     type: CREATEATTRIBUTE_ACTION_CREATE,
+    payload
+})
+export const setStateToCreateAttributeSelect = (payload) => ({
+    type: CREATEATTRIBUTESELECT_ACTION_CREATE,
     payload
 })
 export const setStateToCreateJobPeople = (payload) => ({
@@ -90,6 +95,7 @@ export const setStateToCreateTaskPersonal = (payload) => ({
     payload
 })
 
+
 //----------------------------------------------------------------
 export const CreateJob = (payload) => {
     return dispatch => {
@@ -113,6 +119,12 @@ export const CreateAttribute = (payload) => {
     return dispatch => {
         console.log(payload)
         dispatch(setStateToCreateAttribute(payload))
+    }
+}
+export const CreateAttributeSelect = (payload) => {
+    return dispatch => {
+        console.log(payload)
+        dispatch(setStateToCreateAttributeSelect(payload))
     }
 }
 export const CreateJobPeople = (payload) => {
