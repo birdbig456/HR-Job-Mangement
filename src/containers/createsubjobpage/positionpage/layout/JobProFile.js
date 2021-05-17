@@ -219,7 +219,7 @@ export default function JobProFile() {
   };
 
   return (
-    <div style={{ backgroundColor: "#fff" }}>
+    <div style={{ backgroundColor: "#fff",height:"70vh" }}>
       <Formik
         onSubmit={(values, { setSubmitting }) => {
           console.log(values);

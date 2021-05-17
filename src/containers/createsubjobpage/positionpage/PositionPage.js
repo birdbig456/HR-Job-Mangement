@@ -93,15 +93,16 @@ export default function PositionPage() {
             <Typography className={classes.instructions}>
               {getStepContent(activeStep, childRef)}
             </Typography>
-            <div style={{ margin: 20 }}>
+            <div style={{ margin: 20,bottom:0 }}>
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}
                 className={classes.backButton}
+                style={{fontFamily:"Oswald"}}
               >
                 Back
               </Button>
-              <Button variant="contained"  style={{background:"#13b5ea", color:"#ffffff"}} onClick={handleNext}>
+              <Button variant="contained"  style={{background:"#13b5ea", color:"#ffffff",fontFamily:"Oswald"}} onClick={handleNext}>
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
               </Button>
             </div>

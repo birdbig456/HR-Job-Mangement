@@ -300,6 +300,7 @@ export default function PositionCrate({ match }) {
                                   margin: 7,
                                   background: "#13b5ea",
                                   color: "#ffffff",
+                                  fontFamily:"Oswald"
                                 }}
                               >
                                 Save
@@ -308,7 +309,7 @@ export default function PositionCrate({ match }) {
                                 onClick={handleClose}
                                 variant="contained"
                                 size="small"
-                                style={{ margin: 7 }}
+                                style={{ margin: 7 ,fontFamily:"Oswald"}}
                               >
                                 Cancel
                               </Button>

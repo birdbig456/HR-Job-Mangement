@@ -293,7 +293,7 @@ export default function CreateSubJobPage({ match }) {
             color="primary"
             variant="contained"
             size="small"
-            style={{ margin: 7, background: "#13b5ea", color: "#ffffff" }}
+            style={{ margin: 7, background: "#13b5ea", color: "#ffffff" ,fontFamily:"Oswald"}}
           >
             Save
           </Button>
@@ -301,7 +301,7 @@ export default function CreateSubJobPage({ match }) {
             onClick={handleClose}
             variant="contained"
             size="small"
-            style={{ margin: 7 }}
+            style={{ margin: 7,fontFamily:"Oswald" }}
           >
             Cancel
           </Button>

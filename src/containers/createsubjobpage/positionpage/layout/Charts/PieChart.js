@@ -10,13 +10,13 @@ const data = {
 	datasets: [{
 		data: [80,200],
 		backgroundColor: [
-		'#36a69a',
-		'#fec566',
+		'#bae1de',
+		'#e0e0e0',
 		
 		],
 		hoverBackgroundColor: [
-		'#36a69a',
-		'#fec566',
+		'#bae1de',
+		'#e0e0e0',
 		
 		]
 	}]
@@ -27,7 +27,7 @@ export default class PieChart extends React.Component{
 
   render() {
     return (
-      <div style={{padding:10}}>
+      <div style={{padding:50}}>
         <Pie data={data} />
       </div>
     );

@@ -9,6 +9,7 @@ import Select from "@material-ui/core/Select";
 import InputBase from "@material-ui/core/InputBase";
 import IconButton from '@material-ui/core/IconButton';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import RemoveIcon from '@material-ui/icons/Remove';
 import Grid from "@material-ui/core/Grid";
 import { useSelector, useDispatch } from "react-redux";
 import * as CreateAction from "../../../actions/CreateJob.action";
@@ -154,6 +155,9 @@ export default function TaskInFo() {
              style={{float:"left"}}>
       <AddCircleIcon  fontSize="medium" style={{color:"#fec566"}} />
     </IconButton>
+    <IconButton style={{padding:14.5}}>
+  <RemoveIcon fontSize="small" style={{background:"#fec566",color:"#ffff",borderRadius:15}} />
+    </IconButton>
       <Button
                 className={classes.button3}
                 onClick={() => {
@@ -164,8 +168,6 @@ export default function TaskInFo() {
               >
                 Save
               </Button>
-
-    
     </div>
   );
 }

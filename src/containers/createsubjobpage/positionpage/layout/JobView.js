@@ -12,6 +12,7 @@ import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import IconButton from "@material-ui/core/IconButton";
+import BeenhereIcon from '@material-ui/icons/Beenhere';
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { green, orange } from "@material-ui/core/colors";
@@ -33,11 +34,11 @@ const BorderLinearProgress = withStyles((theme) => ({
     width: 150,
   },
   colorPrimary: {
-    backgroundColor: theme.palette.grey[theme.palette.type === "" ? 200 : 700],
+    backgroundColor: "#e8e8e8",
   },
   bar: {
     borderRadius: 5,
-    backgroundColor: "#26A69A",
+    backgroundColor: "#70c3bb",
   },
 }))(LinearProgress);
 
@@ -112,6 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paperRecom: {
     border: "solid 1px #e5e5e5",
+    color:"#828282",
     textAlign: "center",
     marginLeft: 30,
     marginRight: 30,
@@ -153,22 +155,25 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#fec566",
-            fontFamily: "Montserrat",
+            color: "#385a7c",
+            fontFamily: "Oswald",
             textTransform:"uppercase",
             fontSize: 16,
             fontWeight: "bold",
             marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
+            display:"flex",
+            alignItems:"center"
           }}
         >
-          HRBP Manager
+        <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>HRBP Manager
         </Typography>
-        <Grid container style={{ fontFamily: "Noto Sans" }}>
+        <Grid container style={{ paddingInline:"4%"}}>
+         
           <Grid item xs={3} sm={3}>
             <div
-              style={{ marginLeft: 65, color: "#385a7c", fontWeight: "bold" }}
+              style={{ marginLeft: 65, color: "#262626", }}
             >
               <p>Job group : </p>
               <p>Department : </p>
@@ -178,7 +183,7 @@ export default function JobView() {
             </div>
           </Grid>
           <Grid item xs={3} sm={3}>
-            <div style={{ marginLeft: 50 }}>
+            <div style={{ marginLeft: 50 ,color:"#828282"}}>
               <p>HR</p>
               <p>HRBP</p>
               <p>TPE</p>
@@ -187,8 +192,8 @@ export default function JobView() {
             </div>
           </Grid>
           <Grid item xs={3} sm={3}>
-            <div style={{ color: "#385a7c", fontWeight: "bold" }}>
-              <p>SubJob group : </p>
+            <div style={{ color: "#262626",}}>
+              <p>Sub Job group : </p>
               <p>Section : </p>
               <p>Location : </p>
               <p>Job Grade : </p>
@@ -196,11 +201,13 @@ export default function JobView() {
             </div>
           </Grid>
           <Grid item xs={3} sm={3}>
+            <div style={{color:"#828282"}}>
             <p>HRBP</p>
             <p>-</p>
             <p>Rayong</p>
             <p>S2 - S4</p>
             <p>Any Field</p>
+            </div>
           </Grid>
         </Grid>
       </div>
@@ -208,17 +215,19 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#fec566",
-              fontFamily: "Montserrat",
+              color: "#385a7c",
+              fontFamily: "Oswald",
               textTransform:"uppercase",
               fontSize: 16,
               fontWeight: "bold",
               marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
+              display:"flex",
+            alignItems:"center"
             }}
           >
-            Job Fit Detail
+            <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Job Fit Detail
           </Typography>
           <div className={classes.paperJobfit}>
             <p style={{ textAlign: "center" }}>xxxxxxxxxxxxx</p>
@@ -226,28 +235,30 @@ export default function JobView() {
           </div>
         </div>
       </div>
-      <div className={classes.paperAttribute}>
+      <div className={classes.Newpaper}>
         <div style={{}}>
           <Typography
             style={{
-              color: "#fec566",
-              fontFamily: "Montserrat",
+              color: "#385a7c",
+              fontFamily: "Oswald",
               textTransform:"uppercase",
               fontSize: 16,
               fontWeight: "bold",
               marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
+              display:"flex",
+            alignItems:"center"
             }}
           >
-            Attributes
+            <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Attributes
           </Typography>
-          <Grid container>
+          <Grid container >
             {CreateAttributeReducer.map((itemAttribute, index) => (
               <Grid
                 item
                 xs={6}
-                sm={4}
+                sm={6}
                 style={{ paddingLeft: 80, marginTop: 20 }}
               >
                 <Grid container key={index} style={{ marginBottom: 10 }}>
@@ -268,17 +279,19 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#fec566",
-              fontFamily: "Montserrat",
+              color: "#385a7c",
+              fontFamily: "Oswald",
               textTransform:"uppercase",
               fontSize: 16,
               fontWeight: "bold",
               marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
+              display:"flex",
+            alignItems:"center"
             }}
           >
-            Job Profile
+            <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Job Profile
           </Typography>
           <div style={{ marginTop: 30 }}>
             {CreateJobPeopleReducer.map((itemJobPeople, index) => (
@@ -308,19 +321,21 @@ export default function JobView() {
         <div style={{}}>
           <Typography
             style={{
-              color: "#fec566",
-              fontFamily: "Montserrat",
+              color: "#385a7c",
+              fontFamily: "Oswald",
               textTransform:"uppercase",
               fontSize: 16,
               fontWeight: "bold",
               marginLeft: 65,
               paddingTop: 20,
               paddingBottom: 10,
+              display:"flex",
+            alignItems:"center"
             }}
           >
-            Project Pass Need
+            <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Project Pass Need
           </Typography>
-          <div style={{ marginLeft: 65, color: "", fontWeight: "bold" }}>
+          <div style={{ marginLeft: 65, color: "", }}>
             <p>xxxxxxxxx</p>
             <p>xxxxxxxxx</p>
             <p>xxxxxxxxx</p>
@@ -333,17 +348,19 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#fec566",
-            fontFamily: "Montserrat",
+            color: "#385a7c",
+            fontFamily: "Oswald",
             textTransform:"uppercase",
             fontSize: 16,
             fontWeight: "bold",
             marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
+            display:"flex",
+            alignItems:"center"
           }}
         >
-          Competency Need
+          <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Competency Need
         </Typography>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <MyRadarComp />
@@ -353,24 +370,26 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#fec566",
-            fontFamily: "Montserrat",
+            color: "#385a7c",
+            fontFamily: "Oswald",
             textTransform:"uppercase",
             fontSize: 16,
             fontWeight: "bold",
             marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
+            display:"flex",
+            alignItems:"center"
           }}
         >
-          Job Task
+          <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Job Task
         </Typography>
         <PieChart />
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Button
             variant="contained"
             size="small"
-            style={{ background: "#fec566", color: "#ffffff", marginRight: 40 }}
+            style={{ background: "#fec566", color: "#ffffff", marginRight: 40 ,fontFamily:"Oswald"}}
           >
             View Job Task
           </Button>
@@ -380,20 +399,22 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#fec566",
-            fontFamily: "Montserrat",
+            color: "#385a7c",
+            fontFamily: "Oswald",
             textTransform:"uppercase",
             fontSize: 16,
             fontWeight: "bold",
             marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
+            display:"flex",
+            alignItems:"center"
           }}
         >
-          Lastes Person Inxxxxxx
+          <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Lastes Person Inxxxxxx
         </Typography>
-        <Grid container>
-          <Grid
+        <Grid container style={{marginBottom:15}}>
+          {/* <Grid
             item
             xs={12}
             sm={4}
@@ -404,43 +425,45 @@ export default function JobView() {
             }}
           >
             <p>Graph</p>
-          </Grid>
-          <Grid item xs={12} sm={8}>
+          </Grid> */}
+          <Grid item xs={12} sm={12}>
             <p
               style={{
                 textAlign: "center",
-                color: "#385a7c",
-                fontWeight: "bold",
-                fontFamily: "Oswald",
-                letterSpacing: "1px",
+                color: "#262626",
+                fontWeight: "normal",
+                fontFamily: "",
+                color:"#828282",
+                marginBottom:5,
                 fontSize: 16,
+                textTransform:"uppercase"
               }}
             >
               Puttinun Moungprasert
             </p>
-            <Grid container style={{ fontFamily: "Noto Sans" }}>
+            <Grid container style={{ paddingInline:"15%"}}>
+              <Grid item xs={1} sm={1}></Grid>
               <Grid
                 item
                 xs={3}
                 sm={3}
-                style={{ color: "#", fontWeight: "bold" }}
+                style={{ color: "#", fontWeight: "normal" }}
               >
-                <div style={{ marginLeft: 40 }}>
+                <div style={{ marginLeft: 65 }}>
                   <p>ESY : </p>
                   <p>TIP : </p>
                 </div>
               </Grid>
-              <Grid item xs={3} sm={3}>
-                <div>
+              <Grid item xs={2} sm={2}>
+                <div style={{color:"#828282"}}>
                   <p>11/2</p>
                   <p>4/2</p>
                 </div>
               </Grid>
               <Grid
                 item
-                xs={3}
-                sm={3}
-                style={{ color: "#", fontWeight: "bold" }}
+                xs={3} sm={3}
+                style={{ color: "#", fontWeight: "normal" }}
               >
                 <div style={{ marginLeft: 40 }}>
                   <p>Service year :</p>
@@ -448,7 +471,7 @@ export default function JobView() {
                 </div>
               </Grid>
               <Grid item xs={3} sm={3}>
-                <div>
+                <div style={{color:"#828282"}}>
                   <p>8/4</p>
                   <p>36/2</p>
                 </div>
@@ -461,17 +484,19 @@ export default function JobView() {
       <div className={classes.Newpaper}>
         <Typography
           style={{
-            color: "#fec566",
-            fontFamily: "Montserrat",
+            color: "#385a7c",
+            fontFamily: "Oswald",
             textTransform:"uppercase",
             fontSize: 16,
             fontWeight: "bold",
             marginLeft: 65,
             paddingTop: 20,
             paddingBottom: 10,
+            display:"flex",
+            alignItems:"center"
           }}
         >
-          Recommendation
+          <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Recommendation
         </Typography>
         <Grid container style={{ alignItems: "center", marginLeft: 60 }}>
           <Avatar>B</Avatar>
@@ -504,7 +529,8 @@ export default function JobView() {
             background: "#13b5ea",
             color: "#ffffff",
             display:"block",
-            margin:"auto"
+            margin:"auto",
+            fontFamily:"Oswald"
           }}
         >
           View Job Family

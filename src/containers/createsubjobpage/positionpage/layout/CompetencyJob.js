@@ -192,7 +192,7 @@ export default function CompetencyJob(
   };
 
   return (
-    <div style={{ backgroundColor: "#fff" }}>
+    <div style={{ backgroundColor: "#fff",height:"70vh" }}>
       <Grid container className={classes.paperCompetency}>
         <Grid item xs={12} sm={12} style={{ textAlign: "center",padding: 20, margin: 20  }}>
           <h3

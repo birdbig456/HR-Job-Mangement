@@ -3,7 +3,7 @@ import { CREATEJOBPEOPLE_ACTION_CREATE } from "../constants/Constants";
 const initialState = {
     JobLevel: "18",
     JobClassifield: "12",
-    Exp: "28",
+    Exp: "18",
     ProjectNeed: " ",
 }
 
