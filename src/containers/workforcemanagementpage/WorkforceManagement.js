@@ -13,19 +13,19 @@ import { bindActionCreators } from "redux";
 
 const todos = {
   1: {
-    text: "First ",
+    text: "Employee 1 ",
     state: "box1",
   },
   2: {
-    text: "Second ",
+    text: "Employee 2 ",
     state: "box1",
   },
   3: {
-    text: "Third ",
+    text: "Employee 3 ",
     state: "box1",
   },
   4: {
-    text: "Fourth ",
+    text: "Employee 4 ",
     state: "box1",
   },
 };
@@ -442,8 +442,8 @@ export default function WorkforceManagement() {
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
-                        <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>50.00 %</Box>
+                        <Box>2 persons</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -451,8 +451,8 @@ export default function WorkforceManagement() {
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
-                        <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>25.00 %</Box>
+                        <Box>1 persons</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -460,8 +460,8 @@ export default function WorkforceManagement() {
                 </Grid>
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
-                        <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>25.00 %</Box>
+                        <Box>1 persons</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>

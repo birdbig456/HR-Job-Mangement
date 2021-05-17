@@ -7,7 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import InputBase from "@material-ui/core/InputBase";
 import Grid from "@material-ui/core/Grid";
-
+import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
 
   margin: {
@@ -24,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     minWidth:220
   },
+  buttonSubmit:{
+    background: "#fec566",
+    color: "#ffff",
+    float:"right"
+  }
 }));
 
 export default function FormAvg() {
@@ -401,6 +406,15 @@ export default function FormAvg() {
           />
         </FormControl>
       </Grid>
+      
+          <Button
+            className={classes.buttonSubmit}
+            variant="contained"
+            style={{ paddingLeft: 25, paddingRight: 25,fontFamily:"Montserrat" }}
+          >
+            SUBMIT
+          </Button>
+       
     </div>
   );
 }
