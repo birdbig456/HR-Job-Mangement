@@ -19,7 +19,7 @@ import {
   TablePagination,
   Input,
   Paper,
-  Link,
+  // Link,
   Button,
   ButtonGroup,
 } from "@material-ui/core";
@@ -35,6 +35,8 @@ import { withRouter } from "react-router-dom";
 //import Tools
 import PropTypes from "prop-types";
 import PerfectScrollbar from "react-perfect-scrollbar";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+
 
 
 //import styles
@@ -444,15 +446,19 @@ const useStyles = makeStyles((theme) => ({
             <Grid item xs={6} md={6}>
               <div className={classes.row2}>
                 <span className={classes.spacer} />
+                <Link to="/CreateJob" style={{ textDecoration: 'none' }}>
                 <Button
                   variant="contained"
                   style={{background:"#fec566" , color:"#ffff",fontFamily:"Oswald"}}
-                  onClick={() => {
-                    props.history.push("/addEmployee");
-                  }}
+                  // onClick={() => {
+                  //   props.history.push("/addEmployee");
+                  // }}
                 >
                   Add Position
                 </Button>
+                </Link>
+                
+
               </div>
             </Grid>
             {/* ------------- */}

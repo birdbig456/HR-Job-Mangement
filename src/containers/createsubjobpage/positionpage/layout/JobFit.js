@@ -210,9 +210,18 @@ const JobFit = forwardRef((props, ref) => {
           sm={12}
           style={{ textAlign: "center", padding: 20, margin: 20 }}
         >
-          <span style={{ border: "solid", fontSize: 24, padding: 20 }}>
-            Job Fit
-          </span>
+          <h3
+        style={{
+          fontFamily: "Oswald",
+          color: "#385a7c",
+          fontWeight: "bold",
+          textAlign: "center",
+          margin:0,
+          fontSize: 30,
+        }}
+      >
+        Job Fit
+      </h3>
         </Grid>
 
         <div className={classes.paperPeople}>

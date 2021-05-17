@@ -68,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paperCompetency: {
     padding: 30,
+    paddingTop:0,
     height: "auto",
     width: 900,
     margin: "auto",
@@ -193,12 +194,19 @@ export default function CompetencyJob(
   return (
     <div style={{ backgroundColor: "#fff" }}>
       <Grid container className={classes.paperCompetency}>
-        <Grid item xs={12} sm={12} style={{ textAlign: "center" }}>
-          <span>
-            <u>
-              <h2>Competency Profile</h2>
-            </u>
-          </span>
+        <Grid item xs={12} sm={12} style={{ textAlign: "center",padding: 20, margin: 20  }}>
+          <h3
+        style={{
+          fontFamily: "Oswald",
+          color: "#385a7c",
+          fontWeight: "bold",
+          textAlign: "center",
+          margin:0,
+          fontSize: 30,
+        }}
+      >
+        Competency Profile
+      </h3>
         </Grid>
         <Formik
           onSubmit={(values, { setSubmitting }) => {

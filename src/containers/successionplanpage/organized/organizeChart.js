@@ -119,7 +119,7 @@ const ShowDetail = ({ data, open, setOpen }) => {
       <Dialog open={open} onClose={() => setOpen(false)} className="p-2">
         <DialogTitle
           style={{
-            background:"#262626",
+            background:"#fec566",
             alignItems: "center",
           }}
           onClose={handleClose}
@@ -139,7 +139,7 @@ const ShowDetail = ({ data, open, setOpen }) => {
             size="small"
             style={{ float: "right", marginTop: 3 }}
           >
-            <CloseIcon style={{ color: "#82B440" }} fontSize="small" />
+            <CloseIcon style={{ color: "#ffff" }} fontSize="small" />
           </IconButton>
         </DialogTitle>
         <DialogContent style={{ backgroundColor: "#ffff",paddingTop:""}}>
@@ -201,7 +201,7 @@ const MyNode = ({ nodeData, color }) => {
 
   return (
     <div style={{ backgroundColor: color ? color : "#FFF2E6" }}>
-      <Grid container style={{width:200 }}>
+      <Grid container style={{width:200,boxShadow:"0px 2px 8px rgba(0, 0, 0, 0.18)"}}>
         <Grid item xs={8} sm={8} style={{ padding: 4 }}>
           <p
             style={{
