@@ -215,6 +215,7 @@ export default function SuccessionPlan() {
                 size="small"
                 onClick={handleClose}
                 className={classes.CancelButton}
+                style={{fontFamily:"Oswald"}}
               >
                 Cancel
               </Button>
@@ -223,6 +224,7 @@ export default function SuccessionPlan() {
                 size="small"
                 onClick={handleClose}
                 className={classes.SubmitButton}
+                style={{fontFamily:"Oswald"}}
                 autoFocus
               >
                 Submit

@@ -27,11 +27,13 @@ const useStyles = makeStyles((theme) => ({
     background: "#fafafa",
     color: "#385a7c",
     marginRight: 10,
-    border:"1px solid #385a7c"
+    border:"1px solid #385a7c",
+    fontFamily:"Oswald"
   },
   button3: {
     background: "#13b5ea",
     color: "#ffff",
+    fontFamily:"Oswald"
   },
   buttonSubmit:{
     background: "#fec566",
@@ -195,7 +197,7 @@ export default function FormProject() {
           <Button
             className={classes.buttonSubmit}
             variant="contained"
-            style={{ paddingLeft: 25, paddingRight: 25,fontFamily:"Montserrat" }}
+            style={{ paddingLeft: 25, paddingRight: 25,fontFamily:"Oswald" }}
           >
             SUBMIT
           </Button>

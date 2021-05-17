@@ -259,6 +259,7 @@ export default function FormAvg() {
           float: "right",
           marginTop: 12,
           marginRight:150,
+          fontFamily:"Oswald"
         }}
         variant="contained"
       >

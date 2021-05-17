@@ -162,7 +162,7 @@ export default function TaskPosition() {
           style={{
             background: "#13b5ea",
             color: "#ffff",
-            fontFamily: "Montserrat",
+            fontFamily: "Oswald",
           }}
           onClick={() => {
             dispatch(CreateAction.CreateTaskPersonal(values))
