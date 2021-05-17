@@ -141,7 +141,7 @@ export default function SuccessionPlan() {
             className={classes.CreateButton}
             onClick={handleClickOpen}
           >
-            Create
+            filter
           </Button>
           <Dialog open={open} onClose={handleClose}>
             <DialogTitle style={{ textAlign: "center" }}>
@@ -256,13 +256,13 @@ export default function SuccessionPlan() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 fontFamily: "Oswald",
-                background: "#e5e5e5",
-                color: "#fec566",
+                background: "#fec566",
+                color: "#ffff",
                 letterSpacing:"1px",
                 borderRadius:5,
               }}
             >
-              <h3 style={{ marginLeft: 20 }}>TALENT POOL</h3>
+              <h2 style={{ marginLeft: 20 }}>TALENT POOL</h2>
             </Grid>
         <Grid style={{width:"100%",height:"92%",overflow:"scroll"}}>
           <DropItem
