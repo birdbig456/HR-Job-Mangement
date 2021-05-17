@@ -141,7 +141,7 @@ export default function SuccessionPlan() {
             className={classes.CreateButton}
             onClick={handleClickOpen}
           >
-            filter
+            Filter
           </Button>
           <Dialog open={open} onClose={handleClose}>
             <DialogTitle style={{ textAlign: "center" }}>

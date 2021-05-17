@@ -75,7 +75,6 @@ export default function TaskPosition() {
   }, 0);
   
   console.log(hoursTotal)
-
   console.log(values.ManHours)
 
   const [count, setCount] = useState(2);
