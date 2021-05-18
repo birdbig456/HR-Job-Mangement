@@ -116,7 +116,7 @@ export default function Profile() {
                   <div style={{}}>xxxxxxxx</div>
                   <div style={{}}>xxxxxxxx</div>
                   <div style={{}}>xxxxxxxx</div>
-                  <div style={{}}>xxxxxxxx@gmail.com</div>
+                  <div style={{}}>60011111@gmail.com</div>
               </Grid>
               <Grid item xs={1} sm={1}></Grid>
             </Grid>
@@ -128,7 +128,7 @@ export default function Profile() {
           <div style={{ marginTop: 20 }}>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
                 style={{background:"#262626", borderRadius:15}}
@@ -141,7 +141,7 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#262626", borderRadius:15}}
@@ -154,7 +154,7 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#262626", borderRadius:15}}
@@ -167,7 +167,7 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#262626", borderRadius:15}}
@@ -180,7 +180,7 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#262626", borderRadius:15}}
@@ -193,7 +193,7 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#262626", borderRadius:15}}
@@ -206,7 +206,7 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#262626", borderRadius:15}}
@@ -219,7 +219,7 @@ export default function Profile() {
             </Accordion>
             <Accordion style={{ marginTop:15 , borderRadius:15}}>
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon style={{color:"#82b440"}} />}
+                expandIcon={<ExpandMoreIcon style={{color:"#13b5ea"}} />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
                 style={{background:"#262626", borderRadius:15}}

@@ -4,27 +4,27 @@ import { CREATEATTRIBUTE_ACTION_UPDATE } from "../constants/Constants";
 
 
     const Attribute = [{
-        name: "Attribute 1",
+        name: "Communication",
         value: true,
         id: 1
       },{
-        name: "Attribute 2",
+        name: "Organizational",
         value: true,
         id: 2
       },{
-        name: "Attribute 3",
+        name: "Decision-making",
         value: true,
         id: 3
       },{
-        name: "Attribute 4",
+        name: "Problem solving",
         value: true,
         id: 4
       },{
-        name: "Attribute 5",
+        name: "Teamworking",
         value: true,
         id: 5
       },{
-        name: "Attribute 6",
+        name: "Work under pressure",
         value: false,
         id: 6
       }];

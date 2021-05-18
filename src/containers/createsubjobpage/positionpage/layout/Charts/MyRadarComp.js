@@ -30,11 +30,11 @@ export default class MyRadarComp extends React.Component {
  	 const data = [
       {
         data: {
-          battery: 0.5,
-          design: .7,
-          useful: 0.985,
-          speed: 0.57,
-          weight: 0.7
+          battery: 0.75,
+          design: 0.90,
+          useful: 0.80,
+          speed: 0.75,
+          weight: 0.75
         },
         meta: { color: '#26A69A' }
       },
@@ -96,11 +96,11 @@ export default class MyRadarComp extends React.Component {
         
             captions={{
               // columns
-              battery: 'Battery Capacity',
-              design: 'Design',
-              useful: 'Usefulness',
-              speed: 'Speed',
-              weight: 'Weight'
+              battery: "Communication",
+              design: "Organizational",
+              useful: "Decision-making",
+              speed: "Problem solving",
+              weight: "Teamworking",
             }}
             data={data}
             size={400}

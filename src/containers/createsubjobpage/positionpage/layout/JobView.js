@@ -230,7 +230,7 @@ export default function JobView() {
             <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Job Fit Detail
           </Typography>
           <div className={classes.paperJobfit}>
-            <p style={{ textAlign: "center" }}>xxxxxxxxxxxxx</p>
+            <p style={{ textAlign: "center" }}>require persuasive ability person</p>
             {CreateJobFitReducer.map((itemJobFit, index) => ({ itemJobFit }))}
           </div>
         </div>
@@ -259,13 +259,13 @@ export default function JobView() {
                 item
                 xs={6}
                 sm={6}
-                style={{ paddingLeft: 80, marginTop: 20 }}
+                style={{marginTop: 20 }}
               >
                 <Grid container key={index} style={{ marginBottom: 10 }}>
-                  <Grid item xs={6} sm={6} style={{ textAlign: "left" }}>
+                  <Grid item xs={12} sm={12} style={{ textAlign: "center" }}>
                     {itemAttribute.name}
                   </Grid>
-                  <Grid item xs={6} sm={6} style={{ marginLeft: -80 }}>
+                  <Grid item xs={12} sm={12} style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
                     <BorderLinearProgress variant="determinate" value={30} />
                   </Grid>
                 </Grid>
@@ -336,11 +336,10 @@ export default function JobView() {
             <BeenhereIcon fontSize="medium" style={{color:"#fec566",marginRight:5}}/>Project Pass Need
           </Typography>
           <div style={{ marginLeft: 65, color: "", }}>
-            <p>xxxxxxxxx</p>
-            <p>xxxxxxxxx</p>
-            <p>xxxxxxxxx</p>
-            <p>xxxxxxxxx</p>
-            <p>xxxxxxxxx</p>
+            <p>1. DF Portal</p>
+            <p>2. Pity Cash</p>
+            <p>3. Seeable</p>
+            <p>4. Go dutch</p>
           </div>
         </div>
       </div>

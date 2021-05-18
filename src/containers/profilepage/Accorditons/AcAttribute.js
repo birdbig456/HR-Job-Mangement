@@ -28,11 +28,11 @@ const BorderLinearProgress = withStyles((theme) => ({
     borderRadius: 5,
   },
   colorPrimary: {
-    backgroundColor: theme.palette.grey[theme.palette.type === "" ? 200 : 700],
+    backgroundColor: "#e8e8e8",
   },
   bar: {
     borderRadius: 5,
-    backgroundColor: "#13b5ea",
+    backgroundColor: "#70c3bb",
   },
 }))(LinearProgress);
 
@@ -54,9 +54,8 @@ export default function AcAttribute() {
     };
   }, []);
   return (
-    <div>
-      <Grid container>
-        <Grid item xs={12} sm={8} style={{paddingRight:20}}>
+      <Grid container >
+        <Grid item xs={12} sm={7} style={{}}>
           <Grid
             container
             style={{ textAlign: "left", paddingBottom: 20, lineHeight: 4 }}
@@ -71,10 +70,9 @@ export default function AcAttribute() {
           </Grid>
         </Grid>
         
-        <Grid item xs={12} sm={4} style={{margin:"auto"}}>
+        <Grid item xs={12} sm={5} style={{display:"flex",justifyContent:"center"}}>
           <MyRadarComp />
         </Grid>
       </Grid>
-    </div>
   );
 }

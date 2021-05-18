@@ -375,7 +375,7 @@ export default function CreateSubJobPage({ match }) {
                                     <div
                                       style={{ fontSize: 12, color: "262626" }}
                                     >
-                                      <label>Attribute 1</label>
+                                      <label>Communication</label>
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
@@ -386,7 +386,7 @@ export default function CreateSubJobPage({ match }) {
                                     <div
                                       style={{ fontSize: 12, color: "262626" }}
                                     >
-                                      <label>Attribute 2</label>
+                                      <label>Organizational</label>
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
@@ -397,18 +397,18 @@ export default function CreateSubJobPage({ match }) {
                                     <div
                                       style={{ fontSize: 12, color: "262626" }}
                                     >
-                                      <label>Attribute 3</label>
+                                      <label>Decision-making</label>
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
-                                      value={40}
+                                      value={80}
                                     />
                                   </div>
                                   <div>
                                     <div
                                       style={{ fontSize: 12, color: "262626" }}
                                     >
-                                      <label>Attribute 4</label>
+                                      <label>Problem solving</label>
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
@@ -419,11 +419,11 @@ export default function CreateSubJobPage({ match }) {
                                     <div
                                       style={{ fontSize: 12, color: "262626" }}
                                     >
-                                      <label>Attribute 5</label>
+                                      <label>Teamworking</label>
                                     </div>
                                     <BorderLinearProgress
                                       variant="determinate"
-                                      value={25}
+                                      value={75}
                                     />
                                   </div>
                                 </div>

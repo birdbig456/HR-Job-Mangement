@@ -44,13 +44,13 @@ let dataBar ={
     {
       label: "Best fit",
       stack: "Stack 0",
-      backgroundColor: "#385A7C",
+      backgroundColor: "#fec566",
       data: [10, 20, 30, 40, 50, 60],
     },
     {
       label: "Actual",
       stack: "Stack 0",
-      backgroundColor: "#82b440",
+      backgroundColor: "#e5e5e5",
       data: [10, 15, 30, 60, 50,40].map((k) => -k),
     },
   ],

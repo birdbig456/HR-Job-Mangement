@@ -434,7 +434,7 @@ export default function WorkforceManagement() {
                   fontFamily: "Oswald",
                 }}
               >
-                <h3 style={{ marginLeft: 17 }}>Classes Percentage</h3>
+                <h3 style={{ marginLeft: 17,fontFamily:"Oswald" }}>CLASSES PERCENTAGE</h3>
               </Grid>
               <Grid container style={{padding:"15px 0px"}}>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>

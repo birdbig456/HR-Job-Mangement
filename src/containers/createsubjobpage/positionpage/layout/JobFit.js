@@ -202,7 +202,7 @@ const JobFit = forwardRef((props, ref) => {
   };
 
   return (
-    <div style={{ backgroundColor: "#fff",}}>
+    <div style={{ backgroundColor: "#fff",height:"70vh"}}>
       <Grid container>
         <Grid
           item

@@ -48,7 +48,7 @@ export default function AcCareer() {
               />
             </ListItemAvatar>
             <ListItemText>
-              <h4 style={{color:"#13b5ea"}}>{item.name}</h4>
+              <h4 style={{color:"#385a7c",fontFamily:"Oswald",letterSpacing:1,fontSize:16}}>{item.name}</h4>
               <p>{item.position}</p>
             </ListItemText>
           </ListItem>
