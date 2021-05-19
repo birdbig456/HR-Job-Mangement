@@ -438,7 +438,7 @@ export default function JobView() {
                 textTransform:"uppercase"
               }}
             >
-              Puttinun Moungprasert
+              Puttinum Moungprasert
             </p>
             <Grid container style={{ paddingInline:"15%"}}>
               <Grid item xs={1} sm={1}></Grid>

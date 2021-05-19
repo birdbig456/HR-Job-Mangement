@@ -16,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function TrendLabour() {
   const data = {
-    labels: ["January", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug","Sep","Oct","Nov","Dec"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug","Sep","Oct","Nov","Dec"],
     datasets: [
       {
-        label: "My First dataset",
+        label: "Amount (person) / Month",
         fill: false,
         lineTension: 0.1,
         backgroundColor: "#385A7C)",
@@ -37,7 +37,7 @@ export default function TrendLabour() {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [65, 59, 23, 81, 56, 55, 40,80,75,33,55,16,41,0],
+        data: [65, 59, 23, 81, 56, 55, 40,80,75,33,55,60,41,0],
       },
     ],
   };

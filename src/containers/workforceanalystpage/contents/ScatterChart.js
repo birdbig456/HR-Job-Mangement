@@ -20,7 +20,7 @@ export default function ScatterChart() {
     labels: ['Scatter'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Age / Level',
         fill: true,
         backgroundColor: '#fec566',
         pointBorderColor: '#fec566',

@@ -3,7 +3,7 @@ import { Grid, Paper } from "@material-ui/core";
 
 export default function AcJob() {
   return (
-    <Grid container style={{marginInline:"18%"}}>
+    <Grid container style={{marginInline:"16%"}}>
       <Grid item xs={6} sm={6} style={({ lineHeight: 4 })}>
         <Grid container>
         <Grid item xs={6} sm={6} style={{color:"#385a7c",fontWeight:"bold",fontFamily:"",fontSize:16}}>

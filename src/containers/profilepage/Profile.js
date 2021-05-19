@@ -12,6 +12,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import NavigationIcon from "@material-ui/icons/Navigation";
+import InfoSharpIcon from '@material-ui/icons/InfoSharp';
 import IconButton from "@material-ui/core/IconButton";
 import AcJob from  "./Accorditons/AcJob"
 import AcAttribute from "./Accorditons/AcAttribute";
@@ -79,9 +80,10 @@ export default function Profile() {
           <Paper className={classes.paperInFor} style={{}}>
             <Grid container >
               <Grid item xs={12} sm={12}
-                    style={{textAlign:"center",color:"#385A7C",fontWeight:"bold",fontFamily:"Oswald",fontSize:24}}
+                    style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center"}} 
                     >
-                      <h3>Main Information</h3>
+                     <InfoSharpIcon fontSize="medium" style={{color:"#fec566",marginRight:5}} />    
+                     <h3 style={{color:"#385A7C",fontWeight:"bold",fontFamily:"Oswald",fontSize:24}}>Main Information</h3>
               </Grid>
               <Grid item xs={1} sm={1}></Grid>
               <Grid item xs={2} sm={2} style={{fontSize:22,},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans",color:"#606060",fontWeight:"bold"}}>
@@ -111,12 +113,12 @@ export default function Profile() {
                   <div style={{marginLeft:60}}>Email : </div>
               </Grid>
               <Grid item xs={3} sm={3} style={{fontSize:22},{lineHeight:3,paddingBottom:30,fontFamily:"Noto Sans,",textAlign:"left",color:"#606060"}}>
-                  <div style={{}}>xxxxxxxx</div>
-                  <div style={{}}>xxxxxxxx</div>
-                  <div style={{}}>xxxxxxxx</div>
-                  <div style={{}}>xxxxxxxx</div>
-                  <div style={{}}>xxxxxxxx</div>
-                  <div style={{}}>60011111@gmail.com</div>
+                  <div style={{}}>14/8</div>
+                  <div style={{}}>1/8</div>
+                  <div style={{}}>3/0</div>
+                  <div style={{}}>3/0</div>
+                  <div style={{}}>Puttinum@SCG.com</div>
+                  <div style={{}}>Pongsakorn@SCG.com</div>
               </Grid>
               <Grid item xs={1} sm={1}></Grid>
             </Grid>

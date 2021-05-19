@@ -391,7 +391,7 @@ export default function WorkforceManagement() {
                   }}
                 >
                   <h4 style={{ margin: 0, marginTop: 10, color: "#535353" }}>
-                    C3-Reassign
+                    A3-Reassign
                   </h4>
                   <h4 style={{ margin: 0, marginTop: 10, color: "#13b5ea" }}>
                     22
@@ -443,7 +443,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>50.00 %</Box>
-                        <Box>2 persons</Box>
+                        <Box>4 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -452,7 +452,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>25.00 %</Box>
-                        <Box>1 persons</Box>
+                        <Box>1 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -461,7 +461,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>25.00 %</Box>
-                        <Box>1 persons</Box>
+                        <Box>1 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -470,7 +470,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>0 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -479,7 +479,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>0 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -488,7 +488,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>0 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -497,7 +497,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>0 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -506,7 +506,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>0 person</Box>
                     </div>
                 </Grid>
                 <Grid item sm={1} xs={1} style={{ textAlign: "center" }}>
@@ -515,7 +515,7 @@ export default function WorkforceManagement() {
                 <Grid item sm={3} xs={3}>
                     <div className={classes.RightBlock}>
                         <Box>0.00 %</Box>
-                        <Box>0 persons</Box>
+                        <Box>0 person</Box>
                     </div>
                 </Grid>
               </Grid>
