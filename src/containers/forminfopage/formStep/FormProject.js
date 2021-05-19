@@ -193,7 +193,6 @@ export default function FormProject() {
           alignItems: "center",
         }}
       >
-        <Link to="/JobClassDisplay" style={{textDecoration:"none"}}>
           <Button
             className={classes.buttonSubmit}
             variant="contained"
@@ -201,7 +200,6 @@ export default function FormProject() {
           >
             SUBMIT
           </Button>
-        </Link>
       </Grid>
     </div>
   );

@@ -84,7 +84,7 @@ export default function StatusView() {
       </div>
       <div style={{ textAlign: "right" }}>
         <p className={classes.Topic}>Total workforce seat : </p>
-        <h2 style={{color:"#82b440"}}>300</h2>
+        <h2 style={{color:"#fec566"}}>300</h2>
       </div>
     </Grid>
   );

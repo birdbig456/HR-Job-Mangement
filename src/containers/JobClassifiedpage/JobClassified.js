@@ -46,7 +46,7 @@ export default function JobClassified() {
   const [nameLevel, setNameLevel] = useState();
   const [valueMin, setValueMin] = useState();
   const [valueMax, setValueMax] = useState();
-  const [valueAvg, setValueAvg] = useState([]);
+  const [valueAvg, setValueAvg] = useState();
   const [marketPB, setMarketPB] = useState();
   const history = useHistory();
   const onChangeNameLevel = (event) => {
@@ -61,15 +61,10 @@ export default function JobClassified() {
   const onChangeMarketPB = (event) => {
     setMarketPB(event.target.value);
   };
-  useEffect(() => {
-    let AverageValue = (parseInt(valueMax) + parseInt(valueMin)) / 2;
-    if (AverageValue != NaN) {
-      let arr = valueAvg;
-      arr.splice(0, 1, AverageValue);
-      console.log(arr);
-      setValueAvg(arr);
-    }
-  });
+  const onChangeAvg = (event) => {
+    setValueAvg(event.target.value);
+  };
+  
   const [count, setCount] = useState(2);
   const dispatch = useDispatch();
   const CreateLevelReducer = useSelector(
@@ -178,12 +173,10 @@ export default function JobClassified() {
                   style={{ margin: 10 }}
                   id="outlined-basic"
                   label="Average"
-                  defaultValue="0"
+                  
                   variant="outlined"
-                  value={valueAvg[index]}
-                  InputProps={{
-                    readOnly: true,
-                  }}
+                  onChange={onChangeAvg}
+                  
                 />
               </Grid>
               <Grid item xs={4} sm={4}>
@@ -228,7 +221,6 @@ export default function JobClassified() {
           alignItems: "center",
         }}
       >
-        <Link to="/JobClassDisplay" className={classes.Link}>
           <Button
             className={classes.button}
             variant="contained"
@@ -236,7 +228,7 @@ export default function JobClassified() {
           >
             SUBMIT
           </Button>
-        </Link>
+
       </Grid>
       <div></div>
     </div>
